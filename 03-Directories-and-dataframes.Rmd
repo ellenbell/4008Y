@@ -1,0 +1,18 @@
+# Directories and data frames - Week 4 - Workshop 1
+
+This week we dont have lectures but we do have an in person workshop. The section to complete this week may be a little more chunky then unusual, complete what you can during the workshop and then finish it off in your own time. Do make use of the demonstrators if any of the exercises so far haven't made sense. 
+
+## Understanding directories and their structure 
+
+## Tips and tricks for file naming and version control
+
+## Setting up your R workspace 
+
+## Creating your first data frame using tibble 
+
+## Playing with some functions
+
+
+
+
+

@@ -1,0 +1,7 @@
+# Initial Observations - Week 7
+
+## Getting the measure of your data
+
+## Exploring a little further 
+
+## Your first plot in R

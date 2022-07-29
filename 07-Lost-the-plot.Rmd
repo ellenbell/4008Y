@@ -1,0 +1,10 @@
+# Lost the plot? Start to visualise data - Week 8 - Workshop 2
+
+This is our second workshop hopefully you are gaining some confidence with R and working with data. 
+
+## Relationships and differences
+
+## Introduction to ggplot2
+
+## Some different plots
+

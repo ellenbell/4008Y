@@ -1,60 +1,34 @@
 --- 
-title: "A Minimal Book Example"
-author: "John Doe"
+title: "Introduction to Data Handling - 4008Y"
+author: "Dr Ellen Bell"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
-# url: your book url like https://bookdown.org/yihui/bookdown
-# cover-image: path to the social sharing image like images/cover.jpg
-description: |
-  This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::gitbook,
-  set in the _output.yml file.
+biblio-style: apalike
 link-citations: yes
 github-repo: rstudio/bookdown-demo
+description: "A brief introduction so some fundamental applications of R in data handling"
+always_allow_html: true
+
 ---
 
-# About
+# Welcome to the Data Handling Workbook
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
+## Data Handling learning objectives
 
-## Usage 
+Introduction to Data Handling is a sub-module that will run throughout your first year as part of the BIO-4008Y Skills for Biologists module. Here we aim to teach you the fundamentals of how to collect and organise data in a clean and sensible format and how to correctly visualise and describe data. The platform we will be using to manage, manipulate and analyse data is RStudioCloud. This is a cloud based interface utilises the programming language R. Over the course of the next few weeks you will start to learn fundamentals of this language and its application in RStudioCloud. 
 
-Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
+## How to use this workbook 
 
-Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`.
+The Data Handling sub-module is composed of a combination of lectures and workshops. Here we will aim to cover fundamentals of data organisation and visualisation in semester 1 and in semester 2 we will move onto some slighlty more advanced data visualisation skills, descriptive statistics and data interpretation. We will briefly touch on inferential statistics towards the end of the year, but this will be a very brief introduction. 
 
-The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book.
+Each week is accompanied by a chapter in this workbook and you will be expected to complete these exercises in your own time. The exercises shouldn't take more then an hour but as with learning any new skill, the more you put in the more you get out. 
 
-## Render book
+## Why is data handling important and why are we teaching it in R?
 
-You can render the HTML version of this example book without changing anything:
+It is a common misconception that to be a good biologist you need to 'know' the mechanics of how life works. Questions like; "How does a cell undergo respiration?", "How do kidneys filter blood?", "How do some plants fix nitrogen?" and "How do honey bees communicate the location and quantity of resources to each other?", spring to mind.  While these questions are important, they are also, now, fairly well understood. But how did biologists come to their understanding of these mechanisms? The answer to this lies in data. 
 
-1. Find the **Build** pane in the RStudio IDE, and
+Good science is based on empirical observations and these observations should be reliably collected and reproducible. Exploration of theories through observations and experimentation leads to the collection of data and analysis and interpretation of data feeds into the bedrock of our understanding of the principals of how life works, i.e. the biological sciences. 
 
-1. Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
-
-Or build the book from the R console:
-
-```{r, eval=FALSE}
-bookdown::render_book()
-```
-
-To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
-
-## Preview book
-
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
-
-```{r eval=FALSE}
-bookdown::serve_book()
-```
-
-
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+So why are we teaching you how to handle data using R? To many of you the use of programming languages, such as R, will be new. However if you can get into the habit of manipulating and analysing data in R you will be well set on the path to becoming an efficient and effective data analyst. Knowledge and experience of programming languages such as R are fast becoming key skills in the sciences and beyond, and they are highly valued by employers. You may also have noticed that the term "reproducible" recurring on this page. In the same way that your methods of data collection, when performing a scientific observation or experiment, should be conducted and recorded in such a way that they may be reproduced by others, your data manipulation and analysis must also be conducted and recorded so as to be reproducible. Using RStudioCloud makes it easy to record your data manipulation and analysis workflow and, if done well, makes it very easy for others to see and repeat what you have done. 

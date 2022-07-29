@@ -1,0 +1,17 @@
+# Introduction to RStudioCloud - Week 2
+
+You should aim to complete this chapter in week 2. 
+
+## A short video introducing you to RStudioCloud
+
+Now that you've watched the video, create your own RStudioCloud account.
+
+## Creating your first RStudioCloud Project
+
+Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section.
+
+## Entering commands directly into the terminal
+
+## Sending commands down to the terminal from an R script
+
+## Creating objects 

@@ -1,0 +1,13 @@
+# Packages and Functions - Week 3
+
+If you have the code it is possible to do pretty much whatever you like with your data in R. However, why reinvent the wheel trying to write your own complex scripts, when a lot of very clever coders have already written collections of scripts stored in __packages__ that will do the job for you. As the course progresses you will use a range of packages that contain __functions__. Functions can be thought of as a small piece of code that is designed to perform a set task. For example the data visualisation package (which you will become very familiar with as the course progresses) `ggplot2` contains ranges of functions which allow you to define how your plot or graph will look, for example `geom_bar` is a function within the `ggplot2` package that contains the instructions required to build a bar chart. 
+
+## Installing and calling packages 
+
+
+
+## Using functions
+
+
+## What do I do if I get an error message?
+
