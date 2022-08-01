@@ -2,20 +2,25 @@
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
-# Introduction to R and RStudioCloud - Week 2
+# Introduction to R and RStudio Cloud - Week 2
 
 You should aim to complete this chapter in week 2. 
 
-## What is R and RStudioCloud?
+## What is R and RStudio Cloud?
 
+So hopefully you have read through Chapter 1, where we briefly discussed how we would be using R and the RStudio Cloud interface in this module. But what really is R and what is the difference between R and RStudio Cloud? 
 
-## A short video introducing you to RStudioCloud
+Essentially R is a programming language that is commonly used in statistical computing, data handling, data visualisation and data analysis. On the other hand RStudio Cloud is the cloud based interface of a piece of software called RStudio (we wont be using the non cloud based RStudio so wont explore this software further here). RStudio Cloud uses the R programming language but has a nice user friendly interface and is a great tool for learning how to conduct analysis in R. 
 
-Now that you've watched the video, create your own RStudioCloud account.
+We are using the cloud based version of RStudio because it means that no one has to worry about installing extra software on their own computers and that everyone will be working with the same software versions. You will all need to create your own free accounts on RStudio Cloud, but first have a look at the short video below introducing you to the interface. 
 
-## Creating your first RStudioCloud Project
+__A short video introducing you to RStudio Cloud__
 
-Once you have created an RStudioCloud account you should be presented with this window
+Now that you've watched the video, create your own RStudio Cloud account.
+
+## Creating your first RStudio Cloud Project
+
+Once you have created an RStudio Cloud account you should be presented with this window
 
 __printscreen__
 
@@ -46,8 +51,62 @@ The two final lines of your output should look like this:
 [1] 14
 ```
 
-So your initial command `5 + 9` is shown after the `>`, symbol and the resulting output from R is shown after `[1]`. Don't worry too much about the syntax of `>` and `[1]` here. You can think of `>` as meaning that R is ready to receive a command and `[1]` as R telling you that the answer to the first part of your question is here (in this case `14`). 
+So... your initial command `5 + 9` is shown after the `>`, symbol and the resulting output from R is shown after `[1]`. Don't worry too much about the syntax of `>` and `[1]` here. You can think of `>` as meaning that R is ready to receive a command and `[1]` as R telling you that the answer to the first part of your question is here (in this case `14`). 
+
+Try out some other commands... What happens when you input the following commands?
+
+```{r}
+362 * 12
+```
+
+```{r}
+55 / 5
+```
+
+```{r}
+(40 / 990) * 100
+```
+
+```{r}
+4^2
+```
+
+See if you can work out what 30% of 735 is using the R console
 
 ## Sending commands down to the console from an R script
 
-## Creating objects 
+I have already mentioned the __reproducibility__ factor as an advantage of using RStudioCloud. This is because you can record and run all of your commands from an R script within RStudioCloud. This means that you have a written record of your analysis workflow, what you did to your data at which stage, and you can do all of this without altering the original data files! This is super important because if means that if you revisit your work in a few weeks/months/years you can see exactly what you did AND if someone else needs to rerun any of your analysis or use your workflow on some other data, they can! 
+
+So lets go about setting up your new script. You currently have three panels in RStudioCloud. If you go to __file > New File > R Script__ a new panel will open.
+
+__print screen __
+
+__print screen __
+
+This new panel is essentially a text document where you can write your commands into a script and then send them down to the console when you want to run them. Lets have a play. Copy the below into your new R script. 
+
+```{r}
+362 * 12
+
+55 / 5
+
+(40 / 990) * 100
+
+4^2
+```
+
+These are all commands you have run before but now if you save your script file you will have a text based document with your progress saved. It doesn't make a huge amount of sense to do this now because these are just a random set of equations and we are just playing with the interface, but you could if you wanted to. 
+
+Ok, so now we are ready to execute our commands. You can do this with each equation individually, line by line or you can run the whole script. 
+
+To run your script line by line, place your cursor on the line you wish to run and you can either;
+
+* Click on the run button on the top right of the script panel
+* Press ctrl + Enter (or Command + Enter on mac) 
+
+Or if you wish to run the entire script you can either;
+
+* Manually Highlight the script and click the run button or press ctrl + Enter (or Command + Enter on mac) 
+* Press ctrl + A (or Command + A on mac) and then click the run button or press ctrl + Enter (or Command + Enter on mac) 
+
+Well Done! You have started writing and running simple code. But R is capable of doing so much more then simple calculations. Next week in Chapter 3 we will explore how we can create objects, and use packages and functions.  
