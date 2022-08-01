@@ -1,12 +1,13 @@
 welcome-to-the-data-handling-workbook
 data-handling-learning-objectives
+teaching-layout-for-data-handling
 how-to-use-this-workbook
 why-is-data-handling-important-and-why-are-we-teaching-it-in-r
-introduction-to-rstudiocloud---week-2
+introduction-to-r-and-rstudiocloud---week-2
 a-short-video-introducing-you-to-rstudiocloud
 creating-your-first-rstudiocloud-project
-entering-commands-directly-into-the-terminal
-sending-commands-down-to-the-terminal-from-an-r-script
+entering-commands-directly-into-the-consol
+sending-commands-down-to-the-console-from-an-r-script
 creating-objects
 packages-and-functions---week-3
 installing-and-calling-packages
@@ -36,3 +37,4 @@ make-them-pretty---week-9
 make-them-pretty-continued---week-10
 writing-a-script-from-scratch---week-11---workshop-3
 quiz-time---week-12
+what-is-r-and-rstudiocloud

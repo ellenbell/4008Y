@@ -1,6 +1,13 @@
-# Introduction to RStudioCloud - Week 2
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+# Introduction to R and RStudioCloud - Week 2
 
 You should aim to complete this chapter in week 2. 
+
+## What is R and RStudioCloud?
+
 
 ## A short video introducing you to RStudioCloud
 
@@ -8,10 +15,39 @@ Now that you've watched the video, create your own RStudioCloud account.
 
 ## Creating your first RStudioCloud Project
 
-Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section.
+Once you have created an RStudioCloud account you should be presented with this window
 
-## Entering commands directly into the terminal
+__printscreen__
 
-## Sending commands down to the terminal from an R script
+Under __Spaces__ go to __Your Workspace__ and under __Projects__ create a __New Project > New R studio Project__. 
+
+__printscreen__
+
+Lets name this project `Testing_R`, notice that I have no spaces in my project name, instead I have used an underscore, there are a number of good habits you should try and adopt when project or file naming and not including spaces is one of them, we will go over this in more depth in lectures. You can rename your project by clicking on __Untitled Project__ at the top of the window, and typing in your new project name. 
+
+__printscreen__
+
+You will see that your new project has three pannels with tabs showing the Console, Environment and Files for your project. 
+
+__printscreen__
+
+## Entering commands directly into the consol
+
+Lets start by playing with some commands in the console. Type or copy and paste the simple calculation (or command) shown below, into the console. Your text should appear next to the `>` symbol. Press `Enter` on your keyboard, this will instruct R to run the command. 
+
+```{r}
+5 + 9
+```
+
+The two final lines of your output should look like this:
+
+```
+> 5 + 9
+[1] 14
+```
+
+So your initial command `5 + 9` is shown after the `>`, symbol and the resulting output from R is shown after `[1]`. Don't worry too much about the syntax of `>` and `[1]` here. You can think of `>` as meaning that R is ready to receive a command and `[1]` as R telling you that the answer to the first part of your question is here (in this case `14`). 
+
+## Sending commands down to the console from an R script
 
 ## Creating objects 

@@ -17,13 +17,27 @@ always_allow_html: true
 
 ## Data Handling learning objectives
 
-Introduction to Data Handling is a sub-module that will run throughout your first year as part of the BIO-4008Y Skills for Biologists module. Here we aim to teach you the fundamentals of how to collect and organise data in a clean and sensible format and how to correctly visualise and describe data. The platform we will be using to manage, manipulate and analyse data is RStudioCloud. This is a cloud based interface utilises the programming language R. Over the course of the next few weeks you will start to learn fundamentals of this language and its application in RStudioCloud. 
+Introduction to Data Handling is a 'sub-module' that will run throughout your first year as part of the BIO-4008Y Skills for Biologists module. Here we aim to teach you the fundamentals of how to collect and organise data in a clean and sensible format and how to correctly visualise and describe data. The platform we will be using to manage, manipulate and analyse data is RStudioCloud. This is a cloud based interface utilises the programming language R. Over the course of the next few weeks you will start to learn fundamentals of this language and its application in RStudioCloud. 
+
+## Teaching layout for Data Handling
+
+The Data Handling sub-module aims to cover fundamentals of data organisation and visualisation in semester 1 and in semester 2 will move onto some slightly more advanced data visualisation skills, descriptive statistics and data interpretation. Towards the end of the module we will briefly touch on inferential statistics, but this will be a very brief introduction. 
+
+In semester 1 you will have either a lecture or a 1 hour workshop each week;
+
+* Semester 1 Lectures - Weeks; 2,3,6,7,9,10
+* Semester 1 Workshops - Weeks; 4,8,11
+
+And then in semester 2 you will have a lecture every week up to week 8 and a 2 hour workshop every other week;
+
+* Semester 2 Lectures - Weeks; 1,2,3,4,5,6,7,8
+* Semester 2 Workshops - Weeks; 2,4,6,8
+
+In addition to the in person taught material, you will be expected to complete a chapter of this workbook every week. 
 
 ## How to use this workbook 
 
-The Data Handling sub-module is composed of a combination of lectures and workshops. Here we will aim to cover fundamentals of data organisation and visualisation in semester 1 and in semester 2 we will move onto some slighlty more advanced data visualisation skills, descriptive statistics and data interpretation. We will briefly touch on inferential statistics towards the end of the year, but this will be a very brief introduction. 
-
-Each week is accompanied by a chapter in this workbook and you will be expected to complete these exercises in your own time. The exercises shouldn't take more then an hour but as with learning any new skill, the more you put in the more you get out. 
+Each week of taught material is accompanied by a chapter in this workbook and you will be expected read through and complete any exercises in your own time. Each chapter should take no more then an hour to complete and in many cases will take much less time. We will aim to set aside 10 minutes at the end of each lecture to cover any potential problems you may be having, so if you get stuck do use this time to ask for help. 
 
 ## Why is data handling important and why are we teaching it in R?
 
@@ -31,4 +45,10 @@ It is a common misconception that to be a good biologist you need to 'know' the 
 
 Good science is based on empirical observations and these observations should be reliably collected and reproducible. Exploration of theories through observations and experimentation leads to the collection of data and analysis and interpretation of data feeds into the bedrock of our understanding of the principals of how life works, i.e. the biological sciences. 
 
-So why are we teaching you how to handle data using R? To many of you the use of programming languages, such as R, will be new. However if you can get into the habit of manipulating and analysing data in R you will be well set on the path to becoming an efficient and effective data analyst. Knowledge and experience of programming languages such as R are fast becoming key skills in the sciences and beyond, and they are highly valued by employers. You may also have noticed that the term "reproducible" recurring on this page. In the same way that your methods of data collection, when performing a scientific observation or experiment, should be conducted and recorded in such a way that they may be reproduced by others, your data manipulation and analysis must also be conducted and recorded so as to be reproducible. Using RStudioCloud makes it easy to record your data manipulation and analysis workflow and, if done well, makes it very easy for others to see and repeat what you have done. 
+Hopefully you can see why data handling, analysis and interpretation are important. So why are we teaching you how to handle data using R? 
+
+To many of you the use of programming languages, such as R, will be new. However if you can get into the habit of manipulating and analysing data in R you will be well set on the path to becoming an efficient and effective data analyst. This being confident with data is a key skill in the sciences and will serve you well in many career paths. In addition, knowledge and experience of programming languages such as R are fast becoming key skills in their own right in the science, industry, government and beyond. 
+
+In terms of the use of R for data handling and analysis, you may also have noticed that the term __reproducible__ recurring on this page. In the same way that your methods of data collection should be conducted and recorded in such a way that they may be reproduced by others, your data manipulation and analysis must also be conducted and recorded so as to be reproducible. Using R within the RStudioCloud interface (we will come back to this in Chapter 1) makes it easy to record your data manipulation and analysis workflow and, if done well, makes it very easy for others to see and repeat what you have done. 
+
+So hopefully I have convinced you that data handling, analysis and R are all worthwhile skills to cultivate. We will spend some time in lectures discussing this as well. But for now take a look at Chapter 1. Happy coding!
