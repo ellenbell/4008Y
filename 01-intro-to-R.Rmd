@@ -2,9 +2,9 @@
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
-# Introduction to R and RStudio Cloud - Week 2
+# Introduction to R and RStudio Cloud - Week 2A
 
-You should aim to complete this chapter in week 2. 
+You should aim to complete this chapter in Week 2, Semester 1. 
 
 ## What is R and RStudio Cloud?
 

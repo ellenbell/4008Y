@@ -1,6 +1,6 @@
-# Objects, Packages and Functions - Week 3
+# Objects, Packages and Functions - Week 3A
 
-You should aim to complete this chapter in Week 3
+You should aim to complete this chapter in Week 3, Semester 1
 
 ## Creating objects 
 
@@ -135,12 +135,15 @@ Error messages are almost guaranteed when working regularly with R, they are sup
 
 * A typo (you can reduce risk of this by consistently labeling your objects)
 * A mistake in syntax (missing or un-closed; `()`, `""`, or missing `,`)
-* Missing dependencies (maybe you didnt install or load a package correctly, or maybe if your running a longer script you are trying to call an object that you havent created yet)
+* Missing dependencies (maybe you didnt install or load a package correctly, or maybe if your running a longer script, you are trying to call an object that you havent created yet)
 
-This is by no means an exhaustive list but when I run into errors its normally because of one of the above. The trick is don't panic, read the error message carefully, it often tells you what is wrong. Then look over your script carefully and slowly to troubleshoot. And if you are genuinely stuck and the error doesn't make sense, run it through google, I can almost guarantee you wont have been the first person to have that error message. 
+This is by no means an exhaustive list but when I run into errors its normally because of one of the above. The trick is don't panic and read the error message carefully, it often tells you what is wrong. Then look over your script slowly to troubleshoot. And if you are genuinely stuck and the error doesn't make sense, run it through Google, I can almost guarantee you wont have been the first person to have that error message. 
 
 Well done everyone. I hope you have enjoyed this weeks session. Next week is our first workshop and we will start to use some of these new found skills in tandem and start to look at using them on some new data. 
 
+### References
+
+Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. https://CRAN.R-project.org/package=ggplot2.
 
 
 

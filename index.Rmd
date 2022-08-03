@@ -1,5 +1,5 @@
 --- 
-title: "Introduction to Data Handling - 4008Y"
+title: "Introduction to Data Science - 4008Y"
 author: "Dr Ellen Bell"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -8,38 +8,48 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: rstudio/bookdown-demo
-description: "A brief introduction so some fundamental applications of R in data handling"
+description: "A brief introduction so some fundamental applications of R in data science "
 always_allow_html: true
 
 ---
 
-# Welcome to the Data Handling Workbook
+# Welcome to the Data Science Workbook
 
-## Data Handling learning objectives
+## Data Science learning objectives
 
-Introduction to Data Handling is a 'sub-module' that will run throughout your first year as part of the BIO-4008Y Skills for Biologists module. Here we aim to teach you the fundamentals of how to collect and organise data in a clean and sensible format and how to correctly visualise and describe data. The platform we will be using to manage, manipulate and analyse data is RStudio Cloud. This is a cloud based interface utilises the programming language R. Over the course of the next few weeks you will start to learn fundamentals of this language and its application in RStudio Cloud. 
+Introduction to Data Science is a 'sub-module' that will run throughout your first year as part of the BIO-4008Y Skills for Biologists module. Here we aim to teach you the fundamentals of how to collect and organise data in a clean and sensible format and how to correctly visualise and describe data. The platform we will be using to manage, manipulate and analyse data is RStudio Cloud. This is a cloud based interface utilises the programming language R. Over the course of the next few weeks you will start to learn fundamentals of this language and its application in RStudio Cloud. 
 
-## Teaching layout for Data Handling
+## Teaching layout for Data Science 
 
-The Data Handling sub-module aims to cover fundamentals of data organisation and visualisation in semester 1 and in semester 2 will move onto some slightly more advanced data visualisation skills, descriptive statistics and data interpretation. Towards the end of the module we will briefly touch on inferential statistics, but this will be a very brief introduction. 
+The Data Science  sub-module aims to cover fundamentals of data organisation and visualisation in semester 1 and in semester 2 will move onto some slightly more advanced data visualisation skills, descriptive statistics and data interpretation. Towards the end of the module we will briefly touch on inferential statistics, but this will be a very brief introduction. 
 
 In semester 1 you will have either a lecture or a 1 hour workshop each week;
 
-* Semester 1 Lectures - Weeks; 2,3,6,7,9,10
-* Semester 1 Workshops - Weeks; 4,8,11
+* Semester 1 Lectures - Weeks; 2, 3, 6, 7, 9, 10
+* Semester 1 Workshops - Weeks; 4, 8, 11
 
 And then in semester 2 you will have a lecture every week up to week 8 and a 2 hour workshop every other week;
 
-* Semester 2 Lectures - Weeks; 1,2,3,4,5,6,7,8
-* Semester 2 Workshops - Weeks; 2,4,6,8
+* Semester 2 Lectures - Weeks; 1, 2, 3, 4, 5, 6, 7, 8
+* Semester 2 Workshops - Weeks; 2, 4, 6, 8
 
 In addition to the in person taught material, you will be expected to complete a chapter of this workbook every week. 
+
+## Assessment
+
+* Semester 1
+
+Two quizzes are available on the 4008Y page under Data Science. These are "semi-formative" quizzes, you can attempt them at any point during the semester and you can attempt them as many times as you like. However, if you complete them with a grade of 40% or higher you will get a mark added to your summative Skills essay. If you complete them with a grade of 80% or higher you will get 2 marks added to your summative Skills essay. That's 4 marks in total, last year this was enough to move several students up to the next grade boundary. 
+
+* Semester 2
+
+As part of your Skills portfolio, there will be a data handling task. For this you will be given some data and asked to correctly visualise it in a clean, clear and attractive way, with a suitable figure legend. 
 
 ## How to use this workbook 
 
 Each week of taught material is accompanied by a workbook chapter. You will be expected read through these chapters and complete any exercises in your own time. Each chapter should take no more then an hour to complete and in many cases will take much less time. We will aim to set aside 10 minutes at the end of each lecture to cover any potential problems you may be having, so if you get stuck, use this time to ask for help. 
 
-## Why is data handling important and why are we teaching it in R?
+## Why is data science important and why are we teaching it in R?
 
 It is a common misconception that to be a good biologist you need to 'know' the mechanics of how life works. Questions like; "How does a cell undergo respiration?", "How do kidneys filter blood?", "How do some plants fix nitrogen?" and "How do honey bees communicate the location and quantity of resources to each other?", spring to mind.  While these questions are important, they are also, now, fairly well understood. But how did biologists come to their understanding of these mechanisms? The answer to this lies in data. 
 

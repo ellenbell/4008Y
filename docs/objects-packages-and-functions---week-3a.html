@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Objects, Packages and Functions - Week 3A | Introduction to Data Science - 4008Y</title>
+  <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Objects, Packages and Functions - Week 3A | Introduction to Data Science - 4008Y" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="A brief introduction so some fundamental applications of R in data science" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Objects, Packages and Functions - Week 3A | Introduction to Data Science - 4008Y" />
+  
+  <meta name="twitter:description" content="A brief introduction so some fundamental applications of R in data science" />
+  
+
+<meta name="author" content="Dr Ellen Bell" />
+
+
+<meta name="date" content="2022-08-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction-to-r-and-rstudio-cloud---week-2a.html"/>
+<link rel="next" href="directories-and-data-frames---week-4a---workshop-1.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to Data Handling - 4008Y</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome to the Data Science Workbook</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#data-science-learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Data Science learning objectives</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#teaching-layout-for-data-science"><i class="fa fa-check"></i><b>1.2</b> Teaching layout for Data Science</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#assessment"><i class="fa fa-check"></i><b>1.3</b> Assessment</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#how-to-use-this-workbook"><i class="fa fa-check"></i><b>1.4</b> How to use this workbook</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#why-is-data-science-important-and-why-are-we-teaching-it-in-r"><i class="fa fa-check"></i><b>1.5</b> Why is data science important and why are we teaching it in R?</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-to-r-and-rstudio-cloud---week-2a.html"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html"><i class="fa fa-check"></i><b>2</b> Introduction to R and RStudio Cloud - Week 2A</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-r-and-rstudio-cloud---week-2a.html"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#what-is-r-and-rstudio-cloud"><i class="fa fa-check"></i><b>2.1</b> What is R and RStudio Cloud?</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-r-and-rstudio-cloud---week-2a.html"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#creating-your-first-rstudio-cloud-project"><i class="fa fa-check"></i><b>2.2</b> Creating your first RStudio Cloud Project</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-r-and-rstudio-cloud---week-2a.html"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#entering-commands-directly-into-the-consol"><i class="fa fa-check"></i><b>2.3</b> Entering commands directly into the consol</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-r-and-rstudio-cloud---week-2a.html"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#sending-commands-down-to-the-console-from-an-r-script"><i class="fa fa-check"></i><b>2.4</b> Sending commands down to the console from an R script</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-r-and-rstudio-cloud---week-2a.html"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#a-note-on-comments"><i class="fa fa-check"></i><b>2.5</b> A note on comments</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="objects-packages-and-functions---week-3a.html"><a href="objects-packages-and-functions---week-3a.html"><i class="fa fa-check"></i><b>3</b> Objects, Packages and Functions - Week 3A</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="objects-packages-and-functions---week-3a.html"><a href="objects-packages-and-functions---week-3a.html#creating-objects"><i class="fa fa-check"></i><b>3.1</b> Creating objects</a></li>
+<li class="chapter" data-level="3.2" data-path="objects-packages-and-functions---week-3a.html"><a href="objects-packages-and-functions---week-3a.html#what-are-functions-and-packages"><i class="fa fa-check"></i><b>3.2</b> What are functions and packages?</a></li>
+<li class="chapter" data-level="3.3" data-path="objects-packages-and-functions---week-3a.html"><a href="objects-packages-and-functions---week-3a.html#using-functions"><i class="fa fa-check"></i><b>3.3</b> Using functions</a></li>
+<li class="chapter" data-level="3.4" data-path="objects-packages-and-functions---week-3a.html"><a href="objects-packages-and-functions---week-3a.html#installing-packages"><i class="fa fa-check"></i><b>3.4</b> Installing packages</a></li>
+<li class="chapter" data-level="3.5" data-path="objects-packages-and-functions---week-3a.html"><a href="objects-packages-and-functions---week-3a.html#what-do-i-do-if-i-get-an-error-message"><i class="fa fa-check"></i><b>3.5</b> What do I do if I get an error message?</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="objects-packages-and-functions---week-3a.html"><a href="objects-packages-and-functions---week-3a.html#references"><i class="fa fa-check"></i><b>3.5.1</b> References</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="directories-and-data-frames---week-4a---workshop-1.html"><a href="directories-and-data-frames---week-4a---workshop-1.html"><i class="fa fa-check"></i><b>4</b> Directories and data frames - Week 4A - Workshop 1</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="directories-and-data-frames---week-4a---workshop-1.html"><a href="directories-and-data-frames---week-4a---workshop-1.html#data-entry"><i class="fa fa-check"></i><b>4.1</b> Data Entry</a></li>
+<li class="chapter" data-level="4.2" data-path="directories-and-data-frames---week-4a---workshop-1.html"><a href="directories-and-data-frames---week-4a---workshop-1.html#a-note-on-naming"><i class="fa fa-check"></i><b>4.2</b> A note on naming</a></li>
+<li class="chapter" data-level="4.3" data-path="directories-and-data-frames---week-4a---workshop-1.html"><a href="directories-and-data-frames---week-4a---workshop-1.html#setting-up-your-r-workspace"><i class="fa fa-check"></i><b>4.3</b> Setting up your R workspace</a></li>
+<li class="chapter" data-level="4.4" data-path="directories-and-data-frames---week-4a---workshop-1.html"><a href="directories-and-data-frames---week-4a---workshop-1.html#a-note-on-directories-and-their-structure"><i class="fa fa-check"></i><b>4.4</b> A note on directories and their structure</a></li>
+<li class="chapter" data-level="4.5" data-path="directories-and-data-frames---week-4a---workshop-1.html"><a href="directories-and-data-frames---week-4a---workshop-1.html#setting-up-your-script"><i class="fa fa-check"></i><b>4.5</b> Setting up your script</a></li>
+<li class="chapter" data-level="4.6" data-path="directories-and-data-frames---week-4a---workshop-1.html"><a href="directories-and-data-frames---week-4a---workshop-1.html#importing-data"><i class="fa fa-check"></i><b>4.6</b> Importing data</a></li>
+<li class="chapter" data-level="4.7" data-path="directories-and-data-frames---week-4a---workshop-1.html"><a href="directories-and-data-frames---week-4a---workshop-1.html#creating-tibbles"><i class="fa fa-check"></i><b>4.7</b> Creating tibbles</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="reading-week---week-5.html"><a href="reading-week---week-5.html"><i class="fa fa-check"></i><b>5</b> Reading week - Week 5</a></li>
+<li class="chapter" data-level="6" data-path="keep-it-clean-keep-it-tidy---week-6.html"><a href="keep-it-clean-keep-it-tidy---week-6.html"><i class="fa fa-check"></i><b>6</b> Keep it clean! Keep it tidy! - Week 6</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="keep-it-clean-keep-it-tidy---week-6.html"><a href="keep-it-clean-keep-it-tidy---week-6.html#setting-up-your-workspace"><i class="fa fa-check"></i><b>6.1</b> Setting up your workspace</a></li>
+<li class="chapter" data-level="6.2" data-path="keep-it-clean-keep-it-tidy---week-6.html"><a href="keep-it-clean-keep-it-tidy---week-6.html#initial-observations"><i class="fa fa-check"></i><b>6.2</b> Initial observations</a></li>
+<li class="chapter" data-level="6.3" data-path="keep-it-clean-keep-it-tidy---week-6.html"><a href="keep-it-clean-keep-it-tidy---week-6.html#clean-and-tidy-data-makes-the-world-go-round"><i class="fa fa-check"></i><b>6.3</b> Clean and tidy data makes the world go round</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="initial-observations---week-7.html"><a href="initial-observations---week-7.html"><i class="fa fa-check"></i><b>7</b> Initial Observations - Week 7</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="initial-observations---week-7.html"><a href="initial-observations---week-7.html#getting-the-measure-of-your-data"><i class="fa fa-check"></i><b>7.1</b> Getting the measure of your data</a></li>
+<li class="chapter" data-level="7.2" data-path="initial-observations---week-7.html"><a href="initial-observations---week-7.html#exploring-a-little-further"><i class="fa fa-check"></i><b>7.2</b> Exploring a little further</a></li>
+<li class="chapter" data-level="7.3" data-path="initial-observations---week-7.html"><a href="initial-observations---week-7.html#your-first-plot-in-r"><i class="fa fa-check"></i><b>7.3</b> Your first plot in R</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lost-the-plot-start-to-visualise-data---week-8---workshop-2.html"><a href="lost-the-plot-start-to-visualise-data---week-8---workshop-2.html"><i class="fa fa-check"></i><b>8</b> Lost the plot? Start to visualise data - Week 8 - Workshop 2</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="lost-the-plot-start-to-visualise-data---week-8---workshop-2.html"><a href="lost-the-plot-start-to-visualise-data---week-8---workshop-2.html#relationships-and-differences"><i class="fa fa-check"></i><b>8.1</b> Relationships and differences</a></li>
+<li class="chapter" data-level="8.2" data-path="lost-the-plot-start-to-visualise-data---week-8---workshop-2.html"><a href="lost-the-plot-start-to-visualise-data---week-8---workshop-2.html#introduction-to-ggplot2"><i class="fa fa-check"></i><b>8.2</b> Introduction to ggplot2</a></li>
+<li class="chapter" data-level="8.3" data-path="lost-the-plot-start-to-visualise-data---week-8---workshop-2.html"><a href="lost-the-plot-start-to-visualise-data---week-8---workshop-2.html#some-different-plots"><i class="fa fa-check"></i><b>8.3</b> Some different plots</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="make-them-pretty---week-9.html"><a href="make-them-pretty---week-9.html"><i class="fa fa-check"></i><b>9</b> Make them pretty - Week 9</a></li>
+<li class="chapter" data-level="10" data-path="make-them-pretty-continued---week-10.html"><a href="make-them-pretty-continued---week-10.html"><i class="fa fa-check"></i><b>10</b> Make them pretty continued - Week 10</a></li>
+<li class="chapter" data-level="11" data-path="writing-a-script-from-scratch---week-11---workshop-3.html"><a href="writing-a-script-from-scratch---week-11---workshop-3.html"><i class="fa fa-check"></i><b>11</b> Writing a script from “scratch” - Week 11 - Workshop 3</a></li>
+<li class="chapter" data-level="12" data-path="recapping-semester-1---week-1b.html"><a href="recapping-semester-1---week-1b.html"><i class="fa fa-check"></i><b>12</b> Recapping Semester 1 - Week 1B</a></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Data Science - 4008Y</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="objects-packages-and-functions---week-3a" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Objects, Packages and Functions - Week 3A<a href="objects-packages-and-functions---week-3a.html#objects-packages-and-functions---week-3a" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>You should aim to complete this chapter in Week 3, Semester 1</p>
+<div id="creating-objects" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Creating objects<a href="objects-packages-and-functions---week-3a.html#creating-objects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As we saw in Chapter 2, R can be used to perform calculations. However, we can use R to perform tasks that are much more complex. However in order to do this we are going to have to learn about objects.</p>
+<p>Login to your RStudio Cloud account and go into your <code>Testing_R</code> project. Create a new R script and save it under the name <code>objects</code>. You should see it appear as <code>object.R</code> under the <strong>Files</strong> tab in the bottom right panel. Copy and run the following command using your script.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="objects-packages-and-functions---week-3a.html#cb9-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="dv">50</span></span></code></pre></div>
+<p>What you have essentially done here, is told R to create an object called <code>A</code> and to store the number <code>50</code> inside it using the syntax <code>&lt;-</code>. After running the command you should see your object <code>A</code> and <code>50</code> pop up under <strong>Environment</strong> and <strong>Values</strong> in the top right hand panel, so you can see that <code>50</code> has been stored in <code>A</code>.</p>
+<p>Lets create some more objects</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="objects-packages-and-functions---week-3a.html#cb10-1" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">6</span></span></code></pre></div>
+<p>Now see what happens if you run the following command</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="objects-packages-and-functions---week-3a.html#cb11-1" aria-hidden="true" tabindex="-1"></a>A <span class="sc">*</span> b</span></code></pre></div>
+<p>Oh dear… we have an error…</p>
+<pre><code>&gt; A * b
+Error: object &#39;b&#39; not found</code></pre>
+<p>This is because R has absolutely no flexibility with typos. It is looking for an object called <code>b</code> when there is no object called <code>b</code> existent in your environment. There is an object called <code>B</code>, but to R, <code>B</code> and <code>b</code> are completely different things. Try running this instead.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="objects-packages-and-functions---week-3a.html#cb13-1" aria-hidden="true" tabindex="-1"></a>A <span class="sc">*</span> B</span></code></pre></div>
+<p>Hopefully you should now have an output that looks like this</p>
+<pre><code>&gt; A * B
+[1] 300</code></pre>
+<p>This is a very simple example. But lets try to demonstrate why saving values within objects may be useful. Lets say you are interested in looking at the number of students who get freshers flu in Week 1 of teaching. You have a class size of 200 students and 15 of them report that they have contracted freshers flu. Use the following script to calculate the percentage of students with freshers flu.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="objects-packages-and-functions---week-3a.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create two objects, one for your total class and one for those that have flu</span></span>
+<span id="cb15-2"><a href="objects-packages-and-functions---week-3a.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Notice that neither of my object names contain spaces</span></span>
+<span id="cb15-3"><a href="objects-packages-and-functions---week-3a.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># If you need a space always use an underscore or full stop</span></span>
+<span id="cb15-4"><a href="objects-packages-and-functions---week-3a.html#cb15-4" aria-hidden="true" tabindex="-1"></a>total_class <span class="ot">&lt;-</span> <span class="dv">200</span></span>
+<span id="cb15-5"><a href="objects-packages-and-functions---week-3a.html#cb15-5" aria-hidden="true" tabindex="-1"></a>with_flu <span class="ot">&lt;-</span> <span class="dv">15</span></span>
+<span id="cb15-6"><a href="objects-packages-and-functions---week-3a.html#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="objects-packages-and-functions---week-3a.html#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the percentage of students with flu in week 1</span></span>
+<span id="cb15-8"><a href="objects-packages-and-functions---week-3a.html#cb15-8" aria-hidden="true" tabindex="-1"></a>percentage_with_flu <span class="ot">&lt;-</span> (with_flu<span class="sc">/</span>total_class)<span class="sc">*</span><span class="dv">100</span></span></code></pre></div>
+<p>If you look in your Environment in the top right panel you should see the percentage of students with flu calculated and stored under <code>percentage_with_flu</code>. You can use the following command to see it printed in the consol.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="objects-packages-and-functions---week-3a.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(percentage_with_flu)</span></code></pre></div>
+<p>But some students have been late in reporting their symptoms. A week later you hear that <code>7</code> more students also had freshers flu in Week 1. If you had been typing into the console and not using objects you would have to type this script out all over again. But you dont need to. You just need to change your entry for <code>with_flu</code> from <code>15</code> to <code>22</code>. Do that now and re-run the script. By editing the <code>15</code>, R will overwrite the object <code>with_flu</code> to include the new value of <code>22</code>. If you run the last line of code then the percentage of students with flu will also update. This may seem like a very simple example, and it is, but we are still building up your knowledge of R so you will have to take my word for it that objects will be very helpful to you as we progress :)</p>
+<p>You will see, as we progress, that objects can contain a range of different types of data. We will cover some of these in lectures, but for now lets leave objects and have a think about packages and functions.</p>
+</div>
+<div id="what-are-functions-and-packages" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> What are functions and packages?<a href="objects-packages-and-functions---week-3a.html#what-are-functions-and-packages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If you have the coding skills it is possible to do pretty much whatever you like with your data in R. However, why reinvent the wheel trying to write your own complex scripts, when a lot of very clever coders have already written lots of functional bits of code, known as <strong>functions</strong>, for general use. Functions can be thought of as a piece of code that is designed to perform a set task. R comes with lots of functions already built in, but there are also lots of additional functions that are stored in <strong>packages</strong>.</p>
+<p>Packages are containers that can hold sets of functions or data and as the course progresses you will use a range of packages that contain useful functions and data. For example the data visualisation package (which you will become very familiar with later on) <code>ggplot2</code> contains ranges of functions which allow you to define how your plot or graph will look, for example <code>geom_bar</code> is a function within the <code>ggplot2</code> package that contains the instructions required to build a bar chart.</p>
+</div>
+<div id="using-functions" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Using functions<a href="objects-packages-and-functions---week-3a.html#using-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We actually have already had some exposure to functions. You used the pring function earlier when you asked R to print out the value contained within the `percentage_with_flu’ object. But lets have a go at using another function.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="objects-packages-and-functions---week-3a.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First of all we need some data</span></span>
+<span id="cb17-2"><a href="objects-packages-and-functions---week-3a.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Notice the syntax, by using c() I have told R to prepare for a list of values</span></span>
+<span id="cb17-3"><a href="objects-packages-and-functions---week-3a.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Each value is separated by a comma</span></span>
+<span id="cb17-4"><a href="objects-packages-and-functions---week-3a.html#cb17-4" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">12</span>,<span class="dv">14</span>,<span class="dv">16</span>,<span class="dv">18</span>,<span class="dv">20</span>)</span>
+<span id="cb17-5"><a href="objects-packages-and-functions---week-3a.html#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="objects-packages-and-functions---week-3a.html#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Now I want to know what the total value of data is if I add all the values stored within it together</span></span>
+<span id="cb17-7"><a href="objects-packages-and-functions---week-3a.html#cb17-7" aria-hidden="true" tabindex="-1"></a>total <span class="ot">&lt;-</span> <span class="fu">sum</span>(data)</span></code></pre></div>
+<p>In the above piece of code we have created some data, as a list of values, and stored them under the object name data. We have then used the function <code>sum()</code>. We have essentially told R that we wish it to perform the function <code>sum()</code> on everything contained within the object <code>data</code> and store it in another object called <code>total</code>. You can see the value within <code>total</code> in your environment, can you work out how to get R to print the value of <code>total</code> out?</p>
+<p>If you ever need help working out how to use a function you can use another function <code>help()</code>. Try inputing the code below into your console.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="objects-packages-and-functions---week-3a.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(sum)</span></code></pre></div>
+<p>This should bring up a help file in your bottom right hand panel that describes and explains the use of the function <code>sum()</code>.</p>
+</div>
+<div id="installing-packages" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Installing packages<a href="objects-packages-and-functions---week-3a.html#installing-packages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <code>sum</code> function is part of the base R package that comes with any R installation. However there are lots of other useful functions that are held in additional packages. In order to use these functions, you must have the necessary packages installed in your work space. I already mentioned that we would be using a package called <code>ggplot2</code>, lets try installing and loading it in your work space.</p>
+<p>We only need to install a package once so copy this into your console</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="objects-packages-and-functions---week-3a.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</span></code></pre></div>
+<p>Now we can try to make a simple plot using a function from within <code>ggplot2</code> and an example data set from within the base R package called <code>iris</code>.</p>
+<p>Copy the following command into your script and run it</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="objects-packages-and-functions---week-3a.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First load ggplot and the base R datasets in your workspace</span></span>
+<span id="cb20-2"><a href="objects-packages-and-functions---week-3a.html#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb20-3"><a href="objects-packages-and-functions---week-3a.html#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;datasets&quot;</span>)</span>
+<span id="cb20-4"><a href="objects-packages-and-functions---week-3a.html#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="objects-packages-and-functions---week-3a.html#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Then call the ggplot function and tell it that the data set you wish to use is calles iris</span></span>
+<span id="cb20-6"><a href="objects-packages-and-functions---week-3a.html#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co"># We then need to tell ggplot how to map our variables</span></span>
+<span id="cb20-7"><a href="objects-packages-and-functions---week-3a.html#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"># The aes function is an aesthetic tool that allowes us to define variables for the x and y axes</span></span>
+<span id="cb20-8"><a href="objects-packages-and-functions---week-3a.html#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="co"># We then use the geom_point function to instruct R to built a scatter plot</span></span>
+<span id="cb20-9"><a href="objects-packages-and-functions---week-3a.html#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co"># A second use of the aes function tells R to color points by species</span></span>
+<span id="cb20-10"><a href="objects-packages-and-functions---week-3a.html#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris,<span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span> </span>
+<span id="cb20-11"><a href="objects-packages-and-functions---week-3a.html#cb20-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour=</span>Species)) </span></code></pre></div>
+<p>Those sharped eyed among you may have noticed that the short script defining our plot goes over two lines, has a <code>+</code> and an indentation on the second line. The <code>+</code> and indentation is essentially allowing you to add more directions in how you would like your graph to be built, linking together multiple functions. As we progress with <code>ggplot2</code> you will start to build on this and add more modifications to your plots.</p>
+</div>
+<div id="what-do-i-do-if-i-get-an-error-message" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> What do I do if I get an error message?<a href="objects-packages-and-functions---week-3a.html#what-do-i-do-if-i-get-an-error-message" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Error messages are almost guaranteed when working regularly with R, they are super common, dont panic when you eventually run into one. In fact you may remember that we already ran into one earlier in this chapter, that particular error was caused by a typo. Generally the most common causes of error messages are;</p>
+<ul>
+<li>A typo (you can reduce risk of this by consistently labeling your objects)</li>
+<li>A mistake in syntax (missing or un-closed; <code>()</code>, <code>""</code>, or missing <code>,</code>)</li>
+<li>Missing dependencies (maybe you didnt install or load a package correctly, or maybe if your running a longer script, you are trying to call an object that you havent created yet)</li>
+</ul>
+<p>This is by no means an exhaustive list but when I run into errors its normally because of one of the above. The trick is don’t panic and read the error message carefully, it often tells you what is wrong. Then look over your script slowly to troubleshoot. And if you are genuinely stuck and the error doesn’t make sense, run it through Google, I can almost guarantee you wont have been the first person to have that error message.</p>
+<p>Well done everyone. I hope you have enjoyed this weeks session. Next week is our first workshop and we will start to use some of these new found skills in tandem and start to look at using them on some new data.</p>
+<div id="references" class="section level3 hasAnchor" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> References<a href="objects-packages-and-functions---week-3a.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. <a href="https://CRAN.R-project.org/package=ggplot2" class="uri">https://CRAN.R-project.org/package=ggplot2</a>.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-r-and-rstudio-cloud---week-2a.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="directories-and-data-frames---week-4a---workshop-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-packages-and-functions.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
