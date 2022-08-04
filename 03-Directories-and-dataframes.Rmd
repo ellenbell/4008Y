@@ -30,7 +30,15 @@ __Make sure you have a demonstrator check your work before moving onto the next 
 
 ## Setting up your R workspace 
 
-This is a new piece of analysis, we will be carrying forward principals from the previous chapters but scripts and data will be new. So its a good idea to start with a fresh clean workspace. So lets set up a new project in RStudio Cloud, follow the steps from Chapter 2 if you cant remember how to do this. Its always good to keep a well organised tidy workspace, generally I will start a new project in RStudio Cloud if I am working on a new series of questions with a new data set or sets.
+This is a new piece of analysis, we will be carrying forward principals from the previous chapters but scripts and data will be new. So its a good idea to start with a fresh clean workspace. So lets set up a new project in RStudio Cloud, follow the steps from Chapter 2 if you cant remember how to do this and name this project `tribolium_parasites`. Its always good to keep a well organised tidy workspace, generally I will start a new project in RStudio Cloud if I am working on a new series of questions with a new data set or sets.
+
+For this project you need to make sure two packages are installed. Copy the following directly into your console. 
+
+```{r}
+install.packages("tidyverse")
+install.packages("janitor")
+```
+
 
 We will be moving towards doing some more comprehensive data handling so setting up your workspace is going to become more and more important. If you can get into the habit of setting up your workspace properly at the start of each project you will thank yourself later. A well developed project will contain several files including;
 
@@ -72,6 +80,7 @@ Then we need to load any packages that we might want to use;
 
 ```{r}
 library(tidyverse) # Loads the tidyverse package
+library(janitor) # Loads the janitor package
 ```
 
 ## Importing data
@@ -168,6 +177,18 @@ $ sex             <chr> "F", "F", "F", "F", "F", "M", "M", "M", "M", "M", "F", "
 $ treatment       <dbl> 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 30, 30, 30, 30, 3…
 ```
 
-Once again we can see that four of our variables have been interpreted by R as being `<dbl>` vectors, R has correctly identified them as being numeric. One of our variables has been identified as being a `<chr>` vector, so R knows that this variable contains letters or words. This all looks correct so we are ready to start to play with these data!
+Once again we can see that four of our variables have been interpreted by R as being `<dbl>` vectors, R has correctly identified them as being numeric. One of our variables has been identified as being a `<chr>` (short for character) vector, so R knows that this variable contains letters or words. 
 
-Well done everyone! Next week we will start to make some initial observations based on these data. 
+Well done everyone, you have successfully entered your data and uploaded it to RStudioCloud as well as making some small adjustments to the data frame and doing a first pass quality check! There are more checks we could have run, and we will revisit this later in the course when we look at some larger data sets. But we will leave this here for now, next week is reading week and the week after we will start looking at some initial observations in the data. 
+
+
+## Before you leave!
+
+Make sure you save your script!
+
+### References
+
+Firke, Sam. 2021. Janitor: Simple Tools for Examining and Cleaning Dirty Data. https://github.com/sfirke/janitor.
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686.
+Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2021. Dplyr: A Grammar of Data Manipulation. https://CRAN.R-project.org/package=dplyr.
+Wickham, Hadley, Jim Hester, and Jennifer Bryan. 2021. Readr: Read Rectangular Text Data. https://CRAN.R-project.org/package=readr.
