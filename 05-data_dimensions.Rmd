@@ -1,0 +1,52 @@
+# Exploring the dimensions of your data frame - Week 6A
+
+You should aim to complete this chapter in Week 6, Semester 1
+
+## Top to tail - some useful functions to explore
+
+Log into RStudio cloud and open up your `tribolium_parasites` project. 
+
+Lets start by reminding ourselves of what these data look like. Try using the following functions on your`tribolium_combo` data frame, copy them into your script and comment `#` next to each when you work out what it does. 
+
+```{r}
+# Some functions to play with
+nrow()
+ncol()
+colnames()
+str()
+view()
+tail()
+```
+
+Hopefully you can see that these functions help give you some good insights into the dimensions of your data set, especially whenn used alongside functions that you are already be familiar with, like `head()` and `glimpse()`. 
+
+## Whats your sample size?
+
+With this data set its not hard to work out what the sample size is. But data sets can become huge and its not always easy or effective to scroll through them. Sometimes you really just need to know how many observations are in your data set, thankfully each of our beetles has a unique identifyer so we can count how many unique entries there are in the `beetle_id` variable. Try the following;
+
+```{r}
+# Use the summarise function to count unique/distinct entries in the beetle_id column
+summarise(n_distinct(tribolium_combo$beetle_id))
+```
+
+Side note - Notice the use of the `$` above. This is effectively directling R to a specific column within a data frame. 
+
+You may have noticed that we have two categorical variables in this data set, `sex` and `treatment`. It would be really useful to know what your sample size is for each of these variable. ITry the following;
+
+```{r}
+# Use the tabyl function from the janitor package, comment on what it does. 
+tabyl(tribolium_combo, sex , treatment)
+```
+
+So hopefully you can see from the `summarise` and `tabyl` functions that we have a total sample size of 20 beetles and that 5 of each sex were exposed to each treatment. Next week we will start to explore how we can visualise some of these data. 
+
+## Before you leave!
+
+Make sure you save your script!
+
+### References
+
+Firke, Sam. 2021. Janitor: Simple Tools for Examining and Cleaning Dirty Data. https://github.com/sfirke/janitor.
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686.
+Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2021. Dplyr: A Grammar of Data Manipulation. https://CRAN.R-project.org/package=dplyr.
+Wickham, Hadley, Jim Hester, and Jennifer Bryan. 2021. Readr: Read Rectangular Text Data. https://CRAN.R-project.org/package=readr.

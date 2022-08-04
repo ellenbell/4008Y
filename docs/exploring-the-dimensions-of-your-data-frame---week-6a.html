@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Introduction to R and RStudio Cloud - Week 2A | Introduction to Data Science - 4008Y</title>
+  <title>Chapter 6 Exploring the dimensions of your data frame - Week 6A | Introduction to Data Science - 4008Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Introduction to R and RStudio Cloud - Week 2A | Introduction to Data Science - 4008Y" />
+  <meta property="og:title" content="Chapter 6 Exploring the dimensions of your data frame - Week 6A | Introduction to Data Science - 4008Y" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A brief introduction so some fundamental applications of R in data science" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Introduction to R and RStudio Cloud - Week 2A | Introduction to Data Science - 4008Y" />
+  <meta name="twitter:title" content="Chapter 6 Exploring the dimensions of your data frame - Week 6A | Introduction to Data Science - 4008Y" />
   
   <meta name="twitter:description" content="A brief introduction so some fundamental applications of R in data science" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="objects-packages-and-functions---week-3a.html"/>
+<link rel="prev" href="reading-week---week-5a.html"/>
+<link rel="next" href="initial-observations---week-7.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -224,78 +224,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction-to-r-and-rstudio-cloud---week-2a" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Introduction to R and RStudio Cloud - Week 2A<a href="introduction-to-r-and-rstudio-cloud---week-2a.html#introduction-to-r-and-rstudio-cloud---week-2a" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>You should aim to complete this chapter in Week 2, Semester 1.</p>
-<div id="what-is-r-and-rstudio-cloud" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> What is R and RStudio Cloud?<a href="introduction-to-r-and-rstudio-cloud---week-2a.html#what-is-r-and-rstudio-cloud" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>So hopefully you have read through Chapter 1, where we briefly discussed how we would be using R and the RStudio Cloud interface in this module. But what really is R and what is the difference between R and RStudio Cloud?</p>
-<p>Essentially R is a programming language that is commonly used in statistical computing, data handling, data visualisation and data analysis. RStudio Cloud is a cloud based interface for a piece of software called RStudio (we wont be using the non cloud based RStudio so wont explore this software further here). RStudio Cloud uses the R programming language but has a nice user friendly interface and is a great tool for learning how to conduct analysis in R.</p>
-<p>We are using the cloud based version of RStudio because it means that no one has to worry about installing extra software on their own computers and everyone will be working with the same software versions. You will all need to create your own free accounts on RStudio Cloud, but first have a look at the short video below introducing you to the interface.</p>
-<p><strong>A short video introducing you to RStudio Cloud</strong></p>
-<p>Now that you’ve watched the video, create your own RStudio Cloud account.</p>
+<div id="exploring-the-dimensions-of-your-data-frame---week-6a" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Exploring the dimensions of your data frame - Week 6A<a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#exploring-the-dimensions-of-your-data-frame---week-6a" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>You should aim to complete this chapter in Week 6, Semester 1</p>
+<div id="top-to-tail---some-useful-functions-to-explore" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Top to tail - some useful functions to explore<a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#top-to-tail---some-useful-functions-to-explore" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Log into RStudio cloud and open up your <code>tribolium_parasites</code> project.</p>
+<p>Lets start by reminding ourselves of what these data look like. Try using the following functions on your<code>tribolium_combo</code> data frame, copy them into your script and comment <code>#</code> next to each when you work out what it does.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Some functions to play with</span></span>
+<span id="cb33-2"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>()</span>
+<span id="cb33-3"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>()</span>
+<span id="cb33-4"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>()</span>
+<span id="cb33-5"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>()</span>
+<span id="cb33-6"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span>()</span>
+<span id="cb33-7"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>()</span></code></pre></div>
+<p>Hopefully you can see that these functions help give you some good insights into the dimensions of your data set, especially whenn used alongside functions that you are already be familiar with, like <code>head()</code> and <code>glimpse()</code>.</p>
 </div>
-<div id="creating-your-first-rstudio-cloud-project" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Creating your first RStudio Cloud Project<a href="introduction-to-r-and-rstudio-cloud---week-2a.html#creating-your-first-rstudio-cloud-project" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Once you have created an RStudio Cloud account you should be presented with this window</p>
-<p><strong>printscreen</strong></p>
-<p>Under <strong>Spaces</strong> go to <strong>Your Workspace</strong> and under <strong>Projects</strong> create a <strong>New Project &gt; New R studio Project</strong>.</p>
-<p><strong>printscreen</strong></p>
-<p>Lets name this project <code>Testing_R</code>, notice that I have no spaces in my project name, instead I have used an underscore, there are a number of good habits you should try and adopt when project or file naming and not including spaces is one of them, we will go over this in more depth in lectures. You can rename your project by clicking on <strong>Untitled Project</strong> at the top of the window, and typing in your new project name.</p>
-<p><strong>printscreen</strong></p>
-<p>You will see that your new project has three panels with tabs showing the Console, Environment and Files for your project.</p>
-<p><strong>printscreen</strong></p>
+<div id="whats-your-sample-size" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Whats your sample size?<a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#whats-your-sample-size" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>With this data set its not hard to work out what the sample size is. But data sets can become huge and its not always easy or effective to scroll through them. Sometimes you really just need to know how many observations are in your data set, thankfully each of our beetles has a unique identifyer so we can count how many unique entries there are in the <code>beetle_id</code> variable. Try the following;</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the summarise function to count unique/distinct entries in the beetle_id column</span></span>
+<span id="cb34-2"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summarise</span>(<span class="fu">n_distinct</span>(tribolium_combo<span class="sc">$</span>beetle_id))</span></code></pre></div>
+<p>Side note - Notice the use of the <code>$</code> above. This is effectively directling R to a specific column within a data frame.</p>
+<p>You may have noticed that we have two categorical variables in this data set, <code>sex</code> and <code>treatment</code>. It would be really useful to know what your sample size is for each of these variable. ITry the following;</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the tabyl function from the janitor package, comment on what it does. </span></span>
+<span id="cb35-2"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tabyl</span>(tribolium_combo, sex , treatment)</span></code></pre></div>
+<p>So hopefully you can see from the <code>summarise</code> and <code>tabyl</code> functions that we have a total sample size of 20 beetles and that 5 of each sex were exposed to each treatment. Next week we will start to explore how we can visualise some of these data.</p>
 </div>
-<div id="entering-commands-directly-into-the-consol" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Entering commands directly into the consol<a href="introduction-to-r-and-rstudio-cloud---week-2a.html#entering-commands-directly-into-the-consol" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Lets start by playing with some commands in the console. Type or copy and paste the simple calculation (or command) shown below, into the console. Your text should appear next to the <code>&gt;</code> symbol. Press <code>Enter</code> on your keyboard, this will instruct R to run the command.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">9</span></span></code></pre></div>
-<p>The two final lines of your output should look like this:</p>
-<pre><code>&gt; 5 + 9
-[1] 14</code></pre>
-<p>So… your initial command <code>5 + 9</code> is shown after the <code>&gt;</code>, symbol and the resulting output from R is shown after <code>[1]</code>. Don’t worry too much about the syntax of <code>&gt;</code> and <code>[1]</code> here. You can think of <code>&gt;</code> as meaning that R is ready to receive a command and <code>[1]</code> as R telling you that the answer to the first part of your question is here (in this case <code>14</code>).</p>
-<p>Try out some other commands… What happens when you input the following?</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">362</span> <span class="sc">*</span> <span class="dv">12</span></span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">55</span> <span class="sc">/</span> <span class="dv">5</span></span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#cb5-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">40</span> <span class="sc">/</span> <span class="dv">990</span>) <span class="sc">*</span> <span class="dv">100</span></span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
-<p>See if you can work out what 30% of 735 is using the R console</p>
-</div>
-<div id="sending-commands-down-to-the-console-from-an-r-script" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Sending commands down to the console from an R script<a href="introduction-to-r-and-rstudio-cloud---week-2a.html#sending-commands-down-to-the-console-from-an-r-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>I have already mentioned the <strong>reproducibility</strong> factor as an advantage of using RStudio Cloud. This is because you can record and run all of your commands from an R script within RStudio Cloud. This means that you have a written record of your analysis workflow, what you did to your data at which stage, and you can do all of this without altering the original data files! This is super important because it means that if you revisit your work in a few weeks/months/years you can see exactly what you did AND if someone else needs to rerun any of your analysis or use your workflow on some other data, they can!</p>
-<p>So lets go about setting up your new script. You currently have three panels in RStudioCloud. If you go to <strong>file &gt; New File &gt; R Script</strong> a new panel will open.</p>
-<p><strong>print screen </strong></p>
-<p><strong>print screen </strong></p>
-<p>This new panel is essentially a text document where you can write your commands into a script and then send them down to the console when you want to run them. Lets have a play. Copy the below into your new R script.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">362</span> <span class="sc">*</span> <span class="dv">12</span></span>
-<span id="cb7-2"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dv">55</span> <span class="sc">/</span> <span class="dv">5</span></span>
-<span id="cb7-4"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#cb7-5" aria-hidden="true" tabindex="-1"></a>(<span class="dv">40</span> <span class="sc">/</span> <span class="dv">990</span>) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb7-6"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
-<p>These are all commands you have run before but now if you save your script file you will have a text based document with your progress saved. It doesn’t make a huge amount of sense to do this now because these are just a random set of calculations and we are just playing with the interface, but you could if you wanted to.</p>
-<p>Ok, so now we are ready to execute our commands. You can do this with each calculation individually, line by line, or you can run the whole script.</p>
-<p>To run your script line by line, place your cursor on the line you wish to run and you can either;</p>
-<ul>
-<li>Click on the run button on the top right of the script panel</li>
-<li>Press ctrl + Enter (or Command + Enter on mac)</li>
-</ul>
-<p>Or if you wish to run the entire script you can either;</p>
-<ul>
-<li>Manually highlight the script and click the run button or press ctrl + Enter (or Command + Enter on mac)</li>
-<li>Press ctrl + A (or Command + A on mac) and then click the run button or press ctrl + Enter (or Command + Enter on mac)</li>
-</ul>
-</div>
-<div id="a-note-on-comments" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> A note on comments<a href="introduction-to-r-and-rstudio-cloud---week-2a.html#a-note-on-comments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>When you are wrighting a script you can leave notes for yourself. This can be extremely useful if you need reminding on what a particular piece of script is doing. This is a good learning tool while you are still learning how to use R, but its also a good habit to get into for later. If you progress with R you will inevitably start constructing quite intricate scripts, leaving good notes on what each part of the script is doing is very useful for you and for anyone else who may later come to use your script. You can leave notes or comments in scripts if you preceed them with <code>#</code>. If R sees <code>#</code> it will ignore all text on that line that comes after it. For example…</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Four squared can be calculated with the following command</span></span>
-<span id="cb8-2"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
-<p>In this case I have reminded myself how to calculate 4 squared, everything after the <code>#</code> will be ignored by R when you try to run the line.</p>
-<p>Well Done! You have started writing and running simple code. But R is capable of doing so much more than simple calculations. Next week in Chapter 3 we will explore how we can create objects, and use packages and functions.</p>
+<div id="before-you-leave-1" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Before you leave!<a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#before-you-leave-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Make sure you save your script!</p>
+<div id="references-2" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> References<a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#references-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Firke, Sam. 2021. Janitor: Simple Tools for Examining and Cleaning Dirty Data. <a href="https://github.com/sfirke/janitor" class="uri">https://github.com/sfirke/janitor</a>.
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686" class="uri">https://doi.org/10.21105/joss.01686</a>.
+Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2021. Dplyr: A Grammar of Data Manipulation. <a href="https://CRAN.R-project.org/package=dplyr" class="uri">https://CRAN.R-project.org/package=dplyr</a>.
+Wickham, Hadley, Jim Hester, and Jennifer Bryan. 2021. Readr: Read Rectangular Text Data. <a href="https://CRAN.R-project.org/package=readr" class="uri">https://CRAN.R-project.org/package=readr</a>.</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -303,8 +269,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="objects-packages-and-functions---week-3a.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="reading-week---week-5a.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="initial-observations---week-7.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -335,7 +301,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-intro-to-R.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-data_dimensions.Rmd",
 "text": "Edit"
 },
 "history": {
