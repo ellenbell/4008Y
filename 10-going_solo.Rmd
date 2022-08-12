@@ -1,0 +1,87 @@
+# The subtle art of canibalisation - Week 11A - Workshop 3
+
+In this Week 11 workshop we will be applying the rules of aesthetics that we learned in the last two chapters to the rest of our plots. You may use functions and arguments from your `ggplot_fundamentals.r` script to modify the plots you made in previous weeks. This is a very common practice, especially while learning a new programming language, you get a script or chunk of code right once and then canibalise parts of it for other uses, modifying it as needed to fit its new purpose. 
+
+## Starting on the right footing 
+
+In the last few chapters, and over the last few weeks you have been asked to modify quite a few chunks of script. If anything so far hasn't made sense or you haven't managed to get some chunks or functions working please do let either myself or a demonstrator know before you start the workshop activity. We are here to help!
+
+## Beutifying your box plots
+
+In Chapters 9 and 10 we specifically worked on making changes to our box plots that would make them clean, clear and visually pleasing. You have all the code already made for your box plots, it just needs tailoring a little. You should have three boxplots saved in your `figures` folder;
+
+* size_differences_by_sex_boxplot.pdf
+* size_differences_by_treatment_boxplot.pdf
+* size_differences_boxplot.pdf - remember this is filled by `sex` not `treatment` so will be subtly different to the figure made in the `ggplot_fundamentals.R` script that we worked on in Chapters 9 and 10.
+
+Using the script from `ggplot_fundamentals.R` make the necessary modifications to each of these three saved figures so that they are clean, clear and visually pleasing. Make sure you save each one to your `figures` folder using `ggsave`.
+
+## Beutifying your histograms 
+
+You hopefully also have two scatter plots saved in your `figures` folder; 
+
+* size_histogram.pdf
+* parasite_histogram.pdf
+
+Use you previous chunks of scripts and knowledge of R to edit the labels and themes of this plot. Print it again and take a look. When you're happy save your updated figures to the `figures` folder using `ggsave`. 
+
+## Beutifying your scatter plot
+
+You hopefully also have a scatter plot saved in your `figures` folder;
+
+* size_vs_parasites_point.pdf
+
+Use you previous chunks of scripts and knowledge of R to edit the labels and themes of this plot. Print it again and take a look. 
+
+Now there are some additional elements in this plot that could be adjusted. These include;
+
+* Point shape - The shape of the individual points on the plot, as with colours there are lots of options here numbered 0 - 25, descriptions of each one are listed  [here](https://www.datanovia.com/en/blog/ggplot-point-shapes-best-tips/)
+* Point size - The size of each point
+* Point colour - The colour of your points
+* Line type (solid, dashed, etc) - Again thre are several options here, the notation and descriptions of which can be found [here](http://www.sthda.com/english/wiki/ggplot2-line-types-how-to-change-line-types-of-a-graph-in-r-software)
+* Line colour 
+* Line size - the weight of the line
+* Line fill - Note that here this refers to the colour of the shaded area marking the standard error
+
+So lets play with some of these. Try adding and adjusting the following arguments within `geom_point()`; 
+
+`shape = 1` - have a look at other point shapes you could use and play with this setting
+`size = 2` - again try playing with some point sizes
+`colour = "blue"` - or any other [colour](https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/) you fancy trying.
+
+Once you are happy with your points we can take a look at your regression line. Try adding and adjusting the following arguments within `geom_smooth()`
+
+`colour = "cornflowerblue"`
+`fill = "lightblue"` 
+`size = 1`
+`linetype = "dashed"`
+
+As before please do experiment and play with the settings described by each of these arguments.
+
+Once you are happy with your new and beutiful scatter plot make sure you save it to to the `figures` folder using `ggsave`.
+
+## A Challenge
+
+Try to adjust the chunk for your size vs parasites scatter plot so that the points are coloured by `sex` and shaped by `treatment`. Colour female points `"deepskyblue3"` and male points `"coral"` and use solid squares for the 30°C treatment and solid circles for the 35°C treatment. Make sure the text and titles for your legends are correct and well presented. 
+
+Hint - to do this you will need to correctly use and populate the `aes()` function in `geom_point()` and then to adjust colours, shapes and associated text you will need to pipe `+` to the `scale_color_manual()` and the `scale_shape_manual()` functions. You will also need to adjust the settings in the `labs()` function to change the legend titles. 
+
+## End of Semester 1
+
+This is the last of the taught content for the Introduction to Data Science sub module. You should all be very proud of yourselves for competing the first half of this workbook! Dont forget to compelte the two blackboard quizzes before your Skills Essay deadline and I wish you all a lovely Christmas break!
+
+See you all in the new year :)
+
+## Before you leave!
+
+Make sure you save your script!
+
+### References
+
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686.
+Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. https://CRAN.R-project.org/package=ggplot2.
+
+
+
+
+

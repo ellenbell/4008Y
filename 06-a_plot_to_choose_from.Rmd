@@ -1,0 +1,57 @@
+# A plot to choose from - Week 7A
+
+You should aim to complete this chapter in Week 7, Semester 1
+
+## Relationships, differences and distributions
+
+As discussed in lectures, the plot you choose to produce should be influenced by the question you are asking.
+
+If you are;
+
+* Looking at differences between variables - make something like a box plot or bar chart
+* Looking at relationships between variables - make a scatter plot
+* Looking at the distribution of data within a variable - make a histogram
+
+## My first histogram in R 
+
+Lets have a go at making a histogram. Log-in to your RStudio Cloud account and go to your `tribolium_parasites` project. 
+
+Add the following to your script;
+
+```{r}
+# Making a histogram and saving it in an object
+# Call the ggplot function and direct it to your data and define your x axis
+size_histogram <- ggplot(data = tribolium_combo,aes(x = wing_case_size)) + 
+  geom_histogram(bins = 6) # Tell ggplot that you want it to build a histogram with 6 equal sized bins
+print(size_histogram) # Print your new figure
+```
+
+Your plot should appear in the plot tab in the bottom right panel of RStudio Cloud. 
+
+A side note on histograms and bins. You may have noticed that we have only specified our x axis variable. This is because R is essentially calculating a frequency for the y axis. How many beetles have a 2.1mm long wing case? How many beetles have a 2.4mm long wing case? This what the y axis is based on. We have asked R to split our x axis variable into 6 equal parts (bins). Have a go at changing the number of bins, what happens to the histogram?
+
+Now have a go at making a histogram for the `parasite_burden`. 
+
+Have a look at both of your histograms, what do you think they are showing? We will come back to histograms and how to read them in future lectures. 
+
+## Exporting your histogram
+
+You are going to want to save your plots, you can use the `ggsave` function to do this.
+
+```{r}
+# Saving outputs
+ggsave("figures/tribolium_wincase_size_histogram.pdf", # Give R a path to save to and a file name
+       plot = size_histogram, # Tell R what to save - in this case your object
+       device = "pdf") # Tell R what file type to create, in this case a pdf
+```
+
+A side note - if you remove the device line `ggsave` will automatically create a `.png` file. You can also use `width = , height = , units = "cm"` arguments to specify the size of your figure in cm. Try to incorporate these new arguments into the above chunk. Save both of your histogram outputs in your `figures` folder. 
+
+## Before you leave!
+
+Make sure you save your script!
+
+### References
+
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686.
+Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. https://CRAN.R-project.org/package=ggplot2.

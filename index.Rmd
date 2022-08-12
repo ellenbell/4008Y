@@ -21,7 +21,7 @@ Introduction to Data Science is a 'sub-module' that will run throughout your fir
 
 ## Teaching layout for Data Science 
 
-The Data Science  sub-module aims to cover fundamentals of data organisation and visualisation in semester 1 and in semester 2 will move onto some slightly more advanced data visualisation skills, descriptive statistics and data interpretation. Towards the end of the module we will briefly touch on inferential statistics, but this will be a very brief introduction. 
+The Data Science sub-module aims to cover fundamentals of using R for data organisation and visualisation in semester 1 and in semester 2 will move onto some slightly more advanced data interpretation and visualisation skills and descriptive statistics. Towards the end of the module we will briefly touch on inferential statistics, but this will be a very brief introduction. 
 
 In semester 1 you will have either a lecture or a 1 hour workshop each week;
 

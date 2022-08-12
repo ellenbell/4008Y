@@ -1,0 +1,65 @@
+# Make them pretty continued - Week 10A
+
+You should aim to complete this chapter in Week 10, Semester 1
+
+In Chapter 9 we explored the fundamental functionality of `ggplot2` and we started to play with some functions that improved our plots labels and colour scheme. This week we will be extending this further and investigating how we may also be able to alter spacing and themes to improve the appearance of our plots. 
+
+Open your `tribolium_parasites` project in RStudio Cloud and your `ggplot_fundamentals.r` script.
+
+Your current figure chunk should look something like this;
+
+```{r}
+# Making a box plot and saving it in an object
+# Call the ggplot function and direct it to your data and define your x axis and y axis
+size_differences_boxplot <- ggplot(data = tribolium_combo,aes(x = sex, y = wing_case_size)) + 
+  geom_boxplot(aes(fill = treatment)) + # Tell ggplot that you want it to build a box plot filled according to treatment
+  labs(x = "Sex", y = "Wing case size (mm)\n", fill = "Treatment") + # Adjust your legend and x and y axis labels 
+  scale_x_discrete(labels = c("Female","Male")) + # Rename the categories on the x axis 
+  scale_fill_manual(labels = c("30°C", "35°C"), values = c("cornflowerblue", "coral")) # Rename and colour your treatments
+print(size_differences_boxplot) # Print the object your plot is stored in to view it
+```
+
+## Spacing
+
+Lets have a look at spacing. This is a box plot so we the main spacing option you are likely to want to play with is the width of your boxes. Here we can simply add an argument to the `geom_boxplot` function. Edit this function so that it reads `geom_boxplot(aes(fill = treatment), width = 0.9)`. The width argument can be anything between 0.00 or 1.00. It changes the width of the boxes and this changes the spacing between them as well. Have a play with some values and see what happens. 
+
+We will come back to spacing when we look at our scatter plots next week. 
+
+## Themes
+
+So the final aspect of aesthetics we are going to look at here is themes. We have a reasonably attractive graph now, but its still got a grey background and the grid lines are unnecessary. To remove the grey background and implement the classic black on white aesthetic we can simply add a function that defines a pre-made theme into our script. Adjust your script so that it includes the function `theme_bw()`, I suggest you add this as a new line, don't forget to pipe between your functions with a `+`. Run this chunk and print your new plot. How is that looking now? 
+
+Two things still jump out at me when looking at this plot. The grid lines are completely unnecessary and detract from the overall aesthetic and the text sizes could be larger. To make these edits we can simply add additional instructions to adjust the theme further. So although most of the work has been done by applying a the `theme_bw` we still need make some adjustments. 
+
+Add the following function to your growing ggplot chunk (don't forget to pipe `+` between functions);
+
+```{r}
+theme(panel.border = element_rect(color="black"), # Specifies that the plot boarder is coloured black
+        panel.grid.minor = element_blank(), # Removes minor grid lines 
+        panel.grid.major = element_blank()) # Removes major grid lines 
+```
+
+Now we just need to adjust the text size. We can do this within the `theme` function as well adjust your theme so that it reads like this;
+
+```{r}
+theme(panel.border = element_rect(color="black"), # Specifies that the plot boarder is coloured black
+        panel.grid.minor = element_blank(), # Removes minor grid lines 
+        panel.grid.major = element_blank(), # Removes major grid lines 
+        axis.text = element_text(size = 15), # Changes the size of text on both axis 
+        axis.title = element_text(size = 20), # Changes size of your axis labels 
+        legend.text = element_text(size = 15), # Changes the size of text within your legend
+        legend.title = element_text(size = 20)) # Changes the size of the legend title
+```
+
+Have a play with the different text sizes until you think they are optimal. 
+
+Hopefully you now have a nice clean, clear and aesthetically pleasing plot and have some awareness of the commands and functions used to make it. Next week is our last workshop of the term and we will be applying these rules to all of the plots made in the previous chapters. This will also give you the oppotunity to ask any questions. 
+
+## Before you leave!
+
+Make sure you save your script!
+
+### References
+
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686.
+Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. https://CRAN.R-project.org/package=ggplot2.

@@ -25,8 +25,8 @@ Hopefully you can see that these functions help give you some good insights into
 With this data set its not hard to work out what the sample size is. But data sets can become huge and its not always easy or effective to scroll through them. Sometimes you really just need to know how many observations are in your data set, thankfully each of our beetles has a unique identifyer so we can count how many unique entries there are in the `beetle_id` variable. Try the following;
 
 ```{r}
-# Use the summarise function to count unique/distinct entries in the beetle_id column
-summarise(n_distinct(tribolium_combo$beetle_id))
+# Use the n_distinct function to count unique/distinct entries in the beetle_id column
+n_distinct(tribolium_combo$beetle_id)
 ```
 
 Side note - Notice the use of the `$` above. This is effectively directling R to a specific column within a data frame. 
