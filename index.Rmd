@@ -17,47 +17,48 @@ always_allow_html: true
 
 ## Data Science learning objectives
 
-Introduction to Data Science is a 'sub-module' that will run throughout your first year as part of the BIO-4008Y Skills for Biologists module. Here we aim to teach you the fundamentals of how to collect and organise data in a clean and sensible format and how to correctly visualise and describe data. The platform we will be using to manage, manipulate and analyse data is RStudio Cloud. This is a cloud based interface utilises the programming language R. Over the course of the next few weeks you will start to learn fundamentals of this language and its application in RStudio Cloud. 
+Introduction to Data Science is a 'sub-module' that will run throughout your first year as part of the BIO-4008Y Skills for Biologists module. Here we aim to teach you the fundamentals of how to collect and organise data in a clean and sensible format and how to correctly visualise and describe data. The platform we will be using to manage, manipulate and analyse data is RStudio Cloud. This is a cloud based interface that utilises the programming language R. Over the course of the next few weeks you will start to learn fundamentals of this language and its application in RStudio Cloud. 
 
 ## Teaching layout for Data Science 
 
-The Data Science sub-module aims to cover fundamentals of using R for data organisation and visualisation in semester 1 and in semester 2 will move onto some slightly more advanced data interpretation and visualisation skills and descriptive statistics. Towards the end of the module we will briefly touch on inferential statistics, but this will be a very brief introduction. 
+In Semester 1 we will be learning some basic R syntax, how to create and load data sets and how to produce some basic data visualisations that are attractive and reproducible. Each week you will have either a lecture or a 1 hour workshop, you will also be expected to complete a chapter of this workbook each week, in your own time. 
 
-In semester 1 you will have either a lecture or a 1 hour workshop each week;
+Teaching for semester 1; 
 
 * Semester 1 Lectures - Weeks; 2, 3, 6, 7, 9, 10
 * Semester 1 Workshops - Weeks; 4, 8, 11
 
-And then in semester 2 you will have a lecture every week up to week 8 and a 2 hour workshop every other week;
+
+In semester 2 will move onto some slightly more advanced data interpretation and visualisation skills and some descriptive statistics. Towards the end of the module we will briefly touch on inferential statistics, but this will be a very brief introduction. You will have a lecture every week until week 8 and a 2 hour workshop every other week. The workshops are all outlined as chapters in this workbook, if you don't complete a workshop in the timetabled slot, we strongly recommend you make every effort to complete it in your own time.
+
+Teaching for semester 2; 
 
 * Semester 2 Lectures - Weeks; 1, 2, 3, 4, 5, 6, 7, 8
 * Semester 2 Workshops - Weeks; 2, 4, 6, 8
-
-In addition to the in person taught material, you will be expected to complete a chapter of this workbook every week. 
 
 ## Assessment
 
 * Semester 1
 
-Two quizzes are available on the 4008Y page under Data Science. These are "semi-formative" quizzes, you can attempt them at any point during the semester and you can attempt them as many times as you like. However, if you complete them with a grade of 40% or higher you will get a mark added to your summative Skills essay. If you complete them with a grade of 80% or higher you will get 2 marks added to your summative Skills essay. That's 4 marks in total, last year this was enough to move several students up to the next grade boundary. 
+Two quizzes are available on the 4008Y page under Data Science. These are "semi-formative" quizzes, you can attempt them at any time and as many times as you like before the summative essay deadline for Skills for Biologists, the highest mark you achieve will be the one you are awarded. If you complete them with a grade of 40% or higher you will gain a percentage point towards your summative Skills essay. If you complete them with a grade of 80% or higher you will get 2 percentage points added to your summative Skills essay. That's 4 percent in total, last year this was enough to move several students up to the next grade boundary, definitly worth doing! 
 
 * Semester 2
 
-As part of your Skills portfolio, there will be a data handling task. For this you will be given some data and asked to correctly visualise it in a clean, clear and attractive way, with a suitable figure legend. 
+As part of your Skills portfolio, there will be two data handling tasks. You will be given some data and asked to correctly visualise it in a clean, clear and attractive way, with a suitable figure legend. You will also be asked to write a justification for the decisions you made while preparing your data and visualising it. You will learn all the skills you need to do this while completing lectures, workshops or chapters in this workbook. 
 
 ## How to use this workbook 
 
-Each week of taught material is accompanied by a workbook chapter. You will be expected read through these chapters and complete any exercises in your own time. Each chapter should take no more then an hour to complete and in many cases will take much less time. We will aim to set aside 10 minutes at the end of each lecture to cover any potential problems you may be having, so if you get stuck, use this time to ask for help. 
+In semester 1 each week of taught material is accompanied by a workbook chapter. You will be expected read through these chapters and complete any exercises in your own time. Each chapter should take no more then an hour to complete and in many cases will take much less time. I will aim to set aside 10 minutes at the end of each lecture to cover any potential problems you may be having, so if you get stuck, use this time to ask for help. In semester 2 we have more face to face workshop time, in each workshop you will be expected to work through a chapter in this workbook, you may not complete this in the allocated time, but will be expected to do so in your own time. Use face to face time to ask lots of questions, especially if you are stuck.  
 
 ## Why is data science important and why are we teaching it in R?
 
-It is a common misconception that to be a good biologist you need to 'know' the mechanics of how life works. Questions like; "How does a cell undergo respiration?", "How do kidneys filter blood?", "How do some plants fix nitrogen?" and "How do honey bees communicate the location and quantity of resources to each other?", spring to mind.  While these questions are important, they are also, now, fairly well understood. But how did biologists come to their understanding of these mechanisms? The answer to this lies in data. 
+It is a common misconception, that to be a good biologist you need to 'know' the mechanics of how life works. Questions like; "How does a cell undergo respiration?", "How do kidneys filter blood?", "How do some plants fix nitrogen?" and "How do honey bees communicate the location and quantity of resources to each other?", spring to mind.  While these questions are important, they are also, now, fairly well understood. But how did biologists come to their understanding of these mechanisms? The answer to this lies in data. 
 
-Good science is based on empirical observations and these observations should be reliably collected and reproducible. Exploration of theories through observations and experimentation leads to the collection of data and analysis and interpretation of data feeds into the bedrock of our understanding of the principals of how life works, i.e. the biological sciences. 
+Good science is based on empirical observations and these observations should be reliably collected and reproducible. Exploration of theories through observations and experimentation leads to the collection of data and analysis and interpretation of data feeds into the bedrock of our understanding of how life works, i.e. the biological sciences. 
 
 Hopefully you can see why data handling, analysis and interpretation are important. So why are we teaching you how to handle data using R? 
 
-To many of you the use of programming languages, such as R, will be new. However if you can get into the habit of manipulating and analysing data in R you will be well set on the path to becoming an efficient and effective data analyst. Being confident with data is a key skill in the sciences and will serve you well in many career paths. In addition, knowledge and experience of programming languages such as R are fast becoming key skills in their own right in the science, industry, government and beyond. 
+To many of you the use of programming languages, such as R, will be new. However if you can get into the habit of manipulating and analysing data in R you will be well set on the path to becoming an efficient and effective data analyst. Being confident with data is a key skill in the sciences and will serve you well in many career paths. In addition, knowledge and experience of programming languages such as R are fast becoming key skills in their own right, in science, industry, government and beyond. 
 
 In terms of the use of R for data handling and analysis, you may notice that the term __reproducible__ reoccurs throughout this workbook. In the same way that your methods of data collection should be conducted and recorded in such a way that they may be reproduced by others, your data manipulation and analysis must also be conducted and recorded so as to be reproducible. Using R within the RStudio Cloud interface (we will come back to this in Chapter 2) makes it easy to record your data manipulation and analysis workflow and, if done well, makes it very easy for others to see and repeat what you have done. 
 

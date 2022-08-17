@@ -8,13 +8,13 @@ Go to Blackboard > Skills for Biologists > Data Science > Workshop 1 and downloa
 
 __List files here __
 
-These are image files of lab notes taken during the data collection phase of a small research project to investigate parasite load in 2 small populations of the flour beetle _Tribolium castaneum_. Each beetle has an ID, a measure of wing casing in mm (which is a good proxy for overall size) and a tally for the number of tapeworm cysticercoids dissected out. In terms of data handling and analysis, we need this data to be stored digitally and we need to have it ordered sensibly in a spreadsheet. We covered what to look for in a tidy, well ordered spreadsheet in week 3 lectures. Have a go at entering the data from the .jpeg files into an Excel spreadsheet. When you're done go to __File > Save As...__, name your spreadsheet something sensible and make sure you select a sensible place to save it to, where it says __File Format:__ select __Comma-separated Values (.csv)__. 
+These are image files of lab notes taken during the data collection phase of a small research project to investigate parasite load in 2 small populations of the flour beetle _Tribolium castaneum_. Each beetle has an ID, a measure of wing casing in mm (which is a good proxy for overall size) and a tally for the number of tapeworm cysticercoids dissected out. In terms of data handling and analysis, we need this data to be stored digitally and we need to have it ordered sensibly in a spreadsheet. We covered what to look for in a tidy, well ordered spreadsheet in our week 3 lecture. Have a go at entering the data from the .jpeg files into an Excel spreadsheet. When you're done go to __File > Save As...__, name your spreadsheet something sensible and make sure you select a sensible place to save it to, where it says __File Format:__ select __Comma-separated Values (.csv)__. 
 
 ## A note on naming
 
 While we are on the subject of naming, I am going to take a moment to go over a few good rules to follow. You have just created names for some variables and for a file. You will also frequently have to name folders/directories and objects while working in R, so naming is something that you are repeatedly going to have to do. It therefore makes sense for you to learn how to do it well. 
 
-* Keep names meaningful - Over the course of your degree you will create a lot of files and directories. You will also frequently be naming data variables and objects. You need to be able to easily recognise what is what so informative names are better then arbitrary names. So `girraffe`, `elephant`, `hippo` are better names then `1`, `2` and `3`. 
+* Keep names meaningful - Over the course of your degree you will create a lot of files and folders/directories. You will also frequently be naming data variables and objects. You need to be able to easily recognise what is what so informative names are better then arbitrary names. So `girraffe`, `elephant`, `hippo` are better names then `1`, `2` and `3`. 
 
 * Make versions obvious - There will be occasions when you want to save new information in a file or object but keep the original untouched. You may be experimenting or you may want the option to revisit to your original work. In these instances it makes sense to save your edits to a new version of the original file or object. If you do this and especially if you are sharing it with others make it clear. I tend to add my initials and a version identifier (e.g. v1, v2) as a suffix to the file name. 
 
@@ -60,7 +60,7 @@ A tidy workspace will help you find the things you need when you need them and w
 
 Working with text based interfaces like R, where you are writing and running commands, means that we need to have some understanding of the underlying computer architecture. You need to have some appreciation for how files are organised within folders/directories and why its important to know which directory you are working from with R.
 
-Under Files in the bottom right panel of your screen you will see a file with the ending .Rproj. This is an R project file which tells R where you are working in the server. It means that R will automatically treat your project location as the __working directory__. If you wish to access files in any of the folders you have just created you will need to tell R the __path__ that it needs to follow in order to access these files. There are two types of path;
+Under __Files__ in the bottom right panel of your screen you will see a file with the ending .Rproj. This is an R project file which tells R where you are working in the server. It means that R will automatically treat your project location as the __working directory__. If you wish to access files in any of the folders you have just created you will need to tell R the __path__ that it needs to follow in order to access these files. There are two types of path;
 
 * __absolute__ paths, which refer to the same location in a file system relative to the root directory (don't worry if that doesn't make too much sense at this stage).
 * __relative__ paths, which refer to a location in the file system relative to the directory you are currently working in.
@@ -76,7 +76,7 @@ Right OK, enough theory, lets start setting up your script. Create a new R scrip
 # Your name
 ```
 
-Then we need to load any packages that we might want to use;
+Then we need to load any packages that we might want to use, copy over the following;
 
 ```{r}
 library(tidyverse) # Loads the tidyverse package
@@ -104,7 +104,7 @@ Delimiter: ","
 dbl (3): beetle_id, wing_case_size, parasite_burden
 ```
 
-Here R has told us that there are 20 rows and 3 columns in our data set, it has indicated that it has used comas as a collumn deliminator and that all the data are dbl (short for double), whidch means each collumn contains numbers. You should also be able to see `tribolium` in your __Environment__ under __Data__. 
+Here R has told us that there are 20 rows and 3 columns in our data set, it has indicated that it has used comas as a column deliminator and that all the data are dbl (short for double), which means each column contains numbers. You should also be able to see `tribolium` in your __Environment__ under __Data__. 
 
 If you have errors, make sure your file name and path are input correctly.
 
@@ -114,7 +114,7 @@ Lets have a look at our data to make sure it looks as we expect it to, try this;
 head(tribolium_parasites)
 ```
 
-We can see that R has read from this we can see for ourselves that R has correclty read our data.
+We can see for ourselves that R has correctly read our data.
 
 ## Creating tibbles
 
@@ -146,9 +146,9 @@ tribolium <- tribolium %>%
 head(tribolium) 
 ```
 
-Side note - you may have noticed the %>% expression, this is known as the forward pipe operator and allows you to chain together commands. This is a very simple use of it but it is piping your data frame forward to the rename function.
+Side note - you may have noticed the %>% expression, this is known as the forward pipe operator and allows you to chain together commands (rather like the `+` we covered in Chapter 2 when using `ggplot`). This is a very simple use of it but it is piping your data frame forward to the rename function.
 
-Hopefully the column containing your beetle IDs is now labeled `beetle_id`. Use the same set of commands to rename your variables for beetle wing case size and parasite load. Call these columns `wing_case_size` and `parasite_burden` instead. 
+Hopefully the column containing your beetle IDs is now labeled `beetle_id`. Use the same set of commands to rename your variables for beetle wing case size and parasite load. Call the variables `wing_case_size` and `parasite_burden` instead.
 
 Now we can merge our two data frames. 
 
@@ -158,13 +158,13 @@ tribolium_combo <- merge(tribolium, tribolium_extras, by = "beetle_id")
 # This merge function combines both of your data frames but matches rows by beetle_id
 ```
 
-Take a look at your new data frame now with the `head()` function. Lets try one more command to do one last check on your data. Try this;
+Take a look at your new data frame now with the `head()` function, and lets try one more command to do one last check on your data. Try this;
 
 ```{r}
 glimpse(tribolium_combo)
 ```
 
-This command will show you something like this 
+This command will show you something like this; 
 
 ```
 >glimpse(tribolium_combo)
@@ -177,7 +177,7 @@ $ sex             <chr> "F", "F", "F", "F", "F", "M", "M", "M", "M", "M", "F", "
 $ treatment       <dbl> 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 30, 30, 30, 30, 3…
 ```
 
-Once again we can see that four of our variables have been interpreted by R as being `<dbl>` vectors, R has correctly identified them as being numeric. One of our variables has been identified as being a `<chr>` (short for character) vector, so R knows that this variable contains letters or words. 
+Once again we can see that four of our variables have been interpreted by R as being `<dbl>` vectors, R has identified them as being numeric. One of our variables has been identified as being a `<chr>` (short for character) vector, so R knows that this variable contains letters or words. 
 
 You may now wish to export your new combined data frame as a `.csv` file. You can do this by running the following command;
 
@@ -186,14 +186,14 @@ You may now wish to export your new combined data frame as a `.csv` file. You ca
 write.csv(tribolium_combo,"data/tribolium_combo.csv", row.names = FALSE)
 ```
 
-Well done everyone, you have successfully entered your data and uploaded it to RStudioCloud as well as making some small adjustments to the data frame and doing a first pass quality check! There are more checks we could have run, and we will revisit this later in the course when we look at some larger data sets. But we will leave this here for now, next week is reading week and the week after we will start looking at some initial observations in the data. 
+Well done everyone, you have successfully entered your data and uploaded it to RStudio Cloud as well as making some small adjustments to the data frame and doing a first pass quality check! There are more checks we could have run, and we will revisit this later in the course when we look at some larger data sets. But we will leave this here for now, next week is reading week and the week after we will start looking at checking our data dimensions. 
 
 
 ## Before you leave!
 
 Make sure you save your script!
 
-### References
+## References
 
 Firke, Sam. 2021. Janitor: Simple Tools for Examining and Cleaning Dirty Data. https://github.com/sfirke/janitor.
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686.

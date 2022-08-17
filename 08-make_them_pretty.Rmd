@@ -2,11 +2,11 @@
 
 You should aim to complete this chapter in Week 9, Semester 1
 
-Over the last couple of weeks you have build histograms, box plots and scatter plots. Probably the three types of data visualisation you are most likely to run into and want to build. But you may have noticed that non of these are particularly aesthetically pleasing. As a rule, data visualisations should always be designed to be attractive, clean, clear and nicely spaced. The purpose of a plot is to provide, you and your audience with a accurate, visually pleasing and easy to interpret representation of your data. Thankfully `ggplot` contains all the tools we need to do this. 
+Over the last couple of weeks you have build histograms, box plots and scatter plots. Probably the three types of data visualisation you are most likely to run into and want to build. But you may have noticed that non of these are particularly aesthetically pleasing. As a rule, data visualisations should always be designed to be attractive, clean, clear and nicely spaced. The purpose of a plot is to provide, you and your audience with a accurate, visually pleasing and easy to interpret representation of your data. Thankfully `ggplot2` contains all the tools we need to do this. 
 
 Open your `tribolium_parasites` project in RStudio Cloud. Create a new script and call it `ggplot_fundamentals`, save it in your `scripts` folder and set up your script following the rules in Chapter 4, make sure the `tidyverse` library is loaded, this contains `ggplot2`. 
 
-Sometimes its can be good to cleanup your __Environment__ a bit if you run the following command, it will delete everything stored in your environment. Note - you will have to reload your data frames from your data folder if you do this. Make sure you saved `tribolium_combo` to your data folder in Chapter 4 before you do this. 
+Sometimes its can be good to cleanup your __Environment__ a bit, if you run the following command, it will delete everything stored in your environment. Note - you will have to reload your data frames from your data folder. Make sure you saved `tribolium_combo` to your data folder in Chapter 4 before you do this. 
 
 ```{r}
 # Clean up your environment
@@ -33,7 +33,9 @@ print(size_differences_boxplot) # Print the object your plot is stored in to vie
 
 So you have given ggplot your data set and specified the axes. But you haven't told it how you would like the data to be visualised. So you should see something like this...
 
-__print screen__
+```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Basic ggplot output", fig.cap ="The most basic output from ggplot"}
+knitr::include_graphics("figures/screenshot_deconstructingaplot_1.png")
+```
 
 Now modify the script so that it looks like this...
 
@@ -49,7 +51,9 @@ Note the `+`, this is essentially another way of piping information from one fun
 
 Your figure should look like this...
 
-__print screen__ 
+```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Basic ggplot boxplot", fig.cap ="A basic ggplot box plot output"}
+knitr::include_graphics("figures/screenshot_deconstructingaplot_2.png")
+```
 
 Have a look at this figure, is there anything you would change, to make it more visually appealing or clear? 
 
@@ -65,9 +69,9 @@ We will look into labels and colour scheme this week and spacing and theme next 
 
 ## Labels
 
-Clear accurate labeling is essential in the sciences be it when your in the lab labelling up your samples or creating data visualisations.
+Clear accurate labeling is essential in the sciences, be it when your in the lab labeling up your samples or creating data visualisations.
 
-In our current plot both our x and y axis could do with some relabelling, just because we dont use capitals when coding doesnt mean we dont follow the normal rules of English grammar when presenting data. Try adjusting your code so that it looks like the following;
+In our current plot both our x and y axis could do with some relabeling, just because we dont use capitals when coding doesn't mean we don't follow the normal rules of English grammar when presenting data. Try adjusting your code so that it looks like the following;
 
 ```{r}
 # Making a box plot and saving it in an object
@@ -82,7 +86,7 @@ Note the `\n` on your y axis label. This simply adds a new line to the label and
 
 This looks a bit better but our legend is still not very well labeled. Adjust your `labs` function so that it reads `labs(x = "Sex", y = "Wing case size (mm)\n", fill = "Treatment")`. This will change the label for your legend. 
 
-Our labels still aren't quite right, I don't like the abbreviations on the x axis and our legend could still use some work as there are no units given for the treatment temperatures. 
+Our labels still aren't quite right, I don't like the abbreviations on the x axis and our legend could still use some work as there are no units given for the treatment temperatures. Try these changes;
 
 ```{r}
 # Making a box plot and saving it in an object
@@ -95,21 +99,21 @@ size_differences_boxplot <- ggplot(data = tribolium_combo,aes(x = sex, y = wing_
 print(size_differences_boxplot) # Print the object your plot is stored in to view it
 ```
 
-Note that the `scale x discrete` and 'scale_fill_manual` functions simply rename things in the same order as you present them, make sure you label your categories accurately or this can make a big mess later on. 
+Note that the `scale x discrete` and `scale_fill_manual` functions simply rename things in the same order as you present them, make sure you label your categories accurately or this can make a big mess later on. 
 
 Remake your plot, what do you think?
 
 ## Switching up colours 
 
-The colours of your boxes are the default colours in ggplot. We can modify these to make our plot look a bit more pleasing. Try editing the `scale_fill_manual` function to this `scale_fill_manual(labels = c("30°C", "35°C"), values = c("cornflowerblue", "coral"))`. Run it and see what happens to your plot. R has lots of [colours](https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/), take a look at the reference lists and have a play with changing up some of your colours. 
+The colours of your boxes are the default colours given by `ggplot2`. We can modify these to make our plot look a bit more pleasing. Try editing the `scale_fill_manual` function to this `scale_fill_manual(labels = c("30°C", "35°C"), values = c("cornflowerblue", "coral"))`. Run it and see what happens to your plot. R has lots of [colours](https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/), take a look at the linked reference lists and have a play with changing up some of your colours. 
 
-Colour can be a really useful tool to employ when making your plots visually appealing, however make sure you are mindful that some colour pallets can be difficult for some people to interpret. There are however, some really good [tips] (https://www.tableau.com/en-gb/about/blog/examining-data-viz-rules-dont-use-red-green-together#:~:text=Use%20a%20colour%2Dblind%2Dfriendly%20palette%20when%20appropriate&text=For%20example%2C%20blue%2Forange%20is,blue%20to%20someone%20with%20CVD) out there for making sure your figures are accessible to everyone. 
+Colour can be a really useful tool to employ when making your plots visually appealing, however make sure you are mindful that some colour pallets can be difficult for some people to interpret. There are however, some really good [tips](https://www.tableau.com/en-gb/about/blog/examining-data-viz-rules-dont-use-red-green-together#:~:text=Use%20a%20colour%2Dblind%2Dfriendly%20palette%20when%20appropriate&text=For%20example%2C%20blue%2Forange%20is,blue%20to%20someone%20with%20CVD) out there for making sure your figures are accessible to everyone. 
 
 ## Before you leave!
 
 Make sure you save your script!
 
-### References
+## References
 
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686.
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. https://CRAN.R-project.org/package=ggplot2.

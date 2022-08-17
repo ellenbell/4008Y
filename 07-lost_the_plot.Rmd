@@ -4,7 +4,7 @@ This is our second workshop hopefully you are gaining some confidence with how t
 
 ## Looking at differences
 
-As we discussed in the Chapter 4 wing case length is a good proxy for overall beetle size in _Tribolium_. So we will be comparing beetle wing case length in male and female beetles. Because we are looking for possible differences we know that we probably want to build a box plot. Login to your RStudio Cloud account and copy over the following chunk of code into your script. Run it and see what happens.
+As we discussed in the Chapter 4 wing case length is a good proxy for overall beetle size in _Tribolium_. So we will be comparing beetle wing case length in male and female beetles. Because we are looking for possible differences we know that we probably want to build a box plot. Login to your RStudio Cloud account and copy over the following chunk of code into your `tribolium_parasites.r` script. Run it and see what happens.
 
 ```{r}
 # Making a box plot and saving it in an object
@@ -22,7 +22,7 @@ stat_boxplot: na.rm = FALSE, orientation = NA
 position_dodge2 
 ```
 
-When you get errors like this it generally means that ggplot is missing something essential from the script. There is a typo in the original script, can you spot it and fix it? Once you have made the figure, take a look at it, do you think that there is a difference in size between male and female beetles? How would you interpret this figure? Make sure you save it to your figures folder. 
+When you get errors like this it generally means that ggplot is missing something essential from the script. There is a typo in the original script, can you spot it and fix it? Once you have made the figure, take a look at it, do you think that there is a difference in size between male and female beetles? How would you interpret this figure? Make sure you save your box plot to your figures folder. 
 
 ```{r}
 # Saving outputs
@@ -31,7 +31,7 @@ ggsave("figures/size_differences_by_sex_boxplot.pdf", # Give R a path to save to
        device = "pdf") # Tell R what file type to create, in this case a pdf
 ```
 
-Our other categorical variable is treatment. Using the script you already have try to write a new chunk of code to compare the differences between `wing_case_size` and `treatment` in our sample of _Tribolium_. 
+Our other categorical variable is treatment. Using the chunk of code within your script try to write a new chunk to compare the differences between `wing_case_size` and `treatment` in our sample of _Tribolium_. 
 
 Oh dear... R still isn't happy... You have probably been presented with the following message
 
@@ -40,10 +40,10 @@ Warning message:
 Continuous x aesthetic -- did you forget aes(group=...)? 
 ```
 
-This essentially means that R is expecting a categorical variable (e.g. blue, red, green or as our example is 30 or 35 degrees centigrade) but what it sees is a continuous variable (e.g. 1,2,3,4,5,6,7,8,9). This has essentially come about because although our treatment is categorical it is expressed as a numeric and has confused R. Use the `glimpse()` command to see how R has interpreted the `treatment` variable. This should confirm that R sees `treatment` as a double (`dbl`) vector. We missed this when we were checking our data in Chapter 4, but thankfully it is an easy fix. We essentially want to tell R to treat the variable `treatment` as a factor (categorical data) and not as continuous data. Try adding this to your script;
+This essentially means that R is expecting a categorical variable (e.g. blue, red, green or as our example is 30 or 35 degrees centigrade) but what it sees is a continuous variable (e.g. 1,2,3,4,5,6,7,8,9). This has come about because although our treatment is categorical it is expressed as a numeric and has confused R. Use the `glimpse()` command to see how R has interpreted the `treatment` variable. This should confirm that R sees `treatment` as a double (`dbl`) vector. We missed this when we were checking our data in Chapter 4, but thankfully it is an easy fix. We want to tell R to treat the variable `treatment` as a factor (categorical data) and not as continuous data. Try adding this to your script;
 
 ```{r}
-# Instruct R to the variable treatment as a factor 
+# Instruct R to treat the treatment variable as a factor 
 tribolium_combo$treatment <- as.factor(tribolium_combo$treatment) # Note this will edit your data frame
 ```
 
@@ -51,7 +51,9 @@ Now run `glimpse()` again. Can you spot the difference?
 
 Try to make your box plot for `wing_case_size` and `treatment` again. What does this plot tell you about the data set? Make sure you save it to your `figures` folder. 
 
-It would be really useful to show both `sex` and `treatment` on the x axis so that you can compare between both categorical variables and size. We can do this with a fairly simple addition to our chunk. Add the expression `fill = sex` to the `aes` function of your last chunk. This tells R to colour your box plot by sex. You should therefore have 4 boxes. Save this figure under a different name in your `figures folder`. You should have five figures (2 histogram and 3 box plots) saved there now. Look over your box plots, can you see how your interpretation of the data might change depending on which plot you look at? Which plot gives you the most complete picture? 
+It would be really useful to show both `sex` and `treatment` on the x axis so that you can compare between both categorical variables and size. We can do this with a fairly simple addition to our chunk. Add the expression `fill = sex` to the `aes` function of your last chunk. This tells R to colour your box plot by sex. You should therefore have 4 boxes. Save this figure under a different name in your `figures folder`. 
+
+You should have five figures (2 histogram and 3 box plots) saved there now. Look over your box plots, can you see how your interpretation of the data might change depending on which plot you look at? Which plot gives you the most complete picture? 
 
 We will discus this further in lectures. But for now lets have a look at visualising a relationship. 
 
@@ -67,9 +69,7 @@ size_vs_parasites_point <- ggplot(data = tribolium_combo,aes(x = , y = )) +
 print(size_vs_parasites_point)
 ```
 
-See if you can get `ggplot` to colour your points by `sex`.
-
-Make sure you save your plot in your `figures` folder. What do you think this plot is showing you? Try adding another function to this chunk, add `geom_smooth(method="lm")`. This will add a simple regression line to your plot, I suggest you add a suitable comment to that effect to your chunk. Does this new addition to your plot support any initial observations you may have made from the plot?
+What do you think this plot is showing you? Try adding another function to this chunk, add `geom_smooth(method="lm")`. This will add a simple regression line to your plot, I suggest you add a suitable comment to that effect to your chunk. Does this new addition to your plot support any initial observations you may have made from the plot? Make sure you save your plot in your `figures` folder.
 
 Well done, you have started building two very commonly used plots using R. These plots are functionally sound, but lets be honest, they're not pretty. A plot should always be pretty. Next week we will start learning how to make plots visually pleasing as well as functional. 
 
@@ -77,7 +77,7 @@ Well done, you have started building two very commonly used plots using R. These
 
 Make sure you save your script!
 
-### References
+## References
 
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686.
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. https://CRAN.R-project.org/package=ggplot2.

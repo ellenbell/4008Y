@@ -1,12 +1,12 @@
-# Objects, Packages and Functions - Week 3A
+# Objects, Functions and Packages - Week 3A
 
 You should aim to complete this chapter in Week 3, Semester 1
 
 ## Creating objects 
 
-As we saw in Chapter 2, R can be used to perform calculations. However, we can use R to perform tasks that are much more complex. However in order to do this we are going to have to learn about objects. 
+As we saw in Chapter 2, R can be used to perform calculations. However, we can use R to perform tasks that are much more complex. In order to do this we are going to have to learn about objects. 
 
-Login to your RStudio Cloud account and go into your `Testing_R` project. Create a new R script and save it under the name `objects`. You should see it appear as `object.R` under the __Files__ tab in the bottom right panel. Copy and run the following command using your script.
+Log in to your RStudio Cloud account and go into your `testing_R` project. Create a new R script and save it under the name `objects`. You should see it appear as `object.R` under the __Files__ tab in the bottom right panel. Run the following command using your script.
 
 ```{r}
 A <- 50
@@ -33,7 +33,7 @@ Oh dear... we have an error...
 Error: object 'b' not found
 ```
 
-This is because R has absolutely no flexibility with typos. It is looking for an object called `b` when there is no object called `b` existent in your environment. There is an object called `B`, but to R, `B` and `b` are completely different things. Try running this instead. 
+This is because R has absolutely no flexibility with typos. It is looking for an object called `b` when there is no object called `b` in your environment. There is an object called `B`, but to R, `B` and `b` are completely different things. Try running this instead. 
 
 ```{r}
 A * B
@@ -46,7 +46,7 @@ Hopefully you should now have an output that looks like this
 [1] 300
 ```
 
-This is a very simple example. But lets try to demonstrate why saving values within objects may be useful. Lets say you are interested in looking at the number of students who get freshers flu in Week 1 of teaching. You have a class size of 200 students and 15 of them report that they have contracted freshers flu. Use the following script to calculate the percentage of students with freshers flu. 
+This is a very simple example. But lets try to demonstrate why saving values within objects may be useful. Lets say you are interested in looking at the number of students who get freshers flu in Week 1 of teaching at UEA. You have a class size of 200 students and 15 of them report that they have contracted freshers flu. Use the following script to calculate the percentage of students with freshers flu. 
 
 ```{r}
 # Create two objects, one for your total class and one for those that have flu
@@ -66,9 +66,9 @@ print(percentage_with_flu)
 ```
 
 
-But some students have been late in reporting their symptoms. A week later you hear that `7` more students also had freshers flu in Week 1. If you had been typing into the console and not using objects you would have to type this script out all over again. But you dont need to. You just need to change your entry for `with_flu` from `15` to `22`. Do that now and re-run the script. By editing the `15`, R will overwrite the object `with_flu` to include the new value of `22`. If you run the last line of code then the percentage of students with flu will also update. This may seem like a very simple example, and it is, but we are still building up your knowledge of R so you will have to take my word for it that objects will be very helpful to you as we progress :)
+Some students have been late in reporting their symptoms. A week later you hear that `7` more students also had freshers flu in Week 1. If you had been typing into the console and not using objects you would have to type this script out all over again. But you don't need to. You just need to change your entry for `with_flu` from `15` to `22`. Do that now and re-run the script. By editing the `15`, R will overwrite the object `with_flu` to represent the new value of `22`. If you run the last line of code then the percentage of students with flu will also update. 
 
-You will see, as we progress, that objects can contain a range of different types of data. We will cover some of these in lectures, but for now lets leave objects and have a think about packages and functions. 
+This may seem like a very simple example, and it is, but we are still building up your knowledge of R so you will have to take my word for it that objects will be very helpful to you as we progress :). You will also see, that objects can contain a range of different types of data. We will cover some of these in lectures, but for now lets leave objects and have a think about functions and packages. 
 
 ## What are functions and packages?
 
@@ -78,7 +78,7 @@ Packages are containers that can hold sets of functions or data and as the cours
 
 ## Using functions
 
-We actually have already had some exposure to functions. You used the pring function earlier when you asked R to print out the value contained within the `percentage_with_flu' object. But lets have a go at using another function. 
+We actually have already had some exposure to functions. You used the print function earlier when you asked R to print out the value contained within the `percentage_with_flu` object. But lets have a go at using another function. 
 
 ```{r}
 # First of all we need some data
@@ -121,19 +121,20 @@ library("datasets")
 
 # Then call the ggplot function and tell it that the data set you wish to use is calles iris
 # We then need to tell ggplot how to map our variables
-# The aes function is an aesthetic tool that allowes us to define variables for the x and y axes
+# The aes function is an aesthetic tool that allows us to define variables for the x and y axes
 # We then use the geom_point function to instruct R to built a scatter plot
 # A second use of the aes function tells R to color points by species
 ggplot(data = iris,aes(x = Sepal.Length, y = Sepal.Width)) + 
   geom_point(aes(colour=Species)) 
 ```
-Those sharped eyed among you may have noticed that the short script defining our plot goes over two lines, has a `+` and an indentation on the second line. The `+` and indentation is essentially allowing you to add more directions in how you would like your graph to be built, linking together multiple functions. As we progress with `ggplot2` you will start to build on this and add more modifications to your plots. 
+
+Those sharped eyed among you may have noticed that the short script defining our plot goes over two lines, has a `+` and an indentation on the second line. The `+` and indentation is essentially allowing you to pipe one line of code into the next, adding more directions in how you would like your graph to be built and linking together multiple functions. Don't worry if this is a lot to take in at this stage, as we progress with `ggplot2` we will revisit this in more detail. 
 
 ## What do I do if I get an error message?
 
 Error messages are almost guaranteed when working regularly with R, they are super common, dont panic when you eventually run into one. In fact you may remember that we already ran into one earlier in this chapter, that particular error was caused by a typo. Generally the most common causes of error messages are;
 
-* A typo (you can reduce risk of this by consistently labeling your objects)
+* A typo (you can reduce risk of this by consistently labeling your files and objects)
 * A mistake in syntax (missing or un-closed; `()`, `""`, or missing `,`)
 * Missing dependencies (maybe you didnt install or load a package correctly, or maybe if your running a longer script, you are trying to call an object that you havent created yet)
 
@@ -141,7 +142,7 @@ This is by no means an exhaustive list but when I run into errors its normally b
 
 Well done everyone. I hope you have enjoyed this weeks session. Next week is our first workshop and we will start to use some of these new found skills in tandem and start to look at using them on some new data. 
 
-### References
+## References
 
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. https://CRAN.R-project.org/package=ggplot2.
 

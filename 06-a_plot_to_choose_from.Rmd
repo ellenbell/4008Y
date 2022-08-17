@@ -30,9 +30,9 @@ Your plot should appear in the plot tab in the bottom right panel of RStudio Clo
 
 A side note on histograms and bins. You may have noticed that we have only specified our x axis variable. This is because R is essentially calculating a frequency for the y axis. How many beetles have a 2.1mm long wing case? How many beetles have a 2.4mm long wing case? This what the y axis is based on. We have asked R to split our x axis variable into 6 equal parts (bins). Have a go at changing the number of bins, what happens to the histogram?
 
-Now have a go at making a histogram for the `parasite_burden`. 
+Now have a go at making a histogram for the `parasite_burden` variable. 
 
-Have a look at both of your histograms, what do you think they are showing? We will come back to histograms and how to read them in future lectures. 
+Have a look at both of your histograms, what do you think they are showing? We will come back to histograms and how to read them in lectures. 
 
 ## Exporting your histogram
 
@@ -45,13 +45,13 @@ ggsave("figures/tribolium_wincase_size_histogram.pdf", # Give R a path to save t
        device = "pdf") # Tell R what file type to create, in this case a pdf
 ```
 
-A side note - if you remove the device line `ggsave` will automatically create a `.png` file. You can also use `width = , height = , units = "cm"` arguments to specify the size of your figure in cm. Try to incorporate these new arguments into the above chunk. Save both of your histogram outputs in your `figures` folder. 
+Note that if you remove the device line `ggsave` will automatically create a `.png` file. You can also use `width = , height = , units = "cm"` arguments to specify the size of your figure in cm. Try to incorporate these new arguments into the above chunk. Save both of your histogram outputs in your `figures` folder. 
 
 ## Before you leave!
 
 Make sure you save your script!
 
-### References
+## References
 
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686.
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. https://CRAN.R-project.org/package=ggplot2.
