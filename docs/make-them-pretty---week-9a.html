@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<meta name="date" content="2022-08-17" />
+<meta name="date" content="2022-08-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -267,7 +267,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb47-3"><a href="make-them-pretty---week-9a.html#cb47-3" aria-hidden="true" tabindex="-1"></a>size_differences_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> wing_case_size)) </span>
 <span id="cb47-4"><a href="make-them-pretty---week-9a.html#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_differences_boxplot) <span class="co"># Print the object your plot is stored in to view it</span></span></code></pre></div>
 <p>So you have given ggplot your data set and specified the axes. But you haven’t told it how you would like the data to be visualised. So you should see something like this…</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-48"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-49"></span>
 <img src="figures/screenshot_deconstructingaplot_1.png" alt="Basic ggplot output" width="90%" />
 <p class="caption">
 Figure 9.1: The most basic output from ggplot
@@ -281,7 +281,7 @@ Figure 9.1: The most basic output from ggplot
 <span id="cb48-5"><a href="make-them-pretty---week-9a.html#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_differences_boxplot) <span class="co"># Print the object your plot is stored in to view it</span></span></code></pre></div>
 <p>Note the <code>+</code>, this is essentially another way of piping information from one function into the next. You could also have added <code>fill = treatment</code> to the first line within this chunk within <code>aes()</code>.</p>
 <p>Your figure should look like this…</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-50"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-51"></span>
 <img src="figures/screenshot_deconstructingaplot_2.png" alt="Basic ggplot boxplot" width="90%" />
 <p class="caption">
 Figure 9.2: A basic ggplot box plot output

@@ -4,11 +4,11 @@ This week we don't have any lectures but we do have an in person workshop. The s
 
 ## Data Entry
 
-Go to Blackboard > Skills for Biologists > Data Science > Workshop 1 and download the .jpeg files you find there. 
+Lets have a look at some actual data now, Figure 4.1 shows some lab notes taken during the data collection phase of a small research project to investigate parasite load in 2 small populations of the flour beetle _Tribolium castaneum_. Each beetle has an ID, a measure of wing casing in mm (which is a good proxy for overall size) and a tally for the number of tapeworm cysticercoids dissected out. In terms of data handling and analysis, we need this data to be stored digitally and we need to have it ordered sensibly in a spreadsheet. We covered what to look for in a tidy, well ordered spreadsheet in our week 3 lecture. Have a go at entering the data from Figure 4.1 into an Excel spreadsheet. When you're done go to __File > Save As...__, name your spreadsheet something sensible and make sure you select a sensible place to save it to, where it says __File Format:__ select __Comma-separated Values (.csv)__. 
 
-__List files here __
-
-These are image files of lab notes taken during the data collection phase of a small research project to investigate parasite load in 2 small populations of the flour beetle _Tribolium castaneum_. Each beetle has an ID, a measure of wing casing in mm (which is a good proxy for overall size) and a tally for the number of tapeworm cysticercoids dissected out. In terms of data handling and analysis, we need this data to be stored digitally and we need to have it ordered sensibly in a spreadsheet. We covered what to look for in a tidy, well ordered spreadsheet in our week 3 lecture. Have a go at entering the data from the .jpeg files into an Excel spreadsheet. When you're done go to __File > Save As...__, name your spreadsheet something sensible and make sure you select a sensible place to save it to, where it says __File Format:__ select __Comma-separated Values (.csv)__. 
+```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Tribolium parasite data raw", fig.cap ="Lab notes for wing case size (mm) and parasite burden of 20 _Tribolium castaneum_"}
+knitr::include_graphics("figures/parasite_burden.jpg")
+```
 
 ## A note on naming
 
