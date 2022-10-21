@@ -91,7 +91,7 @@ Now we need to tell R to read your `.csv` file.
 
 ```{r}
 # Read the data from the .csv file in the data folder into my project
-tribolium_parasites <- read_csv("data/your_file_name.csv") #
+tribolium <- read_csv("data/your_file_name.csv") #
 ```
 
 R should respond with this;
@@ -111,7 +111,7 @@ If you have errors, make sure your file name and path are input correctly.
 Lets have a look at our data to make sure it looks as we expect it to, try this;
 
 ```{r}
-head(tribolium_parasites)
+head(tribolium)
 ```
 
 We can see for ourselves that R has correctly read our data.
