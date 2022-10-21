@@ -97,7 +97,7 @@ tribolium <- read_csv("data/your_file_name.csv") #
 R should respond with this;
 
 ```
-> Tribolium <- read_csv("data/Tribolium_parasites.csv")
+> tribolium <- read_csv("data/tribolium.csv")
 Rows: 20 Columns: 3                                                              
 ── Column specification ───────────────────────────────────────────────────────────
 Delimiter: ","

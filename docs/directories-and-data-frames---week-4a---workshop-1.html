@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<meta name="date" content="2022-08-24" />
+<meta name="date" content="2022-10-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -319,9 +319,9 @@ Figure 4.1: Lab notes for wing case size (mm) and parasite burden of 20 <em>Trib
 <p>Lets import your data set. Go into your <strong>data</strong> folder, click <strong>Upload</strong> and select your newly made <code>.csv</code> file. Once its uploaded you should be able to see it under <code>data/</code> in the bottom right panel.</p>
 <p>Now we need to tell R to read your <code>.csv</code> file.</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="directories-and-data-frames---week-4a---workshop-1.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the data from the .csv file in the data folder into my project</span></span>
-<span id="cb24-2"><a href="directories-and-data-frames---week-4a---workshop-1.html#cb24-2" aria-hidden="true" tabindex="-1"></a>tribolium_parasites <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/your_file_name.csv&quot;</span>) <span class="co">#</span></span></code></pre></div>
+<span id="cb24-2"><a href="directories-and-data-frames---week-4a---workshop-1.html#cb24-2" aria-hidden="true" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/your_file_name.csv&quot;</span>) <span class="co">#</span></span></code></pre></div>
 <p>R should respond with this;</p>
-<pre><code>&gt; Tribolium &lt;- read_csv(&quot;data/Tribolium_parasites.csv&quot;)
+<pre><code>&gt; tribolium &lt;- read_csv(&quot;data/tribolium.csv&quot;)
 Rows: 20 Columns: 3                                                              
 ── Column specification ───────────────────────────────────────────────────────────
 Delimiter: &quot;,&quot;
@@ -329,7 +329,7 @@ dbl (3): beetle_id, wing_case_size, parasite_burden</code></pre>
 <p>Here R has told us that there are 20 rows and 3 columns in our data set, it has indicated that it has used comas as a column deliminator and that all the data are dbl (short for double), which means each column contains numbers. You should also be able to see <code>tribolium</code> in your <strong>Environment</strong> under <strong>Data</strong>.</p>
 <p>If you have errors, make sure your file name and path are input correctly.</p>
 <p>Lets have a look at our data to make sure it looks as we expect it to, try this;</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="directories-and-data-frames---week-4a---workshop-1.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tribolium_parasites)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="directories-and-data-frames---week-4a---workshop-1.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tribolium)</span></code></pre></div>
 <p>We can see for ourselves that R has correctly read our data.</p>
 </div>
 <div id="creating-tibbles" class="section level2 hasAnchor" number="4.7">
