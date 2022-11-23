@@ -15,7 +15,7 @@ rm(list = ls())
 
 ```{r}
 # Reload your tribolium_combo data frame
-tribolium_combo <- read_csv("data/tribolium.combo.csv")
+tribolium_combo <- read_csv("data/tribolium_combo.csv")
 ```
 
 Check your data has loaded correctly. Can you remember how to change `treatment` from a `dbl` vector to a factor (`fct`)?
@@ -101,11 +101,23 @@ print(size_differences_boxplot) # Print the object your plot is stored in to vie
 
 Note that the `scale x discrete` and `scale_fill_manual` functions simply rename things in the same order as you present them, make sure you label your categories accurately or this can make a big mess later on. 
 
-Remake your plot, what do you think?
+If you try to remake your plot at this stage you will get the following error:
+
+```
+Error in `f()`:
+! Insufficient values in manual scale. 2 needed but only 0 provided.
+Run `rlang::last_error()` to see where the error occurred.
+```
+
+This is because `scale_fill_manual` is also expecting some instructions on how to colour your boxplot. You will need to complete section 9.3 before you can successfully remake your boxplot. 
 
 ## Switching up colours 
 
-The colours of your boxes are the default colours given by `ggplot2`. We can modify these to make our plot look a bit more pleasing. Try editing the `scale_fill_manual` function to this `scale_fill_manual(labels = c("30°C", "35°C"), values = c("cornflowerblue", "coral"))`. Run it and see what happens to your plot. R has lots of [colours](https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/), take a look at the linked reference lists and have a play with changing up some of your colours. 
+The colours of your boxes are the default colours given by `ggplot2`. We can modify these to make our plot look a bit more pleasing. Try editing the `scale_fill_manual` function to this `scale_fill_manual(labels = c("30°C", "35°C"), values = c("cornflowerblue", "coral"))`. Run it and see what happens to your plot. 
+
+What do you think of your new plot now? Do you think the changes to labels and colours are an improvement?
+
+R has lots of [colours](https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/), take a look at the linked reference lists and have a play with changing up some of your colours. 
 
 Colour can be a really useful tool to employ when making your plots visually appealing, however make sure you are mindful that some colour pallets can be difficult for some people to interpret. There are however, some really good [tips](https://www.tableau.com/en-gb/about/blog/examining-data-viz-rules-dont-use-red-green-together#:~:text=Use%20a%20colour%2Dblind%2Dfriendly%20palette%20when%20appropriate&text=For%20example%2C%20blue%2Forange%20is,blue%20to%20someone%20with%20CVD) out there for making sure your figures are accessible to everyone. 
 

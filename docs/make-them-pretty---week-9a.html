@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<meta name="date" content="2022-10-21" />
+<meta name="date" content="2022-11-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -257,7 +257,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="make-them-pretty---week-9a.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean up your environment</span></span>
 <span id="cb45-2"><a href="make-them-pretty---week-9a.html#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span></code></pre></div>
 <div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="make-them-pretty---week-9a.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reload your tribolium_combo data frame</span></span>
-<span id="cb46-2"><a href="make-them-pretty---week-9a.html#cb46-2" aria-hidden="true" tabindex="-1"></a>tribolium_combo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/tribolium.combo.csv&quot;</span>)</span></code></pre></div>
+<span id="cb46-2"><a href="make-them-pretty---week-9a.html#cb46-2" aria-hidden="true" tabindex="-1"></a>tribolium_combo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/tribolium_combo.csv&quot;</span>)</span></code></pre></div>
 <p>Check your data has loaded correctly. Can you remember how to change <code>treatment</code> from a <code>dbl</code> vector to a factor (<code>fct</code>)?</p>
 <div id="deconstructing-ggplot" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> Deconstructing ggplot<a href="make-them-pretty---week-9a.html#deconstructing-ggplot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -319,11 +319,17 @@ Figure 9.2: A basic ggplot box plot output
 <span id="cb50-7"><a href="make-them-pretty---week-9a.html#cb50-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;30°C&quot;</span>, <span class="st">&quot;35°C&quot;</span>)) <span class="co"># Rename your treatments</span></span>
 <span id="cb50-8"><a href="make-them-pretty---week-9a.html#cb50-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_differences_boxplot) <span class="co"># Print the object your plot is stored in to view it</span></span></code></pre></div>
 <p>Note that the <code>scale x discrete</code> and <code>scale_fill_manual</code> functions simply rename things in the same order as you present them, make sure you label your categories accurately or this can make a big mess later on.</p>
-<p>Remake your plot, what do you think?</p>
+<p>If you try to remake your plot at this stage you will get the following error:</p>
+<pre><code>Error in `f()`:
+! Insufficient values in manual scale. 2 needed but only 0 provided.
+Run `rlang::last_error()` to see where the error occurred.</code></pre>
+<p>This is because <code>scale_fill_manual</code> is also expecting some instructions on how to colour your boxplot. You will need to complete section 9.3 before you can successfully remake your boxplot.</p>
 </div>
 <div id="switching-up-colours" class="section level2 hasAnchor" number="9.3">
 <h2><span class="header-section-number">9.3</span> Switching up colours<a href="make-them-pretty---week-9a.html#switching-up-colours" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The colours of your boxes are the default colours given by <code>ggplot2</code>. We can modify these to make our plot look a bit more pleasing. Try editing the <code>scale_fill_manual</code> function to this <code>scale_fill_manual(labels = c("30°C", "35°C"), values = c("cornflowerblue", "coral"))</code>. Run it and see what happens to your plot. R has lots of <a href="https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/">colours</a>, take a look at the linked reference lists and have a play with changing up some of your colours.</p>
+<p>The colours of your boxes are the default colours given by <code>ggplot2</code>. We can modify these to make our plot look a bit more pleasing. Try editing the <code>scale_fill_manual</code> function to this <code>scale_fill_manual(labels = c("30°C", "35°C"), values = c("cornflowerblue", "coral"))</code>. Run it and see what happens to your plot.</p>
+<p>What do you think of your new plot now? Do you think the changes to labels and colours are an improvement?</p>
+<p>R has lots of <a href="https://www.datanovia.com/en/blog/awesome-list-of-657-r-color-names/">colours</a>, take a look at the linked reference lists and have a play with changing up some of your colours.</p>
 <p>Colour can be a really useful tool to employ when making your plots visually appealing, however make sure you are mindful that some colour pallets can be difficult for some people to interpret. There are however, some really good <a href="https://www.tableau.com/en-gb/about/blog/examining-data-viz-rules-dont-use-red-green-together#:~:text=Use%20a%20colour%2Dblind%2Dfriendly%20palette%20when%20appropriate&amp;text=For%20example%2C%20blue%2Forange%20is,blue%20to%20someone%20with%20CVD">tips</a> out there for making sure your figures are accessible to everyone.</p>
 </div>
 <div id="before-you-leave-4" class="section level2 hasAnchor" number="9.4">
