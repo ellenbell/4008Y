@@ -8,3 +8,8 @@ bookdown::gitbook:
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s
     download: ["pdf", "epub"]
+  bookdown::pdf_book:
+    includes:
+      in_header: include/preamble.tex
+    latex_engine: xelatex
+    keep_tex: yes

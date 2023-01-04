@@ -4,7 +4,7 @@ You should aim to complete this chapter in Week 10, Semester 1
 
 In Chapter 9 we explored the fundamental functionality of `ggplot2` and we started to play with some functions that improved our plots labels and colour scheme. This week we will be extending this further and investigating how we may also be able to alter spacing and themes to improve the appearance of our plots. 
 
-Open your `tribolium_parasites` project in RStudio Cloud and your `ggplot_fundamentals.r` script.
+Open your `tribolium_parasites` project in posit Cloud and your `ggplot_fundamentals.r` script.
 
 Your current figure chunk should look something like this;
 

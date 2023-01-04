@@ -4,7 +4,7 @@ This is our second workshop hopefully you are gaining some confidence with how t
 
 ## Looking at differences
 
-As we discussed in the Chapter 4 wing case length is a good proxy for overall beetle size in _Tribolium_. So we will be comparing beetle wing case length in male and female beetles. Because we are looking for possible differences we know that we probably want to build a box plot. Login to your RStudio Cloud account and copy over the following chunk of code into your `tribolium_parasites.r` script. Run it and see what happens.
+As we discussed in the Chapter 4 wing case length is a good proxy for overall beetle size in _Tribolium_. So we will be comparing beetle wing case length in male and female beetles. Because we are looking for possible differences we know that we probably want to build a box plot. Login to your posit Cloud account and copy over the following chunk of code into your `tribolium_parasites.r` script. Run it and see what happens.
 
 ```{r}
 # Making a box plot and saving it in an object

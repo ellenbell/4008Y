@@ -30,7 +30,7 @@ __Make sure you have a demonstrator check your work before moving onto the next 
 
 ## Setting up your R workspace 
 
-This is a new piece of analysis, we will be carrying forward principals from the previous chapters but scripts and data will be new. So its a good idea to start with a fresh clean workspace. So lets set up a new project in RStudio Cloud, follow the steps from Chapter 2 if you cant remember how to do this and name this project `tribolium_parasites`. Its always good to keep a well organised tidy workspace, generally I will start a new project in RStudio Cloud if I am working on a new series of questions with a new data set or sets.
+This is a new piece of analysis, we will be carrying forward principals from the previous chapters but scripts and data will be new. So its a good idea to start with a fresh clean workspace. So lets set up a new project in posit Cloud, follow the steps from Chapter 2 if you cant remember how to do this and name this project `tribolium_parasites`. Its always good to keep a well organised tidy workspace, generally I will start a new project in posit Cloud if I am working on a new series of questions with a new data set or sets.
 
 For this project you need to make sure two packages are installed. Copy the following directly into your console. 
 
@@ -186,7 +186,7 @@ You may now wish to export your new combined data frame as a `.csv` file. You ca
 write.csv(tribolium_combo,"data/tribolium_combo.csv", row.names = FALSE)
 ```
 
-Well done everyone, you have successfully entered your data and uploaded it to RStudio Cloud as well as making some small adjustments to the data frame and doing a first pass quality check! There are more checks we could have run, and we will revisit this later in the course when we look at some larger data sets. But we will leave this here for now, next week is reading week and the week after we will start looking at checking our data dimensions. 
+Well done everyone, you have successfully entered your data and uploaded it to posit Cloud as well as making some small adjustments to the data frame and doing a first pass quality check! There are more checks we could have run, and we will revisit this later in the course when we look at some larger data sets. But we will leave this here for now, next week is reading week and the week after we will start looking at checking our data dimensions. 
 
 
 ## Before you leave!

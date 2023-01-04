@@ -6,7 +6,7 @@ You should aim to complete this chapter in Week 3, Semester 1
 
 As we saw in Chapter 2, R can be used to perform calculations. However, we can use R to perform tasks that are much more complex. In order to do this we are going to have to learn about objects. 
 
-Log in to your RStudio Cloud account and go into your `testing_R` project. Create a new R script and save it under the name `objects`. You should see it appear as `object.R` under the __Files__ tab in the bottom right panel. Run the following command using your script.
+Log in to your posit Cloud account and go into your `testing_R` project. Create a new R script and save it under the name `objects`. You should see it appear as `object.R` under the __Files__ tab in the bottom right panel. Run the following command using your script.
 
 ```{r}
 A <- 50

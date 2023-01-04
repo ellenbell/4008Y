@@ -4,7 +4,7 @@ You should aim to complete this chapter in Week 6, Semester 1
 
 ## Top to tail - some useful functions to explore
 
-Log into RStudio cloud and open up your `tribolium_parasites` project. 
+Log into posit cloud and open up your `tribolium_parasites` project. 
 
 Lets start by reminding ourselves of what these data look like. Try using the following functions on your`tribolium_combo` data frame, copy them into your script and comment `#` next to each when you work out what it does. 
 

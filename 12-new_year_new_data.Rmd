@@ -1,0 +1,23 @@
+# New year, new data - Workshop 4, Week 2B
+
+Good news! There are only four chapters remaining. Each chapter from this point on wards is associated with a timetabled 2 hour workshop. However if you don't complete a chapter in the timetabled time you are expected to complete it at home. Here we have material for Workshop 4 in Week 2 of Semester 2.
+
+## A new project
+
+We will be working on several new data sets this term. Generally I recommend starting a new R Project every time you start working on new and unrelated data sets. So go to posit Cloud and open a **New Project** and name it `athletes`. Spend a few minutes setting up your workspace, refer back to **Section 4.3** to remind yourself of how to do this. 
+
+For todays workshop you will need the following packages:
+
+* tidyverse
+
+Remember you will need to freshly install any required packages. 
+
+### The data
+
+## A refresher
+
+We finished last terms workshops by looking at how we can cannibalise code to fit our purposes. We will be spending the first part of todays workshop going over a few of these skills on a shiney new data set!
+
+
+
+## Descriptive statistics

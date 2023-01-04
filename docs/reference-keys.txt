@@ -14,10 +14,10 @@ teaching-layout-for-data-science
 assessment
 how-to-use-this-workbook
 why-is-data-science-important-and-why-are-we-teaching-it-in-r
-introduction-to-r-and-rstudio-cloud---week-2a
-what-is-r-and-rstudio-cloud
+introduction-to-r-and-posit-cloud---week-2a
+what-is-r-and-posit-cloud
 a-warning-on-managing-your-work-flow
-creating-your-first-rstudio-cloud-project
+creating-your-first-posit-cloud-project
 maximising-the-efficiency-of-your-workspace
 entering-commands-directly-into-the-consol
 sending-commands-down-to-the-console-from-an-r-script
@@ -76,7 +76,11 @@ a-challenge
 end-of-semester-1
 before-you-leave-6
 references-7
+merry-christmas
 new-year-new-data---workshop-4-week-2b
+a-refresher
+a-new-project
+the-data
 workshop-5-week-4b
 workshop-6-week-6b
 workshop-7-week-8b

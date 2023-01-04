@@ -4,7 +4,7 @@ You should aim to complete this chapter in Week 9, Semester 1
 
 Over the last couple of weeks you have build histograms, box plots and scatter plots. Probably the three types of data visualisation you are most likely to run into and want to build. But you may have noticed that non of these are particularly aesthetically pleasing. As a rule, data visualisations should always be designed to be attractive, clean, clear and nicely spaced. The purpose of a plot is to provide, you and your audience with a accurate, visually pleasing and easy to interpret representation of your data. Thankfully `ggplot2` contains all the tools we need to do this. 
 
-Open your `tribolium_parasites` project in RStudio Cloud. Create a new script and call it `ggplot_fundamentals`, save it in your `scripts` folder and set up your script following the rules in Chapter 4, make sure the `tidyverse` library is loaded, this contains `ggplot2`. 
+Open your `tribolium_parasites` project in posit Cloud. Create a new script and call it `ggplot_fundamentals`, save it in your `scripts` folder and set up your script following the rules in Chapter 4, make sure the `tidyverse` library is loaded, this contains `ggplot2`. 
 
 Sometimes its can be good to cleanup your __Environment__ a bit, if you run the following command, it will delete everything stored in your environment. Note - you will have to reload your data frames from your data folder. Make sure you saved `tribolium_combo` to your data folder in Chapter 4 before you do this. 
 

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 12 New year new data - Workshop 4, Week 2B | Introduction to Data Science - 4008Y</title>
+  <title>Chapter 13 New year, new data - Workshop 4, Week 2B | Introduction to Data Science - 4008Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 12 New year new data - Workshop 4, Week 2B | Introduction to Data Science - 4008Y" />
+  <meta property="og:title" content="Chapter 13 New year, new data - Workshop 4, Week 2B | Introduction to Data Science - 4008Y" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A brief introduction so some fundamental applications of R in data science" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 12 New year new data - Workshop 4, Week 2B | Introduction to Data Science - 4008Y" />
+  <meta name="twitter:title" content="Chapter 13 New year, new data - Workshop 4, Week 2B | Introduction to Data Science - 4008Y" />
   
   <meta name="twitter:description" content="A brief introduction so some fundamental applications of R in data science" />
   
@@ -23,14 +23,14 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<meta name="date" content="2022-11-23" />
+<meta name="date" content="2023-01-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="the-subtle-art-of-cannibalisation---week-11a---workshop-3.html"/>
+<link rel="prev" href="merry-christmas.html"/>
 <link rel="next" href="workshop-5-week-4b.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -52,6 +52,10 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/clipboard-1.7.1/clipboard.min.js"></script>
+<link href="libs/primer-tooltips-1.4.0/build.css" rel="stylesheet" />
+<link href="libs/klippy-0.0.0.9500/css/klippy.min.css" rel="stylesheet" />
+<script src="libs/klippy-0.0.0.9500/js/klippy.min.js"></script>
 
 
 <style type="text/css">
@@ -144,15 +148,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#how-to-use-this-workbook"><i class="fa fa-check"></i><b>1.4</b> How to use this workbook</a></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#why-is-data-science-important-and-why-are-we-teaching-it-in-r"><i class="fa fa-check"></i><b>1.5</b> Why is data science important and why are we teaching it in R?</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="introduction-to-r-and-rstudio-cloud---week-2a.html"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html"><i class="fa fa-check"></i><b>2</b> Introduction to R and RStudio Cloud - Week 2A</a>
+<li class="chapter" data-level="2" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html"><i class="fa fa-check"></i><b>2</b> Introduction to R and posit Cloud - Week 2A</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="introduction-to-r-and-rstudio-cloud---week-2a.html"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#what-is-r-and-rstudio-cloud"><i class="fa fa-check"></i><b>2.1</b> What is R and RStudio Cloud?</a></li>
-<li class="chapter" data-level="2.2" data-path="introduction-to-r-and-rstudio-cloud---week-2a.html"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#a-warning-on-managing-your-work-flow"><i class="fa fa-check"></i><b>2.2</b> A warning on managing your work flow</a></li>
-<li class="chapter" data-level="2.3" data-path="introduction-to-r-and-rstudio-cloud---week-2a.html"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#creating-your-first-rstudio-cloud-project"><i class="fa fa-check"></i><b>2.3</b> Creating your first RStudio Cloud Project</a></li>
-<li class="chapter" data-level="2.4" data-path="introduction-to-r-and-rstudio-cloud---week-2a.html"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#maximising-the-efficiency-of-your-workspace"><i class="fa fa-check"></i><b>2.4</b> Maximising the efficiency of your workspace</a></li>
-<li class="chapter" data-level="2.5" data-path="introduction-to-r-and-rstudio-cloud---week-2a.html"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#entering-commands-directly-into-the-consol"><i class="fa fa-check"></i><b>2.5</b> Entering commands directly into the consol</a></li>
-<li class="chapter" data-level="2.6" data-path="introduction-to-r-and-rstudio-cloud---week-2a.html"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#sending-commands-down-to-the-console-from-an-r-script"><i class="fa fa-check"></i><b>2.6</b> Sending commands down to the console from an R script</a></li>
-<li class="chapter" data-level="2.7" data-path="introduction-to-r-and-rstudio-cloud---week-2a.html"><a href="introduction-to-r-and-rstudio-cloud---week-2a.html#a-note-on-comments"><i class="fa fa-check"></i><b>2.7</b> A note on comments</a></li>
+<li class="chapter" data-level="2.1" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#what-is-r-and-posit-cloud"><i class="fa fa-check"></i><b>2.1</b> What is R and posit Cloud?</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#a-warning-on-managing-your-work-flow"><i class="fa fa-check"></i><b>2.2</b> A warning on managing your work flow</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#creating-your-first-posit-cloud-project"><i class="fa fa-check"></i><b>2.3</b> Creating your first posit Cloud Project</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#maximising-the-efficiency-of-your-workspace"><i class="fa fa-check"></i><b>2.4</b> Maximising the efficiency of your workspace</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#entering-commands-directly-into-the-consol"><i class="fa fa-check"></i><b>2.5</b> Entering commands directly into the consol</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#sending-commands-down-to-the-console-from-an-r-script"><i class="fa fa-check"></i><b>2.6</b> Sending commands down to the console from an R script</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#a-note-on-comments"><i class="fa fa-check"></i><b>2.7</b> A note on comments</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html"><i class="fa fa-check"></i><b>3</b> Objects, Functions and Packages - Week 3A</a>
 <ul>
@@ -224,10 +228,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.7" data-path="the-subtle-art-of-cannibalisation---week-11a---workshop-3.html"><a href="the-subtle-art-of-cannibalisation---week-11a---workshop-3.html#before-you-leave-6"><i class="fa fa-check"></i><b>11.7</b> Before you leave!</a></li>
 <li class="chapter" data-level="11.8" data-path="the-subtle-art-of-cannibalisation---week-11a---workshop-3.html"><a href="the-subtle-art-of-cannibalisation---week-11a---workshop-3.html#references-7"><i class="fa fa-check"></i><b>11.8</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="new-year-new-data---workshop-4-week-2b.html"><a href="new-year-new-data---workshop-4-week-2b.html"><i class="fa fa-check"></i><b>12</b> New year new data - Workshop 4, Week 2B</a></li>
-<li class="chapter" data-level="13" data-path="workshop-5-week-4b.html"><a href="workshop-5-week-4b.html"><i class="fa fa-check"></i><b>13</b> Workshop 5, Week 4B</a></li>
-<li class="chapter" data-level="14" data-path="workshop-6-week-6b.html"><a href="workshop-6-week-6b.html"><i class="fa fa-check"></i><b>14</b> Workshop 6, Week 6B</a></li>
-<li class="chapter" data-level="15" data-path="workshop-7-week-8b.html"><a href="workshop-7-week-8b.html"><i class="fa fa-check"></i><b>15</b> Workshop 7, Week 8B</a></li>
+<li class="chapter" data-level="12" data-path="merry-christmas.html"><a href="merry-christmas.html"><i class="fa fa-check"></i><b>12</b> Merry Christmas!!!</a></li>
+<li class="chapter" data-level="13" data-path="new-year-new-data---workshop-4-week-2b.html"><a href="new-year-new-data---workshop-4-week-2b.html"><i class="fa fa-check"></i><b>13</b> New year, new data - Workshop 4, Week 2B</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="new-year-new-data---workshop-4-week-2b.html"><a href="new-year-new-data---workshop-4-week-2b.html#a-refresher"><i class="fa fa-check"></i><b>13.1</b> A refresher</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="new-year-new-data---workshop-4-week-2b.html"><a href="new-year-new-data---workshop-4-week-2b.html#a-new-project"><i class="fa fa-check"></i><b>13.1.1</b> A new project</a></li>
+<li class="chapter" data-level="13.1.2" data-path="new-year-new-data---workshop-4-week-2b.html"><a href="new-year-new-data---workshop-4-week-2b.html#the-data"><i class="fa fa-check"></i><b>13.1.2</b> The data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="workshop-5-week-4b.html"><a href="workshop-5-week-4b.html"><i class="fa fa-check"></i><b>14</b> Workshop 5, Week 4B</a></li>
+<li class="chapter" data-level="15" data-path="workshop-6-week-6b.html"><a href="workshop-6-week-6b.html"><i class="fa fa-check"></i><b>15</b> Workshop 6, Week 6B</a></li>
+<li class="chapter" data-level="16" data-path="workshop-7-week-8b.html"><a href="workshop-7-week-8b.html"><i class="fa fa-check"></i><b>16</b> Workshop 7, Week 8B</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -248,17 +260,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="new-year-new-data---workshop-4-week-2b" class="section level1 hasAnchor" number="12">
-<h1><span class="header-section-number">Chapter 12</span> New year new data - Workshop 4, Week 2B<a href="new-year-new-data---workshop-4-week-2b.html#new-year-new-data---workshop-4-week-2b" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Good news! There are only four chapters remaining. Each chapter from this point on wards is associated with a timetables 2 hour workshop. However if you don’t complete a chapter in the timetabled time you are expected to complete it at home. Here we have material for Workshop 4 in Week 2 of Semester 2</p>
+<div id="new-year-new-data---workshop-4-week-2b" class="section level1 hasAnchor" number="13">
+<h1><span class="header-section-number">Chapter 13</span> New year, new data - Workshop 4, Week 2B<a href="new-year-new-data---workshop-4-week-2b.html#new-year-new-data---workshop-4-week-2b" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Good news! There are only four chapters remaining. Each chapter from this point on wards is associated with a timetabled 2 hour workshop. However if you don’t complete a chapter in the timetabled time you are expected to complete it at home. Here we have material for Workshop 4 in Week 2 of Semester 2.</p>
+<div id="a-refresher" class="section level2 hasAnchor" number="13.1">
+<h2><span class="header-section-number">13.1</span> A refresher<a href="new-year-new-data---workshop-4-week-2b.html#a-refresher" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We finished last terms workshops by looking at how we can cannibalise code to fit our purposes. We will be spending the first part of todays workshop going over a few of these skills on a shiney new data set!</p>
+<div id="a-new-project" class="section level3 hasAnchor" number="13.1.1">
+<h3><span class="header-section-number">13.1.1</span> A new project<a href="new-year-new-data---workshop-4-week-2b.html#a-new-project" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We will be working on several new data sets this term. Generally I recommend starting a new R Project every time you start working on new and unrelated data sets. So go to posit Cloud and open a <strong>New Project</strong> and name it <code>athletes</code>.</p>
+</div>
+<div id="the-data" class="section level3 hasAnchor" number="13.1.2">
+<h3><span class="header-section-number">13.1.2</span> The data<a href="new-year-new-data---workshop-4-week-2b.html#the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="the-subtle-art-of-cannibalisation---week-11a---workshop-3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="merry-christmas.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="workshop-5-week-4b.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -290,7 +313,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/11-new_year_new_data.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/12-new_year_new_data.Rmd",
 "text": "Edit"
 },
 "history": {
