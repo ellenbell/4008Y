@@ -57,7 +57,7 @@ Hopefully you now have a nice clean, clear and aesthetically pleasing plot and h
 
 ## Before you leave!
 
-Make sure you save your script!
+Log out of posit Cloud and make sure you save your script!
 
 ## References
 

@@ -1,0 +1,79 @@
+# Playing with some statistics - Workshop 5 - Athletes continued, Week 4B
+
+Here we have material for Workshop 5 in Week 4 of Semester 2. We will be continuing with the Athletes data set from Week 2. So go to your `athletes` project in posit Cloud. It may be helpful to review the plots you made (including the histograms) to remind yourself of how the data look. 
+
+## Descriptive statistics
+
+At the end of the Autumn Semester we started to discus some simple descriptive statistics, including measures of central tendency and spread. We discussed means, medians, modes, ranges, standard deviations, standard error of the mean and 95% confidence intervals. If you cant remember what any of these are it is strongly recommended that you revisit the lecture materials. In this section we will be learning how to calculate these basic descriptive statistics for the athletes data set.  
+
+### Task 1 - Calculating some descriptive statistics 
+
+Try copy, paste and run on the following piece of code;
+
+```{r}
+# Create a new object called athletes_summary_stats_ht and store mean, standard deviation (sd), and sample size (n) for height (ht) in male and female athletes.
+athletes_summary_stats_ht <- athletes %>% 
+  group_by(sex) %>% 
+  summarise(mean=mean(ht),
+            sd=sd(ht),
+            n=n())
+athletes_summary_stats_ht
+```
+
+Have a look at the table that R produces. Then look back at the code you used, do you understand what each function has done? The `summarise` function can also calculate other summary statistics, use `help(summarise)` to find out what else it can do. Play with the function, see if you can produce a similar table that calculated the median, mean and standard deviation for red blood cell count in male and female athletes. 
+
+It would also be useful to know the standard error of the mean and 95% confidence intervals for this data set. We can use the `mutate` function to add additional columns onto our summary stats table. Remember we can calculate the standard error of the mean using:
+
+$$
+SEM = \frac{SD}{\sqrt{n}}
+$$
+Try using the following chunk of code and then take a look at the `athletes_summary_stats_ht` object. 
+
+```{r}
+athletes_summary_stats_ht <- athletes_summary_stats_ht %>%
+  mutate(sem = sd/sqrt(n))
+```
+
+Hopefully you should see something that looks like this:
+
+```
+> athletes_summary_stats_ht
+# A tibble: 2 × 7
+  sex    mean    sd     n   sem 
+  <chr> <dbl> <dbl> <int> <dbl>
+1 f      175.  8.24   100 0.824
+2 m      186.  7.90   102 0.783 
+```
+
+Now try using the `mutate` function to calculate the 95% confidence intervals. Remember 95% confidence intervals fall on either side of the mean, so you will need an upper and lower bound, so you will need to use mutate twice, once for an `upper_ci` and once for a `lower_ci`. 
+
+The equation for calulating 95% confidence intervals is:
+
+$$
+95percent CI = \ Mean ± (1.96 * SEM)
+$$
+
+Take a look at your `athletes_summary_stats_ht` object. It should hopefully look something like this:
+
+```
+> athletes_summary_stats_ht
+# A tibble: 2 × 7
+  sex    mean    sd     n   sem upper_ci lower_ci
+  <chr> <dbl> <dbl> <int> <dbl>    <dbl>    <dbl>
+1 f      175.  8.24   100 0.824     176.     173.
+2 m      186.  7.90   102 0.783     187.     184.
+```
+
+The skills you have learned here could be applied to any of the numeric variables in the `athletes` data set. Try calculating similar values for the red blood cell count variable. 
+
+### Testing for normality
+
+## Introducing some inferential statistics
+
+### T-test
+
+### ANOVA
+
+### R^2^
+
+### Spearmans Rank

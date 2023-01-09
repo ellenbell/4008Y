@@ -42,7 +42,7 @@ So hopefully you can see from the `summarise` and `tabyl` functions that we have
 
 ## Before you leave!
 
-Make sure you save your script!
+Log out of posit Cloud and make sure you save your script!
 
 ## References
 

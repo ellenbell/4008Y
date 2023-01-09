@@ -74,7 +74,7 @@ See you all in the new year :)
 
 ## Before you leave!
 
-Make sure you save your script!
+Log out of posit Cloud and make sure you save your script!
 
 ## References
 

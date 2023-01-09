@@ -10,7 +10,7 @@ Lets have a look at some actual data now, Figure 4.1 shows some lab notes taken 
 knitr::include_graphics("figures/parasite_burden.jpg")
 ```
 
-## A note on naming
+### A note on naming
 
 While we are on the subject of naming, I am going to take a moment to go over a few good rules to follow. You have just created names for some variables and for a file. You will also frequently have to name folders/directories and objects while working in R, so naming is something that you are repeatedly going to have to do. It therefore makes sense for you to learn how to do it well. 
 
@@ -56,7 +56,7 @@ __Make sure you copy the names over exactly, or some of the commands that we wil
 
 A tidy workspace will help you find the things you need when you need them and will reduce the risk of loosing things. 
 
-## A note on directories and their structure 
+### A note on directories and their structure 
 
 Working with text based interfaces like R, where you are writing and running commands, means that we need to have some understanding of the underlying computer architecture. You need to have some appreciation for how files are organised within folders/directories and why its important to know which directory you are working from with R.
 
@@ -191,7 +191,7 @@ Well done everyone, you have successfully entered your data and uploaded it to p
 
 ## Before you leave!
 
-Make sure you save your script!
+Log out of posit Cloud and make sure you save your script!
 
 ## References
 

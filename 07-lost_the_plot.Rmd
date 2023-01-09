@@ -75,7 +75,7 @@ Well done, you have started building two very commonly used plots using R. These
 
 ## Before you leave!
 
-Make sure you save your script!
+Log out of posit Cloud and make sure you save your script!
 
 ## References
 

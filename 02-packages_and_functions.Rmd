@@ -76,7 +76,7 @@ If you have the coding skills it is possible to do pretty much whatever you like
 
 Packages are containers that can hold sets of functions or data and as the course progresses you will use a range of packages that contain useful functions and data. For example the data visualisation package (which you will become very familiar with later on) `ggplot2` contains ranges of functions which allow you to define how your plot or graph will look, for example `geom_bar` is a function within the `ggplot2` package that contains the instructions required to build a bar chart. 
 
-## Using functions
+### Using functions
 
 We actually have already had some exposure to functions. You used the print function earlier when you asked R to print out the value contained within the `percentage_with_flu` object. But lets have a go at using another function. 
 

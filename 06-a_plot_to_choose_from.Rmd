@@ -49,7 +49,7 @@ Note that if you remove the device line `ggsave` will automatically create a `.p
 
 ## Before you leave!
 
-Make sure you save your script!
+Log out of posit Cloud and make sure you save your script!
 
 ## References
 

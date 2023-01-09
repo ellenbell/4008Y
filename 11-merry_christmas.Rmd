@@ -169,7 +169,7 @@ print(size_differences_boxplot) # Print the object your plot is stored in to vie
 
 </details>
 
-<details><summary> **Show me some examples of pretty figures** </summary>
+<details><summary> **Show me some examples of scripts for pretty figures** </summary>
 
 ```{r}
 # Pretty figure examples 
