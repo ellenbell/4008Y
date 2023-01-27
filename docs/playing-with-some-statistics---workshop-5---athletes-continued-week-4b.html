@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 14 Playing with some statistics - Workshop 5 - Athletes continued, Week 4B | Introduction to Data Science - 4008Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 14 Playing with some statistics - Workshop 5 - Athletes continued, Week 4B | Introduction to Data Science - 4008Y" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<meta name="date" content="2023-01-09" />
+<meta name="date" content="2023-01-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="new-year-new-data---workshop-4---athletes-week-2b.html"/>
-<link rel="next" href="workshop-6-week-6b.html"/>
+<link rel="next" href="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -240,38 +240,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13.1" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#a-new-project"><i class="fa fa-check"></i><b>13.1</b> A new project</a>
 <ul>
 <li class="chapter" data-level="13.1.1" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#project-setup"><i class="fa fa-check"></i><b>13.1.1</b> Project setup</a></li>
-<li class="chapter" data-level="13.1.2" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#the-data"><i class="fa fa-check"></i><b>13.1.2</b> The data</a></li>
-<li class="chapter" data-level="13.1.3" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#script-set-up"><i class="fa fa-check"></i><b>13.1.3</b> Script set up</a></li>
+<li class="chapter" data-level="13.1.2" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#script-set-up"><i class="fa fa-check"></i><b>13.1.2</b> Script set up</a></li>
+<li class="chapter" data-level="13.1.3" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#the-data"><i class="fa fa-check"></i><b>13.1.3</b> The data</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#explore-the-data"><i class="fa fa-check"></i><b>13.2</b> Explore the data</a>
+<li class="chapter" data-level="13.2" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#check-the-data"><i class="fa fa-check"></i><b>13.2</b> Check the data</a>
 <ul>
-<li class="chapter" data-level="13.2.1" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-1---look-at-your-data-distributions"><i class="fa fa-check"></i><b>13.2.1</b> Task 1 - Look at your data distributions</a></li>
-<li class="chapter" data-level="13.2.2" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-2---look-for-differences-and-relationships"><i class="fa fa-check"></i><b>13.2.2</b> Task 2 - Look for differences and relationships</a></li>
+<li class="chapter" data-level="13.2.1" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-1---make-sure-your-data-are-clean-and-tidy"><i class="fa fa-check"></i><b>13.2.1</b> Task 1 - Make sure your data are clean and tidy</a></li>
 </ul></li>
-<li class="chapter" data-level="13.3" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#reporting-your-analysis"><i class="fa fa-check"></i><b>13.3</b> Reporting your analysis</a>
+<li class="chapter" data-level="13.3" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#explore-the-data"><i class="fa fa-check"></i><b>13.3</b> Explore the data</a>
 <ul>
-<li class="chapter" data-level="13.3.1" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-3---start-thinking-about-how-you-might-report-your-data"><i class="fa fa-check"></i><b>13.3.1</b> Task 3 - Start thinking about how you might report your data</a></li>
-<li class="chapter" data-level="13.3.2" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-4---building-your-first-multi-pannel-figure"><i class="fa fa-check"></i><b>13.3.2</b> Task 4 - Building your first multi-pannel figure</a></li>
+<li class="chapter" data-level="13.3.1" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-2---look-at-your-data-distributions"><i class="fa fa-check"></i><b>13.3.1</b> Task 2 - Look at your data distributions</a></li>
+<li class="chapter" data-level="13.3.2" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-3---look-for-differences-and-relationships"><i class="fa fa-check"></i><b>13.3.2</b> Task 3 - Look for differences and relationships</a></li>
 </ul></li>
-<li class="chapter" data-level="13.4" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#before-you-leave-7"><i class="fa fa-check"></i><b>13.4</b> Before you leave!</a></li>
-<li class="chapter" data-level="13.5" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#references-8"><i class="fa fa-check"></i><b>13.5</b> References</a></li>
+<li class="chapter" data-level="13.4" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#wrapping-up"><i class="fa fa-check"></i><b>13.4</b> Wrapping up</a></li>
+<li class="chapter" data-level="13.5" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#before-you-leave-7"><i class="fa fa-check"></i><b>13.5</b> Before you leave!</a></li>
+<li class="chapter" data-level="13.6" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#references-8"><i class="fa fa-check"></i><b>13.6</b> References</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><i class="fa fa-check"></i><b>14</b> Playing with some statistics - Workshop 5 - Athletes continued, Week 4B</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#descriptive-statistics"><i class="fa fa-check"></i><b>14.1</b> Descriptive statistics</a>
 <ul>
 <li class="chapter" data-level="14.1.1" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#task-1---calculating-some-descriptive-statistics"><i class="fa fa-check"></i><b>14.1.1</b> Task 1 - Calculating some descriptive statistics</a></li>
-<li class="chapter" data-level="14.1.2" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#testing-for-normality"><i class="fa fa-check"></i><b>14.1.2</b> Testing for normality</a></li>
 </ul></li>
 <li class="chapter" data-level="14.2" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#introducing-some-inferential-statistics"><i class="fa fa-check"></i><b>14.2</b> Introducing some inferential statistics</a>
 <ul>
-<li class="chapter" data-level="14.2.1" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#t-test"><i class="fa fa-check"></i><b>14.2.1</b> T-test</a></li>
-<li class="chapter" data-level="14.2.2" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#anova"><i class="fa fa-check"></i><b>14.2.2</b> ANOVA</a></li>
-<li class="chapter" data-level="14.2.3" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#r2"><i class="fa fa-check"></i><b>14.2.3</b> R<sup>2</sup></a></li>
-<li class="chapter" data-level="14.2.4" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#spearmans-rank"><i class="fa fa-check"></i><b>14.2.4</b> Spearmans Rank</a></li>
+<li class="chapter" data-level="14.2.1" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#the-general-linear-model"><i class="fa fa-check"></i><b>14.2.1</b> The general linear model</a></li>
+<li class="chapter" data-level="14.2.2" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#testing-for-differences"><i class="fa fa-check"></i><b>14.2.2</b> Testing for differences</a></li>
+<li class="chapter" data-level="14.2.3" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#testing-for-relationships"><i class="fa fa-check"></i><b>14.2.3</b> Testing for relationships</a></li>
+<li class="chapter" data-level="14.2.4" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#assumptions"><i class="fa fa-check"></i><b>14.2.4</b> Assumptions</a></li>
+<li class="chapter" data-level="14.2.5" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#what-to-do-if-your-data-are-not-normally-distributed"><i class="fa fa-check"></i><b>14.2.5</b> What to do if your data are not normally distributed</a></li>
+<li class="chapter" data-level="14.2.6" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#testing-for-correlations"><i class="fa fa-check"></i><b>14.2.6</b> Testing for Correlations</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="workshop-6-week-6b.html"><a href="workshop-6-week-6b.html"><i class="fa fa-check"></i><b>15</b> Workshop 6, Week 6B</a></li>
+<li class="chapter" data-level="15" data-path="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"><a href="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"><i class="fa fa-check"></i><b>15</b> Reporting your analysis - Workshop 6 - Athletes continued, Week 6B</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"><a href="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html#reporting-your-analysis"><i class="fa fa-check"></i><b>15.1</b> Reporting your analysis</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"><a href="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html#task-1---start-thinking-about-how-you-might-report-your-data"><i class="fa fa-check"></i><b>15.1.1</b> Task 1 - Start thinking about how you might report your data</a></li>
+<li class="chapter" data-level="15.1.2" data-path="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"><a href="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html#task-2---building-your-first-multi-pannel-figure"><i class="fa fa-check"></i><b>15.1.2</b> Task 2 - Building your first multi-pannel figure</a></li>
+<li class="chapter" data-level="15.1.3" data-path="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"><a href="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html#task-3---writing-a-figure-legend"><i class="fa fa-check"></i><b>15.1.3</b> Task 3 - Writing a figure legend</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"><a href="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html#references-9"><i class="fa fa-check"></i><b>15.2</b> References</a></li>
+</ul></li>
 <li class="chapter" data-level="16" data-path="workshop-7-week-8b.html"><a href="workshop-7-week-8b.html"><i class="fa fa-check"></i><b>16</b> Workshop 7, Week 8B</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -301,22 +311,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>At the end of the Autumn Semester we started to discus some simple descriptive statistics, including measures of central tendency and spread. We discussed means, medians, modes, ranges, standard deviations, standard error of the mean and 95% confidence intervals. If you cant remember what any of these are it is strongly recommended that you revisit the lecture materials. In this section we will be learning how to calculate these basic descriptive statistics for the athletes data set.</p>
 <div id="task-1---calculating-some-descriptive-statistics" class="section level3 hasAnchor" number="14.1.1">
 <h3><span class="header-section-number">14.1.1</span> Task 1 - Calculating some descriptive statistics<a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#task-1---calculating-some-descriptive-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Try copy, paste and run on the following piece of code;</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new object called athletes_summary_stats_ht and store mean, standard deviation (sd), and sample size (n) for height (ht) in male and female athletes.</span></span>
-<span id="cb60-2"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb60-2" aria-hidden="true" tabindex="-1"></a>athletes_summary_stats_ht <span class="ot">&lt;-</span> athletes <span class="sc">%&gt;%</span> </span>
-<span id="cb60-3"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb60-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">%&gt;%</span> </span>
-<span id="cb60-4"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb60-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean=</span><span class="fu">mean</span>(ht),</span>
-<span id="cb60-5"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb60-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd=</span><span class="fu">sd</span>(ht),</span>
-<span id="cb60-6"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb60-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">n=</span><span class="fu">n</span>())</span>
-<span id="cb60-7"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb60-7" aria-hidden="true" tabindex="-1"></a>athletes_summary_stats_ht</span></code></pre></div>
-<p>Have a look at the table that R produces. Then look back at the code you used, do you understand what each function has done? The <code>summarise</code> function can also calculate other summary statistics, use <code>help(summarise)</code> to find out what else it can do. Play with the function, see if you can produce a similar table that calculated the median, mean and standard deviation for red blood cell count in male and female athletes.</p>
-<p>It would also be useful to know the standard error of the mean and 95% confidence intervals for this data set. We can use the <code>mutate</code> function to add additional columns onto our summary stats table. Remember we can calculate the standard error of the mean using:</p>
+<p>Copy the following piece of code into your script and then run it;</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new object called athletes_summary_stats_ht and store mean, standard deviation (sd), and sample size (n) for height (ht) in male and female athletes.</span></span>
+<span id="cb64-2"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb64-2" aria-hidden="true" tabindex="-1"></a>athletes_summary_stats_ht <span class="ot">&lt;-</span> athletes <span class="sc">%&gt;%</span> </span>
+<span id="cb64-3"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">%&gt;%</span> </span>
+<span id="cb64-4"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb64-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean=</span><span class="fu">mean</span>(ht),</span>
+<span id="cb64-5"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb64-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd=</span><span class="fu">sd</span>(ht),</span>
+<span id="cb64-6"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb64-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">n=</span><span class="fu">n</span>())</span>
+<span id="cb64-7"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb64-7" aria-hidden="true" tabindex="-1"></a>athletes_summary_stats_ht</span></code></pre></div>
+<p>Have a look at the table that R produces. Then look back at the code you used, do you understand what each function has done? The <code>summarise</code> function can also calculate other summary statistics, use <code>help(summarise)</code> to find out what else it can do. Play with the function, see if you can produce a similar table that calculates the mean and standard deviation for red blood cell count in male and female athletes.</p>
+<p>It would also be useful to know the standard error of the mean and 95% confidence intervals for this data set. We can use the <code>mutate</code> function to add additional columns onto our summary stats table. Remember we can calculate the standard error of the mean using;</p>
 <p><span class="math display">\[
 SEM = \frac{SD}{\sqrt{n}}
 \]</span>
-Try using the following chunk of code and then take a look at the <code>athletes_summary_stats_ht</code> object.</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb61-1" aria-hidden="true" tabindex="-1"></a>athletes_summary_stats_ht <span class="ot">&lt;-</span> athletes_summary_stats_ht <span class="sc">%&gt;%</span></span>
-<span id="cb61-2"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb61-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sem =</span> sd<span class="sc">/</span><span class="fu">sqrt</span>(n))</span></code></pre></div>
+Copy the following chunk of code into your script, run it, and then take a look at the <code>athletes_summary_stats_ht</code> object.</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb65-1" aria-hidden="true" tabindex="-1"></a>athletes_summary_stats_ht <span class="ot">&lt;-</span> athletes_summary_stats_ht <span class="sc">%&gt;%</span></span>
+<span id="cb65-2"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb65-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sem =</span> sd<span class="sc">/</span><span class="fu">sqrt</span>(n))</span></code></pre></div>
 <p>Hopefully you should see something that looks like this:</p>
 <pre><code>&gt; athletes_summary_stats_ht
 # A tibble: 2 × 7
@@ -325,7 +335,7 @@ Try using the following chunk of code and then take a look at the <code>athletes
 1 f      175.  8.24   100 0.824
 2 m      186.  7.90   102 0.783 </code></pre>
 <p>Now try using the <code>mutate</code> function to calculate the 95% confidence intervals. Remember 95% confidence intervals fall on either side of the mean, so you will need an upper and lower bound, so you will need to use mutate twice, once for an <code>upper_ci</code> and once for a <code>lower_ci</code>.</p>
-<p>The equation for calulating 95% confidence intervals is:</p>
+<p>The equation for calculating 95% confidence intervals is:</p>
 <p><span class="math display">\[
 95percent CI = \ Mean ± (1.96 * SEM)
 \]</span></p>
@@ -338,23 +348,200 @@ Try using the following chunk of code and then take a look at the <code>athletes
 2 m      186.  7.90   102 0.783     187.     184.</code></pre>
 <p>The skills you have learned here could be applied to any of the numeric variables in the <code>athletes</code> data set. Try calculating similar values for the red blood cell count variable.</p>
 </div>
-<div id="testing-for-normality" class="section level3 hasAnchor" number="14.1.2">
-<h3><span class="header-section-number">14.1.2</span> Testing for normality<a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#testing-for-normality" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-</div>
 </div>
 <div id="introducing-some-inferential-statistics" class="section level2 hasAnchor" number="14.2">
 <h2><span class="header-section-number">14.2</span> Introducing some inferential statistics<a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#introducing-some-inferential-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="t-test" class="section level3 hasAnchor" number="14.2.1">
-<h3><span class="header-section-number">14.2.1</span> T-test<a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#t-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We have, so far, looked at how to explore our data set, both graphically (using histograms, box plots and scatter plots) and numerically (by using descriptive statistics). But something you will come into frequent contact with throughout your degree is inferential statistics. You may heave heard of statistical tests such as; T-test, ANOVA, Chi squared and Mann Whitney U before. These are all different types of statistical model that are loosely grouped under the header of inferential statistics. These are statistics that allow you to make predictions from your data with the aim of allowing you to take data from your samples and make generalisations about a respective population. You may hear people refer to <em>significant differences</em> or <em>significant relationships</em>, essentially as soon as the term <em>significant</em> comes into play there is an assumption made that some kind of statistical test has been applied.</p>
+<p>We wont be going into a huge amount of detail regarding these inferential statistics, the field of statistics is huge and there are many ways you may apply statistics to different data sets. At this stage, I would much prefer that you become confident with visualising data and interpreting those visualisations. However to ensure that you are set up for your future studies and data analysis ambitions it important that you are at least aware of some inferential statistics. My aim here is go give you an overview of how to run and interpret the statistical models that you are most likely to come across in your degree. This will hopefully act as a foundation in statistic that you can build on as required.</p>
+<div id="the-general-linear-model" class="section level3 hasAnchor" number="14.2.1">
+<h3><span class="header-section-number">14.2.1</span> The general linear model<a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#the-general-linear-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>General linear models (not to be confused with generalised linear models or GLMs) are a commonly used statistic in the biological sciences, this is, at least in part, because they are pretty versatile and can output information on statistical significance and effect size. We wont go into the maths behind them in too much detail but in essence they make use of a linear equation. We can apply general linear models to look for differences, if one of our variables is categorical (essentially we are performing an ANOVA or T-test), this will compare the means between our two groups, or we can use the same function to look for relationships and perform a regression, if both of our variables are continuous.</p>
+<p>Helpfully, general linear models are very easy to apply in R, there is a function called <code>lm()</code> that is part of the base R package. Lets have a look at some applications of this function.</p>
 </div>
-<div id="anova" class="section level3 hasAnchor" number="14.2.2">
-<h3><span class="header-section-number">14.2.2</span> ANOVA<a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#anova" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="testing-for-differences" class="section level3 hasAnchor" number="14.2.2">
+<h3><span class="header-section-number">14.2.2</span> Testing for differences<a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#testing-for-differences" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Lets say we wanted to analyse the difference in average weight between male and female athletes. So our hypothesis might be; male athletes are heavier then female athletes, in this case the predictor variable is sex and the response variable is weight. If we wanted to use that information to fit a general linear model we could use the following chunk;</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fitting a linear model </span></span>
+<span id="cb68-2"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Here I have created an object &quot;linear_model01&quot; to store the outputs of our model in</span></span>
+<span id="cb68-3"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb68-3" aria-hidden="true" tabindex="-1"></a>linear_model01 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wt <span class="sc">~</span> sex, <span class="at">data =</span> athletes) <span class="co"># lm() is the function here, and we are specifying that we want to analyse weight (our response variable) as a function of sex (our predictor variable) using tilde (~). It is super important to place your response and predictor variables on the right side of tilde. We then just tell R which data frame we are using with the data = athletes argument. </span></span>
+<span id="cb68-4"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb68-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(linear_model01) <span class="co"># Summary() will just print out a summary of our model for us to interpret </span></span></code></pre></div>
+<p>The <code>summary()</code> function will then provide you with the following overview of your model output;</p>
+<pre><code>&gt; summary(lsmodel01)
+
+Call:
+lm(formula = wt ~ sex, data = athletes)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-29.542  -7.703   0.517   7.538  40.676 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   67.342      1.169  57.599   &lt;2e-16 ***
+sexm          15.182      1.645   9.227   &lt;2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 11.69 on 200 degrees of freedom
+Multiple R-squared:  0.2986,    Adjusted R-squared:  0.2951 
+F-statistic: 85.14 on 1 and 200 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>There is a lot of information here so we will break each section down.</p>
+<p>First of all we have a reminder of the formula we gave to the <code>lm()</code> function;</p>
+<pre><code>Call:
+lm(formula = wt ~ sex, data = athletes)</code></pre>
+<p>Then we have a summary of our residuals;</p>
+<pre><code>Residuals:
+    Min      1Q  Median      3Q     Max 
+-29.542  -7.703   0.517   7.538  40.676 </code></pre>
+<p>I wont go into a huge amount of detail around how we interpret these, you can read around it if it interests you. But in a nutshell the general linear model draws a straight line through all of our data points, so it has fitted a model predicting where it would expect your data points to land. The residuals are then the distances away from that line each data point is, so the distance each of your observed data points are away from the predicted values. Here R has given us some summary statistics around the residuals.</p>
+<p>Next we have our coefficients;</p>
+<pre><code>Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   67.342      1.169  57.599   &lt;2e-16 ***
+sexm          15.182      1.645   9.227   &lt;2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+</code></pre>
+<p>So here we have a table with two rows called <code>(Intercept)</code> and <code>sexm</code> and four collumns called <code>Estimate</code> which is essentially the mean, <code>Std. Error</code> which is standard error, <code>t value</code> which is our T statistic and <code>Pr(&gt;ltl)</code> which is otherwise known as a p value. We set out to model the difference in weight between male and female athletes, the labeling here is somewhat confusing but the <code>(Intercept)</code> row actually refers to the female athletes. You can check for yourself if you like the <code>Estimate</code> and <code>Std. Error</code> here denote the mean and standard error for weight among female athletes. The<code>t value</code> is the <code>Estimate</code> divided by <code>Std. Errors</code> and the <code>Pr(&gt;|t|)</code> is the corresponding value for that t value in a T distribution table with the given degrees of freedom (dont worry about this last bit just yet).</p>
+<p>A common mistake is therefore to assume that the <code>sexm</code> row then referes to the same values for male athletes. This isn’t quite right. This actually refers to the <strong>difference in the mean weight of the two groups.</strong> This focuses then on the question which we are asking: is their a difference in the weight between male and female athletes? You can check this for yourself, but essentially this row is saying that male athletes are, on average, 15.2kgs heavier then female athletes with a standard error of 1.65kgs. Our <code>t value</code> here is then the <code>Estimate</code> divided by the <code>Std. Error</code> again.</p>
+<p>Now lets have a look at our <code>Pr(&gt;ltl)</code> value, otherwise known as a p value. I am not going to go into how these are calculated as they are often worked out by comparing the test statistics (in this case the T value) and degrees of freedom, against a contingency table. However I will give you some outline of how they are interpreted. Our p value here is given as &gt;2e-16 which translates as 0.0000000000000002. We can interpret this value as there is a 0.0000000000000002% probability that we would see our given t value if the null hypothesis was true, out null hypothesis being that there is no difference in weight between male and female athletes. This, I hope you will agree is a very low probability. We generally use cut offs for p values of 0.05 or 0.01 so if you get a p value less then those cut offs you have found statistical significance. Here our p value is less than 0.01 so we can say that there is a statistically significant difference between male and female athlete weight.</p>
+<p>Finally you may have noticed that there are some asterisks <code>*</code> in the coefficients section, these relate to the <code>Signif.codes</code>, or significance codes row below. Here you can see the relavent number of asterisks and how they relate to the different p value cutoffs.</p>
+<p>The last part of our summary is shown here;</p>
+<pre><code>Residual standard error: 11.69 on 200 degrees of freedom
+Multiple R-squared:  0.2986,    Adjusted R-squared:  0.2951 
+F-statistic: 85.14 on 1 and 200 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>The residual standard error is pretty much what is says on the tin. I’m not going to go into more depth on residuals here. But I will draw your attention to degrees of freedom or DF. This is essentially is the number of independent pieces of information used to calculate a statistic. It’s calculated as the sample size minus the number of restrictions. So in a nutshell its a measure of sample size.</p>
+<p>The multiple R-squared value describes how well your regression model explains the variation in your data. Here we have a multiple R-squared of 0.2986, which we could round to 0.3. This can be interpreted as 30% of the variation in weight is explained by the sex of the athletes. Adjusted R-squared, which is also reported here is only really of use if you are doing multivariate statistics it takes into account how many samples you have and how many variables you’re using. Here we only have one variable so we don’t need to worry about the adjusted R-squared.</p>
+<p>Finally we have our F statistic. This is essentially another test statistic (like T in the coefficients table), here it has been reported with its own degrees of freedom (DF) and p value. You can interpret these as we did previously.</p>
+<p>So by funning the <code>lm()</code> function on categorical data and using the <code>summary()</code> function, we have performed both an Independent T-test (T-values in the coefficient section) and an ANOVA (the F statistics). We have also aquired an R-squared value to show the goodness of fit of our regression.</p>
+<p>Try running the <code>lm()</code> and <code>summary()</code> functions now height and sex in the athletes data set, can you interpret the results?</p>
 </div>
-<div id="r2" class="section level3 hasAnchor" number="14.2.3">
-<h3><span class="header-section-number">14.2.3</span> R<sup>2</sup><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#r2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="testing-for-relationships" class="section level3 hasAnchor" number="14.2.3">
+<h3><span class="header-section-number">14.2.3</span> Testing for relationships<a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#testing-for-relationships" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="spearmans-rank" class="section level3 hasAnchor" number="14.2.4">
-<h3><span class="header-section-number">14.2.4</span> Spearmans Rank<a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#spearmans-rank" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="assumptions" class="section level3 hasAnchor" number="14.2.4">
+<h3><span class="header-section-number">14.2.4</span> Assumptions<a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We have explored several applications of the general linear model (including T-tests, ANOVA and regression). However you should also be aware of some of the assumptions that these models make. All statistical models come with a set of assumptions that are made of the data set. As a result your choice of test is quite important when starting to perform inferential statistics, and there are a number of factors around your data that you need to be clear about. These include;</p>
+<ul>
+<li>What is your question and hypothesis?</li>
+<li>What types of data are available to you in your data set?</li>
+<li>What is your sample size?</li>
+<li>Are your data normally distributed?</li>
+</ul>
+<p>Most of these fairly self explanatory and easy to find out but a key assumption made by all the statistical tests we have looked at so far and that is a little more tricky to define is that the data are normally distributed.</p>
+<p>You will frequently see statistical models refereed to as parametric or non-parametric.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Parametric</th>
+<th align="center">Non-Parametric</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">General linear model variants</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">Independent T-test</td>
+<td align="center">Mann-Whitney U</td>
+</tr>
+<tr class="odd">
+<td align="center">ANOVA</td>
+<td align="center">Mann-Whitney U</td>
+</tr>
+<tr class="even">
+<td align="center">Pearson’s Correlation</td>
+<td align="center">Spearman’s Rank Correlation</td>
+</tr>
+</tbody>
+</table>
+<p>Parametric tests assume that your data are normally distributed and non-parametric tests do not make this assumption, but are not as statistically powerful as parametric tests (hense why we don’t always do a non-parametric test just to be on the safe side).</p>
+<p>To check our distributions we can and should always make a histogram just to look over the data. But there are also tests we can use to reassure ourselves of the data distribution. One such test is called the Shapiro-Wilk test for normality and its very easy to perform in R. Lets go back to our weight variable in the male athletes data set and see if that is normally distributed. First of all pull up your histogram for this variable and remind yourself of how the data are distributed.</p>
+<p>Now to add confidence to our interpretation we can run the following piece of code;</p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Normality test</span></span>
+<span id="cb74-2"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb74-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb74-3"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb74-3" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(male_athletes<span class="sc">$</span>wt) <span class="co"># Notice we are running this test on just the male athletes</span></span></code></pre></div>
+<p>The results should look something like this;</p>
+<pre><code>&gt; shapiro.test(athletes$wt)
+
+    Shapiro-Wilk normality test
+
+data:  athletes$wt
+W = 0.99299, p-value = 0.4516
+</code></pre>
+<p>Here our test statistic is W and our p value is fairly self explanatory. But the interpretation of this test is often a little challenging for students. Here the null hypothesis is that our data are normally distributed so if our p value is greater then 0.05 we accept the null hypothesis to be true and our data are normally distributed but if our p value is less than 0.05 our null hypothesis is rejected and that our data are not normally distributed. Here because weight is normally distributed it would be fine to run a parametric test on it.</p>
+<p>Try running this test on all of your variables for male and female athletes, are any of them not normally distributed?</p>
+</div>
+<div id="what-to-do-if-your-data-are-not-normally-distributed" class="section level3 hasAnchor" number="14.2.5">
+<h3><span class="header-section-number">14.2.5</span> What to do if your data are not normally distributed<a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#what-to-do-if-your-data-are-not-normally-distributed" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There are a couple of things we can do if our data are not normally distributed.</p>
+<ol style="list-style-type: decimal">
+<li>We can log transform the data</li>
+<li>We can run a non parametric test</li>
+</ol>
+<p>Hopefully you noticed that the red blood cell count for both male and female athletes was not normally distributed. We can log transform the female althletes red blood cell count using the following piece of code;</p>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Log transform</span></span>
+<span id="cb76-2"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb76-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-3"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb76-3" aria-hidden="true" tabindex="-1"></a>female_athletes <span class="ot">&lt;-</span> female_athletes <span class="sc">%&gt;%</span></span>
+<span id="cb76-4"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb76-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">log10 =</span> <span class="fu">log10</span>(female_athletes<span class="sc">$</span>rcc))</span></code></pre></div>
+<p>Now run the Shapiro-Wilk test on this new log10 variable and see if its normally distributed.</p>
+</div>
+<div id="testing-for-correlations" class="section level3 hasAnchor" number="14.2.6">
+<h3><span class="header-section-number">14.2.6</span> Testing for Correlations<a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#testing-for-correlations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Normality and homology of varience test</span></span>
+<span id="cb77-2"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-3"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-3" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(athletes<span class="sc">$</span>ht)</span>
+<span id="cb77-4"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-4" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(athletes<span class="sc">$</span>wt)</span>
+<span id="cb77-5"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-5" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(male_athletes<span class="sc">$</span>rcc)</span>
+<span id="cb77-6"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-6" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(female_athletes<span class="sc">$</span>rcc)</span>
+<span id="cb77-7"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-8"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-9"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-10"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-10" aria-hidden="true" tabindex="-1"></a><span class="co"># linear models </span></span>
+<span id="cb77-11"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-12"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-12" aria-hidden="true" tabindex="-1"></a>lsmodel01 <span class="ot">&lt;-</span> <span class="fu">lm</span>(ht <span class="sc">~</span> sex, <span class="at">data =</span> athletes)</span>
+<span id="cb77-13"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-13" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lsmodel01)</span>
+<span id="cb77-14"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-14" aria-hidden="true" tabindex="-1"></a>lsmodel02 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wt <span class="sc">~</span> sex, <span class="at">data =</span> athletes)</span>
+<span id="cb77-15"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-15" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lsmodel02)</span>
+<span id="cb77-16"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-16" aria-hidden="true" tabindex="-1"></a>lsmodel03 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wt <span class="sc">~</span> ht, <span class="at">data =</span> athletes)</span>
+<span id="cb77-17"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-17" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lsmodel03)</span>
+<span id="cb77-18"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-19"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlations</span></span>
+<span id="cb77-20"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-21"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-21" aria-hidden="true" tabindex="-1"></a>correlation01 <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(athletes<span class="sc">$</span>ht, athletes<span class="sc">$</span>wt, <span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>)</span>
+<span id="cb77-22"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-22" aria-hidden="true" tabindex="-1"></a>correlation01</span>
+<span id="cb77-23"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-24"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Log transform</span></span>
+<span id="cb77-25"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-26"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-26" aria-hidden="true" tabindex="-1"></a>female_athletes <span class="ot">&lt;-</span> female_athletes <span class="sc">%&gt;%</span></span>
+<span id="cb77-27"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">log10 =</span> <span class="fu">log10</span>(female_athletes<span class="sc">$</span>rcc))</span>
+<span id="cb77-28"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-28" aria-hidden="true" tabindex="-1"></a>male_athletes <span class="ot">&lt;-</span> male_athletes <span class="sc">%&gt;%</span> </span>
+<span id="cb77-29"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">log10 =</span> <span class="fu">log10</span>(male_athletes<span class="sc">$</span>rcc))</span>
+<span id="cb77-30"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-30" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(female_athletes<span class="sc">$</span>log10)</span>
+<span id="cb77-31"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-31" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(male_athletes<span class="sc">$</span>log10)</span>
+<span id="cb77-32"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-33"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Mann Whitney U / Wilcoxan </span></span>
+<span id="cb77-34"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-35"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-35" aria-hidden="true" tabindex="-1"></a><span class="fu">wilcox.test</span>(rcc <span class="sc">~</span> sex, <span class="at">data=</span>athletes) </span></code></pre></div>
+<pre><code>    Shapiro-Wilk normality test
+
+data:  athletes$log10
+W = 0.97946, p-value = 0.004685
+
+&gt; leveneTest(athletes$ht, athletes$sex)
+Levene&#39;s Test for Homogeneity of Variance (center = median)
+       Df F value Pr(&gt;F)
+group   1  0.0955 0.7577
+      200 
+
+&gt; wilcox.test(rcc ~ sex, data=athletes) 
+
+    Wilcoxon rank sum test with continuity correction
+
+data:  rcc by sex
+W = 948, p-value &lt; 2.2e-16
+alternative hypothesis: true location shift is not equal to 0</code></pre>
 
 </div>
 </div>
@@ -365,7 +552,7 @@ Try using the following chunk of code and then take a look at the <code>athletes
         </div>
       </div>
 <a href="new-year-new-data---workshop-4---athletes-week-2b.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="workshop-6-week-6b.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -425,7 +612,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

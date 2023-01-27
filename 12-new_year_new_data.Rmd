@@ -4,22 +4,26 @@ Good news! There are only four chapters remaining. Each chapter from this point 
 
 ## A new project
 
-We will be working on two new data sets this term and for each one you will be asked to produce a mock project result section. These wont be marked, but will help you prepare for the Skills for Biologists Summative and other reports that you will produce through your university career. You can ask for feedback from either myself or demonstrators during your workshop sessions. 
+We will be working on a new data set this term and will be asked to produce a mock project result section. This will help you prepare for the Skills for Biologists Summative and other reports that you will produce through your university career. You can ask for feedback from either myself or demonstrators during your workshop sessions. 
 
 In this project you are interested in exploring the differences and relationships in weight, height and red blood cell in a group of male and female athletes. 
 
 ### Project setup
 
-Generally I recommend starting a new R Project every time you start working on new and unrelated data sets. Go to posit Cloud and open a **New Project** and name it `athletes`. Spend a few minutes setting up your workspace, refer back to **Section 4.3** to remind yourself of how to do this. Remember you will need to create sensible places to save scrips, data and figures to. You will also need to freshly install any required packages. 
+Generally I recommend starting a new R Project every time you start working on new and unrelated data sets. Go to posit Cloud and open a **New R Studio Project** and name it `athletes`. Spend a few minutes setting up your workspace, refer back to **Section 4.3** to remind yourself of how to do this. Remember you will need to create sensible places to save scrips, data and figures to. You will also need to freshly install any required packages. 
 
 For todays workshop you will need the following packages:
 
 * tidyverse
 * patchwork
 
+### Script set up
+
+Its fairly safe to say we will be creating some new scripts so open a new **R script** and set it up as described in **Section 4.5**. The project title will be *An analysis of red cell counts among athletes*. Remember to use `library()` to load your freshly installed packages. 
+
 ### The data
 
-The data we will be working on was collected from 202 athletes (102 male (m) and 100 female (f)). 
+The data set we will be working on was collected from 202 Australian athletes (102 male (m), 100 female (f)) (data set adapted from Telford and Cunningham, 1991). 
 
 The following variables were measured for each athlete:
 
@@ -29,15 +33,76 @@ The following variables were measured for each athlete:
 
 You can download the new data set [here](https://downgit.github.io/#/home?url=https://github.com/ellenbell/4008Y/blob/main/data/athletes.csv). When downloaded you will need to unzip the file, save it somewhere sensible on your computer and then load it in to posit cloud (see **Section 4.4** if you are unsure). 
 
-### Script set up
+## Check the data 
 
-Its fairly safe to say we will be creating some new scripts so open a new **R script** and set it up as described in **Section 4.5**. The project title will be *An analysis of red cell counts among athletes*. Remember to use `library()` to load your freshly installed packages. 
+Once you have imported and loaded your data into your new r project you will need to spend a few minutes checking it over to make sure that R has correctly identified and formatted your variables. 
+
+### Task 1 - Make sure your data are clean and tidy
+
+1)  First of all make sure your data have imported correctly, do you have the expected numbers of rows and columns? - *Hint - consider using functions such as ```ncol(), nrow(), colnames()``` to check this, for more details on how consider revisiting Chapters 4 and 6.*
+2)  Then check that R has correctly identified the data types for each variable. Do you need to adjust any variables to factors? - *Hint - consider using functions such as ```head()``` to check and ```as.factor()``` to identify variables as factors where required, consider revisiting Chapters 4.4 and 8.1 for further assistance*
+3)  Now you can check your variable names, are they nice and concise, do you want to change them? *Hint - you can use the ```rename()``` function, as seen in Chapter 4.5 to change variable names if you wish to.*
+
+Now we know our that R has read our data correctly and we have all of our variables named as we would like we can run a few further checks. Frequently your data will have originally been manually entered into a spreadsheet, maybe from hand drafted notes in a field or lab notebook. Every time something is copies over there is the opportunity for error. Maybe a row has been accidentally duplicated, or there is a typo or maybe some data is missed out altogether. There are a few tricks we can use to check for each of these and to make sure we are confident in the fidelity of our dataset. 
+
+1) Checking for duplicates - As mentioned above when you are manually entering data into a spreadsheet, it is very easy to accidentally enter the same row twice. With very large data sets this is something that is very hard to pick out by just looking. Thankfully R has some very useful functions to check for this. Try running;
+
+```{r}
+athletes %>%
+  duplicated() # check for duplicated rows
+```
+**Note that %>% used here is just another notation for piping, rather like the + that ggplot uses.This means that the output from one function is fed directly into the next function.**
+
+This chunk of code will spit out a long list of TRUE (row is duplicated) or FALSE (row is not duplicated) statements. Again not very human readable, especially if we have a very large data set. Try ammending the code to;
+
+```{r}
+athletes %>%
+  duplicated() %>% # check for duplicated rows
+  sum() # Sums any TRUE statements in the list 
+```
+
+Do we have any duplicated rows?
+
+2)  Checking for typos - As with duplicates it is very easy to enter a typo when manually entering data into a spreadsheet. Generally if you have been collecting continuous data you will have an idea of what a sensible upper and lower bound within your data set should be. We can use the `summarise()` function to see what these are within this data set, as shown below;
+
+```{r}
+athletes %>% 
+  summarise(min=min(wt, na.rm=TRUE), # reports the minimum value in the wt variable and ignores cells with N/A
+            max=max(wt, na.rm=TRUE)) # reports the maximum value in the wt variable and ignores cells with N/A
+```
+
+Try manipulating the above chunk to report the upper and lower bounds for the height variable in your data set. Do these values all look reasonable to you?
+
+But how can we check for typos in categorical data? We can use the `distinct()` function to identify all of the options stored under a categorical variable name. Try using the following chunk;
+
+```{r}
+athletes %>% 
+  distinct(sex) # reports the categories stored under sex
+```
+
+So do you think there are any potential typos in your data set?
+
+3)  Checking for missing data - finally sometimes when entering data manually, you may miss or delete a spreadsheet cell by mistake, leaving it empty. Again this is really difficult to spot in a large data set. Try running the following chunk of code, can you work out what each line does? Try annotating it in your script yourself.
+
+```{r}
+athletes %>% 
+  is.na() %>% 
+  sum()
+```
+
+<details><summary> **Click-me to check your code interpretation** </summary>
+
+So here you are piping your initial data set `athletes` into the `is.na()` function which is then looking for cells containing N/A and reporting a TRUE/FALSE data frame (where TRUE indicates N/A). We are then piping that output straight into the `sum()` function which is summing the number of TRUE values.
+
+</details>
+
+Do we have any missing data?
 
 ## Explore the data
 
 We finished last terms workshops by looking at how we can cannibalise code to fit our purposes. We will be spending the first part of todays workshop going over a few of these skills on our shiney new data set! It may be helpful to look through some of the scripts in **Section 12** if you get stuck.
 
-### Task 1 - Look at your data distributions
+### Task 2 - Look at your data distributions
 
 Its always helpful to look at how your data is distributed, as this could have implication for how you tackle downstream analysis. 
 
@@ -55,7 +120,7 @@ Create a histogram for the following variables, start with a 6 bins and then mak
 
 <details><summary> **Click-me to check your interpretation** </summary>
 
-Your histograms for height and weight both appear normally distributed. Changing the number of bins doesn't really alter this. However when you look at the histogram for red blood cell count with 6 bins it looks like it might be sightly skewed, with 20 bins however we get more resolution over the data distribution and two peaks appear. The red blood cell count data are bi-modal. This suggest that we may need to think about our data a little more. These histograms were performed on all the data, which includes both male and female athletes, the bi-modal distribution suggests we should consider splitting the data and analysing male and female athletes separately. 
+Your histograms for height and weight both appear normally distributed. Changing the number of bins doesn't really alter this. However when you look at the histogram for red blood cell count with 6 bins it looks like it might be skewed, with 20 bins however we get more resolution over the data distribution and two peaks appear. The red blood cell count data are bi-modal. This suggest that we may need to think about our data a little more. These histograms were performed on all the data, which includes both male and female athletes, the bi-modal distribution suggests we should consider splitting the data and analysing male and female athletes separately. 
 
 </details>
 
@@ -70,7 +135,6 @@ male_athletes <- athletes %>%
   filter(sex == "m")
 
 ```
-**Note that %>% used here is just another notation for piping, rather like the + that ggplot uses.This means that the output from one function is fed into the next function.**
 
 Make a similar data frame for female athletes using the above chunk. Then create two new histograms for:
 
@@ -80,7 +144,7 @@ Make a similar data frame for female athletes using the above chunk. Then create
 > **Pitt Stop; pause your analysis and check your interpretation**
 > How would you describe these two new histograms?
 
-### Task 2 - Look for differences and relationships
+### Task 3 - Look for differences and relationships
 
 Now that we have a better idea for how our data are distributed we can start to ask some questions of the data set. First of all think, what kind of plot would you build to explore the following questions? We covered this in *Section 7.1*.
 
@@ -131,70 +195,9 @@ Essentially, the relationship between height and weight in male and female athle
 
 </details>
 
-So hopefully you can see why its important to think about interpretation at each stage of your analysis, if we had not broken our data set down and analysed male and female athletes separately, we may have ended up drawing false conclusions from our data set. 
+## Wrapping up
 
-## Reporting your analysis
-
-As mentioned at the beginning of this chapter, this semester we will not only be working on our analytical skills but also thinking about how we report our analyses. Here, we are conducting analysis that will eventually be put into a mock report (to help you prepare for future reports that you may need to produce). So lets begin by thinking about how we might present some of our figures.  
-
-### Task 3 - Start thinking about how you might report your data
-
-First of all, identify which plots you would include in a report if you were interested in answering the following questions;
-
-* Is there a difference between male and female athlete height?
-* Is there a difference between male and female athlete weight?
-* Is there a difference between male and female athlete red blood cell count?
-* Is there a relationship between height and weight in male and female athletes?
-* Is there a relationship between red blood cell count and weight in male and female athletes?
-
-> **Selecting plots for a report**
-> An extremely common error students make is to include every plot they build in a report. Sometimes it is important to build a plot, as part of your own data exploration, but not include it when writing your report. Histograms are a prime example of this, unless the question you are exploring is related to data distribution, you do not need to include histograms in your project reports. You do need to know how the data are distributed, but you do not need to present the histograms that show the data distribution. Your report should only include figures that relate to the questions you are asking. You want to try and tell a story through your figures, while showing academic rigour. With this in mind, which of your plots would you include in your report, given the questions above?  
-
-<details><summary> **Click-me to see which figures Ellen would present** </summary>
-
-There are several combinations of plots you could present to answer the above questions in a report, but this is how I would do it;
-
-* Figure 1 - A multi-panel (group of plots) figure containing box plots for (i) weight in male and female athletes, (ii) height in male and female athletes and (iii) scatter plot for weight vs height in male and female athletes (pooled)
-* Figure 2 - a multi-panel figure containing (i) box plot for red blood cell count in male and female athletes, (ii) scatter plot for red blood cell counts in male athletes, (iii) scatter plot for red blood cell counts in female athletes
-
-We will cover how to make multi-panel figures shortly. 
-</details>
-
-
-Make each figure that you would include in your report visually pleasing. Use your ggplot skills and scripts to do this. Think about colour choices and try to make them uniform.
-
-
-### Task 4 - Building your first multi-pannel figure
-
-In **Section 13.3.1** I suggested that it may be a good idea to present some of your reported plots in a multi-panel figure. We can make these in R using the package `patchwork`. See the chunk below for a demonstration;
-
-```{r}
-# Demonstrating how to use the plot_layout function within the patchwork package to make multi-panel figures
-# First, here are some basic plots, you can use your own plots that have been nicely formatted instead, these are just to demonstrate
-weight_box <- ggplot(data = athletes,aes(x = sex, y = wt)) + 
-  geom_boxplot() 
-height_box <- ggplot(data = athletes,aes(x = sex, y = ht)) + 
-  geom_boxplot() 
-height_v_weight <- ggplot(data = athletes,aes(x = ht, y = wt)) + 
-  geom_point(aes(colour = sex)) +
-  geom_smooth(method="lm")
-
-# Now we can use the plot_layout function within the patchwork package to make our multi-panel figure.
-# Here I have asked for the height and weight box plots to be on the top row, side by side and the height v weight scatter below.
-# You can play with the configuration to suit your tastes, use help(plot_layout) to see some other configurations.
-# You may notice that here I have specified the package for the function using "::" e.g. patchwork::plot_layout.
-# This is because some functions across multiple packages have shared names, as the do here, so R can become confused, by specifying the package, I am directing R to the specific package which contains the specific function I wish to use. 
-# The final argument (guides='collect') pulls together all the little figure keys you may have and presents them on one place and should remove duplicated information
-(height_box | weight_box) / height_v_weight + patchwork::plot_layout(guides ='collect')
-```
-
-The results of this chunk can be seen in Figure 13.1. Note that these are rough draft figures and placement, you can play with the ggplot and patchwork parameters to get them to look as you would like, and as would be expected in a written report. 
-
-```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Results from the patchwork demonstration chunk", fig.cap ="Results from the patchwork demonstration chunk"}
-knitr::include_graphics("figures/screenshot_patchwork.png")
-```
-
-Have a go at putting some of your report ready plots into a multi-panel figure. Use `ggsave` to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in **Section 12**.
+During this chapter we have loaded a new data set into a new R project. We have checked over the data to makes sure that its been loaded correctly and that there are no duplicated rows, typos or missing data. We have then moved on further to exploring the data set, looking at its shape/distribution and identifying any early patterns. As a really important take home message you can hopefully see and appreciate why its important to think about interpretation at each stage of your analysis. If we had not broken our data set down and analysed male and female athletes separately, we may have ended up drawing false conclusions from our data set and this could have derailed much or our downstream analysis as well. 
 
 ## Before you leave!
 
@@ -203,5 +206,6 @@ Log out of posit Cloud and make sure you save your script!
 ## References
 
 Pedersen, T. L. (2020). Patchwork: The composer of plots. https://CRAN.R-project.org/package=patchwork
+Telford, R.D. and Cunningham, R.B. 1991. Sex, sport and body-size dependency of hematology in highly trained athletes. Medicine and Science in Sports and Exercise 23: 788-794.
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686.
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. https://CRAN.R-project.org/package=ggplot2.

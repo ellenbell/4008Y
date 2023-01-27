@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 13 New year, new data - Workshop 4 - Athletes, Week 2B | Introduction to Data Science - 4008Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 13 New year, new data - Workshop 4 - Athletes, Week 2B | Introduction to Data Science - 4008Y" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<meta name="date" content="2023-01-09" />
+<meta name="date" content="2023-01-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -240,38 +240,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13.1" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#a-new-project"><i class="fa fa-check"></i><b>13.1</b> A new project</a>
 <ul>
 <li class="chapter" data-level="13.1.1" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#project-setup"><i class="fa fa-check"></i><b>13.1.1</b> Project setup</a></li>
-<li class="chapter" data-level="13.1.2" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#the-data"><i class="fa fa-check"></i><b>13.1.2</b> The data</a></li>
-<li class="chapter" data-level="13.1.3" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#script-set-up"><i class="fa fa-check"></i><b>13.1.3</b> Script set up</a></li>
+<li class="chapter" data-level="13.1.2" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#script-set-up"><i class="fa fa-check"></i><b>13.1.2</b> Script set up</a></li>
+<li class="chapter" data-level="13.1.3" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#the-data"><i class="fa fa-check"></i><b>13.1.3</b> The data</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#explore-the-data"><i class="fa fa-check"></i><b>13.2</b> Explore the data</a>
+<li class="chapter" data-level="13.2" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#check-the-data"><i class="fa fa-check"></i><b>13.2</b> Check the data</a>
 <ul>
-<li class="chapter" data-level="13.2.1" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-1---look-at-your-data-distributions"><i class="fa fa-check"></i><b>13.2.1</b> Task 1 - Look at your data distributions</a></li>
-<li class="chapter" data-level="13.2.2" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-2---look-for-differences-and-relationships"><i class="fa fa-check"></i><b>13.2.2</b> Task 2 - Look for differences and relationships</a></li>
+<li class="chapter" data-level="13.2.1" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-1---make-sure-your-data-are-clean-and-tidy"><i class="fa fa-check"></i><b>13.2.1</b> Task 1 - Make sure your data are clean and tidy</a></li>
 </ul></li>
-<li class="chapter" data-level="13.3" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#reporting-your-analysis"><i class="fa fa-check"></i><b>13.3</b> Reporting your analysis</a>
+<li class="chapter" data-level="13.3" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#explore-the-data"><i class="fa fa-check"></i><b>13.3</b> Explore the data</a>
 <ul>
-<li class="chapter" data-level="13.3.1" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-3---start-thinking-about-how-you-might-report-your-data"><i class="fa fa-check"></i><b>13.3.1</b> Task 3 - Start thinking about how you might report your data</a></li>
-<li class="chapter" data-level="13.3.2" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-4---building-your-first-multi-pannel-figure"><i class="fa fa-check"></i><b>13.3.2</b> Task 4 - Building your first multi-pannel figure</a></li>
+<li class="chapter" data-level="13.3.1" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-2---look-at-your-data-distributions"><i class="fa fa-check"></i><b>13.3.1</b> Task 2 - Look at your data distributions</a></li>
+<li class="chapter" data-level="13.3.2" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-3---look-for-differences-and-relationships"><i class="fa fa-check"></i><b>13.3.2</b> Task 3 - Look for differences and relationships</a></li>
 </ul></li>
-<li class="chapter" data-level="13.4" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#before-you-leave-7"><i class="fa fa-check"></i><b>13.4</b> Before you leave!</a></li>
-<li class="chapter" data-level="13.5" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#references-8"><i class="fa fa-check"></i><b>13.5</b> References</a></li>
+<li class="chapter" data-level="13.4" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#wrapping-up"><i class="fa fa-check"></i><b>13.4</b> Wrapping up</a></li>
+<li class="chapter" data-level="13.5" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#before-you-leave-7"><i class="fa fa-check"></i><b>13.5</b> Before you leave!</a></li>
+<li class="chapter" data-level="13.6" data-path="new-year-new-data---workshop-4---athletes-week-2b.html"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#references-8"><i class="fa fa-check"></i><b>13.6</b> References</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><i class="fa fa-check"></i><b>14</b> Playing with some statistics - Workshop 5 - Athletes continued, Week 4B</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#descriptive-statistics"><i class="fa fa-check"></i><b>14.1</b> Descriptive statistics</a>
 <ul>
 <li class="chapter" data-level="14.1.1" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#task-1---calculating-some-descriptive-statistics"><i class="fa fa-check"></i><b>14.1.1</b> Task 1 - Calculating some descriptive statistics</a></li>
-<li class="chapter" data-level="14.1.2" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#testing-for-normality"><i class="fa fa-check"></i><b>14.1.2</b> Testing for normality</a></li>
 </ul></li>
 <li class="chapter" data-level="14.2" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#introducing-some-inferential-statistics"><i class="fa fa-check"></i><b>14.2</b> Introducing some inferential statistics</a>
 <ul>
-<li class="chapter" data-level="14.2.1" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#t-test"><i class="fa fa-check"></i><b>14.2.1</b> T-test</a></li>
-<li class="chapter" data-level="14.2.2" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#anova"><i class="fa fa-check"></i><b>14.2.2</b> ANOVA</a></li>
-<li class="chapter" data-level="14.2.3" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#r2"><i class="fa fa-check"></i><b>14.2.3</b> R<sup>2</sup></a></li>
-<li class="chapter" data-level="14.2.4" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#spearmans-rank"><i class="fa fa-check"></i><b>14.2.4</b> Spearmans Rank</a></li>
+<li class="chapter" data-level="14.2.1" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#the-general-linear-model"><i class="fa fa-check"></i><b>14.2.1</b> The general linear model</a></li>
+<li class="chapter" data-level="14.2.2" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#testing-for-differences"><i class="fa fa-check"></i><b>14.2.2</b> Testing for differences</a></li>
+<li class="chapter" data-level="14.2.3" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#testing-for-relationships"><i class="fa fa-check"></i><b>14.2.3</b> Testing for relationships</a></li>
+<li class="chapter" data-level="14.2.4" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#assumptions"><i class="fa fa-check"></i><b>14.2.4</b> Assumptions</a></li>
+<li class="chapter" data-level="14.2.5" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#what-to-do-if-your-data-are-not-normally-distributed"><i class="fa fa-check"></i><b>14.2.5</b> What to do if your data are not normally distributed</a></li>
+<li class="chapter" data-level="14.2.6" data-path="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#testing-for-correlations"><i class="fa fa-check"></i><b>14.2.6</b> Testing for Correlations</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="workshop-6-week-6b.html"><a href="workshop-6-week-6b.html"><i class="fa fa-check"></i><b>15</b> Workshop 6, Week 6B</a></li>
+<li class="chapter" data-level="15" data-path="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"><a href="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"><i class="fa fa-check"></i><b>15</b> Reporting your analysis - Workshop 6 - Athletes continued, Week 6B</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"><a href="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html#reporting-your-analysis"><i class="fa fa-check"></i><b>15.1</b> Reporting your analysis</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"><a href="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html#task-1---start-thinking-about-how-you-might-report-your-data"><i class="fa fa-check"></i><b>15.1.1</b> Task 1 - Start thinking about how you might report your data</a></li>
+<li class="chapter" data-level="15.1.2" data-path="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"><a href="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html#task-2---building-your-first-multi-pannel-figure"><i class="fa fa-check"></i><b>15.1.2</b> Task 2 - Building your first multi-pannel figure</a></li>
+<li class="chapter" data-level="15.1.3" data-path="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"><a href="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html#task-3---writing-a-figure-legend"><i class="fa fa-check"></i><b>15.1.3</b> Task 3 - Writing a figure legend</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html"><a href="reporting-your-analysis---workshop-6---athletes-continued-week-6b.html#references-9"><i class="fa fa-check"></i><b>15.2</b> References</a></li>
+</ul></li>
 <li class="chapter" data-level="16" data-path="workshop-7-week-8b.html"><a href="workshop-7-week-8b.html"><i class="fa fa-check"></i><b>16</b> Workshop 7, Week 8B</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -298,20 +308,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Good news! There are only four chapters remaining. Each chapter from this point on wards is associated with a timetabled 2 hour workshop. However if you don’t complete a chapter in the timetabled time you are expected to complete it at home. Here we have material for Workshop 4 in Week 2 of Semester 2.</p>
 <div id="a-new-project" class="section level2 hasAnchor" number="13.1">
 <h2><span class="header-section-number">13.1</span> A new project<a href="new-year-new-data---workshop-4---athletes-week-2b.html#a-new-project" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We will be working on two new data sets this term and for each one you will be asked to produce a mock project result section. These wont be marked, but will help you prepare for the Skills for Biologists Summative and other reports that you will produce through your university career. You can ask for feedback from either myself or demonstrators during your workshop sessions.</p>
+<p>We will be working on a new data set this term and will be asked to produce a mock project result section. This will help you prepare for the Skills for Biologists Summative and other reports that you will produce through your university career. You can ask for feedback from either myself or demonstrators during your workshop sessions.</p>
 <p>In this project you are interested in exploring the differences and relationships in weight, height and red blood cell in a group of male and female athletes.</p>
 <div id="project-setup" class="section level3 hasAnchor" number="13.1.1">
 <h3><span class="header-section-number">13.1.1</span> Project setup<a href="new-year-new-data---workshop-4---athletes-week-2b.html#project-setup" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Generally I recommend starting a new R Project every time you start working on new and unrelated data sets. Go to posit Cloud and open a <strong>New Project</strong> and name it <code>athletes</code>. Spend a few minutes setting up your workspace, refer back to <strong>Section 4.3</strong> to remind yourself of how to do this. Remember you will need to create sensible places to save scrips, data and figures to. You will also need to freshly install any required packages.</p>
+<p>Generally I recommend starting a new R Project every time you start working on new and unrelated data sets. Go to posit Cloud and open a <strong>New R Studio Project</strong> and name it <code>athletes</code>. Spend a few minutes setting up your workspace, refer back to <strong>Section 4.3</strong> to remind yourself of how to do this. Remember you will need to create sensible places to save scrips, data and figures to. You will also need to freshly install any required packages.</p>
 <p>For todays workshop you will need the following packages:</p>
 <ul>
 <li>tidyverse</li>
 <li>patchwork</li>
 </ul>
 </div>
-<div id="the-data" class="section level3 hasAnchor" number="13.1.2">
-<h3><span class="header-section-number">13.1.2</span> The data<a href="new-year-new-data---workshop-4---athletes-week-2b.html#the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The data we will be working on was collected from 202 athletes (102 male (m) and 100 female (f)).</p>
+<div id="script-set-up" class="section level3 hasAnchor" number="13.1.2">
+<h3><span class="header-section-number">13.1.2</span> Script set up<a href="new-year-new-data---workshop-4---athletes-week-2b.html#script-set-up" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Its fairly safe to say we will be creating some new scripts so open a new <strong>R script</strong> and set it up as described in <strong>Section 4.5</strong>. The project title will be <em>An analysis of red cell counts among athletes</em>. Remember to use <code>library()</code> to load your freshly installed packages.</p>
+</div>
+<div id="the-data" class="section level3 hasAnchor" number="13.1.3">
+<h3><span class="header-section-number">13.1.3</span> The data<a href="new-year-new-data---workshop-4---athletes-week-2b.html#the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The data set we will be working on was collected from 202 Australian athletes (102 male (m), 100 female (f)) (data set adapted from Telford and Cunningham, 1991).</p>
 <p>The following variables were measured for each athlete:</p>
 <ul>
 <li>height (ht) was recorded in cm</li>
@@ -320,16 +334,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>You can download the new data set <a href="https://downgit.github.io/#/home?url=https://github.com/ellenbell/4008Y/blob/main/data/athletes.csv">here</a>. When downloaded you will need to unzip the file, save it somewhere sensible on your computer and then load it in to posit cloud (see <strong>Section 4.4</strong> if you are unsure).</p>
 </div>
-<div id="script-set-up" class="section level3 hasAnchor" number="13.1.3">
-<h3><span class="header-section-number">13.1.3</span> Script set up<a href="new-year-new-data---workshop-4---athletes-week-2b.html#script-set-up" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Its fairly safe to say we will be creating some new scripts so open a new <strong>R script</strong> and set it up as described in <strong>Section 4.5</strong>. The project title will be <em>An analysis of red cell counts among athletes</em>. Remember to use <code>library()</code> to load your freshly installed packages.</p>
+</div>
+<div id="check-the-data" class="section level2 hasAnchor" number="13.2">
+<h2><span class="header-section-number">13.2</span> Check the data<a href="new-year-new-data---workshop-4---athletes-week-2b.html#check-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once you have imported and loaded your data into your new r project you will need to spend a few minutes checking it over to make sure that R has correctly identified and formatted your variables.</p>
+<div id="task-1---make-sure-your-data-are-clean-and-tidy" class="section level3 hasAnchor" number="13.2.1">
+<h3><span class="header-section-number">13.2.1</span> Task 1 - Make sure your data are clean and tidy<a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-1---make-sure-your-data-are-clean-and-tidy" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>First of all make sure your data have imported correctly, do you have the expected numbers of rows and columns? - <em>Hint - consider using functions such as <code>ncol(), nrow(), colnames()</code> to check this, for more details on how consider revisiting Chapters 4 and 6.</em></li>
+<li>Then check that R has correctly identified the data types for each variable. Do you need to adjust any variables to factors? - <em>Hint - consider using functions such as <code>head()</code> to check and <code>as.factor()</code> to identify variables as factors where required, consider revisiting Chapters 4.4 and 8.1 for further assistance</em></li>
+<li>Now you can check your variable names, are they nice and concise, do you want to change them? <em>Hint - you can use the <code>rename()</code> function, as seen in Chapter 4.5 to change variable names if you wish to.</em></li>
+</ol>
+<p>Now we know our that R has read our data correctly and we have all of our variables named as we would like we can run a few further checks. Frequently your data will have originally been manually entered into a spreadsheet, maybe from hand drafted notes in a field or lab notebook. Every time something is copies over there is the opportunity for error. Maybe a row has been accidentally duplicated, or there is a typo or maybe some data is missed out altogether. There are a few tricks we can use to check for each of these and to make sure we are confident in the fidelity of our dataset.</p>
+<ol style="list-style-type: decimal">
+<li>Checking for duplicates - As mentioned above when you are manually entering data into a spreadsheet, it is very easy to accidentally enter the same row twice. With very large data sets this is something that is very hard to pick out by just looking. Thankfully R has some very useful functions to check for this. Try running;</li>
+</ol>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb58-1" aria-hidden="true" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span></span>
+<span id="cb58-2"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">duplicated</span>() <span class="co"># check for duplicated rows</span></span></code></pre></div>
+<p><strong>Note that %&gt;% used here is just another notation for piping, rather like the + that ggplot uses.This means that the output from one function is fed directly into the next function.</strong></p>
+<p>This chunk of code will spit out a long list of TRUE (row is duplicated) or FALSE (row is not duplicated) statements. Again not very human readable, especially if we have a very large data set. Try ammending the code to;</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-1" aria-hidden="true" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span></span>
+<span id="cb59-2"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">duplicated</span>() <span class="sc">%&gt;%</span> <span class="co"># check for duplicated rows</span></span>
+<span id="cb59-3"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>() <span class="co"># Sums any TRUE statements in the list </span></span></code></pre></div>
+<p>Do we have any duplicated rows?</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Checking for typos - As with duplicates it is very easy to enter a typo when manually entering data into a spreadsheet. Generally if you have been collecting continuous data you will have an idea of what a sensible upper and lower bound within your data set should be. We can use the <code>summarise()</code> function to see what these are within this data set, as shown below;</li>
+</ol>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb60-1" aria-hidden="true" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span> </span>
+<span id="cb60-2"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb60-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">min=</span><span class="fu">min</span>(wt, <span class="at">na.rm=</span><span class="cn">TRUE</span>), <span class="co"># reports the minimum value in the wt variable and ignores cells with N/A</span></span>
+<span id="cb60-3"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb60-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">max=</span><span class="fu">max</span>(wt, <span class="at">na.rm=</span><span class="cn">TRUE</span>)) <span class="co"># reports the maximum value in the wt variable and ignores cells with N/A</span></span></code></pre></div>
+<p>Try manipulating the above chunk to report the upper and lower bounds for the height variable in your data set. Do these values all look reasonable to you?</p>
+<p>But how can we check for typos in categorical data? We can use the <code>distinct()</code> function to identify all of the options stored under a categorical variable name. Try using the following chunk;</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb61-1" aria-hidden="true" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span> </span>
+<span id="cb61-2"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb61-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(sex) <span class="co"># reports the categories stored under sex</span></span></code></pre></div>
+<p>So do you think there are any potential typos in your data set?</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Checking for missing data - finally sometimes when entering data manually, you may miss or delete a spreadsheet cell by mistake, leaving it empty. Again this is really difficult to spot in a large data set. Try running the following chunk of code, can you work out what each line does? Try annotating it in your script yourself.</li>
+</ol>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb62-1" aria-hidden="true" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span> </span>
+<span id="cb62-2"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb62-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">is.na</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb62-3"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb62-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>()</span></code></pre></div>
+<details>
+<summary>
+<strong>Click-me to check your code interpretation</strong>
+</summary>
+<p>So here you are piping your initial data set <code>athletes</code> into the <code>is.na()</code> function which is then looking for cells containing N/A and reporting a TRUE/FALSE data frame (where TRUE indicates N/A). We are then piping that output straight into the <code>sum()</code> function which is summing the number of TRUE values.</p>
+</details>
+<p>Do we have any missing data?</p>
 </div>
 </div>
-<div id="explore-the-data" class="section level2 hasAnchor" number="13.2">
-<h2><span class="header-section-number">13.2</span> Explore the data<a href="new-year-new-data---workshop-4---athletes-week-2b.html#explore-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="explore-the-data" class="section level2 hasAnchor" number="13.3">
+<h2><span class="header-section-number">13.3</span> Explore the data<a href="new-year-new-data---workshop-4---athletes-week-2b.html#explore-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We finished last terms workshops by looking at how we can cannibalise code to fit our purposes. We will be spending the first part of todays workshop going over a few of these skills on our shiney new data set! It may be helpful to look through some of the scripts in <strong>Section 12</strong> if you get stuck.</p>
-<div id="task-1---look-at-your-data-distributions" class="section level3 hasAnchor" number="13.2.1">
-<h3><span class="header-section-number">13.2.1</span> Task 1 - Look at your data distributions<a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-1---look-at-your-data-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="task-2---look-at-your-data-distributions" class="section level3 hasAnchor" number="13.3.1">
+<h3><span class="header-section-number">13.3.1</span> Task 2 - Look at your data distributions<a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-2---look-at-your-data-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Its always helpful to look at how your data is distributed, as this could have implication for how you tackle downstream analysis.</p>
 <p>Create a histogram for the following variables, start with a 6 bins and then make a second set of histogams with 20 bins:</p>
 <ul>
@@ -348,14 +406,13 @@ Look at your histogram for red blood cell count with 20 bins, why do you think i
 <summary>
 <strong>Click-me to check your interpretation</strong>
 </summary>
-<p>Your histograms for height and weight both appear normally distributed. Changing the number of bins doesn’t really alter this. However when you look at the histogram for red blood cell count with 6 bins it looks like it might be sightly skewed, with 20 bins however we get more resolution over the data distribution and two peaks appear. The red blood cell count data are bi-modal. This suggest that we may need to think about our data a little more. These histograms were performed on all the data, which includes both male and female athletes, the bi-modal distribution suggests we should consider splitting the data and analysing male and female athletes separately.</p>
+<p>Your histograms for height and weight both appear normally distributed. Changing the number of bins doesn’t really alter this. However when you look at the histogram for red blood cell count with 6 bins it looks like it might be skewed, with 20 bins however we get more resolution over the data distribution and two peaks appear. The red blood cell count data are bi-modal. This suggest that we may need to think about our data a little more. These histograms were performed on all the data, which includes both male and female athletes, the bi-modal distribution suggests we should consider splitting the data and analysing male and female athletes separately.</p>
 </details>
 <p>So lets have a think about how we could split out data set up to examine male and female athletes separately.</p>
 <p>Make sure the tidyverse package is installed <strong>and</strong> loaded and try using this chunk, note that I have called my initial data frame <code>athletes</code> you may have named yours something else;</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pipe your data set to the filter function, this will pull out the male athletes and store then in a new object.</span></span>
-<span id="cb58-2"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb58-2" aria-hidden="true" tabindex="-1"></a>male_athletes <span class="ot">&lt;-</span> athletes <span class="sc">%&gt;%</span></span>
-<span id="cb58-3"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb58-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="st">&quot;m&quot;</span>)</span></code></pre></div>
-<p><strong>Note that %&gt;% used here is just another notation for piping, rather like the + that ggplot uses.This means that the output from one function is fed into the next function.</strong></p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pipe your data set to the filter function, this will pull out the male athletes and store then in a new object.</span></span>
+<span id="cb63-2"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb63-2" aria-hidden="true" tabindex="-1"></a>male_athletes <span class="ot">&lt;-</span> athletes <span class="sc">%&gt;%</span></span>
+<span id="cb63-3"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb63-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="st">&quot;m&quot;</span>)</span></code></pre></div>
 <p>Make a similar data frame for female athletes using the above chunk. Then create two new histograms for:</p>
 <ul>
 <li>Male athlete red blood cell count</li>
@@ -366,8 +423,8 @@ Look at your histogram for red blood cell count with 20 bins, why do you think i
 How would you describe these two new histograms?</p>
 </blockquote>
 </div>
-<div id="task-2---look-for-differences-and-relationships" class="section level3 hasAnchor" number="13.2.2">
-<h3><span class="header-section-number">13.2.2</span> Task 2 - Look for differences and relationships<a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-2---look-for-differences-and-relationships" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="task-3---look-for-differences-and-relationships" class="section level3 hasAnchor" number="13.3.2">
+<h3><span class="header-section-number">13.3.2</span> Task 3 - Look for differences and relationships<a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-3---look-for-differences-and-relationships" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now that we have a better idea for how our data are distributed we can start to ask some questions of the data set. First of all think, what kind of plot would you build to explore the following questions? We covered this in <em>Section 7.1</em>.</p>
 <ul>
 <li>Is there a difference between male and female athlete height?</li>
@@ -418,76 +475,20 @@ Has the relationship changed between weight and height in male and female athlet
 </summary>
 <p>Essentially, the relationship between height and weight in male and female athletes has not changed, and we didn’t really expect it too. By looking at these scatter plots we can see that height explains most of the variation in weight in this data set, makes sense right? Taller people are usually going to be heavier then shorter people. When we look at the relationship between weight and red blood cell count in male and female athletes separately we now see that there is, essentially, no relationship. So weight doesn’t explain the variation in red blood cell count, heavier people don’t necessarily have more red blood cells. So the positive relationship we saw in our first scatter plot was likely explained by sex not weight.</p>
 </details>
-<p>So hopefully you can see why its important to think about interpretation at each stage of your analysis, if we had not broken our data set down and analysed male and female athletes separately, we may have ended up drawing false conclusions from our data set.</p>
 </div>
 </div>
-<div id="reporting-your-analysis" class="section level2 hasAnchor" number="13.3">
-<h2><span class="header-section-number">13.3</span> Reporting your analysis<a href="new-year-new-data---workshop-4---athletes-week-2b.html#reporting-your-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>As mentioned at the beginning of this chapter, this semester we will not only be working on our analytical skills but also thinking about how we report our analyses. Here, we are conducting analysis that will eventually be put into a mock report (to help you prepare for future reports that you may need to produce). So lets begin by thinking about how we might present some of our figures.</p>
-<div id="task-3---start-thinking-about-how-you-might-report-your-data" class="section level3 hasAnchor" number="13.3.1">
-<h3><span class="header-section-number">13.3.1</span> Task 3 - Start thinking about how you might report your data<a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-3---start-thinking-about-how-you-might-report-your-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>First of all, identify which plots you would include in a report if you were interested in answering the following questions;</p>
-<ul>
-<li>Is there a difference between male and female athlete height?</li>
-<li>Is there a difference between male and female athlete weight?</li>
-<li>Is there a difference between male and female athlete red blood cell count?</li>
-<li>Is there a relationship between height and weight in male and female athletes?</li>
-<li>Is there a relationship between red blood cell count and weight in male and female athletes?</li>
-</ul>
-<blockquote>
-<p><strong>Selecting plots for a report</strong>
-An extremely common error students make is to include every plot they build in a report. Sometimes it is important to build a plot, as part of your own data exploration, but not include it when writing your report. Histograms are a prime example of this, unless the question you are exploring is related to data distribution, you do not need to include histograms in your project reports. You do need to know how the data are distributed, but you do not need to present the histograms that show the data distribution. Your report should only include figures that relate to the questions you are asking. You want to try and tell a story through your figures, while showing academic rigour. With this in mind, which of your plots would you include in your report, given the questions above?</p>
-</blockquote>
-<details>
-<summary>
-<strong>Click-me to see which figures Ellen would present</strong>
-</summary>
-<p>There are several combinations of plots you could present to answer the above questions in a report, but this is how I would do it;</p>
-<ul>
-<li>Figure 1 - A multi-panel (group of plots) figure containing box plots for (i) weight in male and female athletes, (ii) height in male and female athletes and (iii) scatter plot for weight vs height in male and female athletes (pooled)</li>
-<li>Figure 2 - a multi-panel figure containing (i) box plot for red blood cell count in male and female athletes, (ii) scatter plot for red blood cell counts in male athletes, (iii) scatter plot for red blood cell counts in female athletes</li>
-</ul>
-We will cover how to make multi-panel figures shortly.
-</details>
-<p>Make each figure that you would include in your report visually pleasing. Use your ggplot skills and scripts to do this. Think about colour choices and try to make them uniform.</p>
+<div id="wrapping-up" class="section level2 hasAnchor" number="13.4">
+<h2><span class="header-section-number">13.4</span> Wrapping up<a href="new-year-new-data---workshop-4---athletes-week-2b.html#wrapping-up" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>During this chapter we have loaded a new data set into a new R project. We have checked over the data to makes sure that its been loaded correctly and that there are no duplicated rows, typos or missing data. We have then moved on further to exploring the data set, looking at its shape/distribution and identifying any early patterns. As a really important take home message you can hopefully see and appreciate why its important to think about interpretation at each stage of your analysis. If we had not broken our data set down and analysed male and female athletes separately, we may have ended up drawing false conclusions from our data set and this could have derailed much or our downstream analysis as well.</p>
 </div>
-<div id="task-4---building-your-first-multi-pannel-figure" class="section level3 hasAnchor" number="13.3.2">
-<h3><span class="header-section-number">13.3.2</span> Task 4 - Building your first multi-pannel figure<a href="new-year-new-data---workshop-4---athletes-week-2b.html#task-4---building-your-first-multi-pannel-figure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In <strong>Section 13.3.1</strong> I suggested that it may be a good idea to present some of your reported plots in a multi-panel figure. We can make these in R using the package <code>patchwork</code>. See the chunk below for a demonstration;</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Demonstrating how to use the plot_layout function within the patchwork package to make multi-panel figures</span></span>
-<span id="cb59-2"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="co"># First, here are some basic plots, you can use your own plots that have been nicely formatted instead, these are just to demonstrate</span></span>
-<span id="cb59-3"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-3" aria-hidden="true" tabindex="-1"></a>weight_box <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> athletes,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> wt)) <span class="sc">+</span> </span>
-<span id="cb59-4"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() </span>
-<span id="cb59-5"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-5" aria-hidden="true" tabindex="-1"></a>height_box <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> athletes,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> ht)) <span class="sc">+</span> </span>
-<span id="cb59-6"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() </span>
-<span id="cb59-7"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-7" aria-hidden="true" tabindex="-1"></a>height_v_weight <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> athletes,<span class="fu">aes</span>(<span class="at">x =</span> ht, <span class="at">y =</span> wt)) <span class="sc">+</span> </span>
-<span id="cb59-8"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour =</span> sex)) <span class="sc">+</span></span>
-<span id="cb59-9"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>)</span>
-<span id="cb59-10"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb59-11"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Now we can use the plot_layout function within the patchwork package to make our multi-panel figure.</span></span>
-<span id="cb59-12"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Here I have asked for the height and weight box plots to be on the top row, side by side and the height v weight scatter below.</span></span>
-<span id="cb59-13"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-13" aria-hidden="true" tabindex="-1"></a><span class="co"># You can play with the configuration to suit your tastes, use help(plot_layout) to see some other configurations.</span></span>
-<span id="cb59-14"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-14" aria-hidden="true" tabindex="-1"></a><span class="co"># You may notice that here I have specified the package for the function using &quot;::&quot; e.g. patchwork::plot_layout.</span></span>
-<span id="cb59-15"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-15" aria-hidden="true" tabindex="-1"></a><span class="co"># This is because some functions across multiple packages have shared names, as the do here, so R can become confused, by specifying the package, I am directing R to the specific package which contains the specific function I wish to use. </span></span>
-<span id="cb59-16"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-16" aria-hidden="true" tabindex="-1"></a><span class="co"># The final argument (guides=&#39;collect&#39;) pulls together all the little figure keys you may have and presents them on one place and should remove duplicated information</span></span>
-<span id="cb59-17"><a href="new-year-new-data---workshop-4---athletes-week-2b.html#cb59-17" aria-hidden="true" tabindex="-1"></a>(height_box <span class="sc">|</span> weight_box) <span class="sc">/</span> height_v_weight <span class="sc">+</span> patchwork<span class="sc">::</span><span class="fu">plot_layout</span>(<span class="at">guides =</span><span class="st">&#39;collect&#39;</span>)</span></code></pre></div>
-<p>The results of this chunk can be seen in Figure 13.1. Note that these are rough draft figures and placement, you can play with the ggplot and patchwork parameters to get them to look as you would like, and as would be expected in a written report.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-64"></span>
-<img src="figures/screenshot_patchwork.png" alt="Results from the patchwork demonstration chunk" width="90%" />
-<p class="caption">
-Figure 13.1: Results from the patchwork demonstration chunk
-</p>
-</div>
-<p>Have a go at putting some of your report ready plots into a multi-panel figure. Use <code>ggsave</code> to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in <strong>Section 12</strong>.</p>
-</div>
-</div>
-<div id="before-you-leave-7" class="section level2 hasAnchor" number="13.4">
-<h2><span class="header-section-number">13.4</span> Before you leave!<a href="new-year-new-data---workshop-4---athletes-week-2b.html#before-you-leave-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="before-you-leave-7" class="section level2 hasAnchor" number="13.5">
+<h2><span class="header-section-number">13.5</span> Before you leave!<a href="new-year-new-data---workshop-4---athletes-week-2b.html#before-you-leave-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Log out of posit Cloud and make sure you save your script!</p>
 </div>
-<div id="references-8" class="section level2 hasAnchor" number="13.5">
-<h2><span class="header-section-number">13.5</span> References<a href="new-year-new-data---workshop-4---athletes-week-2b.html#references-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="references-8" class="section level2 hasAnchor" number="13.6">
+<h2><span class="header-section-number">13.6</span> References<a href="new-year-new-data---workshop-4---athletes-week-2b.html#references-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Pedersen, T. L. (2020). Patchwork: The composer of plots. <a href="https://CRAN.R-project.org/package=patchwork" class="uri">https://CRAN.R-project.org/package=patchwork</a>
+Telford, R.D. and Cunningham, R.B. 1991. Sex, sport and body-size dependency of hematology in highly trained athletes. Medicine and Science in Sports and Exercise 23: 788-794.
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686" class="uri">https://doi.org/10.21105/joss.01686</a>.
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. <a href="https://CRAN.R-project.org/package=ggplot2" class="uri">https://CRAN.R-project.org/package=ggplot2</a>.</p>
 
@@ -559,7 +560,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
