@@ -78,7 +78,7 @@ General linear models (not to be confused with generalised linear models or GLMs
 
 Helpfully, general linear models are very easy to apply in R, there is a function called `lm()` that is part of the base R package. Lets have a look at some applications of this function. 
 
-### Testing for differences 
+### Task 2 - Testing for differences 
 
 Lets say we wanted to analyse the difference in average weight between male and female athletes. So our hypothesis might be; male athletes are heavier then female athletes, in this case the predictor variable is sex and the response variable is weight. If we wanted to use that information to fit a general linear model we could use the following chunk;   
 
@@ -168,10 +168,76 @@ So by funning the `lm()` function on categorical data and using the `summary()` 
 
 Try running the `lm()` and `summary()` functions now height and sex in the athletes data set, can you interpret the results?
 
-### Testing for relationships
+### Task 3 - Testing for relationships
 
+When it comes to investigating relationships between two continuous variables we may want to know if there is a statistical correlation between variables. We can use Pearsons correlation coefficient to do this. Try running the following chunk of code to test for a correlation between height and weight in the athletes data set; 
 
-### Assumptions
+```{r}
+# Correlations
+
+correlation01 <- cor.test(athletes$ht, athletes$wt, method = "pearson")
+correlation01
+```
+
+Your output should look comethink like this;
+
+```
+> correlation01
+
+	Pearson's product-moment correlation
+
+data:  athletes$ht and athletes$wt
+t = 17.681, df = 200, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.7205640 0.8295505
+sample estimates:
+      cor 
+0.7809321 
+
+```
+
+Here we can see that R has given us a test statistic `t`, degrees of freedom `DF` and p-value. R even helpfully tells us that it considers the alternative hypothesis true in this case and that there is a correlation between weight and height variables given that the p-value is less than 0.01. We arent going to worry about the other information given in this summary. 
+
+So you have probably heard that correlation doesn't equal causation. But we may wish to see if we can use height to predict weight, to do this we need to try and fit a model to our data. Here we can apply the `lm()` function again. When we have two continuous variables and use the lm() function we are essentially performing a linear regression. The linear regression essentially uses the equation for a straight line;
+
+$$
+y = mx+c
+$$
+
+Try running the `lm()` function to look at the relationship between athlete weight and height (remember to make sure your variables are the correct side of the tilde, you want to analyse weight as a function of height).
+
+Your output should look something like this;
+
+```
+> summary(lsmodel03)
+
+Call:
+lm(formula = wt ~ ht, data = athletes)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-16.372  -5.296  -1.196   4.378  38.031 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -126.19049   11.39566  -11.07   <2e-16 ***
+ht             1.11712    0.06318   17.68   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.72 on 200 degrees of freedom
+Multiple R-squared:  0.6099,	Adjusted R-squared:  0.6079 
+F-statistic: 312.6 on 1 and 200 DF,  p-value: < 2.2e-16
+```
+
+The output here should look familiar, it is very similar to that produced for the general linear models we fitted before. We can interpret the call and residuals sections of the summary as we did before. However the coefficients section is a little different in its interpretation. If we look at the `Estimate` column, the `(Intercept)` is the intercept in the traditional sense, this would be where the regression line meets the Y axis when height is zero. Now of course its impossible for someone to weigh -126kgs even if they have a height of 0cms (which is also impossible). But this is simply the fit of the regression line. Now if you look at the `ht` `Estimate` this is 1.12, this is the slope of the regression line. We can also think of this as for every increment in height, weight increases by 1.12 increments as well. We can test this theory. We can plug these values into the y = mx + c equation to estimate the weight of an athlete with a height of 160cms. Try plugging `1.12 * 160 -126` into the console in R. You should have a scatter plot with a regression line produced in the previous workshop, have a look and see how our regressions prediction of the weight of an athlete with a height of 160cms compares to the plot. 
+
+Regarding the other values represented here, the coefficient `Std. Error` (Standard Error) measures the average amount that the coefficient estimates vary from the actual average value of our response variable. The `t values` represent our test statistics and `Pr(>|t|)` our p values. 
+
+The last value I will draw your attention to here is `Multiple R-squared` value. Here R-squared is 0.61, so rephrased 61% of the variation in weight can be explained by height. This is quite a large effect size. 
+
+## Assumptions
 
 We have explored several applications of the general linear model (including T-tests, ANOVA and regression). However you should also be aware of some of the assumptions that these models make. All statistical models come with a set of assumptions that are made of the data set. As a result your choice of test is quite important when starting to perform inferential statistics, and there are a number of factors around your data that you need to be clear about. These include;
 
@@ -192,6 +258,8 @@ You will frequently see statistical models refereed to as parametric or non-para
 |    Pearson's Correlation        |     Spearman's Rank Correlation    | 
 
 Parametric tests assume that your data are normally distributed and non-parametric tests do not make this assumption, but are not as statistically powerful as parametric tests (hense why we don't always do a non-parametric test just to be on the safe side).
+
+### Task 4 - Checking for normality 
 
 To check our distributions we can and should always make a histogram just to look over the data. But there are also tests we can use to reassure ourselves of the data distribution. One such test is called the Shapiro-Wilk test for normality and its very easy to perform in R. Lets go back to our weight variable in the male athletes data set and see if that is normally distributed. First of all pull up your histogram for this variable and remind yourself of how the data are distributed. 
 
@@ -216,18 +284,18 @@ W = 0.99299, p-value = 0.4516
 
 ```
 
-Here our test statistic is W and our p value is fairly self explanatory. But the interpretation of this test is often a little challenging for students. Here the null hypothesis is that our data are normally distributed so if our p value is greater then 0.05 we accept the null hypothesis to be true and our data are normally distributed but if our p value is less than 0.05 our null hypothesis is rejected and that our data are not normally distributed. Here because weight is normally distributed it would be fine to run a parametric test on it. 
+Here our test statistic is W and our p value is fairly self explanatory. But the interpretation of this test is often a little challenging for students. Here the null hypothesis is that our data follow a normal distribution so if our p value is greater then 0.05 we wont reject the null hypothesis and will assume our data are normally distributed. But if our p value is less than 0.05 the distribution of our data is deemed significantly different to a normal distribution so our null hypothesis is rejected and we assume that our data are not normally distributed. So in this instance because the weight vairable follows a normal distribution it would be fine to run a parametric test on it. 
 
 Try running this test on all of your variables for male and female athletes, are any of them not normally distributed?
 
-### What to do if your data are not normally distributed
+### Task 5 - What to do if your data are not normally distributed?
 
 There are a couple of things we can do if our data are not normally distributed. 
 
 1) We can log transform the data
 2) We can run a non parametric test
 
-Hopefully you noticed that the red blood cell count for both male and female athletes was not normally distributed. We can log transform the female althletes red blood cell count using the following piece of code;
+Hopefully you noticed that the red blood cell count for both male and female athletes are not normally distributed. We can log transform the female althletes red blood cell count using the following piece of code;
 
 ```{r}
 # Log transform
@@ -236,43 +304,19 @@ female_athletes <- female_athletes %>%
   mutate(log10 = log10(female_athletes$rcc))
 ```
 
-Now run the Shapiro-Wilk test on this new log10 variable and see if its normally distributed.
+Now try making a new histogram and running the Shapiro-Wilk test on this new log10 variable and see if its normally distributed. Do the same thing for the red blood cell counts in male athletes. How might you interpret these results?
 
-### Testing for Correlations
+<details><summary> **Click-me to check interpretation** </summary>
+
+So hopefully you can see that log transforming has reduced the p value for red blood cell counts in female athletes it is still greater then 0.05 so the distribution is still not normal. The red blood cell count for male athletes following log transformation is normally distributed. But because some of our data does not follow a normal distribution even after log tranforming it we will need to perform a non parametric test. 
+
+</details>
+
+The second option with data that aren't normally distributed is to perform a non-parametric test. If we are interested in looking for differences between categorical variables we can perform a Mann-Whitney U test (instead of a general linear model, ANOVA or T-test) or if we wish to test for correlations we can use Spearmans rank correlation coefficient (instead of Pearsons correlation coefficient). 
+
+Try running the following piece of code;
 
 ```{r}
-# Normality and homology of varience test
-
-shapiro.test(athletes$ht)
-shapiro.test(athletes$wt)
-shapiro.test(male_athletes$rcc)
-shapiro.test(female_athletes$rcc)
-
-
-
-# linear models 
-
-lsmodel01 <- lm(ht ~ sex, data = athletes)
-summary(lsmodel01)
-lsmodel02 <- lm(wt ~ sex, data = athletes)
-summary(lsmodel02)
-lsmodel03 <- lm(wt ~ ht, data = athletes)
-summary(lsmodel03)
-
-# Correlations
-
-correlation01 <- cor.test(athletes$ht, athletes$wt, method = "pearson")
-correlation01
-
-# Log transform
-
-female_athletes <- female_athletes %>%
-  mutate(log10 = log10(female_athletes$rcc))
-male_athletes <- male_athletes %>% 
-  mutate(log10 = log10(male_athletes$rcc))
-shapiro.test(female_athletes$log10)
-shapiro.test(male_athletes$log10)
-
 # Mann Whitney U / Wilcoxan 
 
 wilcox.test(rcc ~ sex, data=athletes) 
@@ -280,17 +324,6 @@ wilcox.test(rcc ~ sex, data=athletes)
 ```
 
 ```
-	Shapiro-Wilk normality test
-
-data:  athletes$log10
-W = 0.97946, p-value = 0.004685
-
-> leveneTest(athletes$ht, athletes$sex)
-Levene's Test for Homogeneity of Variance (center = median)
-       Df F value Pr(>F)
-group   1  0.0955 0.7577
-      200 
-
 > wilcox.test(rcc ~ sex, data=athletes) 
 
 	Wilcoxon rank sum test with continuity correction
@@ -299,3 +332,43 @@ data:  rcc by sex
 W = 948, p-value < 2.2e-16
 alternative hypothesis: true location shift is not equal to 0
 ```
+
+This is a fairly easy output to interpret. Although this is called a Wilcoxon test if you run the test on two independent samples (as we have here) R essentially runs a Mann-Whitney U test (confusing I know). Here we have performed a Mann-Whitney U test. The W value is our test statistic and p-value is fairly self explanatory. So we can say that there is a significant difference in red blood cell count between male and female athletes. 
+
+Now if we want to investigate a correlation with data that does not follow a normal distribution we can use the Spearmans rank correlation coefficient. Lets use the same functions to test for a correlation between height and red blood cell count. Try using the following chunk;
+
+```{r}
+# Correlations
+
+correlation02 <- cor.test(athletes$ht, athletes$rcc, method = "spearman")
+correlation02
+```
+
+You should get an output that looks something like this;
+
+```
+> correlation02
+
+	Spearman's rank correlation rho
+
+data:  athletes$ht and athletes$rcc
+S = 822518, p-value = 3.262e-09
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.4012392
+```
+
+Here S is the test statstic and the p-value is, well the p-value. This again shows that there is a correlation between height and red blood cell count. 
+
+## Wrapping up
+
+During this chapter we have loaded a new data set into a new R project. We have checked over the data to makes sure that its been loaded correctly and that there are no duplicated rows, typos or missing data. We have then moved on further to exploring the data set, looking at its shape/distribution and identifying any early patterns. As a really important take home message you can hopefully see and appreciate why its important to think about interpretation at each stage of your analysis. If we had not broken our data set down and analysed male and female athletes separately, we may have ended up drawing false conclusions from our data set and this could have derailed much or our downstream analysis as well. 
+
+## Before you leave!
+
+Log out of posit Cloud and make sure you save your script!
+
+## References
+
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686.
