@@ -1,8 +1,8 @@
 # Reporting your analysis - Workshop 6 - Athletes continued, Week 6B
 
-## Reporting your analysis
-
 This semester we have been working through the complete process of analysing a data set. So we not only do we need to be working on our analytical skills but also thinking about how we report our analyses. Over the last few weeks we have been conducting analysis that will eventually be put into a mock report (to help you prepare for future reports that you may need to produce). So lets begin by thinking about how we might present some of our figures.  
+
+## Selecting what to report
 
 ### Task 1 - Start thinking about how you might report your data
 
@@ -59,15 +59,72 @@ The results of this chunk can be seen in Figure 13.1. Note that these are rough 
 knitr::include_graphics("figures/screenshot_patchwork.png")
 ```
 
-Have a go at putting some of your report ready plots into a multi-panel figure. Use `ggsave` to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in **Section 12**.
+Have a go at putting some of your report ready plots into a multi-panel figure. Use `ggsave` to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in **Section 12**. You can download these pdfs by opening them in browser and clicking the download button in the top right hand corner. 
+
+## Writing about your analysis 
+
+We have done a lot of exploration when it comes to presenting data and performing analysis. But something you will frequently be asked to do throughout your degree, is write about your findings. Here I will cover a few summary point to bare in mind when writing about your analyses. 
+
+* Keep it concise - always aim to keep sentences short and snappy when writing in the sciences
+* Be specific - make sure it is very clear what it is you are discussing, especially when you have a project with multiple variables
+* Keep it biology focused - statistics be it inferential or descriptive are helpful when building an argument, you can use them to support your point, but the point should be biology driven. 
+* **Always** give a measure of spread, like standard error, when discussing a mean.
+
+**Do** this; <br />
+
+“Male gorillas ate fewer bananas per day (mean ± s.e. = 12.3 ± 1.3) compared to females (mean ± s.e. = 14.7 ± 1.1)” <br />
+
+**Do NOT** do this; <br />
+
+"The mean was 12.3 for males and 14.7 for females so females ate more bananas." <br />
+
+This second example makes the entire sentence about the mean values and not about the biological question, which is the difference in bananas eaten by male and female gorillas. It also lacks details like standard deviation or error but discusses a mean which by itself is not very meaningful.The first example was a much more professional and scientifically sound way to report this analysis, using values from the analysis to support the main argument. It will take practice to introduce this writing method into your own work. <br />
+
+You may have noticed that in the last two chapters statistics have been reported in a very specific way. When reporting statistics, you should try to state what is shown and then include supporting information, in brackets, from the statistical analysis you have run. When reporting statitics, you should report;
+
+* The statistical test used (e.g. T-test, ANOVA, etc)
+* The test statistic (T or F for T-tests or ANOVA)
+* Degrees of freedom or some alternative indicator of sample size as recomended by the test run
+* p value 
+
+For example,  <br />
+
+**Do** this; <br />
+
+“Male gorillas ate fewer bananas per day (mean ± s.e. = 12.3 ± 1.3) compared to females (mean ± s.e. = 14.7 ± 1.1) and this difference was significant (T-test, t = -3.7, d.f. = 99, P = 0.035)"
+
+**Do NOT** do this; <br />
+
+"The mean was 12.3 for males and 14.7 for females so females ate more bananas. The test was significant because p< 0.05" <br />
+
+This second example is very commonly seen in student work and should be avoided at all costs. Essentially this person is asking the reader to accept that there was a statistical difference because p was less than an the arbitrary cut off of 0.05. It gives no evidence to show that this is true. It also creates the impression that the person who conducted the analysis had no understanding of how or why they were analysing the data or what it was they were looking for. The first example is only fractionally longer, but provides much more information to the reader, it is professional and allows the reader to feel confident that the analyst is basing their conclusion on sound scientific and statistical evidence. 
 
 ### Task 3 - Writing a figure legend 
 
+You will often need to construct figure legends, here are a few pointers to bare in mind;
 
+* Table legends go above and figure legends go below
+
+Legends should; 
+
+* Allow the reader to understand the figure without reference to the text, so include information about what is being shown. For example, with a box plot you may wish to say "The middle line, box and whiskers represent the median, interquartile range and range, respectively."
+* Include info on sample size, study organism (in Latin) and (if relevant, e.g. ecology) study location and time
+
+Legends should **not**;
+
+* Include information that is obvious to a scientific audience (e.g. “a scatter plot to show” or “a graph to show”)
+* Repeat what’s in the figure (e.g. describe what the colour mean if you also have a key in the figure)
+
+With this in mind have a go at writing a figure legend for some of the report ready figures that you made earlier. 
+
+## Before you leave!
+
+Log out of posit Cloud and make sure you save your script!
 
 ## References
 
 Pedersen, T. L. (2020). Patchwork: The composer of plots. https://CRAN.R-project.org/package=patchwork
-Telford, R.D. and Cunningham, R.B. 1991. Sex, sport and body-size dependency of hematology in highly trained athletes. Medicine and Science in Sports and Exercise 23: 788-794.
-Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686.
+Telford, R.D. and Cunningham, R.B. 1991. Sex, sport and body-size dependency of hematology in highly trained athletes. Medicine and Science in Sports and Exercise 23: 788-794. Pedersen, T. L. (2020). Patchwork: The composer of plots. https://CRAN.R-project.org/package=patchwork <br />
+Telford, R.D. and Cunningham, R.B. 1991. Sex, sport and body-size dependency of hematology in highly trained athletes. Medicine and Science in Sports and Exercise 23: 788-794. <br />
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. https://doi.org/10.21105/joss.01686. <br />
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. https://CRAN.R-project.org/package=ggplot2.
