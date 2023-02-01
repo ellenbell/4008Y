@@ -4,7 +4,7 @@ Here we have material for Workshop 5 in Week 4 of Semester 2. We will be continu
 
 ## Descriptive statistics
 
-At the end of the Autumn Semester we started to discus some simple descriptive statistics, including measures of central tendency and spread. We discussed means, medians, modes, ranges, standard deviations, standard error of the mean and 95% confidence intervals. If you cant remember what any of these are it is strongly recommended that you revisit the lecture materials. In this section we will be learning how to calculate these basic descriptive statistics for the athletes data set.  
+At the end of the Autumn Semester we started to discus some simple descriptive statistics, including measures of central tendency and spread. We discussed means, medians, modes, ranges, standard deviations, standard error of the mean and 95% confidence intervals. If you cant remember what any of these are it is strongly recommended that you revisit the lecture materials. In this section we will be learning how to calculate these basic descriptive statistics for the athletes data set, before moving on to some inferential statistics.  
 
 ### Task 1 - Calculating some descriptive statistics 
 
@@ -20,7 +20,7 @@ athletes_summary_stats_ht <- athletes %>%
 athletes_summary_stats_ht
 ```
 
-Have a look at the table that R produces. Then look back at the code you used, do you understand what each function has done? The `summarise` function can also calculate other summary statistics, use `help(summarise)` to find out what else it can do. Play with the function, see if you can produce a similar table that calculates the mean and standard deviation for red blood cell count in male and female athletes. 
+Have a look at the table that R produces. Then look back at the code you used, do you understand what each function has done? The `summarise` function can also calculate other summary statistics. Try using `help(summarise)` to find out what else it can do. Play with the function, see if you can produce a similar table that calculates the mean and standard deviation for red blood cell count in male and female athletes. 
 
 It would also be useful to know the standard error of the mean and 95% confidence intervals for this data set. We can use the `mutate` function to add additional columns onto our summary stats table. Remember we can calculate the standard error of the mean using;
 
@@ -68,9 +68,9 @@ The skills you have learned here could be applied to any of the numeric variable
 
 ## Introducing some inferential statistics
 
-We have, so far, looked at how to explore our data set, both graphically (using histograms, box plots and scatter plots) and numerically (by using descriptive statistics). But something you will come into frequent contact with throughout your degree is inferential statistics. You may heave heard of statistical tests such as; T-test, ANOVA, Chi squared and Mann Whitney U before. These are all different types of statistical model that are loosely grouped under the header of inferential statistics. These are statistics that allow you to make predictions from your data with the aim of allowing you to take data from your samples and make generalisations about a respective population. You may hear people refer to *significant differences* or *significant relationships*, essentially as soon as the term *significant* comes into play there is an assumption made that some kind of statistical test has been applied. 
+We have, so far, looked at how to explore our data set, both graphically (using histograms, box plots and scatter plots) and numerically (by using descriptive statistics). But something you will come into frequent contact with throughout your degree is inferential statistics. You may heave heard of statistical tests such as; T-test, ANOVA, Chi squared and Mann Whitney U before. These are all different types of statistical model that are loosely grouped under the header of inferential statistics. These are statistics that allow you to make predictions from your data, with the aim of allowing you to take data from your samples and make generalisations about a respective population. You may hear people refer to *significant differences* or *significant relationships*, essentially as soon as the term *significant* comes into play there is an assumption made that some kind of statistical test has been applied. 
 
-We wont be going into a huge amount of detail regarding these inferential statistics, the field of statistics is huge and there are many ways you may apply statistics to different data sets. At this stage, I would much prefer that you become confident with visualising data and interpreting those visualisations. However to ensure that you are set up for your future studies and data analysis ambitions it important that you are at least aware of some inferential statistics. My aim here is go give you an overview of how to run and interpret the statistical models that you are most likely to come across in your degree. This will hopefully act as a foundation in statistic that you can build on as required. 
+We wont be going into a huge amount of detail regarding these inferential statistics, the field of statistics is huge and there are many ways you may apply statistics to different data sets. At this stage, I would much prefer that you become confident with visualising data and interpreting those visualisations. However to ensure that you are set up for your future studies and data analysis ambitions, it important that you are at least aware of some inferential statistics. My aim here is go give you an overview of how to run and interpret the statistical models that you are most likely to come across in your degree. This will hopefully act as a foundation in statistic that you can build on as required. 
 
 ### The general linear model 
 
@@ -128,7 +128,8 @@ Residuals:
 -29.542  -7.703   0.517   7.538  40.676 
 ```
 
-I wont go into a huge amount of detail around how we interpret these, you can read around it if it interests you. But in a nutshell the general linear model draws a straight line through all of our data points, so it has fitted a model predicting where it would expect your data points to land. The residuals are then the distances away from that line each data point is, so the distance each of your observed data points are away from the predicted values. Here R has given us some summary statistics around the residuals. 
+I wont go into a huge amount of detail around how we interpret these, you can read around it if it interests you. But in a nutshell the general linear model draws a straight line through all of our data points, so it has fitted a model predicting where it would expect your data points to land. The residuals are then the distances away from that line each data point is, so the distance each of your observed data points are 
+from the predicted values. Here R has given us some summary statistics around the residuals. 
 
 Next we have our coefficients;
 
@@ -142,13 +143,13 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
 ```
 
-So here we have a table with two rows called `(Intercept)` and `sexm` and four collumns called `Estimate` which is essentially the mean, `Std. Error` which is standard error, `t value` which is our T statistic and `Pr(>ltl)` which is otherwise known as a p value. We set out to model the difference in weight between male and female athletes, the labeling here is somewhat confusing but the `(Intercept)` row actually refers to the female athletes. You can check for yourself if you like the `Estimate` and `Std. Error` here denote the mean and standard error for weight among female athletes. The`t value` is the `Estimate` divided by `Std. Errors` and the `Pr(>|t|)` is the corresponding value for that t value in a T distribution table with the given degrees of freedom (dont worry about this last bit just yet).
+So here we have a table with two rows called `(Intercept)` and `sexm` and four collumns called `Estimate` which is essentially the mean, `Std. Error` which is standard error, `t value` which is our T statistic and `Pr(>ltl)` which is otherwise known as a p value. We set out to model the difference in weight between male and female athletes, but the labeling here is somewhat confusing. The `(Intercept)` row in this case actually refers to the female athletes, it can help to prove this to yourself, try calculating the mean weight of female athletes and compare the result to the `Estimate` value. The`t value` for this row is the `Estimate` divided by `Std. Errors` and the `Pr(>|t|)` is the corresponding value for that t value in a T distribution table, with the given degrees of freedom (don't worry about this last bit just yet).
 
-A common mistake is therefore to assume that the `sexm` row then referes to the same values for male athletes. This isn't quite right. This actually refers to the **difference in the mean weight of the two groups.** This focuses then on the question which we are asking: is their a difference in the weight between male and female athletes? You can check this for yourself, but essentially this row is saying that male athletes are, on average, 15.2kgs heavier then female athletes with a standard error of 1.65kgs. Our `t value` here is then the `Estimate` divided by the `Std. Error` again. 
+A common mistake is therefore to assume that the `sexm` row then referes to the same values for male athletes. This isn't quite right. This actually refers to the **difference in the mean weight of the two groups.** So this focuses on the question which we are asking: is their a difference in the weight between male and female athletes? You can check this for yourself, but essentially this row is saying that male athletes are, on average, 15.2kgs heavier then female athletes with a standard error of 1.65kgs. Our `t value` here is then the `Estimate` divided by the `Std. Error` again. This gives our test statistic. 
 
-Now lets have a look at our `Pr(>ltl)` value, otherwise known as a p value. I am not going to go into how these are calculated as they are often worked out by comparing the test statistics (in this case the T value) and degrees of freedom, against a contingency table. However I will give you some outline of how they are interpreted. Our p value here is given as >2e-16 which translates as 0.0000000000000002. We can interpret this value as there is a 0.0000000000000002% probability that we would see our given t value if the null hypothesis was true, out null hypothesis being that there is no difference in weight between male and female athletes. This, I hope you will agree is a very low probability. We generally use cut offs for p values of 0.05 or 0.01 so if you get a p value less then those cut offs you have found statistical significance. Here our p value is less than 0.01 so we can say that there is a statistically significant difference between male and female athlete weight.
+Now lets have a look at our `Pr(>ltl)` value, otherwise known as a p value. I am not going to go into how these are calculated as they are often worked out by comparing the test statistics (in this case the T value) and degrees of freedom, against a preexisting contingency table. However I will give you some outline of how they are interpreted. Our p value here is given as >2e-16 which translates as 0.0000000000000002. We can interpret this value as there is a 0.0000000000000002% probability that we would see our given t value if the null hypothesis was true. Our null hypothesis being, there is no difference in weight between male and female athletes. This, I hope you will agree, is a very low probability. We generally use cut offs for p values of 0.05 or 0.01, so if you get a p value less then those cut offs you have found statistical significance. Here our p value is less than 0.01 so we can say that there is a statistically significant difference between male and female athlete weight (T-test, T = 9.23, DF = 200, p<0.01).
 
-Finally you may have noticed that there are some asterisks `*` in the coefficients section, these relate to the `Signif.codes`, or significance codes row below. Here you can see the relavent number of asterisks and how they relate to the different p value cutoffs. 
+Finally you may have noticed that there are some asterisks `*` in the coefficients section, these relate to the `Signif.codes`, or significance codes row below. Here you can see the relavent number of asterisks and how they relate to the different p value thresholds. 
 
 The last part of our summary is shown here;
 
@@ -158,28 +159,28 @@ Multiple R-squared:  0.2986,	Adjusted R-squared:  0.2951
 F-statistic: 85.14 on 1 and 200 DF,  p-value: < 2.2e-16
 ```
 
-The residual standard error is pretty much what is says on the tin. I'm not going to go into more depth on residuals here. But I will draw your attention to degrees of freedom or DF. This is essentially is the number of independent pieces of information used to calculate a statistic. It’s calculated as the sample size minus the number of restrictions. So in a nutshell its a measure of sample size. 
+The residual standard error is pretty much what is says on the tin. I'm not going to go into more depth on residuals here. But I will draw your attention to degrees of freedom or DF. This is essentially the number of independent pieces of information used to calculate a statistic. It’s calculated as the sample size minus the number of restrictions. So in a nutshell its a measure of sample size. 
 
-The multiple R-squared value describes how well your regression model explains the variation in your data. Here we have a multiple R-squared of 0.2986, which we could round to 0.3. This can be interpreted as 30% of the variation in weight is explained by the sex of the athletes. Adjusted R-squared, which is also reported here is only really of use if you are doing multivariate statistics it takes into account how many samples you have and how many variables you’re using. Here we only have one variable so we don't need to worry about the adjusted R-squared. 
+The multiple R-squared value describes how well your regression model explains the variation in your data. Here we have a multiple R-squared of 0.2986, which we could round to 0.3. This can be interpreted as 30% of the variation in weight is explained by the sex of the athletes. Adjusted R-squared, which is also reported here, is only really of use if you are doing multivariate statistics. It takes into account; how many samples you have and how many variables you’re using. Here we only have one variable so we don't need to worry about the adjusted R-squared. 
 
-Finally we have our F statistic. This is essentially another test statistic (like T in the coefficients table), here it has been reported with its own degrees of freedom (DF) and p value. You can interpret these as we did previously. 
+Finally we have our F statistic. This is essentially another test statistic (like T in the coefficients table), here it has been reported with its own degrees of freedom (DF) and p value. You can interpret these as we did previously.
 
-So by funning the `lm()` function on categorical data and using the `summary()` function, we have performed both an Independent T-test (T-values in the coefficient section) and an ANOVA (the F statistics). We have also aquired an R-squared value to show the goodness of fit of our regression. 
+So by running the `lm()` function on categorical data and using the `summary()` function, we have performed both an Independent T-test (t-values and associated p-value in the coefficient section) and an ANOVA (the F statistic and associated p-value). We have also acquired an R-squared value to show the goodness of fit of our regression. 
 
-Try running the `lm()` and `summary()` functions now height and sex in the athletes data set, can you interpret the results?
+Try running the `lm()` and `summary()` functions not to test the null hypothesis that there is no difference in height between male and female athletes, can you interpret the results?
 
 ### Task 3 - Testing for relationships
 
-When it comes to investigating relationships between two continuous variables we may want to know if there is a statistical correlation between variables. We can use Pearsons correlation coefficient to do this. Try running the following chunk of code to test for a correlation between height and weight in the athletes data set; 
+When it comes to investigating relationships between two continuous variables we may want to know if there is a statistical correlation between variables. We can use Pearson's correlation coefficient to do this. Try running the following chunk of code to test for a correlation between height and weight in the athletes data set; 
 
 ```{r}
 # Correlations
 
-correlation01 <- cor.test(athletes$ht, athletes$wt, method = "pearson")
+correlation01 <- cor.test(athletes$ht, athletes$wt, method = "pearson") # perform a correlation test on height and weight in the athletes data set using Pearson's correlation coefficient 
 correlation01
 ```
 
-Your output should look comethink like this;
+Your output should look somethink like this;
 
 ```
 > correlation01
@@ -199,7 +200,7 @@ sample estimates:
 
 Here we can see that R has given us a test statistic `t`, degrees of freedom `DF` and p-value. R even helpfully tells us that it considers the alternative hypothesis true in this case and that there is a correlation between weight and height variables given that the p-value is less than 0.01. We arent going to worry about the other information given in this summary. 
 
-So you have probably heard that correlation doesn't equal causation. But we may wish to see if we can use height to predict weight, to do this we need to try and fit a model to our data. Here we can apply the `lm()` function again. When we have two continuous variables and use the lm() function we are essentially performing a linear regression. The linear regression essentially uses the equation for a straight line;
+You have probably heard that correlation doesn't equal causation. But we may wish to see if we can use height to predict weight, to do this we need to try and fit a model to our data. Here we can apply the `lm()` function again. When we have two continuous variables and use the lm() function, we are performing a linear regression. The linear regression essentially uses the equation for a straight line;
 
 $$
 y = mx+c
@@ -231,11 +232,17 @@ Multiple R-squared:  0.6099,	Adjusted R-squared:  0.6079
 F-statistic: 312.6 on 1 and 200 DF,  p-value: < 2.2e-16
 ```
 
-The output here should look familiar, it is very similar to that produced for the general linear models we fitted before. We can interpret the call and residuals sections of the summary as we did before. However the coefficients section is a little different in its interpretation. If we look at the `Estimate` column, the `(Intercept)` is the intercept in the traditional sense, this would be where the regression line meets the Y axis when height is zero. Now of course its impossible for someone to weigh -126kgs even if they have a height of 0cms (which is also impossible). But this is simply the fit of the regression line. Now if you look at the `ht` `Estimate` this is 1.12, this is the slope of the regression line. We can also think of this as for every increment in height, weight increases by 1.12 increments as well. We can test this theory. We can plug these values into the y = mx + c equation to estimate the weight of an athlete with a height of 160cms. Try plugging `1.12 * 160 -126` into the console in R. You should have a scatter plot with a regression line produced in the previous workshop, have a look and see how our regressions prediction of the weight of an athlete with a height of 160cms compares to the plot. 
+The output here should look familiar, it is very similar to that produced for the general linear models we fitted before. We can interpret the call and residuals sections of the summary as we did before. However the coefficients section is a little different in its interpretation. 
+
+If we look at the `Estimate` column, the `(Intercept)` is the intercept in the traditional sense, this would be where the regression line meets the Y axis, when height is zero. Now of course its impossible for someone to weigh -126kgs even if they have a height of 0cms (which is also impossible). But this is simply the fit of the regression line. 
+
+Now if you look at the `ht` `Estimate` this is 1.12, this is the slope of the regression line. We can also think of this as for every unit increment in height, weight increases by 1.12kg increments as well. We can test this theory. 
+
+Plug your intercept and slope values into the y = mx + c equation to estimate the weight of an athlete with a height of 160cms. You can do this by typing `1.12 * 160 -126` into the console in R. Last week we made scatter plots for for height and weight, with regression lines, have a look and see how our prediction of the weight of an athlete with a height of 160cms compares to the plot. 
 
 Regarding the other values represented here, the coefficient `Std. Error` (Standard Error) measures the average amount that the coefficient estimates vary from the actual average value of our response variable. The `t values` represent our test statistics and `Pr(>|t|)` our p values. 
 
-The last value I will draw your attention to here is `Multiple R-squared` value. Here R-squared is 0.61, so rephrased 61% of the variation in weight can be explained by height. This is quite a large effect size. 
+The last value I will draw your attention to here is `Multiple R-squared` value. Here R-squared is 0.61, so rephrased, 61% of the variation in weight can be explained by height. This is quite a large effect size. 
 
 ## Assumptions
 
@@ -246,9 +253,9 @@ We have explored several applications of the general linear model (including T-t
 * What is your sample size?
 * Are your data normally distributed?
 
-Most of these fairly self explanatory and easy to find out but a key assumption made by all the statistical tests we have looked at so far and that is a little more tricky to define is that the data are normally distributed. 
+Most of these fairly self explanatory and easy to find out. But a key assumption made by the statistical tests we have looked at so far, and that is a little more tricky to define, is that the data follow a normally distribution. 
 
-You will frequently see statistical models refereed to as parametric or non-parametric. 
+You will frequently see statistical models refereed to as parametric or non-parametric. Parametric tests assume that your data are normally distributed and non-parametric tests do not make this assumption, but are not as statistically powerful as parametric tests (hense why we don't always do a non-parametric test, just to be on the safe side).
 
 |   Parametric      |  Non-Parametric  |   
 |:-----------------:|:----------------:|
@@ -257,7 +264,6 @@ You will frequently see statistical models refereed to as parametric or non-para
 |     ANOVA         |  Mann-Whitney U  | 
 |    Pearson's Correlation        |     Spearman's Rank Correlation    | 
 
-Parametric tests assume that your data are normally distributed and non-parametric tests do not make this assumption, but are not as statistically powerful as parametric tests (hense why we don't always do a non-parametric test just to be on the safe side).
 
 ### Task 4 - Checking for normality 
 
@@ -284,7 +290,7 @@ W = 0.99299, p-value = 0.4516
 
 ```
 
-Here our test statistic is W and our p value is fairly self explanatory. But the interpretation of this test is often a little challenging for students. Here the null hypothesis is that our data follow a normal distribution so if our p value is greater then 0.05 we wont reject the null hypothesis and will assume our data are normally distributed. But if our p value is less than 0.05 the distribution of our data is deemed significantly different to a normal distribution so our null hypothesis is rejected and we assume that our data are not normally distributed. So in this instance because the weight vairable follows a normal distribution it would be fine to run a parametric test on it. 
+Here our test statistic is W and our p value is fairly self explanatory. But the interpretation of this test is often a little challenging for students. Here the null hypothesis is that our data follow a normal distribution so if our p value is greater then 0.05 we wont reject the null hypothesis and will assume our data are normally distributed. But if our p value is less than 0.05 the distribution of our data is deemed significantly different to that of a normal distribution, so our null hypothesis is rejected and we assume that our data are not normally distributed. In this instance because the weight variable follows a normal distribution it would be fine to run a parametric test on it. 
 
 Try running this test on all of your variables for male and female athletes, are any of them not normally distributed?
 
@@ -308,10 +314,10 @@ Now try making a new histogram and running the Shapiro-Wilk test on this new log
 
 <details><summary> **Click-me to check interpretation** </summary>
 
-So hopefully you can see that log transforming has reduced the p value for red blood cell counts in female athletes it is still greater then 0.05 so the distribution is still not normal. The red blood cell count for male athletes following log transformation is normally distributed. But because some of our data does not follow a normal distribution even after log tranforming it we will need to perform a non parametric test. 
+Hopefully you can see that log transforming has reduced the p value for red blood cell counts in female athletes, it is still greater then 0.05, so the data do not follow a normal distribution. The red blood cell count for male athletes following log transformation is normally distributed. But because some of our data does not follow a normal distribution even after a log transformation, we will need to perform a non parametric test. 
 
 </details>
-
+<br />
 The second option with data that aren't normally distributed is to perform a non-parametric test. If we are interested in looking for differences between categorical variables we can perform a Mann-Whitney U test (instead of a general linear model, ANOVA or T-test) or if we wish to test for correlations we can use Spearmans rank correlation coefficient (instead of Pearsons correlation coefficient). 
 
 Try running the following piece of code;
@@ -333,7 +339,7 @@ W = 948, p-value < 2.2e-16
 alternative hypothesis: true location shift is not equal to 0
 ```
 
-This is a fairly easy output to interpret. Although this is called a Wilcoxon test if you run the test on two independent samples (as we have here) R essentially runs a Mann-Whitney U test (confusing I know). Here we have performed a Mann-Whitney U test. The W value is our test statistic and p-value is fairly self explanatory. So we can say that there is a significant difference in red blood cell count between male and female athletes. 
+This is a fairly easy output to interpret. Although this is called a Wilcoxon test, if you run the test on two independent samples (as we have here), R runs a Mann-Whitney U test (confusing I know). Here we have performed a Mann-Whitney U test. The W value is our test statistic and p-value is fairly self explanatory. So we can say that there is a significant difference in red blood cell count between male and female athletes. 
 
 Now if we want to investigate a correlation with data that does not follow a normal distribution we can use the Spearmans rank correlation coefficient. Lets use the same functions to test for a correlation between height and red blood cell count. Try using the following chunk;
 
@@ -361,6 +367,9 @@ sample estimates:
 
 Here S is the test statstic and the p-value is, well the p-value. This again shows that there is a correlation between height and red blood cell count. 
 
+## Wrapping up
+
+We have covered a huge amount of ground today, so don't worry if it takes a while to sink in, or if you need to revisit this chapter a few times. We have covered the basics of how to calculate some descriptive statistics and started playing with performing and interpreting some inferential statistics. 
 
 ## Before you leave!
 

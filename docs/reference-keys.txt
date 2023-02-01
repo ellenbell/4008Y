@@ -103,6 +103,7 @@ task-3---testing-for-relationships
 assumptions
 task-4---checking-for-normality
 task-5---what-to-do-if-your-data-are-not-normally-distributed
+wrapping-up-1
 before-you-leave-8
 references-9
 reporting-your-analysis---workshop-6---athletes-continued-week-6b
@@ -111,6 +112,8 @@ task-1---start-thinking-about-how-you-might-report-your-data
 task-2---building-your-first-multi-pannel-figure
 writing-about-your-analysis
 task-3---writing-a-figure-legend
+task-4---have-a-go-at-preparing-a-result-section
+wrapping-up-2
 before-you-leave-9
 references-10
 portfolio-tasks

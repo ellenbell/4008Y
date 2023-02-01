@@ -1,25 +1,25 @@
 # New year, new data - Workshop 4 - Athletes, Week 2B
 
-Good news! There are only three content chapters remaining. Each chapter from this point on wards is associated with a timetabled 2 hour workshop. However if you don't complete a chapter in the timetabled time you are expected to complete it at home. Here we have material for Workshop 4 in Week 2 of Semester 2.
+Good news! There are only three chapters of content remaining. Each chapter from this point onwards is associated with a timetabled 2 hour workshop. However if you don't complete a chapter in the timetabled slot you are expected to complete it at home. Here we have material for Workshop 4 in Week 2 of Semester 2.
 
 ## A new project
 
-We will be working on a new data set this term and will be asked to produce a mock project result section. This will help you prepare for the Skills for Biologists Summative and other reports that you will produce through your university career. You can ask for feedback from either myself or demonstrators during your workshop sessions. 
+We will be working on a new data set this term and you will be asked to produce a mock project result section to match the data set. This will help you prepare for the Skills for Biologists portfolio task and act as a good primer for completing other reports that you will be asked to produce throughout your university career. Over the next three workshops we will work through the complete analytical workflow needed to analyse this data set. You can ask for feedback from either myself or demonstrators during your workshop sessions. 
 
 In this project you are interested in exploring the differences and relationships in weight, height and red blood cell in a group of male and female athletes. 
 
 ### Project setup
 
-Generally I recommend starting a new R Project every time you start working on new and unrelated data sets. Go to posit Cloud and open a **New R Studio Project** and name it `athletes`. Spend a few minutes setting up your workspace, refer back to **Section 4.3** to remind yourself of how to do this. Remember you will need to create sensible places to save scrips, data and figures to. You will also need to freshly install any required packages. 
+Generally I recommend starting a new R Project every time you start working on new and unrelated data sets. Go to posit Cloud, open a **New R Studio Project** and name it `athletes`. Spend a few minutes setting up your workspace, refer back to **Chapter 4.3** to remind yourself of how to do this. Remember you will need to create sensible places to save scripts, data and figures. You will also need to freshly install any required packages. 
 
-For todays workshop you will need the following packages:
+For this workshop series you will need the following packages:
 
 * tidyverse
 * patchwork
 
 ### Script set up
 
-Its fairly safe to say we will be creating some new scripts so open a new **R script** and set it up as described in **Section 4.5**. The project title will be *An analysis of red cell counts among athletes*. Remember to use `library()` to load your freshly installed packages. 
+Its fairly safe to say we will be creating some new scripts so open a new **R script** and set it up as described in **Chapter 4.5**. The project title will be *An analysis of red blood cell counts among athletes*. Remember to use `library()` to load your freshly installed packages. 
 
 ### The data
 
@@ -31,7 +31,7 @@ The following variables were measured for each athlete:
 * weight (wt) was recorded in kg
 * red blood cell count (rcc) in 10^12^l^-1^
 
-You can download the new data set [here](https://downgit.github.io/#/home?url=https://github.com/ellenbell/4008Y/blob/main/data/athletes.csv). When downloaded you will need to unzip the file, save it somewhere sensible on your computer and then load it in to posit cloud (see **Section 4.4** if you are unsure). If you have trouble downloading the data via the link I have also uploaded it to the blackboard Skills for Biologists > Data Sciences > Data page > athletes
+You can download the new data set [here](https://downgit.github.io/#/home?url=https://github.com/ellenbell/4008Y/blob/main/data/athletes.csv). When downloaded you will need to unzip the file, save it somewhere sensible on your computer and then load it in to posit cloud (see **Chapter 4.4** if you are unsure). If you have trouble downloading the data via the link I have also uploaded it to the blackboard Skills for Biologists > Data Sciences > Data page > athletes
 
 ## Check the data 
 
@@ -39,19 +39,27 @@ Once you have imported and loaded your athletes.csv spreadsheet into your new r 
 
 ### Task 1 - Make sure your data are clean and tidy
 
-1)  First of all make sure your data have imported correctly, do you have the expected numbers of rows and columns? - *Hint - consider using functions such as ```ncol(), nrow(), colnames()``` to check this, for more details on how consider revisiting Chapters 4 and 6.*
-2)  Then check that R has correctly identified the data types for each variable. Do you need to adjust any variables to factors? - *Hint - consider using functions such as ```head()``` to check and ```as.factor()``` to identify variables as factors where required, consider revisiting Chapters 4.4 and 8.1 for further assistance*
-3)  Now you can check your variable names, are they nice and concise, do you want to change them? *Hint - you can use the ```rename()``` function, as seen in Chapter 4.5 to change variable names if you wish to.*
+1)  First of all make sure your data have imported correctly, do you have the expected numbers of rows and columns? 
 
-Now we know our that R has read our data correctly and we have all of our variables named as we would like we can run a few further checks. Frequently your data will have originally been manually entered into a spreadsheet, maybe from hand drafted notes in a field or lab notebook. Every time something is copies over there is the opportunity for error. Maybe a row has been accidentally duplicated, or there is a typo or maybe some data is missed out altogether. There are a few tricks we can use to check for each of these and to make sure we are confident in the fidelity of our dataset. 
+> Hint - consider using functions such as ```ncol(), nrow(), colnames()``` to check this, for more details on how consider revisiting Chapters 4 and 6.
 
-1) Checking for duplicates - As mentioned above when you are manually entering data into a spreadsheet, it is very easy to accidentally enter the same row twice. With very large data sets this is something that is very hard to pick out by just looking. Thankfully R has some very useful functions to check for this. Try running;
+2)  Then check that R has correctly identified the data types for each variable. Do you need to adjust any variables to factors? 
+
+> Hint - consider using functions such as ```head()``` to check and ```as.factor()``` to identify variables as factors where required, consider revisiting Chapters 4.4 and 8.1 for further assistance
+
+3)  Now you can check your variable names, are they nice and concise, do you want to change them? 
+
+> Hint - you can use the ```rename()``` function, as seen in Chapter 4.5 to change variable names if you wish to.
+
+Now we know our that R has read our data correctly and we have all of our variables named as we would like we can run a few further checks. Frequently you will find that your data have originally been manually entered into a spreadsheet, maybe from hand drafted notes in a field or lab notebook. Every time something is copied there is the opportunity for error. Maybe a row has been accidentally duplicated, or there is a typo or maybe some data is missed out altogether. There are a few tricks we can use to check for each of these and to make sure we are confident in the fidelity of our dataset. 
+
+1) Checking for duplicates - When you are manually entering data into a spreadsheet, it is very easy to accidentally enter the same row twice. With very large data sets this is something that is very hard to pick out by eye. Thankfully R has some very useful functions to check for this. Try running;
 
 ```{r}
 athletes %>%
   duplicated() # check for duplicated rows
 ```
-**Note that %>% used here is just another notation for piping, rather like the + that ggplot uses.This means that the output from one function is fed directly into the next function.**
+**Note that %>% used here is just another notation for piping, rather like the + that ggplot uses. This means that the output from one function is fed directly into the next function.**
 
 This chunk of code will spit out a long list of TRUE (row is duplicated) or FALSE (row is not duplicated) statements. Again not very human readable, especially if we have a very large data set. Try ammending the code to;
 
@@ -82,7 +90,7 @@ athletes %>%
 
 So do you think there are any potential typos in your data set?
 
-3)  Checking for missing data - finally sometimes when entering data manually, you may miss or delete a spreadsheet cell by mistake, leaving it empty. Again this is really difficult to spot in a large data set. Try running the following chunk of code, can you work out what each line does? Try annotating it in your script yourself.
+3)  Checking for missing data - finally sometimes when entering data manually, you may miss or delete a spreadsheet cell by mistake, leaving it empty. Again this is really difficult to spot by eye in a large data set. Try running the following chunk of code, can you work out what each line does? Try adding comments to it in your script yourself.
 
 ```{r}
 athletes %>% 
@@ -95,12 +103,12 @@ athletes %>%
 So here you are piping your initial data set `athletes` into the `is.na()` function which is then looking for cells containing N/A and reporting a TRUE/FALSE data frame (where TRUE indicates N/A). We are then piping that output straight into the `sum()` function which is summing the number of TRUE values.
 
 </details>
-
+<br />
 Do we have any missing data?
 
 ## Explore the data
 
-We finished last terms workshops by looking at how we can cannibalise code to fit our purposes. We will be spending the first part of todays workshop going over a few of these skills on our shiney new data set! It may be helpful to look through some of the scripts in **Section 12** if you get stuck.
+We finished last terms workshops by looking at how we can cannibalise code to fit our purposes. We will be spending the first part of todays workshop going over a few of these skills on our shiney new data set! It may be helpful to look through some of the scripts in **Chapter 12** if you get stuck.
 
 ### Task 2 - Look at your data distributions
 
@@ -123,10 +131,8 @@ Create a histogram for the following variables, start with a 6 bins and then mak
 Your histograms for height and weight both appear normally distributed. Changing the number of bins doesn't really alter this. However when you look at the histogram for red blood cell count with 6 bins it looks like it might be skewed, with 20 bins however we get more resolution over the data distribution and two peaks appear. The red blood cell count data are bi-modal. This suggest that we may need to think about our data a little more. These histograms were performed on all the data, which includes both male and female athletes, the bi-modal distribution suggests we should consider splitting the data and analysing male and female athletes separately. 
 
 </details>
-
-So lets have a think about how we could split out data set up to examine male and female athletes separately.
-
-Make sure the tidyverse package is installed **and** loaded and try using this chunk, note that I have called my initial data frame `athletes` you may have named yours something else;
+<br />
+So lets have a think about how we could split out data set up to examine male and female athletes separately. Try using this chunk;
 
 ```{r}
 
@@ -146,7 +152,7 @@ Make a similar data frame for female athletes using the above chunk. Then create
 
 ### Task 3 - Look for differences and relationships
 
-Now that we have a better idea for how our data are distributed we can start to ask some questions of the data set. First of all think, what kind of plot would you build to explore the following questions? We covered this in *Section 7.1*.
+Now that we have a better idea for how our data are distributed we can start to ask some questions of the data set. First of all think, what kind of plot would you build to explore the following questions? We covered this in **Chapter 7.1**.
 
 * Is there a difference between male and female athlete height?
 * Is there a difference between male and female athlete weight?
@@ -165,7 +171,7 @@ Now that we have a better idea for how our data are distributed we can start to 
 If you are unsure about any of the logic behind these choices - please ask a demonstrator 
 
 </details>
-
+<br />
 Build a draft plot to explore each of your questions.
 
 For your scatter plots add some code to colour the points by sex and add a regression line using `geom_smooth()`. 
@@ -175,10 +181,10 @@ For your scatter plots add some code to colour the points by sex and add a regre
 
 <details><summary> **Click-me to check your interpretation** </summary>
 
-Just from glancing at the data, median weight and height are slightly higher in male athletes, this difference is greater when looking at red blood cell counts. There appears to be a positive relationship between weight and height in both males and female athletes, i.e. if we plotted male and female athletes separately, it looks like there would still be a positive relationship between height and weight (we will do this in a moment). When looking at the relationship between red blood cell count and weight in male and female athletes, initially there appears to be a positive relationship, **but** looking at the positioning of male and female points it looks like within each sex the relationship may be less strong. If we think back to our histograms, the red blood cell count data followed a bi-modal distribution, so we need to think about how we explore these data a bit more. In this scatter plot we cant really clearly tell if the variables weight or sex explain most of the variation in red blood cell count. So we need to make some more plots to look at the relationship between weight and red blood cell count in male and female athletes separately. 
+Just from glancing at the data, median weight and height are slightly higher in male athletes, this difference is greater when looking at red blood cell counts. There appears to be a positive relationship between weight and height in both males and female athletes, i.e. if we plotted male and female athletes separately, it looks like there would still be a positive relationship between height and weight (we will do this in a moment). When looking at the relationship between red blood cell count and weight in male and female athletes, initially there appears to be a positive relationship, **but** looking at the positioning of male and female points it looks like within each sex the relationship may be less strong. If we think back to our histograms, the red blood cell count data followed a bi-modal distribution, so we need to think about how we explore these data a bit more. In this scatter plot we cant really tell if either of the variables weight or sex explain most of the variation in red blood cell count. So we need to make some more plots to look at the relationship between weight and red blood cell count in male and female athletes separately. 
 
 </details>
-
+<br />
 So it looks like we need to tease our scatter plots apart a little more to make sure our understanding of the data is good. Have a go at making plots for the following four questions (make sure you include a regression line);
 
 * Is there a relationship between height and weight in female athletes?
@@ -187,7 +193,7 @@ So it looks like we need to tease our scatter plots apart a little more to make 
 * Is there a relationship between red blood cell count and weight in male athletes?
  
 > **Pitt Stop; pause your analysis and check your interpretation**
-> Has the relationship changed between weight and height in male and female athletes? Has the relationship changed between red blood cell cound and weight in male and female athletes? Do you understand why it was important to explore these scatter graphs a little more? Do you understand why seeing the bi-modal distribution in our histograms was a clue that we needed to explore red blood cell count in males and females individually? 
+> Has the relationship changed between weight and height in male and female athletes? Has the relationship changed between red blood cell count and weight in male and female athletes? Do you understand why it was important to explore these scatter graphs a little more? Do you understand why seeing the bi-modal distribution in our histograms was a clue, suggesting that we needed to explore red blood cell count in males and females individually? 
 
 <details><summary> **Click-me to check interpretation** </summary>
 
@@ -197,7 +203,7 @@ Essentially, the relationship between height and weight in male and female athle
 
 ## Wrapping up
 
-During this chapter we have loaded a new data set into a new R project. We have checked over the data to makes sure that its been loaded correctly and that there are no duplicated rows, typos or missing data. We have then moved on further to exploring the data set, looking at its shape/distribution and identifying any early patterns. As a really important take home message you can hopefully see and appreciate why its important to think about interpretation at each stage of your analysis. If we had not broken our data set down and analysed male and female athletes separately, we may have ended up drawing false conclusions from our data set and this could have derailed much or our downstream analysis as well. 
+In this chapter we have loaded a new data set into a new R project. We have checked over the data to makes sure that its been loaded correctly and that there are no duplicated rows, typos or missing data. We have then moved on further to exploring the data set, looking at its shape/distribution and identifying any early patterns. As a really important take home message you can hopefully see and appreciate why its important to think about interpretation at each stage of your analysis. If we had not broken our data set down and analysed male and female athletes separately, we may have ended up drawing false conclusions from our data set and this could have derailed much or our downstream analysis as well. 
 
 ## Before you leave!
 
