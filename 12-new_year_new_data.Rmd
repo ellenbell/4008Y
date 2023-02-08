@@ -23,7 +23,7 @@ Its fairly safe to say we will be creating some new scripts so open a new **R sc
 
 ### The data
 
-The data set we will be working on was collected from 202 Australian athletes (102 male (m), 100 female (f)) (data set adapted from Telford and Cunningham, 1991). 
+The data set we will be working on was collected from 202 Australian athletes (102 identified as male (m), 100 identified as female (f)) (data set adapted from Telford and Cunningham, 1991). 
 
 The following variables were measured for each athlete:
 
