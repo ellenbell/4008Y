@@ -251,11 +251,14 @@ We have explored several applications of the general linear model (including T-t
 * What is your question and hypothesis?
 * What types of data are available to you in your data set?
 * What is your sample size?
-* Are your data normally distributed?
+* What does your data distribution look like?
+* Is your relationship linear?
+* Are your observations independent? 
+* We won't go into this too much this term but you should also consider wether your residuals are normally distributed and homoscedastic (dont worry about this for now).
 
 Most of these fairly self explanatory and easy to find out. But a key assumption made by the statistical tests we have looked at so far, and that is a little more tricky to define, is that the data follow a normally distribution. 
 
-You will frequently see statistical models refereed to as parametric or non-parametric. Parametric tests assume that your data are normally distributed and non-parametric tests do not make this assumption, but are not as statistically powerful as parametric tests (hense why we don't always do a non-parametric test, just to be on the safe side).
+You will frequently see statistical models refereed to as parametric or non-parametric. Parametric tests assume that the residuals in your data are normally distributed (we can look at the overall distribution of the data as a reasonable proxy for this) and non-parametric tests do not make this assumption, but are not as statistically powerful as parametric tests (hense why we don't always do a non-parametric test, just to be on the safe side).
 
 |   Parametric      |  Non-Parametric  |   
 |:-----------------:|:----------------:|

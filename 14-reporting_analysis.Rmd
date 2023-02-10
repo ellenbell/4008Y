@@ -119,7 +119,7 @@ Legends **should NOT**;
 
 With this in mind have a go at writing a figure legend for some of the report ready figures that you made earlier. 
 
-## Task 4 - Have a go at preparing a result section
+### Task 4 - Have a go at preparing a result section
 
 You have some report ready figures and some report ready figure legends now. The next step is to put this together into a result section. Have a think about how you would describe the data you are presenting. It only needs to be a couple of paragraphs. Have a demonstrator check your work. 
 
