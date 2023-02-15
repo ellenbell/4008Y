@@ -198,7 +198,7 @@ sample estimates:
 
 ```
 
-Here we can see that R has given us a test statistic `t`, degrees of freedom `DF` and p-value. R even helpfully tells us that it considers the alternative hypothesis true in this case and that there is a correlation between weight and height variables given that the p-value is less than 0.01. We arent going to worry about the other information given in this summary. 
+Here we can see that R has given us a test statistic `t`, degrees of freedom `DF` and p-value. R even helpfully tells us that it considers the alternative hypothesis true in this case and that there is a correlation between weight and height variables given that the p-value is less than 0.01. We also have our correlation coefficient labeled here as sample estimates. This is a value between -1 and 1 (-1 being a perfectly negative correlation and 1 being a perfectly positive correlation). 
 
 You have probably heard that correlation doesn't equal causation. But we may wish to see if we can use height to predict weight, to do this we need to try and fit a model to our data. Here we can apply the `lm()` function again. When we have two continuous variables and use the lm() function, we are performing a linear regression. The linear regression essentially uses the equation for a straight line;
 
@@ -368,7 +368,7 @@ sample estimates:
 0.4012392
 ```
 
-Here S is the test statstic and the p-value is, well the p-value. This again shows that there is a correlation between height and red blood cell count. 
+Here S is the test statistic, the p-value is, well the p-value and our correlation coefficient is represented by sample estimates: rho (this can be interpreted as we did with the Pearson's test). This again shows that there is a correlation between height and red blood cell count. 
 
 ## Wrapping up
 
