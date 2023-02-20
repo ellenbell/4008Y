@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 14 Playing with some statistics - Workshop 5 - Athletes continued, Week 4B | Introduction to Data Science - 4008Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 14 Playing with some statistics - Workshop 5 - Athletes continued, Week 4B | Introduction to Data Science - 4008Y" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<meta name="date" content="2023-02-15" />
+<meta name="date" content="2023-02-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -438,7 +438,7 @@ F-statistic: 85.14 on 1 and 200 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>The multiple R-squared value describes how well your regression model explains the variation in your data. Here we have a multiple R-squared of 0.2986, which we could round to 0.3. This can be interpreted as 30% of the variation in weight is explained by the sex of the athletes. Adjusted R-squared, which is also reported here, is only really of use if you are doing multivariate statistics. It takes into account; how many samples you have and how many variables you’re using. Here we only have one variable so we don’t need to worry about the adjusted R-squared.</p>
 <p>Finally we have our F statistic. This is essentially another test statistic (like T in the coefficients table), here it has been reported with its own degrees of freedom (DF) and p value. You can interpret these as we did previously.</p>
 <p>So by running the <code>lm()</code> function on categorical data and using the <code>summary()</code> function, we have performed both an Independent T-test (t-values and associated p-value in the coefficient section) and an ANOVA (the F statistic and associated p-value). We have also acquired an R-squared value to show the goodness of fit of our regression.</p>
-<p>Try running the <code>lm()</code> and <code>summary()</code> functions not to test the null hypothesis that there is no difference in height between male and female athletes, can you interpret the results?</p>
+<p>Try running the <code>lm()</code> and <code>summary()</code> functions to test the null hypothesis that there is no difference in height between male and female athletes, can you interpret the results?</p>
 </div>
 <div id="task-3---testing-for-relationships" class="section level3 hasAnchor" number="14.2.3">
 <h3><span class="header-section-number">14.2.3</span> Task 3 - Testing for relationships<a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#task-3---testing-for-relationships" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -543,12 +543,12 @@ F-statistic: 312.6 on 1 and 200 DF,  p-value: &lt; 2.2e-16</code></pre>
 <span id="cb77-2"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb77-3"><a href="playing-with-some-statistics---workshop-5---athletes-continued-week-4b.html#cb77-3" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(male_athletes<span class="sc">$</span>wt) <span class="co"># Notice we are running this test on just the male athletes</span></span></code></pre></div>
 <p>The results should look something like this;</p>
-<pre><code>&gt; shapiro.test(athletes$wt)
+<pre><code>&gt; shapiro.test(male_athletes$wt)
 
     Shapiro-Wilk normality test
 
-data:  athletes$wt
-W = 0.99299, p-value = 0.4516
+data:  male_athletes$wt
+W = 0.98523, p-value = 0.3167
 </code></pre>
 <p>Here our test statistic is W and our p value is fairly self explanatory. But the interpretation of this test is often a little challenging for students. Here the null hypothesis is that our data follow a normal distribution so if our p value is greater then 0.05 we wont reject the null hypothesis and will assume our data are normally distributed. But if our p value is less than 0.05 the distribution of our data is deemed significantly different to that of a normal distribution, so our null hypothesis is rejected and we assume that our data are not normally distributed. In this instance because the weight variable follows a normal distribution it would be fine to run a parametric test on it.</p>
 <p>Try running this test on all of your variables for male and female athletes, are any of them not normally distributed?</p>
@@ -570,7 +570,7 @@ W = 0.99299, p-value = 0.4516
 <summary>
 <strong>Click-me to check interpretation</strong>
 </summary>
-<p>Hopefully you can see that log transforming has reduced the p value for red blood cell counts in female athletes, it is still greater then 0.05, so the data do not follow a normal distribution. The red blood cell count for male athletes following log transformation is normally distributed. But because some of our data does not follow a normal distribution even after a log transformation, we will need to perform a non parametric test.</p>
+<p>Hopefully you can see that log transforming has increased the p value for red blood cell counts in female athletes, to above 0.05, so the data now follow a normal distribution. The Shapiro-Wilk test for red blood cell count in male athletes following log transformation still shows a p-value of less then 0.05, so the data are not normally distributed. But because some of our data does not follow a normal distribution even after a log transformation, we will need to perform a non parametric test.</p>
 </details>
 <p><br />
 The second option with data that aren’t normally distributed is to perform a non-parametric test. If we are interested in looking for differences between categorical variables we can perform a Mann-Whitney U test (instead of a general linear model, ANOVA or T-test) or if we wish to test for correlations we can use Spearmans rank correlation coefficient (instead of Pearsons correlation coefficient).</p>
@@ -688,7 +688,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -167,7 +167,7 @@ Finally we have our F statistic. This is essentially another test statistic (lik
 
 So by running the `lm()` function on categorical data and using the `summary()` function, we have performed both an Independent T-test (t-values and associated p-value in the coefficient section) and an ANOVA (the F statistic and associated p-value). We have also acquired an R-squared value to show the goodness of fit of our regression. 
 
-Try running the `lm()` and `summary()` functions not to test the null hypothesis that there is no difference in height between male and female athletes, can you interpret the results?
+Try running the `lm()` and `summary()` functions to test the null hypothesis that there is no difference in height between male and female athletes, can you interpret the results?
 
 ### Task 3 - Testing for relationships
 
@@ -284,12 +284,12 @@ shapiro.test(male_athletes$wt) # Notice we are running this test on just the mal
 The results should look something like this;
 
 ```
-> shapiro.test(athletes$wt)
+> shapiro.test(male_athletes$wt)
 
 	Shapiro-Wilk normality test
 
-data:  athletes$wt
-W = 0.99299, p-value = 0.4516
+data:  male_athletes$wt
+W = 0.98523, p-value = 0.3167
 
 ```
 
@@ -317,7 +317,7 @@ Now try making a new histogram and running the Shapiro-Wilk test on this new log
 
 <details><summary> **Click-me to check interpretation** </summary>
 
-Hopefully you can see that log transforming has reduced the p value for red blood cell counts in female athletes, it is still greater then 0.05, so the data do not follow a normal distribution. The red blood cell count for male athletes following log transformation is normally distributed. But because some of our data does not follow a normal distribution even after a log transformation, we will need to perform a non parametric test. 
+Hopefully you can see that log transforming has increased the p value for red blood cell counts in female athletes, to above 0.05, so the data now follow a normal distribution. The Shapiro-Wilk test for red blood cell count in male athletes following log transformation still shows a p-value of less then 0.05, so the data are not normally distributed. But because some of our data does not follow a normal distribution even after a log transformation, we will need to perform a non parametric test. 
 
 </details>
 <br />
