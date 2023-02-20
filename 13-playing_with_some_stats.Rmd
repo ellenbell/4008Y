@@ -317,7 +317,7 @@ Now try making a new histogram and running the Shapiro-Wilk test on this new log
 
 <details><summary> **Click-me to check interpretation** </summary>
 
-Hopefully you can see that log transforming has increased the p value for red blood cell counts in female athletes, to above 0.05, so the data now follow a normal distribution. The Shapiro-Wilk test for red blood cell count in male athletes following log transformation still shows a p-value of less then 0.05, so the data are not normally distributed. But because some of our data does not follow a normal distribution even after a log transformation, we will need to perform a non parametric test. 
+Hopefully you can see that log transforming has increased the p value for red blood cell counts in female athletes, to above 0.05, so these data now follow a normal distribution. However, the Shapiro-Wilk test for red blood cell counts in male athletes, following log transformation, still show a p-value of less then 0.05, so these data do not follow a normal distribution. Because some of our data does not follow a normal distribution even after a log transformation, we will need to perform a non parametric test. 
 
 </details>
 <br />
