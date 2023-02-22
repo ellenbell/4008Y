@@ -38,7 +38,7 @@ Hopefully you should see something that looks like this:
 
 ```
 > athletes_summary_stats_ht
-# A tibble: 2 × 7
+# A tibble: 2 × 5
   sex    mean    sd     n   sem 
   <chr> <dbl> <dbl> <int> <dbl>
 1 f      175.  8.24   100 0.824
