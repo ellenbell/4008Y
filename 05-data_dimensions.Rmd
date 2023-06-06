@@ -29,7 +29,7 @@ With this data set its not hard to work out what the sample size is. But data se
 n_distinct(tribolium_combo$beetle_id)
 ```
 
-Notice the use of the `$` above. This is effectively directing R to a specific variable/column within a data frame. 
+> __Side Note__ notice the use of the `$` above. This is effectively directing R to a specific variable/column within a data frame. 
 
 You may have noticed that we have two categorical variables in this data set, `sex` and `treatment`. It would be really useful to know what your sample size is for each of these variables. Try the following;
 
@@ -38,7 +38,11 @@ You may have noticed that we have two categorical variables in this data set, `s
 tabyl(tribolium_combo, sex , treatment)
 ```
 
-So hopefully you can see from the `summarise` and `tabyl` functions that we have a total sample size of 20 beetles and that 5 of each sex were exposed to each treatment. Next week we will start to explore how we can visualise some of these data. 
+<details><summary> **Stuck? Click here for a breakdown of the code above** </summary>
+In this case the tabyl function has returned the number of individuals of each sex in each treatment. In this experiment there were 5 females kept at 30°C and 5 females kept at 35°C, likewise for males, 5 males were kept 30°C and 5 males were kept at 35°C in this experiment.
+</details>
+
+So hopefully you can see from the outputs of the `summarise` and `tabyl` functions that we have a total sample size of 20 beetles and that 5 of each sex were exposed to each treatment. Next week we will start to explore how we can visualise some of these data. 
 
 ## Before you leave!
 

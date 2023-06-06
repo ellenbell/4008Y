@@ -347,11 +347,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>With this data set its not hard to work out what the sample size is. But data sets can become huge and its not always easy or effective to scroll through them. Sometimes you really just need to know how many observations are in your data set, thankfully each of our beetles has a unique identifyer so we can count how many unique entries there are in the <code>beetle_id</code> variable. Try the following;</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the n_distinct function to count unique/distinct entries in the beetle_id column</span></span>
 <span id="cb35-2"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">n_distinct</span>(tribolium_combo<span class="sc">$</span>beetle_id)</span></code></pre></div>
-<p>Notice the use of the <code>$</code> above. This is effectively directing R to a specific variable/column within a data frame.</p>
+<blockquote>
+<p><strong>Side Note</strong> notice the use of the <code>$</code> above. This is effectively directing R to a specific variable/column within a data frame.</p>
+</blockquote>
 <p>You may have noticed that we have two categorical variables in this data set, <code>sex</code> and <code>treatment</code>. It would be really useful to know what your sample size is for each of these variables. Try the following;</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the tabyl function from the janitor package, comment on what it does. </span></span>
 <span id="cb36-2"><a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tabyl</span>(tribolium_combo, sex , treatment)</span></code></pre></div>
-<p>So hopefully you can see from the <code>summarise</code> and <code>tabyl</code> functions that we have a total sample size of 20 beetles and that 5 of each sex were exposed to each treatment. Next week we will start to explore how we can visualise some of these data.</p>
+<details>
+<summary>
+<strong>Stuck? Click here for a breakdown of the code above</strong>
+</summary>
+In this case the tabyl function has returned the number of individuals of each sex in each treatment. In this experiment there were 5 females kept at 30°C and 5 females kept at 35°C, likewise for males, 5 males were kept 30°C and 5 males were kept at 35°C in this experiment.
+</details>
+<p>So hopefully you can see from the outputs of the <code>summarise</code> and <code>tabyl</code> functions that we have a total sample size of 20 beetles and that 5 of each sex were exposed to each treatment. Next week we will start to explore how we can visualise some of these data.</p>
 </div>
 <div id="before-you-leave-1" class="section level2 hasAnchor" number="6.3">
 <h2><span class="header-section-number">6.3</span> Before you leave!<a href="exploring-the-dimensions-of-your-data-frame---week-6a.html#before-you-leave-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>

@@ -51,14 +51,17 @@ height_v_weight <- ggplot(data = athletes,aes(x = ht, y = wt)) +
 # You can play with the configuration to suit your tastes, use help(plot_layout) to see some other configurations.
 # You may notice that here I have specified the package for the function using "::" e.g. patchwork::plot_layout.
 # This is because some functions across multiple packages have shared names, as the do here, so R can become confused, by specifying the package, I am directing R to the specific package which contains the specific function I wish to use. 
-# The final argument (guides='collect') pulls together all the little figure keys you may have and presents them on one place and should remove duplicated information
-(height_box | weight_box) / height_v_weight + patchwork::plot_layout(guides ='collect')
+# The second argument (guides='collect') pulls together all the little figure keys you may have and presents them on one place and should remove duplicated information.
+# The final argument adds a tag onto each plot within the figure, in this case A, B C, this makes it easier to write about each plot when you construct your figure legend.
+(height_box | weight_box) / height_v_weight + 
+  patchwork::plot_layout(guides ='collect') +
+  plot_annotation(tag_levels = 'A')
 ```
 
 The results of this chunk can be seen in Figure 13.1. Note that these are rough draft figures and placement, you can play with the ggplot and patchwork parameters to get them to look as you would like, and as would be expected in a written report. 
 
 ```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Results from the patchwork demonstration chunk", fig.cap ="Results from the patchwork demonstration chunk"}
-knitr::include_graphics("figures/screenshot_patchwork.png")
+knitr::include_graphics("figures/multipanel.png")
 ```
 
 Have a go at putting some of your report ready plots into a multi-panel figure. Use `ggsave` to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in **Chapter 12**. You can download these pdfs by opening them in browser and clicking the download button in the top right hand corner. 

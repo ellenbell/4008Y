@@ -69,7 +69,7 @@ Here we will only be dealing with __relative__ paths because you will always be 
 
 ## Setting up your script
 
-Right OK, enough theory, lets start setting up your script. Create a new R script and call it `tribolium_parasites`. Its always good to add a few lines of description at the start of your script, this tells your future self and anyone else what the script is doing. Copy over the following.
+Right OK, enough theory, lets start setting up your script. Create a new R script by clicking on the icon with a little green plus, below File in the top left of the posit Cloud windown and select __R Script__. Call your new script `tribolium_parasites`. Its always good to add a few lines of description at the start of your script, this tells your future self and anyone else what the script is doing. Copy over the following.
 
 ```{r}
 # An analysis of parasite abundance between male and female tribolium beetles from two thermal treatments (30 and 35 degrees centigrade)
@@ -79,13 +79,13 @@ Right OK, enough theory, lets start setting up your script. Create a new R scrip
 Then we need to load any packages that we might want to use, copy over the following;
 
 ```{r}
-library(tidyverse) # Loads the tidyverse package
-library(janitor) # Loads the janitor package
+library(tidyverse) # Load the tidyverse package
+library(janitor) # Load the janitor package
 ```
 
 ## Importing data
 
-Lets import your data set. Go into your __data__ folder, click __Upload__ and select your newly made `.csv` file. Once its uploaded you should be able to see it under `data/` in the bottom right panel. 
+Lets import your data set. Go into your __data__ folder within __Files__, click __Upload__ and select your newly made `.csv` file. Once its uploaded you should be able to see it under `data/` in the bottom right panel. 
 
 Now we need to tell R to read your `.csv` file.
 
@@ -134,7 +134,7 @@ Now we neet to turn our new variables into a data frame
 tribolium_extras <- tibble(beetle_id,sex,treatment)
 ```
 
-Try using `head()` to check your new `tribolium_extras' data frame. 
+Try using `head()` to check your new `tribolium_extras` data frame. 
 
 It may be advantageous to have all the data from both of our data frames together, we can use another function to do this. However first I would like everyone in the class to have the same variable names, this will help us later on but also sometimes its useful to change headings in R. Add the following to your script and run it, make sure you edit it to match your variable names. 
 
@@ -146,7 +146,7 @@ tribolium <- tribolium %>%
 head(tribolium) 
 ```
 
-Side note - you may have noticed the %>% expression, this is known as the forward pipe operator and allows you to chain together commands (rather like the `+` we covered in Chapter 2 when using `ggplot`). This is a very simple use of it but it is piping your data frame forward to the rename function.
+> __Side Note__ you may have noticed the %>% expression, this is known as the forward pipe operator and allows you to chain together commands (rather like the `+` we covered in Chapter 2 when using `ggplot`). This is a very simple use of it but it is piping your data frame forward to the rename function.
 
 Hopefully the column containing your beetle IDs is now labeled `beetle_id`. Use the same set of commands to rename your variables for beetle wing case size and parasite load. Call the variables `wing_case_size` and `parasite_burden` instead.
 
