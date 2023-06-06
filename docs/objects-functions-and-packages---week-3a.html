@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Objects, Functions and Packages - Week 3A | Introduction to Data Science - 4008Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Objects, Functions and Packages - Week 3A | Introduction to Data Science - 4008Y" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<meta name="date" content="2023-02-22" />
+<meta name="date" content="2023-06-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -384,30 +384,31 @@ Error: object &#39;b&#39; not found</code></pre>
 <div id="installing-packages" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Installing packages<a href="objects-functions-and-packages---week-3a.html#installing-packages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The <code>sum</code> function is part of the base R package that comes with any R installation. However there are lots of other useful functions that are held in additional packages. In order to use these functions, you must have the necessary packages installed in your work space. I already mentioned that we would be using a package called <code>ggplot2</code>, lets try installing and loading it in your work space.</p>
-<p>We only need to install a package once so copy this into your console</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="objects-functions-and-packages---week-3a.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</span></code></pre></div>
-<p>Now we can try to make a simple plot using a function from within <code>ggplot2</code> and an example data set from within the base R package called <code>iris</code>.</p>
+<p>With any package you wish to use in posit Cloud you will need to go through a two step process, first of all you need to <strong>install</strong> the package using the <code>install.packages()</code> function (see below for usage and then you will need to <strong>load</strong> it using the <code>library()</code> function. We only need to install and load a package once per posit Cloud project but I would generally keep the commands for installing and loading packages at the top of the script I’m working on.</p>
+<p>Try copying and running the following lines in your script;</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="objects-functions-and-packages---week-3a.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>) <span class="co"># Install the ggplot package</span></span>
+<span id="cb19-2"><a href="objects-functions-and-packages---week-3a.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># Load the ggplot package</span></span></code></pre></div>
+<p>Now we can try to make a simple plot using some functions from the <code>ggplot2</code> package and using an example data set called <code>iris</code> that is stored in the base R <code>datasets</code> package.</p>
 <p>Copy the following command into your script and run it</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="objects-functions-and-packages---week-3a.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First load ggplot and the base R datasets in your workspace</span></span>
-<span id="cb20-2"><a href="objects-functions-and-packages---week-3a.html#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
-<span id="cb20-3"><a href="objects-functions-and-packages---week-3a.html#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;datasets&quot;</span>)</span>
-<span id="cb20-4"><a href="objects-functions-and-packages---week-3a.html#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="objects-functions-and-packages---week-3a.html#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Then call the ggplot function and tell it that the data set you wish to use is calles iris</span></span>
-<span id="cb20-6"><a href="objects-functions-and-packages---week-3a.html#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co"># We then need to tell ggplot how to map our variables</span></span>
-<span id="cb20-7"><a href="objects-functions-and-packages---week-3a.html#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"># The aes function is an aesthetic tool that allows us to define variables for the x and y axes</span></span>
-<span id="cb20-8"><a href="objects-functions-and-packages---week-3a.html#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="co"># We then use the geom_point function to instruct R to built a scatter plot</span></span>
-<span id="cb20-9"><a href="objects-functions-and-packages---week-3a.html#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co"># A second use of the aes function tells R to color points by species</span></span>
-<span id="cb20-10"><a href="objects-functions-and-packages---week-3a.html#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris,<span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span> </span>
-<span id="cb20-11"><a href="objects-functions-and-packages---week-3a.html#cb20-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour=</span>Species)) </span></code></pre></div>
-<p>Those sharped eyed among you may have noticed that the short script defining our plot goes over two lines, has a <code>+</code> and an indentation on the second line. The <code>+</code> and indentation is essentially allowing you to pipe one line of code into the next, adding more directions in how you would like your graph to be built and linking together multiple functions. Don’t worry if this is a lot to take in at this stage, as we progress with <code>ggplot2</code> we will revisit this in more detail.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="objects-functions-and-packages---week-3a.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First load the base R datasets in your workspace</span></span>
+<span id="cb20-2"><a href="objects-functions-and-packages---week-3a.html#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;datasets&quot;</span>)</span>
+<span id="cb20-3"><a href="objects-functions-and-packages---week-3a.html#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="objects-functions-and-packages---week-3a.html#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Then call the ggplot function and tell it that the data set you wish to use is called iris</span></span>
+<span id="cb20-5"><a href="objects-functions-and-packages---week-3a.html#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co"># We then need to tell ggplot how to map our variables</span></span>
+<span id="cb20-6"><a href="objects-functions-and-packages---week-3a.html#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co"># The aes function is an aesthetic tool that allows us to define variables for the x and y axes</span></span>
+<span id="cb20-7"><a href="objects-functions-and-packages---week-3a.html#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"># We then use the geom_point function to instruct R to built a scatter plot</span></span>
+<span id="cb20-8"><a href="objects-functions-and-packages---week-3a.html#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="co"># A second use of the aes function tells R to color points by species</span></span>
+<span id="cb20-9"><a href="objects-functions-and-packages---week-3a.html#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris,<span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span> </span>
+<span id="cb20-10"><a href="objects-functions-and-packages---week-3a.html#cb20-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour=</span>Species)) </span></code></pre></div>
+<p>Those sharped eyed among you may have noticed that the short script defining our plot goes over two lines and contains a <code>+</code> and an indentation on the second line. The <code>+</code> and indentation is essentially allowing you to pipe one line of code into the next. This allows you to add more detailed instructions on how you would like your graph to be built and linking together multiple functions. Don’t worry if this is a lot to take in at this stage, as we progress with <code>ggplot2</code> we will revisit this in more detail.</p>
 </div>
 <div id="what-do-i-do-if-i-get-an-error-message" class="section level2 hasAnchor" number="3.4">
 <h2><span class="header-section-number">3.4</span> What do I do if I get an error message?<a href="objects-functions-and-packages---week-3a.html#what-do-i-do-if-i-get-an-error-message" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Error messages are almost guaranteed when working regularly with R, they are super common, dont panic when you eventually run into one. In fact you may remember that we already ran into one earlier in this chapter, that particular error was caused by a typo. Generally the most common causes of error messages are;</p>
+<p>Error messages are almost guaranteed when working regularly with R, they are super common, don’t panic when you eventually run into one. In fact you may remember that we already encountered one earlier in this chapter, that particular error was caused by a typo. Generally the most common causes of error messages are;</p>
 <ul>
 <li>A typo (you can reduce risk of this by consistently labeling your files and objects)</li>
 <li>A mistake in syntax (missing or un-closed; <code>()</code>, <code>""</code>, or missing <code>,</code>)</li>
-<li>Missing dependencies (maybe you didnt install or load a package correctly, or maybe if your running a longer script, you are trying to call an object that you havent created yet)</li>
+<li>Missing dependencies (maybe you didnt install or load a package correctly, or maybe if your running a longer script, you are trying to call an object that you haven’t created yet)</li>
 </ul>
 <p>This is by no means an exhaustive list but when I run into errors its normally because of one of the above. The trick is don’t panic and read the error message carefully, it often tells you what is wrong. Then look over your script slowly to troubleshoot. And if you are genuinely stuck and the error doesn’t make sense, run it through Google, I can almost guarantee you wont have been the first person to have that error message.</p>
 <p>Well done everyone. I hope you have enjoyed this weeks session. Next week is our first workshop and we will start to use some of these new found skills in tandem and start to look at using them on some new data.</p>
@@ -484,7 +485,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

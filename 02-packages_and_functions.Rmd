@@ -104,22 +104,24 @@ This should bring up a help file in your bottom right hand panel that describes 
 
 The `sum` function is part of the base R package that comes with any R installation. However there are lots of other useful functions that are held in additional packages. In order to use these functions, you must have the necessary packages installed in your work space. I already mentioned that we would be using a package called `ggplot2`, lets try installing and loading it in your work space. 
 
-We only need to install a package once so copy this into your console
+With any package you wish to use in posit Cloud you will need to go through a two step process, first of all you need to __install__ the package using the `install.packages()` function (see below for usage and then you will need to __load__ it using the `library()` function. We only need to install and load a package once per posit Cloud project but I would generally keep the commands for installing and loading packages at the top of the script I'm working on.
+
+Try copying and running the following lines in your script;
 
 ```{r}
-install.packages("ggplot2")
+install.packages("ggplot2") # Install the ggplot package
+library(ggplot2) # Load the ggplot package
 ```
 
-Now we can try to make a simple plot using a function from within `ggplot2` and an example data set from within the base R package called `iris`. 
+Now we can try to make a simple plot using some functions from the `ggplot2` package and using an example data set called `iris` that is stored in the base R `datasets` package. 
 
 Copy the following command into your script and run it
 
 ```{r}
-# First load ggplot and the base R datasets in your workspace
-library("ggplot2")
+# First load the base R datasets in your workspace
 library("datasets")
 
-# Then call the ggplot function and tell it that the data set you wish to use is calles iris
+# Then call the ggplot function and tell it that the data set you wish to use is called iris
 # We then need to tell ggplot how to map our variables
 # The aes function is an aesthetic tool that allows us to define variables for the x and y axes
 # We then use the geom_point function to instruct R to built a scatter plot
@@ -128,15 +130,15 @@ ggplot(data = iris,aes(x = Sepal.Length, y = Sepal.Width)) +
   geom_point(aes(colour=Species)) 
 ```
 
-Those sharped eyed among you may have noticed that the short script defining our plot goes over two lines, has a `+` and an indentation on the second line. The `+` and indentation is essentially allowing you to pipe one line of code into the next, adding more directions in how you would like your graph to be built and linking together multiple functions. Don't worry if this is a lot to take in at this stage, as we progress with `ggplot2` we will revisit this in more detail. 
+Those sharped eyed among you may have noticed that the short script defining our plot goes over two lines and contains a `+` and an indentation on the second line. The `+` and indentation is essentially allowing you to pipe one line of code into the next. This allows you to add more detailed instructions on how you would like your graph to be built and linking together multiple functions. Don't worry if this is a lot to take in at this stage, as we progress with `ggplot2` we will revisit this in more detail. 
 
 ## What do I do if I get an error message?
 
-Error messages are almost guaranteed when working regularly with R, they are super common, dont panic when you eventually run into one. In fact you may remember that we already ran into one earlier in this chapter, that particular error was caused by a typo. Generally the most common causes of error messages are;
+Error messages are almost guaranteed when working regularly with R, they are super common, don't panic when you eventually run into one. In fact you may remember that we already encountered one earlier in this chapter, that particular error was caused by a typo. Generally the most common causes of error messages are;
 
 * A typo (you can reduce risk of this by consistently labeling your files and objects)
 * A mistake in syntax (missing or un-closed; `()`, `""`, or missing `,`)
-* Missing dependencies (maybe you didnt install or load a package correctly, or maybe if your running a longer script, you are trying to call an object that you havent created yet)
+* Missing dependencies (maybe you didnt install or load a package correctly, or maybe if your running a longer script, you are trying to call an object that you haven't created yet)
 
 This is by no means an exhaustive list but when I run into errors its normally because of one of the above. The trick is don't panic and read the error message carefully, it often tells you what is wrong. Then look over your script slowly to troubleshoot. And if you are genuinely stuck and the error doesn't make sense, run it through Google, I can almost guarantee you wont have been the first person to have that error message. 
 
