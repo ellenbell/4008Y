@@ -59,7 +59,7 @@ with_flu <- 15
 percentage_with_flu <- (with_flu/total_class)*100
 ```
 
-If you look in your Environment in the top right panel you should see the percentage of students with flu calculated and stored under `percentage_with_flu`. You can use the following command to see it printed in the consol.
+If you look in your Environment in the top right panel you should see the percentage of students with flu calculated and stored under `percentage_with_flu`. You can use the following command to see it printed in the console.
 
 ```{r}
 print(percentage_with_flu)
