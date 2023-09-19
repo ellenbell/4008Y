@@ -1,6 +1,6 @@
-# Directories and data frames - Week 4A - Workshop 1
+# Directories and data frames - Week 4A - Workshop 1 {#data-frames}
 
-This week we don't have any lectures but we do have an in person workshop. The section to complete this week may be a little more chunky than unusual, complete what you can during the workshop and then finish it off in your own time. Do make use of the demonstrators if any of the exercises so far haven't made sense. 
+This week we don't have any lectures but we do have an in person workshop. The section to complete this week may be a little more chunky than usual, complete what you can during the workshop and then finish it off in your own time. Do make use of the demonstrators if any of the exercises so far haven't made sense. 
 
 ## Data Entry
 
@@ -16,7 +16,7 @@ While we are on the subject of naming, I am going to take a moment to go over a 
 
 * Keep names meaningful - Over the course of your degree you will create a lot of files and folders/directories. You will also frequently be naming data variables and objects. You need to be able to easily recognise what is what so informative names are better then arbitrary names. So `girraffe`, `elephant`, `hippo` are better names then `1`, `2` and `3`. 
 
-* Make versions obvious - There will be occasions when you want to save new information in a file or object but keep the original untouched. You may be experimenting or you may want the option to revisit to your original work. In these instances it makes sense to save your edits to a new version of the original file or object. If you do this and especially if you are sharing it with others make it clear. I tend to add my initials and a version identifier (e.g. v1, v2) as a suffix to the file name. 
+* Make versions obvious - There will be occasions when you want to save new information in a file or object but keep the original untouched. You may be experimenting or you may want the option to revisit to your original work. In these instances it makes sense to save your edits to a new version of the original file or object. If you do this and especially if you are sharing it with others make it clear. I tend to add my initials and a version identifier (e.g. eb_v1, eb_v2) as a suffix to the file name. 
 
 * Keep names short - Typing takes time, its boring, and the more you type the greater the risk of a typo. So keep names short. So `trunk_length` is better than `elephant_trunk_length_cm`, there is important information in the second name but you can store this as a comment or a note. 
 
@@ -28,7 +28,7 @@ Now go back to your spreadsheet, do your variables and file names follow a sensi
 
 __Make sure you have a demonstrator check your work before moving onto the next step.__
 
-## Setting up your R workspace 
+## Setting up your R workspace {#workspace}
 
 This is a new piece of analysis, we will be carrying forward principals from the previous chapters but scripts and data will be new. So its a good idea to start with a fresh clean workspace. So lets set up a new project in posit Cloud, follow the steps from Chapter 2 if you cant remember how to do this and name this project `tribolium_parasites`. Its always good to keep a well organised tidy workspace, generally I will start a new project in posit Cloud if I am working on a new series of questions with a new data set or sets.
 
@@ -62,14 +62,18 @@ Working with text based interfaces like R, where you are writing and running com
 
 Under __Files__ in the bottom right panel of your screen you will see a file with the ending .Rproj. This is an R project file which tells R where you are working in the server. It means that R will automatically treat your project location as the __working directory__. If you wish to access files in any of the folders you have just created you will need to tell R the __path__ that it needs to follow in order to access these files. There are two types of path;
 
-* __absolute__ paths, which refer to the same location in a file system relative to the root directory (don't worry if that doesn't make too much sense at this stage).
-* __relative__ paths, which refer to a location in the file system relative to the directory you are currently working in.
+* __absolute__ paths, which refer to the same location in a file system relative to the root directory (don't worry if that doesn't make too much sense at this stage). For example, in Figure 4.2, if you wanted to access files in the `/work` directory but were already in any of the other directories like `/dev`, an absolute path would work from wherever you were working this would be `/home/jono/work`.
+* __relative__ paths, which refer to a location in the file system relative to the directory you are currently working in. For example, in Figure 4.2, if you were working in the `/home` directory and wanted to access files in `/work` a relative path would look like `jono/work`. This is fine from the `/home` directory, but the path would not work if you were working in, for example `/lib`. 
+
+```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Absolute vs relative paths", fig.cap ="Absolute vs Relative Paths"}
+knitr::include_graphics("figures/absolutePathNames.jpg")
+```
 
 Here we will only be dealing with __relative__ paths because you will always be working from within your R project directory. So for example if you wish to access a file in your `data` folder in the R project you would need to provide the path `("data/any_sub_folders_you_may_have_made/the_file_you_wish_to_access")`. We will do this in the next step so don't worry if you don't quite get it yet. 
 
-## Setting up your script
+## Setting up your script {#script}
 
-Right OK, enough theory, lets start setting up your script. Create a new R script by clicking on the icon with a little green plus, below File in the top left of the posit Cloud windown and select __R Script__. Call your new script `tribolium_parasites`. Its always good to add a few lines of description at the start of your script, this tells your future self and anyone else what the script is doing. Copy over the following.
+Right OK, enough theory, lets start setting up your script. Create a new R script by clicking on the icon with a little green plus, below File in the top left of the posit Cloud window and select __R Script__. Call your new script `tribolium_parasites`. Its always good to add a few lines of description at the start of your script, this tells your future self and anyone else what the script is doing. Copy over the following.
 
 ```{r}
 # An analysis of parasite abundance between male and female tribolium beetles from two thermal treatments (30 and 35 degrees centigrade)
@@ -83,7 +87,7 @@ library(tidyverse) # Load the tidyverse package
 library(janitor) # Load the janitor package
 ```
 
-## Importing data
+## Importing data {#importing}
 
 Lets import your data set. Go into your __data__ folder within __Files__, click __Upload__ and select your newly made `.csv` file. Once its uploaded you should be able to see it under `data/` in the bottom right panel. 
 
@@ -135,6 +139,8 @@ tribolium_extras <- tibble(beetle_id,sex,treatment)
 ```
 
 Try using `head()` to check your new `tribolium_extras` data frame. 
+
+## Renaming variables {#renaming}
 
 It may be advantageous to have all the data from both of our data frames together, we can use another function to do this. However first I would like everyone in the class to have the same variable names, this will help us later on but also sometimes its useful to change headings in R. Add the following to your script and run it, make sure you edit it to match your variable names. 
 

@@ -172,14 +172,14 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Introduction to Data Science - 4008Y},
+  pdftitle={Introduction to Data Science - BIO-4008Y/CHE-4602Y},
   pdfauthor={Dr Ellen Bell},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{Introduction to Data Science - 4008Y}
+\title{Introduction to Data Science - BIO-4008Y/CHE-4602Y}
 \author{Dr Ellen Bell}
-\date{2023-07-31}
+\date{2023-09-19}
 
 \begin{document}
 \maketitle
@@ -194,7 +194,7 @@
 \hypertarget{data-science-learning-objectives}{%
 \section{Data Science learning objectives}\label{data-science-learning-objectives}}
 
-Introduction to Data Science is a `sub-module' that will run throughout your first year as part of the BIO-4008Y Skills for Biologists module. Here we aim to teach you the fundamentals of how to collect and organise data in a clean and sensible format and how to correctly visualise and describe data. The platform we will be using to manage, manipulate and analyse data is posit Cloud. This is a cloud based interface that utilises the programming language R in a very similar interface to RStudio (a package you may wish to install on your own computers at some point). Over the course of the next few weeks you will start to learn fundamentals of this language and its application in posit Cloud.
+Introduction to Data Science is a `sub-module' that will run throughout your first year as part of the BIO-4008Y anc CHE-4602Y Skills modules. Here we aim to teach you the fundamentals of how to collect and organise data in a clean and sensible format and how to correctly visualise and describe data. The platform we will be using to manage, manipulate and analyse data is posit Cloud. This is a cloud based interface that utilises the programming language R in a very similar interface to RStudio (a package you may wish to install on your own computers at some point). Over the course of the next few weeks you will start to learn fundamentals of this language and its application in posit Cloud.
 
 \hypertarget{teaching-layout-for-data-science}{%
 \section{Teaching layout for Data Science}\label{teaching-layout-for-data-science}}
@@ -232,7 +232,7 @@ Teaching for semester 2;
   Semester 1
 \end{itemize}
 
-Two quizzes are available on the 4008Y page under Data Science. These are ``semi-formative'' quizzes, you can attempt them at any time and as many times as you like before the summative essay deadline for Skills for Biologists, the highest mark you achieve will be the one you are awarded. If you complete them with a grade of 40\% or higher you will gain a percentage point towards your summative Skills essay. If you complete them with a grade of 80\% or higher you will get 2 percentage points added to your summative Skills essay. That's 4 percent in total, last year this was enough to move several students up to the next grade boundary, definitely worth doing!
+At the end of Semester 1 you will be given the opportunity to submit a formative assignment. From this you will get feedback and a mock grade for your work, the formative assignment and marking scheme is similar to the the later summative assignment (in Semester 2) so is a great opportunity to get constructive feedback on your work and places to improve on.
 
 \begin{itemize}
 \tightlist
@@ -240,17 +240,17 @@ Two quizzes are available on the 4008Y page under Data Science. These are ``semi
   Semester 2
 \end{itemize}
 
-As part of your Skills portfolio, there will be two data handling tasks. You will be given some data and asked to correctly visualise it in a clean, clear and attractive way, with a suitable figure legend. You will also be asked to write a justification for the decisions you made while preparing your data and visualising it. You will learn all the skills you need to do this while completing lectures, workshops or chapters in this workbook.
+During Semester 2 you will be given an assessment data set and a series of questions, you will be asked to produce a series of plots and format them into a multi-panel figure with accompanying figure legend. You will be asked to upload these alongside your R script and these will constitute the summative task for the Data Sciences component of your respective skills module.
 
 \hypertarget{how-to-use-this-workbook}{%
 \section{How to use this workbook}\label{how-to-use-this-workbook}}
 
-In semester 1 each week of taught material is accompanied by a workbook chapter. You will be expected read through these chapters and complete any exercises in your own time. Each chapter should take no more then an hour to complete and in many cases will take much less time. I will aim to set aside 10 minutes at the end of each lecture to cover any potential problems you may be having, so if you get stuck, use this time to ask for help. In semester 2 we have more face to face workshop time, in each workshop you will be expected to work through a chapter in this workbook, you may not complete this in the allocated time, but will be expected to do so in your own time. Use face to face time to ask lots of questions, especially if you are stuck.
+In semester 1 each week of taught material is accompanied by a workbook chapter. You will be expected to read through these chapters and complete any exercises in your own time. Each chapter should take no more then an hour to complete and in many cases will take much less time. I will aim to set aside 10 minutes at the end of each lecture to cover any potential problems you may be having, so if you get stuck, use this time to ask for help. In semester 2 we have more face to face workshop time, in each workshop you will be expected to work through a chapter in this workbook, you may not complete this in the allocated time, but will be expected to do so in your own time. Use face to face time to ask lots of questions, especially if you are stuck.
 
 \hypertarget{why-is-data-science-important-and-why-are-we-teaching-it-in-r}{%
 \section{Why is data science important and why are we teaching it in R?}\label{why-is-data-science-important-and-why-are-we-teaching-it-in-r}}
 
-It is a common misconception, that to be a good biologist you need to `know' the mechanics of how life works. Questions like; ``How does a cell undergo respiration?'', ``How do kidneys filter blood?'', ``How do some plants fix nitrogen?'' and ``How do honey bees communicate the location and quantity of resources to each other?'', spring to mind. While these questions are important, they are also, now, fairly well understood. But how did biologists come to their understanding of these mechanisms? The answer to this lies in data.
+It is a common misconception, that to be a good biologist or biochemist you need to `know' the mechanics of how life works. Questions like; ``How does a cell undergo respiration?'', ``How do kidneys filter blood?'', ``How do some plants fix nitrogen?'' and ``How do honey bees communicate the location and quantity of resources to each other?'', spring to mind. While these questions are important, they are also, now, fairly well understood. But how did biologists come to their understanding of these mechanisms? The answer to this lies in data.
 
 Good science is based on empirical observations and these observations should be reliably collected and reproducible. Exploration of theories through observations and experimentation leads to the collection of data and analysis and interpretation of data feeds into the bedrock of our understanding of how life works, i.e.~the biological sciences.
 
@@ -293,7 +293,7 @@ Your free posit Cloud account comes with some restrictions which you should be a
   You have up to 1GB of RAM and 1 CPU per project
 \end{itemize}
 
-For the purposes of our work here these restrictions should not be a problem. But I strongly suggest you don't leave your coursework to the last minute. If you try and pack in a whole semester or years worth or material into a single month, you will brush up against those 25 project hours. There are some options of last resort should this happen, you could install RStudio on your desktop for example but things will get complicated. Lets avoid that where we can!There are some ways you can increase the efficiency of your workspace which are documented below in section 2.4.
+For the purposes of our work here these restrictions should not be a problem. But I strongly suggest you don't leave your coursework to the last minute. If you try and pack in a whole semester or years worth or material into a single month, you will exceed those 25 project hours. There are some options of last resort should this happen, you could install RStudio on your desktop for example, or set up an alternative posit cloud account with an alternative email address, but things will get complicated. Lets avoid that where we can! There are some ways you can increase the efficiency of your workspace which are documented below in section 2.4.
 
 \hypertarget{creating-your-first-posit-cloud-project}{%
 \section{Creating your first posit Cloud Project}\label{creating-your-first-posit-cloud-project}}
@@ -301,25 +301,25 @@ For the purposes of our work here these restrictions should not be a problem. Bu
 Once you have created an posit Cloud account you should be presented with this window
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{figures/screenshot_rstudiocloud_1} \caption{Your workspace in posit Cloud}\label{fig:unnamed-chunk-1}
+\includegraphics[width=0.9\linewidth]{figures/posit1} \caption{Your workspace in posit Cloud}\label{fig:unnamed-chunk-1}
 \end{figure}
 
 Under \textbf{Spaces} go to \textbf{Your Workspace} and under \textbf{Projects} create a \textbf{New Project \textgreater{} New R studio Project}.
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{figures/screenshot_rstudiocloud_2} \caption{Creating a new project in posit Cloud}\label{fig:unnamed-chunk-2}
+\includegraphics[width=0.9\linewidth]{figures/posit2} \caption{Creating a new project in posit Cloud}\label{fig:unnamed-chunk-2}
 \end{figure}
 
 Lets name this project \texttt{testing\_R}, notice that I have no spaces in my project name. Instead of a space I have used an underscore, there are a number of good habits you should try and adopt when project or file naming and not including spaces is one of them, we will go over this in more depth in lectures and later chapters. You can rename your project by clicking on \textbf{Untitled Project} at the top of the window, and typing in your new project name.
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{figures/screenshot_rstudiocloud_3} \caption{Renaming your project}\label{fig:unnamed-chunk-3}
+\includegraphics[width=0.9\linewidth]{figures/posit3} \caption{Renaming your project}\label{fig:unnamed-chunk-3}
 \end{figure}
 
 You will see that your new project has three panels with tabs showing the Console, Environment and Files for your project.
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{figures/screenshot_rstudiocloud_4} \caption{The three basic panels of an R Studio workspace}\label{fig:unnamed-chunk-4}
+\includegraphics[width=0.9\linewidth]{figures/posit4} \caption{The three basic panels of an R Studio workspace}\label{fig:unnamed-chunk-4}
 \end{figure}
 
 \hypertarget{maximising-the-efficiency-of-your-workspace}{%
@@ -328,7 +328,7 @@ You will see that your new project has three panels with tabs showing the Consol
 We know we have limited project hours on our free posit Cloud accounts to reduce your resource usage. In your project, go to settings (the cogwheel sign), Resources, and drag all of the sliders down to the minimum setting, apply the changes, this will mean the project has to restart. This will mean that running the project for 1 hour will consume 0.5 project hours. We wont be doing anything particularly computationally intensive so there is no need for RAM of CPUs to be higher.
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{figures/screenshot_rstudiocloud_5} \caption{How to make your project more efficient}\label{fig:unnamed-chunk-5}
+\includegraphics[width=0.9\linewidth]{figures/posit5} \caption{How to make your project more efficient}\label{fig:unnamed-chunk-5}
 \end{figure}
 
 \hypertarget{entering-commands-directly-into-the-consol}{%
@@ -387,11 +387,11 @@ I have already mentioned the \textbf{reproducibility} factor as an advantage of 
 So lets go about setting up your new script. You currently have three panels in posit Cloud. If you go to \textbf{file \textgreater{} New File \textgreater{} R Script} a new panel will open.
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{figures/screenshot_rstudiocloud_6} \caption{How to create a new R script}\label{fig:unnamed-chunk-11}
+\includegraphics[width=0.9\linewidth]{figures/posit6} \caption{How to create a new R script}\label{fig:unnamed-chunk-11}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{figures/screenshot_rstudiocloud_7} \caption{The four panels of an R Studio workspace}\label{fig:unnamed-chunk-12}
+\includegraphics[width=0.9\linewidth]{figures/posit7} \caption{The four panels of an R Studio workspace}\label{fig:unnamed-chunk-12}
 \end{figure}
 
 This new panel is essentially a text file where you can write your commands into a script and then send them down to the console when you want to run them. Lets have a play. Copy the below into your new R script.
@@ -574,7 +574,7 @@ This should bring up a help file in your bottom right hand panel that describes 
 
 The \texttt{sum} function is part of the base R package that comes with any R installation. However there are lots of other useful functions that are held in additional packages. In order to use these functions, you must have the necessary packages installed in your work space. I already mentioned that we would be using a package called \texttt{ggplot2}, lets try installing and loading it in your work space.
 
-With any package you wish to use in posit Cloud you will need to go through a two step process, first of all you need to \textbf{install} the package using the \texttt{install.packages()} function (see below for usage and then you will need to \textbf{load} it using the \texttt{library()} function. We only need to install and load a package once per posit Cloud project but I would generally keep the commands for installing and loading packages at the top of the script I'm working on.
+With any package you wish to use in posit Cloud you will need to go through a two step process, first of all you need to \textbf{install} the package using the \texttt{install.packages()} function (see below for usage) and then you will need to \textbf{load} it using the \texttt{library()} function. We only need to install and load a package once per posit Cloud project but I would generally keep the commands for installing and loading packages at the top of the script I'm working on.
 
 Try copying and running the following lines in your script;
 
@@ -630,10 +630,10 @@ Well done everyone. I hope you have enjoyed this weeks session. Next week is our
 
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. \url{https://CRAN.R-project.org/package=ggplot2}.
 
-\hypertarget{directories-and-data-frames---week-4a---workshop-1}{%
-\chapter{Directories and data frames - Week 4A - Workshop 1}\label{directories-and-data-frames---week-4a---workshop-1}}
+\hypertarget{data-frames}{%
+\chapter{Directories and data frames - Week 4A - Workshop 1}\label{data-frames}}
 
-This week we don't have any lectures but we do have an in person workshop. The section to complete this week may be a little more chunky than unusual, complete what you can during the workshop and then finish it off in your own time. Do make use of the demonstrators if any of the exercises so far haven't made sense.
+This week we don't have any lectures but we do have an in person workshop. The section to complete this week may be a little more chunky than usual, complete what you can during the workshop and then finish it off in your own time. Do make use of the demonstrators if any of the exercises so far haven't made sense.
 
 \hypertarget{data-entry}{%
 \section{Data Entry}\label{data-entry}}
@@ -653,7 +653,7 @@ While we are on the subject of naming, I am going to take a moment to go over a 
 \item
   Keep names meaningful - Over the course of your degree you will create a lot of files and folders/directories. You will also frequently be naming data variables and objects. You need to be able to easily recognise what is what so informative names are better then arbitrary names. So \texttt{girraffe}, \texttt{elephant}, \texttt{hippo} are better names then \texttt{1}, \texttt{2} and \texttt{3}.
 \item
-  Make versions obvious - There will be occasions when you want to save new information in a file or object but keep the original untouched. You may be experimenting or you may want the option to revisit to your original work. In these instances it makes sense to save your edits to a new version of the original file or object. If you do this and especially if you are sharing it with others make it clear. I tend to add my initials and a version identifier (e.g.~v1, v2) as a suffix to the file name.
+  Make versions obvious - There will be occasions when you want to save new information in a file or object but keep the original untouched. You may be experimenting or you may want the option to revisit to your original work. In these instances it makes sense to save your edits to a new version of the original file or object. If you do this and especially if you are sharing it with others make it clear. I tend to add my initials and a version identifier (e.g.~eb\_v1, eb\_v2) as a suffix to the file name.
 \item
   Keep names short - Typing takes time, its boring, and the more you type the greater the risk of a typo. So keep names short. So \texttt{trunk\_length} is better than \texttt{elephant\_trunk\_length\_cm}, there is important information in the second name but you can store this as a comment or a note.
 \item
@@ -666,8 +666,8 @@ Now go back to your spreadsheet, do your variables and file names follow a sensi
 
 \textbf{Make sure you have a demonstrator check your work before moving onto the next step.}
 
-\hypertarget{setting-up-your-r-workspace}{%
-\section{Setting up your R workspace}\label{setting-up-your-r-workspace}}
+\hypertarget{workspace}{%
+\section{Setting up your R workspace}\label{workspace}}
 
 This is a new piece of analysis, we will be carrying forward principals from the previous chapters but scripts and data will be new. So its a good idea to start with a fresh clean workspace. So lets set up a new project in posit Cloud, follow the steps from Chapter 2 if you cant remember how to do this and name this project \texttt{tribolium\_parasites}. Its always good to keep a well organised tidy workspace, generally I will start a new project in posit Cloud if I am working on a new series of questions with a new data set or sets.
 
@@ -718,17 +718,21 @@ Under \textbf{Files} in the bottom right panel of your screen you will see a fil
 \begin{itemize}
 \tightlist
 \item
-  \textbf{absolute} paths, which refer to the same location in a file system relative to the root directory (don't worry if that doesn't make too much sense at this stage).
+  \textbf{absolute} paths, which refer to the same location in a file system relative to the root directory (don't worry if that doesn't make too much sense at this stage). For example, in Figure 4.2, if you wanted to access files in the \texttt{/work} directory but were already in any of the other directories like \texttt{/dev}, an absolute path would work from wherever you were working this would be \texttt{/home/jono/work}.
 \item
-  \textbf{relative} paths, which refer to a location in the file system relative to the directory you are currently working in.
+  \textbf{relative} paths, which refer to a location in the file system relative to the directory you are currently working in. For example, in Figure 4.2, if you were working in the \texttt{/home} directory and wanted to access files in \texttt{/work} a relative path would look like \texttt{jono/work}. This is fine from the \texttt{/home} directory, but the path would not work if you were working in, for example \texttt{/lib}.
 \end{itemize}
+
+\begin{figure}
+\includegraphics[width=0.9\linewidth]{figures/absolutePathNames} \caption{Absolute vs Relative Paths}\label{fig:unnamed-chunk-27}
+\end{figure}
 
 Here we will only be dealing with \textbf{relative} paths because you will always be working from within your R project directory. So for example if you wish to access a file in your \texttt{data} folder in the R project you would need to provide the path \texttt{("data/any\_sub\_folders\_you\_may\_have\_made/the\_file\_you\_wish\_to\_access")}. We will do this in the next step so don't worry if you don't quite get it yet.
 
-\hypertarget{setting-up-your-script}{%
-\section{Setting up your script}\label{setting-up-your-script}}
+\hypertarget{script}{%
+\section{Setting up your script}\label{script}}
 
-Right OK, enough theory, lets start setting up your script. Create a new R script by clicking on the icon with a little green plus, below File in the top left of the posit Cloud windown and select \textbf{R Script}. Call your new script \texttt{tribolium\_parasites}. Its always good to add a few lines of description at the start of your script, this tells your future self and anyone else what the script is doing. Copy over the following.
+Right OK, enough theory, lets start setting up your script. Create a new R script by clicking on the icon with a little green plus, below File in the top left of the posit Cloud window and select \textbf{R Script}. Call your new script \texttt{tribolium\_parasites}. Its always good to add a few lines of description at the start of your script, this tells your future self and anyone else what the script is doing. Copy over the following.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -746,8 +750,8 @@ Then we need to load any packages that we might want to use, copy over the follo
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{importing-data}{%
-\section{Importing data}\label{importing-data}}
+\hypertarget{importing}{%
+\section{Importing data}\label{importing}}
 
 Lets import your data set. Go into your \textbf{data} folder within \textbf{Files}, click \textbf{Upload} and select your newly made \texttt{.csv} file. Once its uploaded you should be able to see it under \texttt{data/} in the bottom right panel.
 
@@ -808,6 +812,9 @@ Now we neet to turn our new variables into a data frame
 \end{Shaded}
 
 Try using \texttt{head()} to check your new \texttt{tribolium\_extras} data frame.
+
+\hypertarget{renaming}{%
+\section{Renaming variables}\label{renaming}}
 
 It may be advantageous to have all the data from both of our data frames together, we can use another function to do this. However first I would like everyone in the class to have the same variable names, this will help us later on but also sometimes its useful to change headings in R. Add the following to your script and run it, make sure you edit it to match your variable names.
 
@@ -889,8 +896,8 @@ Wickham, Hadley, Jim Hester, and Jennifer Bryan. 2021. Readr: Read Rectangular T
 
 There will be no new material released this week, we recommend that you use this time to catch up on any former sections of the workbook that you may not have completed yet.
 
-\hypertarget{exploring-the-dimensions-of-your-data-frame---week-6a}{%
-\chapter{Exploring the dimensions of your data frame - Week 6A}\label{exploring-the-dimensions-of-your-data-frame---week-6a}}
+\hypertarget{dimensions}{%
+\chapter{Exploring the dimensions of your data frame - Week 6A}\label{dimensions}}
 
 You should aim to complete this chapter in Week 6, Semester 1
 
@@ -959,8 +966,8 @@ Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D'Agostino Mc
 Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2021. Dplyr: A Grammar of Data Manipulation. \url{https://CRAN.R-project.org/package=dplyr}.
 Wickham, Hadley, Jim Hester, and Jennifer Bryan. 2021. Readr: Read Rectangular Text Data. \url{https://CRAN.R-project.org/package=readr}.
 
-\hypertarget{a-plot-to-choose-from---week-7a}{%
-\chapter{A plot to choose from - Week 7A}\label{a-plot-to-choose-from---week-7a}}
+\hypertarget{histogram}{%
+\chapter{A plot to choose from - Week 7A}\label{histogram}}
 
 You should aim to complete this chapter in Week 7, Semester 1
 
@@ -986,7 +993,7 @@ If you are;
 
 Lets have a go at making a histogram. Log-in to your posit Cloud account and go to your \texttt{tribolium\_parasites} project.
 
-Add the following to your script;
+Add the following to your script and run it;
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1006,26 +1013,30 @@ Now have a go at making a histogram for the \texttt{parasite\_burden} variable.
 
 Have a look at both of your histograms, what do you think they are showing? We will come back to histograms and how to read them in lectures.
 
-\hypertarget{exporting-your-histogram}{%
-\section{Exporting your histogram}\label{exporting-your-histogram}}
+\hypertarget{export}{%
+\section{Exporting your histogram}\label{export}}
 
-You are going to want to save your plots, you can use the \texttt{ggsave} function to do this.
+You are going to want to save your plots, you can use the \texttt{ggsave} function to do this. Try running the code below;
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\# Saving outputs}
 \FunctionTok{ggsave}\NormalTok{(}\StringTok{"figures/tribolium\_wincase\_size\_histogram.pdf"}\NormalTok{, }\CommentTok{\# Give R a path to save to and a file name}
-       \AttributeTok{plot =}\NormalTok{ size\_histogram, }\CommentTok{\# Tell R what to save {-} in this case your object}
+       \AttributeTok{plot =}\NormalTok{ size\_histogram,}\CommentTok{\# Tell R what to save {-} in this case your object}
+       \AttributeTok{width =} \DecValTok{15}\NormalTok{, }\CommentTok{\# Set .pdf width}
+       \AttributeTok{height =} \DecValTok{10}\NormalTok{, }\CommentTok{\# Set .pdf height}
+       \AttributeTok{units =} \StringTok{"cm"}\NormalTok{, }\CommentTok{\# Specify units for .pdf width and height}
        \AttributeTok{device =} \StringTok{"pdf"}\NormalTok{) }\CommentTok{\# Tell R what file type to create, in this case a pdf}
+\CommentTok{\# Note, use trial and error to select a good width and height for your figure}
 \end{Highlighting}
 \end{Shaded}
 
-Note that if you remove the device line \texttt{ggsave} will automatically create a \texttt{.png} file. You can also use \texttt{width\ =\ ,\ height\ =\ ,\ units\ =\ "cm"} arguments to specify the size of your figure in cm. Try to incorporate these new arguments into the above chunk. Save both of your histogram outputs in your \texttt{figures} folder.
+Note that if you remove the \texttt{device\ =} line \texttt{ggsave} will automatically create a \texttt{.png} file. You can also use \texttt{width\ =\ ,\ height\ =\ ,\ units\ =\ "cm"} arguments to specify the size of your figure in cm. You will need to adjust these by trial and error until the proportional sizing of your plot to axis and legend labels is pleasing. Save both of your histogram outputs in your \texttt{figures} folder.
 
 \hypertarget{before-you-leave-2}{%
 \section{Before you leave!}\label{before-you-leave-2}}
 
-Log out of posit Cloud and make sure you save your script!
+You should have two histograms saved in your \texttt{figures} folder from todays session. Check that they are saved and look as you would expect. Make sure to log out of posit Cloud and make sure you save your script!
 
 \hypertarget{references-3}{%
 \section{References}\label{references-3}}
@@ -1038,8 +1049,8 @@ Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takaha
 
 This is our second workshop hopefully you are gaining some confidence with how the underlying functionality of R works. For this workshop we will be building plots to explore possible relationships and differences within the data. Don't forget to ask for help if you are stuck on any of the material covered so far.
 
-\hypertarget{looking-at-differences}{%
-\section{Looking at differences}\label{looking-at-differences}}
+\hypertarget{boxplot}{%
+\section{Looking at differences}\label{boxplot}}
 
 As we discussed in the Chapter 4 wing case length is a good proxy for overall beetle size in \emph{Tribolium}. So we will be comparing beetle wing case length in male and female beetles. Because we are looking for possible differences we know that we probably want to build a box plot. Login to your posit Cloud account and copy over the following chunk of code into your \texttt{tribolium\_parasites.r} script. Run it and see what happens.
 
@@ -1061,7 +1072,7 @@ stat_boxplot: na.rm = FALSE, orientation = NA
 position_dodge2 
 \end{verbatim}
 
-When you get errors like this it generally means that ggplot is missing something essential from the script. There is a typo in the original script, can you spot it and fix it? Once you have made the figure, take a look at it, do you think that there is a difference in size between male and female beetles? How would you interpret this figure? Make sure you save your box plot to your figures folder.
+When you get errors like this it generally means that ggplot is missing something essential from the script. There is a typo in the original script, can you spot it and fix it? Once you have made the figure, take a look at it, do you think that there is a difference in size between male and female beetles? How would you interpret this figure? Make sure you save your box plot to your figures folder, you may need to adjust the sizing variables using the some of the arguments we learned in Chapter \ref{export}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1081,7 +1092,7 @@ Warning message:
 Continuous x aesthetic -- did you forget aes(group=...)? 
 \end{verbatim}
 
-This essentially means that R is expecting a categorical variable (e.g.~blue, red, green or as our example is 30 or 35 degrees centigrade) but what it sees is a continuous variable (e.g.~1,2,3,4,5,6,7,8,9). This has come about because although our treatment is categorical it is expressed as a numeric and has confused R. Use the \texttt{glimpse()} command to see how R has interpreted the \texttt{treatment} variable. This should confirm that R sees \texttt{treatment} as a double (\texttt{dbl}) vector. We missed this when we were checking our data in Chapter 4, but thankfully it is an easy fix. We want to tell R to treat the variable \texttt{treatment} as a factor (categorical data) and not as continuous data. Try adding this to your script;
+This essentially means that R is expecting a categorical variable (e.g.~blue, red, green or as our example is 30 or 35 degrees centigrade) but what it sees is a continuous variable (e.g.~1, 2, 3, 4, 5, 6, 7, 8, 9). This has come about because although our treatment is categorical it is expressed as a numeric and has confused R. Use the \texttt{glimpse()} command to see how R has interpreted the \texttt{treatment} variable. This should confirm that R sees \texttt{treatment} as a double (\texttt{dbl}) vector. We missed this when we were checking our data in Chapter 4, but thankfully it is an easy fix. We want to tell R to treat the variable \texttt{treatment} as a factor (categorical data) and not as continuous data. Try adding this to your script;
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1100,8 +1111,8 @@ You should have five figures (2 histogram and 3 box plots) saved there now. Look
 
 We will discus this further in lectures. But for now lets have a look at visualising a relationship.
 
-\hypertarget{looking-at-relationships}{%
-\section{Looking at relationships}\label{looking-at-relationships}}
+\hypertarget{scatter}{%
+\section{Looking at relationships}\label{scatter}}
 
 To look for possible relationships we need two continuous variables. In our data set we have \texttt{wing\_case\_size} and \texttt{parasite\_burden}. There are several theories in the field of parasitology that suggest larger organisms tend to harbor more parasites. We can see if this is a relationship that persists in our \emph{Tribolium}. Copy, complete and run the following chunk. You may notice that x and y axis variables have been left blank, which variable do you think belongs on which axis?
 
@@ -1122,7 +1133,7 @@ Well done, you have started building two very commonly used plots using R. These
 \hypertarget{before-you-leave-3}{%
 \section{Before you leave!}\label{before-you-leave-3}}
 
-Log out of posit Cloud and make sure you save your script!
+You should have two histograms from last week (Chapter \ref{histogram}) along with three boxplots (Chapter \ref{boxplot}) and one scatter plot (Chapter \ref{scatter}) from today saved in your \texttt{figures} folder. Check that they are saved and look as you would expect. Make sure to log out of posit Cloud and make sure you save your script!
 
 \hypertarget{references-4}{%
 \section{References}\label{references-4}}
@@ -1130,12 +1141,12 @@ Log out of posit Cloud and make sure you save your script!
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D'Agostino McGowan, Romain François, Garrett Grolemund, et al.~2019. ``Welcome to the tidyverse.'' Journal of Open Source Software 4 (43): 1686. \url{https://doi.org/10.21105/joss.01686}.
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. \url{https://CRAN.R-project.org/package=ggplot2}.
 
-\hypertarget{make-them-pretty---week-9a}{%
-\chapter{Make them pretty - Week 9A}\label{make-them-pretty---week-9a}}
+\hypertarget{pretty-figs-p1}{%
+\chapter{Make them pretty - Week 9A}\label{pretty-figs-p1}}
 
 You should aim to complete this chapter in Week 9, Semester 1
 
-Over the last couple of weeks you have build histograms, box plots and scatter plots. Probably the three types of data visualisation you are most likely to run into and want to build. But you may have noticed that non of these are particularly aesthetically pleasing. As a rule, data visualisations should always be designed to be attractive, clean, clear and nicely spaced. The purpose of a plot is to provide, you and your audience with a accurate, visually pleasing and easy to interpret representation of your data. Thankfully \texttt{ggplot2} contains all the tools we need to do this.
+Over the last couple of weeks you have built histograms, box plots and scatter plots. Probably the three types of data visualisation you are most likely to run into and want to build. But you may have noticed that non of these are particularly aesthetically pleasing. As a rule, data visualisations should always be designed to be attractive, clean, clear and nicely spaced. The purpose of a plot is to provide, you and your audience with a accurate, visually pleasing and easy to interpret representation of your data. Thankfully \texttt{ggplot2} contains all the tools we need to do this.
 
 Open your \texttt{tribolium\_parasites} project in posit Cloud. Create a new script and call it \texttt{ggplot\_fundamentals}, save it in your \texttt{scripts} folder and set up your script following the rules in Chapter 4, make sure the \texttt{tidyverse} library is loaded, this contains \texttt{ggplot2}.
 
@@ -1155,7 +1166,7 @@ Sometimes its can be good to cleanup your \textbf{Environment} a bit, if you run
 \end{Highlighting}
 \end{Shaded}
 
-Check your data has loaded correctly. Can you remember how to change \texttt{treatment} from a \texttt{dbl} vector to a factor (\texttt{fct})?
+Check your data has loaded correctly. Can you remember how to change \texttt{treatment} from a \texttt{dbl} vector to a factor (\texttt{fct}) (hint in Chapter \ref{boxplot})?
 
 \hypertarget{deconstructing-ggplot}{%
 \section{Deconstructing ggplot}\label{deconstructing-ggplot}}
@@ -1174,7 +1185,7 @@ To get an idea of how ggplot works we are going to go back over some code you ha
 So you have given ggplot your data set and specified the axes. But you haven't told it how you would like the data to be visualised. So you should see something like this\ldots{}
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{figures/screenshot_deconstructingaplot_1} \caption{The most basic output from ggplot}\label{fig:unnamed-chunk-49}
+\includegraphics[width=0.9\linewidth]{figures/screenshot_deconstructingaplot_1} \caption{The most basic output from ggplot}\label{fig:unnamed-chunk-50}
 \end{figure}
 
 Now modify the script so that it looks like this\ldots{}
@@ -1194,7 +1205,7 @@ Note the \texttt{+}, this is essentially another way of piping information from 
 Your figure should look like this\ldots{}
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{figures/screenshot_deconstructingaplot_2} \caption{A basic ggplot box plot output}\label{fig:unnamed-chunk-51}
+\includegraphics[width=0.9\linewidth]{figures/screenshot_deconstructingaplot_2} \caption{A basic ggplot box plot output}\label{fig:unnamed-chunk-52}
 \end{figure}
 
 Have a look at this figure, is there anything you would change, to make it more visually appealing or clear?
@@ -1262,10 +1273,10 @@ Error in `f()`:
 Run `rlang::last_error()` to see where the error occurred.
 \end{verbatim}
 
-This is because \texttt{scale\_fill\_manual} is also expecting some instructions on how to colour your boxplot. You will need to complete section 9.3 before you can successfully remake your boxplot.
+This is because \texttt{scale\_fill\_manual} is also expecting some instructions on how to colour your boxplot. You will need to complete Chapter \ref{colours} before you can successfully remake your boxplot.
 
-\hypertarget{switching-up-colours}{%
-\section{Switching up colours}\label{switching-up-colours}}
+\hypertarget{colours}{%
+\section{Switching up colours}\label{colours}}
 
 The colours of your boxes are the default colours given by \texttt{ggplot2}. We can modify these to make our plot look a bit more pleasing. Try editing the \texttt{scale\_fill\_manual} function to this \texttt{scale\_fill\_manual(labels\ =\ c("30°C",\ "35°C"),\ values\ =\ c("cornflowerblue",\ "coral"))}. Run it and see what happens to your plot.
 
@@ -1286,12 +1297,12 @@ Log out of posit Cloud and make sure you save your script!
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D'Agostino McGowan, Romain François, Garrett Grolemund, et al.~2019. ``Welcome to the tidyverse.'' Journal of Open Source Software 4 (43): 1686. \url{https://doi.org/10.21105/joss.01686}.
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. \url{https://CRAN.R-project.org/package=ggplot2}.
 
-\hypertarget{make-them-pretty-continued---week-10a}{%
-\chapter{Make them pretty continued - Week 10A}\label{make-them-pretty-continued---week-10a}}
+\hypertarget{pretty-figs-p2}{%
+\chapter{Make them pretty continued - Week 10A}\label{pretty-figs-p2}}
 
 You should aim to complete this chapter in Week 10, Semester 1
 
-In Chapter 9 we explored the fundamental functionality of \texttt{ggplot2} and we started to play with some functions that improved our plots labels and colour scheme. This week we will be extending this further and investigating how we may also be able to alter spacing and themes to improve the appearance of our plots.
+In Chapter \ref{pretty-figs-p1} we explored the fundamental functionality of \texttt{ggplot2} and we started to play with some functions that improved our plots labels and colour scheme. This week we will be extending this further and investigating how we may also be able to alter spacing and themes to improve the appearance of our plots.
 
 Open your \texttt{tribolium\_parasites} project in posit Cloud and your \texttt{ggplot\_fundamentals.r} script.
 
@@ -1363,20 +1374,20 @@ Log out of posit Cloud and make sure you save your script!
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D'Agostino McGowan, Romain François, Garrett Grolemund, et al.~2019. ``Welcome to the tidyverse.'' Journal of Open Source Software 4 (43): 1686. \url{https://doi.org/10.21105/joss.01686}.
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. \url{https://CRAN.R-project.org/package=ggplot2}.
 
-\hypertarget{the-subtle-art-of-cannibalisation---week-11a---workshop-3}{%
-\chapter{The subtle art of cannibalisation - Week 11A - Workshop 3}\label{the-subtle-art-of-cannibalisation---week-11a---workshop-3}}
+\hypertarget{cannibalisation}{%
+\chapter{The subtle art of cannibalisation - Week 11A - Workshop 3}\label{cannibalisation}}
 
 In this Week 11 workshop we will be applying the rules of aesthetics that we learned in the last two chapters to the rest of our plots. You may use functions and arguments from your \texttt{ggplot\_fundamentals.r} script to modify the plots you made in previous weeks. This is a very common practice, especially while learning a new programming language, you get a script or chunk of code right once and then canibalise parts of it for other uses, modifying it as needed to fit its new purpose.
 
 \hypertarget{starting-on-the-right-footing}{%
 \section{Starting on the right footing}\label{starting-on-the-right-footing}}
 
-In the last few chapters, and over the last few weeks you have been asked to modify quite a few chunks of script. If anything so far hasn't made sense or you haven't managed to get some chunks or functions working please do let either myself or a demonstrator know before you start the workshop activity. We are here to help!
+In the last few chapters, and over the last few weeks you have been asked to modify quite a few chunks of script. If anything hasn't made sense or you haven't managed to get some chunks or functions working please do let either myself or a demonstrator know before you start the workshop activity. We are here to help!
 
 \hypertarget{beautifying-your-box-plots}{%
 \section{Beautifying your box plots}\label{beautifying-your-box-plots}}
 
-In Chapters 9 and 10 we specifically worked on making changes to our box plots that would make them clean, clear and visually pleasing. You have all the code already made for your box plots, it just needs tailoring a little. You should have three boxplots saved in your \texttt{figures} folder;
+In Chapters 9 and 10 we specifically worked on making changes to our box plots that would make them clean, clear and visually pleasing. You have all the code already made for your box plots, it just needs tailoring a little. You should have three boxplots saved in your \texttt{figures} folder (made in Chapter \ref{boxplot});
 
 \begin{itemize}
 \tightlist
@@ -1385,7 +1396,7 @@ In Chapters 9 and 10 we specifically worked on making changes to our box plots t
 \item
   size\_differences\_by\_treatment\_boxplot.pdf
 \item
-  size\_differences\_boxplot.pdf - remember this is filled by \texttt{sex} not \texttt{treatment} so will be subtly different to the figure made in the \texttt{ggplot\_fundamentals.R} script that we worked on in Chapters 9 and 10.
+  size\_differences\_boxplot.pdf - remember this is filled by \texttt{sex} not \texttt{treatment} so will be subtly different to the figure made in the \texttt{ggplot\_fundamentals.R}.
 \end{itemize}
 
 Using the script from \texttt{ggplot\_fundamentals.R} make the necessary modifications to each of these three figures so that they are clean, clear and visually pleasing. Make sure you save each one to your \texttt{figures} folder using \texttt{ggsave}.
@@ -1393,7 +1404,7 @@ Using the script from \texttt{ggplot\_fundamentals.R} make the necessary modific
 \hypertarget{beautifying-your-histograms}{%
 \section{Beautifying your histograms}\label{beautifying-your-histograms}}
 
-You hopefully also have two histograms saved in your \texttt{figures} folder;
+You hopefully also have two histograms saved in your \texttt{figures} folder (made in Chapter \ref{histogram});
 
 \begin{itemize}
 \tightlist
@@ -1408,7 +1419,7 @@ Use you previous chunks of scripts and knowledge of R to edit the labels and the
 \hypertarget{beautifying-your-scatter-plot}{%
 \section{Beautifying your scatter plot}\label{beautifying-your-scatter-plot}}
 
-You hopefully also have a scatter plot saved in your \texttt{figures} folder;
+You hopefully also have a scatter plot saved in your \texttt{figures} folder (made in Chapter \ref{scatter});
 
 \begin{itemize}
 \tightlist
@@ -1475,10 +1486,10 @@ Try to adjust the chunk for your size vs parasites scatter plot so that the poin
 
 Hint - to do this you will need to correctly use and populate the \texttt{aes()} function in \texttt{geom\_point()} and then to adjust colours, shapes and associated text you will need to pipe \texttt{+} to the \texttt{scale\_color\_manual()} and the \texttt{scale\_shape\_manual()} functions. You will also need to adjust the settings in the \texttt{labs()} function to change the legend titles.
 
-\hypertarget{end-of-semester-1}{%
-\section{End of Semester 1}\label{end-of-semester-1}}
+\hypertarget{formative-assignment}{%
+\section{Formative Assignment}\label{formative-assignment}}
 
-This is the last of the taught content for the Introduction to Data Science sub module. You should all be very proud of yourselves for completing the first half of this workbook! Don't forget to complete the two blackboard quizzes before your Skills Essay deadline and I wish you all a lovely Christmas break!
+This is the last of the taught content for the Introduction to Data Science sub module. You should all be very proud of yourselves for completing the first half of this workbook! You now have the opportunity to submit a formative assignment, this is hosted in PebblePad and can be accessed through the BIO-4008Y page on blackboard in the Data Science Learning Module. Details of the task can be found in Chapter \ref{formative}.
 
 See you all in the new year :)
 
@@ -1493,8 +1504,59 @@ Log out of posit Cloud and make sure you save your script!
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D'Agostino McGowan, Romain François, Garrett Grolemund, et al.~2019. ``Welcome to the tidyverse.'' Journal of Open Source Software 4 (43): 1686. \url{https://doi.org/10.21105/joss.01686}.
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. \url{https://CRAN.R-project.org/package=ggplot2}.
 
-\hypertarget{merry-christmas}{%
-\chapter{Merry Christmas!!!}\label{merry-christmas}}
+\hypertarget{formative}{%
+\chapter{Formative Assessment - Deadline 15/12/23}\label{formative}}
+
+The formative assessment is essentially a stripped down version of what will be asked for in the summative assessment task. They will be marked similarly so this is a fantastic opportunity to get feedback on this section of the Skills modules. There are essentially two tasks for the formative.
+
+\hypertarget{task-1}{%
+\section{Task 1 - Figure and Figure Legend}\label{task-1}}
+
+Download one of your \texttt{.pdf} box plots or scatter plots from posit Cloud, it doesnt matter which one but it does need to be presented well. Plot selection and presentation will be assessed. Use the tips and tricks that we covered in Chapters \ref{pretty-figs-p1}, \ref{pretty-figs-p2} and \ref{cannibalisation}. You can download your files from posit Cloud onto your local device by moving to your \texttt{figures} folder, ticking the box next to the file you wish to download and then clicking on \texttt{More} and then \texttt{Export}. You will then be given the option to \texttt{Download} your files.
+Once you have your figure of choice downloaded you can copy it into a Word file and write a suitable figure legend.
+
+Remember my top tips for writing an appropriate figure legend (as covered in lectures);
+
+Legends \textbf{should};
+
+\begin{itemize}
+\tightlist
+\item
+  Allow the reader to understand the figure without reference to the text, so include information about what is being shown. For example, with a box plot you may wish to say ``The middle line, box and whiskers represent the median, interquartile range and range, respectively.''
+\item
+  Include info on sample size, study organism (in Latin) and (if relevant, e.g.~ecology) study location and time
+\end{itemize}
+
+Legends \textbf{should NOT};
+
+\begin{itemize}
+\tightlist
+\item
+  Include information that is obvious to a scientific audience (e.g.~``a scatter plot to show'' or ``a graph to show'')
+\item
+  Repeat what's in the figure (e.g.~describe what the colour mean if you also have a key in the figure)
+\end{itemize}
+
+\hypertarget{task-2---script}{%
+\section{Task 2 - Script}\label{task-2---script}}
+
+Hopefully you have been keeping your script nice and clean and tidy throughout your \texttt{tribolium\_parasites} analysis and have it saved nicely in your \texttt{scripts} folder. If you have then this step will be super easy! You simply need to download your script using the same method described above in Chapter \ref{task-1}.
+
+\hypertarget{task-3---submission}{%
+\section{Task 3 - Submission}\label{task-3---submission}}
+
+If you go to the Data Sciences Learning Module in the BIO-4008Y page of blackboard you will see a link to PebblePad. If you follow this link you should be automatically taken to the Data Sciences portfolio. You will see there are two pages to the portfolio, at this stage you only need to complete the \texttt{Formative} page. You will see there are a number of tick boxes to help guide you through what our expectations are from your work here. There are then two places to upload your work, one for your figure and figure legend and the other for your script. Upload the corresponding documents where required.
+
+You may notice that there is a check box where you will need to assert that this is your own work. Once this is done you can scroll down and you will be able to mark the page as complete. Once you have marked your page as complete you can consider it submitted.
+
+\begin{quote}
+Top tip - as you scroll down the page you can see that there is a marking rubric included, these are the criteria under which we will be marking your work, a similar one has been created for the summative page as well.
+\end{quote}
+
+The deadline for formative submissions is the 8/12/23, I will mark all submissions submitted by this date over the Christmas break.
+
+\hypertarget{merry-christmas-code}{%
+\chapter{Merry Christmas!!! (\#code)}\label{merry-christmas-code}}
 
 You have all done fanatically well in semester A so I have got you all a lovely Christmas gift\ldots{} Fully commented and completed versions of the scripts you have been working on. I would still suggest you try to complete the workbook in your own time, this will mean that you have a much better understanding of how the code works and will be better for you in the long run. But these commented and completed scripts may give you something to compare your own work too and will hopefully allow us all to start on the same page in the New Year.
 
@@ -1750,22 +1812,22 @@ You have all done fanatically well in semester A so I have got you all a lovely 
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{new-year-new-data---workshop-4---athletes-week-2b}{%
-\chapter{New year, new data - Workshop 4 - Athletes, Week 2B}\label{new-year-new-data---workshop-4---athletes-week-2b}}
+\hypertarget{data-setup}{%
+\chapter{New year, new data - Workshop 4 - Athletes, Week 2B}\label{data-setup}}
 
 Good news! There are only three chapters of content remaining. Each chapter from this point onwards is associated with a timetabled 2 hour workshop. However if you don't complete a chapter in the timetabled slot you are expected to complete it at home. Here we have material for Workshop 4 in Week 2 of Semester 2.
 
 \hypertarget{a-new-project}{%
 \section{A new project}\label{a-new-project}}
 
-We will be working on a new data set this term and you will be asked to produce a mock project result section to match the data set. This will help you prepare for the Skills for Biologists portfolio task and act as a good primer for completing other reports that you will be asked to produce throughout your university career. Over the next three workshops we will work through the complete analytical workflow needed to analyse this data set. You can ask for feedback from either myself or demonstrators during your workshop sessions.
+We will be working on a new data set this term to walk you through a full simple analysis workflow. This will help you prepare for the Skills for Biologists portfolio task and act as a good primer for completing other reports that you will be asked to produce throughout your university career. Over the next three workshops we will work through the complete analytical workflow needed to analyse this data set. You can ask for feedback from either myself or demonstrators during your workshop sessions.
 
 In this project you are interested in exploring the differences and relationships in weight, height and red blood cell in a group of male and female athletes.
 
 \hypertarget{project-setup}{%
 \subsection{Project setup}\label{project-setup}}
 
-Generally I recommend starting a new R Project every time you start working on new and unrelated data sets. Go to posit Cloud, open a \textbf{New R Studio Project} and name it \texttt{athletes}. Spend a few minutes setting up your workspace, refer back to \textbf{Chapter 4.3} to remind yourself of how to do this. Remember you will need to create sensible places to save scripts, data and figures. You will also need to freshly install any required packages.
+Generally I recommend starting a new R Project every time you start working on new and unrelated data sets. Go to posit Cloud, open a \textbf{New RStudio Project} and name it \texttt{athletes}. Spend a few minutes setting up your workspace, refer back to Chapters \ref{workspace} to remind yourself of how to do this. Remember you will need to create sensible places to save scripts, data and figures. You will also need to freshly \textbf{install} and \textbf{load} any required packages.
 
 For this workshop series you will need the following packages:
 
@@ -1780,7 +1842,7 @@ For this workshop series you will need the following packages:
 \hypertarget{script-set-up}{%
 \subsection{Script set up}\label{script-set-up}}
 
-Its fairly safe to say we will be creating some new scripts so open a new \textbf{R script} and set it up as described in \textbf{Chapter 4.5}. The project title will be \emph{An analysis of red blood cell counts among athletes}. Remember to use \texttt{library()} to load your freshly installed packages.
+Its fairly safe to say we will be creating some new scripts so open a new \textbf{R script} and set it up as described in Chapter \ref{script}. The project title will be \emph{An analysis of red blood cell counts among athletes}. Make sure you have used \texttt{library()} to load your freshly installed packages.
 
 \hypertarget{the-data}{%
 \subsection{The data}\label{the-data}}
@@ -1799,7 +1861,7 @@ The following variables were measured for each athlete:
   red blood cell count (rcc) in 10\textsuperscript{12}l\textsuperscript{-1}
 \end{itemize}
 
-You can download the new data set \href{https://downgit.github.io/\#/home?url=https://github.com/ellenbell/4008Y/blob/main/data/athletes.csv}{here}. When downloaded you will need to unzip the file, save it somewhere sensible on your computer and then load it in to posit cloud (see \textbf{Chapter 4.4} if you are unsure). If you have trouble downloading the data via the link I have also uploaded it to the blackboard Skills for Biologists \textgreater{} Data Sciences \textgreater{} Data page \textgreater{} athletes
+You can download the new data set \href{https://downgit.github.io/\#/home?url=https://github.com/ellenbell/4008Y/blob/main/data/athletes.csv}{here}. When downloaded you will need to unzip the file, save it somewhere sensible on your computer and then load it in to posit cloud (see \textbf{Chapter 4.4} if you are unsure). If you have trouble downloading the data via the link I have also uploaded it to the Workbook and Data Sets folder in the Data Sciences Learning Module in your Skills module blackboard page, the file is called \texttt{athletes.csv}.
 
 \hypertarget{check-the-data}{%
 \section{Check the data}\label{check-the-data}}
@@ -2075,8 +2137,8 @@ Telford, R.D. and Cunningham, R.B. 1991. Sex, sport and body-size dependency of 
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D'Agostino McGowan, Romain François, Garrett Grolemund, et al.~2019. ``Welcome to the tidyverse.'' Journal of Open Source Software 4 (43): 1686. \url{https://doi.org/10.21105/joss.01686}.
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. \url{https://CRAN.R-project.org/package=ggplot2}.
 
-\hypertarget{playing-with-some-statistics---workshop-5---athletes-continued-week-4b}{%
-\chapter{Playing with some statistics - Workshop 5 - Athletes continued, Week 4B}\label{playing-with-some-statistics---workshop-5---athletes-continued-week-4b}}
+\hypertarget{stats}{%
+\chapter{Playing with some statistics - Workshop 5 - Athletes continued, Week 4B}\label{stats}}
 
 Here we have material for Workshop 5 in Week 4 of Semester 2. We will be continuing with the Athletes data set from Week 2. So go to your \texttt{athletes} project in posit Cloud. It may be helpful to review the plots you made (including the histograms) to remind yourself of how the data look.
 
@@ -2507,8 +2569,8 @@ Telford, R.D. and Cunningham, R.B. 1991. Sex, sport and body-size dependency of 
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D'Agostino McGowan, Romain François, Garrett Grolemund, et al.~2019. ``Welcome to the tidyverse.'' Journal of Open Source Software 4 (43): 1686. \url{https://doi.org/10.21105/joss.01686}.
 Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. \url{https://CRAN.R-project.org/package=ggplot2}.
 
-\hypertarget{reporting-your-analysis---workshop-6---athletes-continued-week-6b}{%
-\chapter{Reporting your analysis - Workshop 6 - Athletes continued, Week 6B}\label{reporting-your-analysis---workshop-6---athletes-continued-week-6b}}
+\hypertarget{reporting}{%
+\chapter{Reporting your analysis - Workshop 6 - Athletes continued, Week 6B}\label{reporting}}
 
 This semester we have been working through the complete process of analysing a data set. So we not only do we need to be working on our analytical skills but also thinking about how we report our analyses. Over the last few weeks we have been conducting analysis that will eventually be put into a mock report (to help you prepare for future reports that you may need to produce). So lets begin by thinking about how we might present some of our figures.
 
@@ -2590,13 +2652,13 @@ Above I suggested that it may be a good idea to present some of your reported pl
 The results of this chunk can be seen in Figure 13.1. Note that these are rough draft figures and placement, you can play with the ggplot and patchwork parameters to get them to look as you would like, and as would be expected in a written report.
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{figures/multipanel} \caption{Results from the patchwork demonstration chunk}\label{fig:unnamed-chunk-77}
+\includegraphics[width=0.9\linewidth]{figures/multipanel} \caption{Results from the patchwork demonstration chunk}\label{fig:unnamed-chunk-78}
 \end{figure}
 
 Have a go at putting some of your report ready plots into a multi-panel figure. Use \texttt{ggsave} to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in \textbf{Chapter 12}. You can download these pdfs by opening them in browser and clicking the download button in the top right hand corner.
 
-\hypertarget{writing-about-your-analysis}{%
-\section{Writing about your analysis}\label{writing-about-your-analysis}}
+\hypertarget{analysis-writing}{%
+\section{Writing about your analysis}\label{analysis-writing}}
 
 We have done a lot of exploration when it comes to presenting data and performing analysis. But something you will frequently be asked to do throughout your degree, is write about your findings. Here I will cover a few summary point to bare in mind when writing about your analyses.
 
@@ -2648,10 +2710,10 @@ For example,
 
 This second example is very commonly seen in student work and should be avoided at all costs. The analyst here is asking the reader to accept that there was a statistical difference because p was less than an the arbitrary cut off of 0.05. It gives no evidence to show that this is true. It also creates the impression that the person who conducted the analysis had no understanding of how or why they were analysing the data or what it was they were looking for. The first example is only fractionally longer, but provides much more information to the reader, it is professional and allows the reader to feel confident that the analyst is basing their conclusion on sound scientific and statistical evidence.
 
-\hypertarget{task-3---writing-a-figure-legend}{%
-\subsection{Task 3 - Writing a figure legend}\label{task-3---writing-a-figure-legend}}
+\hypertarget{legend2}{%
+\subsection{Task 3 - Writing a figure legend}\label{legend2}}
 
-You will often need to construct figure legends, here are a few pointers to bare in mind;
+You will often need to construct figure legends, here are a few reminders to bare in mind;
 
 \begin{itemize}
 \tightlist
@@ -2714,7 +2776,7 @@ Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takaha
 The data you will be analysing focus' on parasite abundance in \emph{Corydoras} catfish.
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{figures/cory} \caption{*Corydoras araguaiaensis*}\label{fig:unnamed-chunk-78}
+\includegraphics[width=0.9\linewidth]{figures/cory} \caption{*Corydoras araguaiaensis*}\label{fig:unnamed-chunk-79}
 \end{figure}
 
 \emph{Corydoras} catfishes were collected from Brazil and identified. Each fish belonged to one of two species that are very similar in life history but have dramatically different genome sizes. \emph{Corydoras araguaiaensis} is a polyploid species (probable tetraploid), and \emph{Corydoras maculifer} is a diploid species. The two species are müllerian mimics and coexist, sharing a niche, so environmentally they have had very similar experiences.
@@ -2724,7 +2786,7 @@ This prediction was that polyploid fish may carry a higher number of different i
 \hypertarget{the-data-1}{%
 \section{The data}\label{the-data-1}}
 
-The data you have been provided with can be found \href{https://downgit.github.io/\#/home?url=https://github.com/ellenbell/4008Y/blob/main/data/catfish_parasite_data.csv}{here}, it is also on blackboard should the download link prove troublesome (blackboard Skills for Biologists \textgreater{} Data Sciences \textgreater{} Data page \textgreater{} catfish\_parasite\_data).
+The data you have been provided with can be found \href{https://downgit.github.io/\#/home?url=https://github.com/ellenbell/4008Y/blob/main/data/catfish_parasite_data.csv}{here}, it is also on blackboard should the download link prove troublesome. Go to the Workbook and Data Sets folder in the Data Sciences Learning Module in your Skills module blackboard page, the file is called \texttt{catfish\_parasite\_data.csv}.
 
 The data consist of four variables;
 
@@ -2746,10 +2808,10 @@ This data set was adapted from Bell et al., 2020.
 \hypertarget{the-tasks}{%
 \section{The tasks}\label{the-tasks}}
 
-Task 3 and 4 of your Skills portfolio are based in the Data Sciences work you have been doing. Each of these is broken into two parts - each exercise listed below describes the work required to complete each part of the two Data Sciences portfolio tasks. If you wish to know how these sections will be marked, consult the Skills for Biologists Portfolio Rubric on Blackboard.
+You will need to produce a series of plots to answer the questions in \textbf{Exercise 1} and present them at publication standard in a multi-panel layout alongised a figure legend. You will then be required to present your script for the second part of this assessment in \textbf{Exercise 2}.
 
-\hypertarget{exercise-1---plots}{%
-\subsection{Exercise 1 - plots}\label{exercise-1---plots}}
+\hypertarget{exercise-1---figure-and-figure-legend}{%
+\subsection{Exercise 1 - Figure and figure legend}\label{exercise-1---figure-and-figure-legend}}
 
 You wish to know if there is a link between genome size and parasite load in \emph{Corydoras} catfishes, but you also want to make sure and show that there are no confounding variables (like size) affecting any conclusions you draw from your analysis. So you ask three questions of your data;
 
@@ -2764,26 +2826,25 @@ You wish to know if there is a link between genome size and parasite load in \em
   Is there a relationship between length and parasite abundance in \emph{C. araguaiaensis} and \emph{C. maculifer}?
 \end{enumerate}
 
-Set up a new R studio project, import the catfish\_parasites data and make sure it is clean and tidy. Complete all the checks that you did in \textbf{Chapter 13} and then you can start exploring the data (\textbf{Chapter 13 and 14}). When you are satisfied with the data quality and appearance you can begin to answer the questions above. Construct a plot to address each of these questions. I suggest a plot per question. Make them visually pleasing and then combine the three plots into a multi-panel figure (\textbf{Chapter 15}). Export this as a pdf, you will be able to download this pdf to your own computer when you are happy with it (you may need to open it in your browser and then click the download button in the top right hand corner of the screen). Present these plots in your portfolio for Task 3.
+Set up a new R studio project, import the catfish\_parasites data and make sure it is clean and tidy. Complete all the checks that you did in Chapter \ref{data-setup} and then you can start exploring the data as you did in Chapter \ref{data-setup} and \ref{stats}. When you are satisfied with the data quality and appearance you can begin to answer the questions above. Construct a plot to address each of these questions. I suggest a plot per question. Make them visually pleasing and then combine the three plots into a multi-panel figure as you did in Chapter \ref{reporting}. Export this as a pdf (see Chapter \ref{export}). You will be able to download this pdf to your own computer when you are happy with it, instructions on how to do this are in Chapter \ref{formative}.
 
-\hypertarget{exercise-2---figure-legend}{%
-\subsection{Exercise 2 - figure legend}\label{exercise-2---figure-legend}}
+Now you will need to copy your figure into a word document and write a suitable figure legend. We have discussed figure legends in lectures and in Chapters \ref{formative} and \ref{legend2} we have also explored how to report results in Chapter \ref{analysis-writing}. So now write a clear but concise figure legend underneath your newly made figure.
 
-We have discussed figure legends in lectures and in \textbf{Chapter 15}, write a good figure legend underneath your newly made figure within Task 3 of your portfolio.
+\hypertarget{exercise-2---code}{%
+\subsection{Exercise 2 - Code}\label{exercise-2---code}}
 
-\hypertarget{exercise-3---justification}{%
-\subsection{Exercise 3 - justification}\label{exercise-3---justification}}
+As before, during the formative, we require you to upload the script you have created to analyse the \texttt{catfish\_parasites.csv} dataset. I strongly recomment keeping your script nice and clean and tidy and well commented throughout your \texttt{catfish\_parasite} analysis and have it saved nicely in your \texttt{scripts} folder. If you do then this step will be super easy! You simply need to download your script using the same method described above in Chapter \ref{formative}.
 
-Task 4 of your portfolio is divided into two parts, a justification and a proof of programming. The first part is a justification of your work flow. Please briefly bullet point a summary of the process you went through to complete Exercise 1 and why you made the choices you made, this should extend from the point that you downloaded the data set to presenting your final figure.
+\hypertarget{submission}{%
+\subsection{Submission}\label{submission}}
 
-\hypertarget{exercise-4---proof-of-programing}{%
-\subsection{Exercise 4 - proof of programing}\label{exercise-4---proof-of-programing}}
+If you go to the Data Sciences Learning Module in the BIO-4008Y page of blackboard you will see a link to PebblePad. If you follow this link you should be automatically taken to the Data Sciences portfolio. You will see there are two pages to the portfolio, at this stage you only need to complete the \texttt{Summative} page. You will see there are a number of tick boxes to help guide you through what our expectations are from your work here. There are then two places to upload your work, one for your figure and figure legend and the other for your script. Upload the corresponding documents where required.
 
-The second part of Task 4 is a proof of programming. Please make a screen grab of one of the chunks of code used to create one of your plots. Make sure we can clearly see the code (an example of a good printscreen is shown in Figure 16.2).
+You may notice that there is a check box where you will need to assert that this is your own work. Once this is done you can scroll down and you will be able to mark the page as complete. Once you have marked your page as complete you can consider it submitted.
 
-\begin{figure}
-\includegraphics[width=0.9\linewidth]{figures/code_example} \caption{ggplot chunk}\label{fig:unnamed-chunk-79}
-\end{figure}
+\begin{quote}
+Top tip - as you scroll down the page you can see that there is a marking rubric included, these are the criteria under which we will be marking your work, a similar one has been created for the summative page as well.
+\end{quote}
 
 Good luck everyone! The final workshop in Week 8 will be a drop in session, so if you are really stuck do feel free to pop by. We can help you with fixing code but cant give you more feedback then that.
 

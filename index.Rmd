@@ -1,5 +1,5 @@
 --- 
-title: "Introduction to Data Science - 4008Y"
+title: "Introduction to Data Science - BIO-4008Y/CHE-4602Y"
 author: "Dr Ellen Bell"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -17,7 +17,7 @@ always_allow_html: true
 
 ## Data Science learning objectives
 
-Introduction to Data Science is a 'sub-module' that will run throughout your first year as part of the BIO-4008Y Skills for Biologists module. Here we aim to teach you the fundamentals of how to collect and organise data in a clean and sensible format and how to correctly visualise and describe data. The platform we will be using to manage, manipulate and analyse data is posit Cloud. This is a cloud based interface that utilises the programming language R in a very similar interface to RStudio (a package you may wish to install on your own computers at some point). Over the course of the next few weeks you will start to learn fundamentals of this language and its application in posit Cloud. 
+Introduction to Data Science is a 'sub-module' that will run throughout your first year as part of the BIO-4008Y anc CHE-4602Y Skills modules. Here we aim to teach you the fundamentals of how to collect and organise data in a clean and sensible format and how to correctly visualise and describe data. The platform we will be using to manage, manipulate and analyse data is posit Cloud. This is a cloud based interface that utilises the programming language R in a very similar interface to RStudio (a package you may wish to install on your own computers at some point). Over the course of the next few weeks you will start to learn fundamentals of this language and its application in posit Cloud. 
 
 ## Teaching layout for Data Science 
 
@@ -40,19 +40,19 @@ Teaching for semester 2;
 
 * Semester 1
 
-Two quizzes are available on the 4008Y page under Data Science. These are "semi-formative" quizzes, you can attempt them at any time and as many times as you like before the summative essay deadline for Skills for Biologists, the highest mark you achieve will be the one you are awarded. If you complete them with a grade of 40% or higher you will gain a percentage point towards your summative Skills essay. If you complete them with a grade of 80% or higher you will get 2 percentage points added to your summative Skills essay. That's 4 percent in total, last year this was enough to move several students up to the next grade boundary, definitely worth doing! 
+At the end of Semester 1 you will be given the opportunity to submit a formative assignment. From this you will get feedback and a mock grade for your work, the formative assignment and marking scheme is similar to the the later summative assignment (in Semester 2) so is a great opportunity to get constructive feedback on your work and places to improve on. 
 
 * Semester 2
 
-As part of your Skills portfolio, there will be two data handling tasks. You will be given some data and asked to correctly visualise it in a clean, clear and attractive way, with a suitable figure legend. You will also be asked to write a justification for the decisions you made while preparing your data and visualising it. You will learn all the skills you need to do this while completing lectures, workshops or chapters in this workbook. 
+During Semester 2 you will be given an assessment data set and a series of questions, you will be asked to produce a series of plots and format them into a multi-panel figure with accompanying figure legend. You will be asked to upload these alongside your R script and these will constitute the summative task for the Data Sciences component of your respective skills module.
 
 ## How to use this workbook 
 
-In semester 1 each week of taught material is accompanied by a workbook chapter. You will be expected read through these chapters and complete any exercises in your own time. Each chapter should take no more then an hour to complete and in many cases will take much less time. I will aim to set aside 10 minutes at the end of each lecture to cover any potential problems you may be having, so if you get stuck, use this time to ask for help. In semester 2 we have more face to face workshop time, in each workshop you will be expected to work through a chapter in this workbook, you may not complete this in the allocated time, but will be expected to do so in your own time. Use face to face time to ask lots of questions, especially if you are stuck.  
+In semester 1 each week of taught material is accompanied by a workbook chapter. You will be expected to read through these chapters and complete any exercises in your own time. Each chapter should take no more then an hour to complete and in many cases will take much less time. I will aim to set aside 10 minutes at the end of each lecture to cover any potential problems you may be having, so if you get stuck, use this time to ask for help. In semester 2 we have more face to face workshop time, in each workshop you will be expected to work through a chapter in this workbook, you may not complete this in the allocated time, but will be expected to do so in your own time. Use face to face time to ask lots of questions, especially if you are stuck.  
 
 ## Why is data science important and why are we teaching it in R?
 
-It is a common misconception, that to be a good biologist you need to 'know' the mechanics of how life works. Questions like; "How does a cell undergo respiration?", "How do kidneys filter blood?", "How do some plants fix nitrogen?" and "How do honey bees communicate the location and quantity of resources to each other?", spring to mind.  While these questions are important, they are also, now, fairly well understood. But how did biologists come to their understanding of these mechanisms? The answer to this lies in data. 
+It is a common misconception, that to be a good biologist or biochemist you need to 'know' the mechanics of how life works. Questions like; "How does a cell undergo respiration?", "How do kidneys filter blood?", "How do some plants fix nitrogen?" and "How do honey bees communicate the location and quantity of resources to each other?", spring to mind.  While these questions are important, they are also, now, fairly well understood. But how did biologists come to their understanding of these mechanisms? The answer to this lies in data. 
 
 Good science is based on empirical observations and these observations should be reliably collected and reproducible. Exploration of theories through observations and experimentation leads to the collection of data and analysis and interpretation of data feeds into the bedrock of our understanding of how life works, i.e. the biological sciences. 
 

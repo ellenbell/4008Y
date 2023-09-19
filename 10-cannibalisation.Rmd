@@ -1,24 +1,24 @@
-# The subtle art of cannibalisation - Week 11A - Workshop 3
+# The subtle art of cannibalisation - Week 11A - Workshop 3 {#cannibalisation}
 
 In this Week 11 workshop we will be applying the rules of aesthetics that we learned in the last two chapters to the rest of our plots. You may use functions and arguments from your `ggplot_fundamentals.r` script to modify the plots you made in previous weeks. This is a very common practice, especially while learning a new programming language, you get a script or chunk of code right once and then canibalise parts of it for other uses, modifying it as needed to fit its new purpose. 
 
 ## Starting on the right footing 
 
-In the last few chapters, and over the last few weeks you have been asked to modify quite a few chunks of script. If anything so far hasn't made sense or you haven't managed to get some chunks or functions working please do let either myself or a demonstrator know before you start the workshop activity. We are here to help!
+In the last few chapters, and over the last few weeks you have been asked to modify quite a few chunks of script. If anything hasn't made sense or you haven't managed to get some chunks or functions working please do let either myself or a demonstrator know before you start the workshop activity. We are here to help!
 
 ## Beautifying your box plots
 
-In Chapters 9 and 10 we specifically worked on making changes to our box plots that would make them clean, clear and visually pleasing. You have all the code already made for your box plots, it just needs tailoring a little. You should have three boxplots saved in your `figures` folder;
+In Chapters 9 and 10 we specifically worked on making changes to our box plots that would make them clean, clear and visually pleasing. You have all the code already made for your box plots, it just needs tailoring a little. You should have three boxplots saved in your `figures` folder (made in Chapter \@ref(boxplot));
 
 * size_differences_by_sex_boxplot.pdf
 * size_differences_by_treatment_boxplot.pdf
-* size_differences_boxplot.pdf - remember this is filled by `sex` not `treatment` so will be subtly different to the figure made in the `ggplot_fundamentals.R` script that we worked on in Chapters 9 and 10.
+* size_differences_boxplot.pdf - remember this is filled by `sex` not `treatment` so will be subtly different to the figure made in the `ggplot_fundamentals.R`.
 
 Using the script from `ggplot_fundamentals.R` make the necessary modifications to each of these three figures so that they are clean, clear and visually pleasing. Make sure you save each one to your `figures` folder using `ggsave`.
 
 ## Beautifying your histograms 
 
-You hopefully also have two histograms saved in your `figures` folder; 
+You hopefully also have two histograms saved in your `figures` folder (made in Chapter \@ref(histogram)); 
 
 * size_histogram.pdf
 * parasite_histogram.pdf
@@ -27,7 +27,7 @@ Use you previous chunks of scripts and knowledge of R to edit the labels and the
 
 ## Beautifying your scatter plot
 
-You hopefully also have a scatter plot saved in your `figures` folder;
+You hopefully also have a scatter plot saved in your `figures` folder (made in Chapter \@ref(scatter));
 
 * size_vs_parasites_point.pdf
 
@@ -66,9 +66,9 @@ Try to adjust the chunk for your size vs parasites scatter plot so that the poin
 
 Hint - to do this you will need to correctly use and populate the `aes()` function in `geom_point()` and then to adjust colours, shapes and associated text you will need to pipe `+` to the `scale_color_manual()` and the `scale_shape_manual()` functions. You will also need to adjust the settings in the `labs()` function to change the legend titles. 
 
-## End of Semester 1
+## Formative Assignment
 
-This is the last of the taught content for the Introduction to Data Science sub module. You should all be very proud of yourselves for completing the first half of this workbook! Don't forget to complete the two blackboard quizzes before your Skills Essay deadline and I wish you all a lovely Christmas break!
+This is the last of the taught content for the Introduction to Data Science sub module. You should all be very proud of yourselves for completing the first half of this workbook! You now have the opportunity to submit a formative assignment, this is hosted in PebblePad and can be accessed through the BIO-4008Y page on blackboard in the Data Science Learning Module. Details of the task can be found in Chapter \@ref(formative).
 
 See you all in the new year :)
 
