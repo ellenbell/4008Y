@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Merry Christmas!!! {#code}
+=======
+# Merry Christmas!!! (#code)
+>>>>>>> 7c875222307693b9fb69a50ba3edddb75a89628b
 
 ```{r , echo=FALSE, eval=TRUE, include=TRUE}
 #remotes::install_github("rlesur/klippy")

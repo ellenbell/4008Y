@@ -42,7 +42,11 @@ Now you will need to copy your figure into a word document and write a suitable 
 
 ### Exercise 2 - Code
 
+<<<<<<< HEAD
 As before, during the formative, we require you to upload the script you have created to analyse the `catfish_parasites.csv` dataset. I strongly recommend keeping your script nice and clean and tidy and well commented throughout your `catfish_parasite` analysis and have it saved in your `scripts` folder. If you do, then this step will be super easy! You simply need to download your script using the same method described above in Chapter \@ref(formative).
+=======
+As before, during the formative, we require you to upload the script you have created to analyse the `catfish_parasites.csv` dataset. I strongly recomment keeping your script nice and clean and tidy and well commented throughout your `catfish_parasite` analysis and have it saved nicely in your `scripts` folder. If you do then this step will be super easy! You simply need to download your script using the same method described above in Chapter \@ref(formative).
+>>>>>>> 7c875222307693b9fb69a50ba3edddb75a89628b
 
 ### Submission
 

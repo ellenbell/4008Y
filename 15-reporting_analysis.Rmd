@@ -64,7 +64,11 @@ The results of this chunk can be seen in Figure 13.1. Note that these are rough 
 knitr::include_graphics("figures/multipanel.png")
 ```
 
+<<<<<<< HEAD
 Have a go at putting some of your report ready plots into a multi-panel figure. Use `ggsave` to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in Chapter \@ref(export). You can download these pdfs by opening them in browser and clicking the download button in the top right hand corner. 
+=======
+Have a go at putting some of your report ready plots into a multi-panel figure. Use `ggsave` to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in **Chapter 12**. You can download these pdfs by opening them in browser and clicking the download button in the top right hand corner. 
+>>>>>>> 7c875222307693b9fb69a50ba3edddb75a89628b
 
 ## Writing about your analysis {#analysis-writing}
 

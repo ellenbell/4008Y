@@ -1,10 +1,18 @@
 # Formative Assessment - Deadline 15/12/23 {#formative}
 
+<<<<<<< HEAD
 The formative assessment is essentially a stripped down version of what will be asked for in the summative assessment task. Both formative and summative task will be marked similarly, so this is a fantastic opportunity to get feedback on this section of the Skills modules. There are essentially two tasks for the formative.
 
 ## Task 1 - Figure and Figure Legend {#task-1}
 
 Download one of your `.pdf` box plots or scatter plots from posit Cloud, it doesnt matter which one, but the plot does need to be appropriate for the data and does need to be presented well. Plot selection and presentation will be assessed. Use the tips and tricks that we covered in Chapters \@ref(pretty-figs-p1), \@ref(pretty-figs-p2) and \@ref(cannibalisation). You can download your files from posit Cloud onto your local device by moving to your `figures` folder, ticking the box next to the file you wish to download and then clicking on `More` and then `Export`. You will then be given the option to `Download` your files. 
+=======
+The formative assessment is essentially a stripped down version of what will be asked for in the summative assessment task. They will be marked similarly so this is a fantastic opportunity to get feedback on this section of the Skills modules. There are essentially two tasks for the formative.
+
+## Task 1 - Figure and Figure Legend {#task-1}
+
+Download one of your `.pdf` box plots or scatter plots from posit Cloud, it doesnt matter which one but it does need to be presented well. Plot selection and presentation will be assessed. Use the tips and tricks that we covered in Chapters \@ref(pretty-figs-p1), \@ref(pretty-figs-p2) and \@ref(cannibalisation). You can download your files from posit Cloud onto your local device by moving to your `figures` folder, ticking the box next to the file you wish to download and then clicking on `More` and then `Export`. You will then be given the option to `Download` your files. 
+>>>>>>> 7c875222307693b9fb69a50ba3edddb75a89628b
 Once you have your figure of choice downloaded you can copy it into a Word file and write a suitable figure legend. 
 
 Remember my top tips for writing an appropriate figure legend (as covered in lectures);
