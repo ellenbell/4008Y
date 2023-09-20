@@ -28,32 +28,32 @@ Your free posit Cloud account comes with some restrictions which you should be a
 * You are limited to 25 project hours per month
 * You have up to 1GB of RAM and 1 CPU per project
 
-For the purposes of our work here these restrictions should not be a problem. But I strongly suggest you don't leave your coursework to the last minute. If you try and pack in a whole semester or years worth or material into a single month, you will brush up against those 25 project hours. There are some options of last resort should this happen, you could install RStudio on your desktop for example but things will get complicated. Lets avoid that where we can!There are some ways you can increase the efficiency of your workspace which are documented below in section 2.4.
+For the purposes of our work here these restrictions should not be a problem. But I strongly suggest you don't leave your coursework to the last minute. If you try and pack in a whole semester or years worth or material into a single month, you will exceed those 25 project hours. There are some options of last resort should this happen, you could install RStudio on your desktop for example, or set up an alternative posit cloud account with an alternative email address, but things will get complicated. Lets avoid that where we can! There are some ways you can increase the efficiency of your workspace which are documented below in section 2.4.
 
 ## Creating your first posit Cloud Project
 
 Once you have created an posit Cloud account you should be presented with this window
 
 ```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Screen for when you first login to posit Cloud", fig.cap ="Your workspace in posit Cloud"}
-knitr::include_graphics("figures/screenshot_rstudiocloud_1.jpg")
+knitr::include_graphics("figures/posit1.jpg")
 ```
 
 Under __Spaces__ go to __Your Workspace__ and under __Projects__ create a __New Project > New R studio Project__. 
 
 ```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Screen for creating a new project", fig.cap ="Creating a new project in posit Cloud"}
-knitr::include_graphics("figures/screenshot_rstudiocloud_2.png")
+knitr::include_graphics("figures/posit2.jpg")
 ```
 
 Lets name this project `testing_R`, notice that I have no spaces in my project name. Instead of a space I have used an underscore, there are a number of good habits you should try and adopt when project or file naming and not including spaces is one of them, we will go over this in more depth in lectures and later chapters. You can rename your project by clicking on __Untitled Project__ at the top of the window, and typing in your new project name. 
 
 ```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Screen for renaming your project", fig.cap ="Renaming your project"}
-knitr::include_graphics("figures/screenshot_rstudiocloud_3.jpg")
+knitr::include_graphics("figures/posit3.jpg")
 ```
 
 You will see that your new project has three panels with tabs showing the Console, Environment and Files for your project. 
 
 ```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Screen for your r studio workspace", fig.cap ="The three basic panels of an R Studio workspace"}
-knitr::include_graphics("figures/screenshot_rstudiocloud_4.jpg")
+knitr::include_graphics("figures/posit4.jpg")
 ```
 
 ## Maximising the efficiency of your workspace
@@ -61,7 +61,7 @@ knitr::include_graphics("figures/screenshot_rstudiocloud_4.jpg")
 We know we have limited project hours on our free posit Cloud accounts to reduce your resource usage. In your project, go to settings (the cogwheel sign), Resources, and drag all of the sliders down to the minimum setting, apply the changes, this will mean the project has to restart. This will mean that running the project for 1 hour will consume 0.5 project hours. We wont be doing anything particularly computationally intensive so there is no need for RAM of CPUs to be higher. 
 
 ```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Making your project more efficient", fig.cap ="How to make your project more efficient"}
-knitr::include_graphics("figures/screenshot_rstudiocloud_5.png")
+knitr::include_graphics("figures/posit5.jpg")
 ```
  
 ## Entering commands directly into the consol
@@ -108,11 +108,11 @@ I have already mentioned the __reproducibility__ factor as an advantage of using
 So lets go about setting up your new script. You currently have three panels in posit Cloud. If you go to __file > New File > R Script__ a new panel will open.
 
 ```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "creating a new r script", fig.cap ="How to create a new R script"}
-knitr::include_graphics("figures/screenshot_rstudiocloud_6.png")
+knitr::include_graphics("figures/posit6.jpg")
 ```
 
 ```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Screen for your r studio workspace", fig.cap ="The four panels of an R Studio workspace"}
-knitr::include_graphics("figures/screenshot_rstudiocloud_7.jpg")
+knitr::include_graphics("figures/posit7.jpg")
 ```
 
 This new panel is essentially a text file where you can write your commands into a script and then send them down to the console when you want to run them. Lets have a play. Copy the below into your new R script. 

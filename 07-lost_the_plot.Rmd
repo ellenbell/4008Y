@@ -2,7 +2,7 @@
 
 This is our second workshop hopefully you are gaining some confidence with how the underlying functionality of R works. For this workshop we will be building plots to explore possible relationships and differences within the data. Don't forget to ask for help if you are stuck on any of the material covered so far.
 
-## Looking at differences
+## Looking at differences {#boxplot}
 
 As we discussed in the Chapter 4 wing case length is a good proxy for overall beetle size in _Tribolium_. So we will be comparing beetle wing case length in male and female beetles. Because we are looking for possible differences we know that we probably want to build a box plot. Login to your posit Cloud account and copy over the following chunk of code into your `tribolium_parasites.r` script. Run it and see what happens.
 
@@ -22,7 +22,7 @@ stat_boxplot: na.rm = FALSE, orientation = NA
 position_dodge2 
 ```
 
-When you get errors like this it generally means that ggplot is missing something essential from the script. There is a typo in the original script, can you spot it and fix it? Once you have made the figure, take a look at it, do you think that there is a difference in size between male and female beetles? How would you interpret this figure? Make sure you save your box plot to your figures folder. 
+When you get errors like this it generally means that ggplot is missing something essential from the script. There is a typo in the original script, can you spot it and fix it? Once you have made the figure, take a look at it, do you think that there is a difference in size between male and female beetles? How would you interpret this figure? Make sure you save your box plot to your figures folder, you may need to adjust the sizing variables using the some of the arguments we learned in Chapter \@ref(export). 
 
 ```{r}
 # Saving outputs
@@ -40,7 +40,7 @@ Warning message:
 Continuous x aesthetic -- did you forget aes(group=...)? 
 ```
 
-This essentially means that R is expecting a categorical variable (e.g. blue, red, green or as our example is 30 or 35 degrees centigrade) but what it sees is a continuous variable (e.g. 1,2,3,4,5,6,7,8,9). This has come about because although our treatment is categorical it is expressed as a numeric and has confused R. Use the `glimpse()` command to see how R has interpreted the `treatment` variable. This should confirm that R sees `treatment` as a double (`dbl`) vector. We missed this when we were checking our data in Chapter 4, but thankfully it is an easy fix. We want to tell R to treat the variable `treatment` as a factor (categorical data) and not as continuous data. Try adding this to your script;
+This essentially means that R is expecting a categorical variable (e.g. blue, red, green or as our example is 30 or 35 degrees centigrade) but what it sees is a continuous variable (e.g. 1, 2, 3, 4, 5, 6, 7, 8, 9). This has come about because although our treatment is categorical it is expressed as a numeric and has confused R. Use the `glimpse()` command to see how R has interpreted the `treatment` variable. This should confirm that R sees `treatment` as a double (`dbl`) vector. We missed this when we were checking our data in Chapter 4, but thankfully it is an easy fix. We want to tell R to treat the variable `treatment` as a factor (categorical data) and not as continuous data. Try adding this to your script;
 
 ```{r}
 # Instruct R to treat the treatment variable as a factor 
@@ -57,7 +57,7 @@ You should have five figures (2 histogram and 3 box plots) saved there now. Look
 
 We will discus this further in lectures. But for now lets have a look at visualising a relationship. 
 
-## Looking at relationships
+## Looking at relationships {#scatter}
 
 To look for possible relationships we need two continuous variables. In our data set we have `wing_case_size` and `parasite_burden`. There are several theories in the field of parasitology that suggest larger organisms tend to harbor more parasites. We can see if this is a relationship that persists in our _Tribolium_. Copy, complete and run the following chunk. You may notice that x and y axis variables have been left blank, which variable do you think belongs on which axis?
 
@@ -75,7 +75,8 @@ Well done, you have started building two very commonly used plots using R. These
 
 ## Before you leave!
 
-Log out of posit Cloud and make sure you save your script!
+You should have two histograms from last week (Chapter \@ref(histogram)) along with three boxplots (Chapter \@ref(boxplot)) and one scatter plot (Chapter \@ref(scatter)) from today saved in your `figures` folder. Check that they are saved and look as you would expect. Make sure to log out of posit Cloud and make sure you save your script!
+
 
 ## References
 

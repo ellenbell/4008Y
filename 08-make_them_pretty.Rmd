@@ -1,8 +1,8 @@
-# Make them pretty - Week 9A 
+# Make them pretty - Week 9A {#pretty-figs-p1}
 
 You should aim to complete this chapter in Week 9, Semester 1
 
-Over the last couple of weeks you have build histograms, box plots and scatter plots. Probably the three types of data visualisation you are most likely to run into and want to build. But you may have noticed that non of these are particularly aesthetically pleasing. As a rule, data visualisations should always be designed to be attractive, clean, clear and nicely spaced. The purpose of a plot is to provide, you and your audience with a accurate, visually pleasing and easy to interpret representation of your data. Thankfully `ggplot2` contains all the tools we need to do this. 
+Over the last couple of weeks you have built histograms, box plots and scatter plots. Probably the three types of data visualisation you are most likely to run into and want to build. But you may have noticed that non of these are particularly aesthetically pleasing. As a rule, data visualisations should always be designed to be attractive, clean, clear and nicely spaced. The purpose of a plot is to provide, you and your audience with a accurate, visually pleasing and easy to interpret representation of your data. Thankfully `ggplot2` contains all the tools we need to do this. 
 
 Open your `tribolium_parasites` project in posit Cloud. Create a new script and call it `ggplot_fundamentals`, save it in your `scripts` folder and set up your script following the rules in Chapter 4, make sure the `tidyverse` library is loaded, this contains `ggplot2`. 
 
@@ -18,7 +18,7 @@ rm(list = ls())
 tribolium_combo <- read_csv("data/tribolium_combo.csv")
 ```
 
-Check your data has loaded correctly. Can you remember how to change `treatment` from a `dbl` vector to a factor (`fct`)?
+Check your data has loaded correctly. Can you remember how to change `treatment` from a `dbl` vector to a factor (`fct`) (hint in Chapter \@ref(boxplot))?
 
 ## Deconstructing ggplot
 
@@ -109,9 +109,9 @@ Error in `f()`:
 Run `rlang::last_error()` to see where the error occurred.
 ```
 
-This is because `scale_fill_manual` is also expecting some instructions on how to colour your boxplot. You will need to complete section 9.3 before you can successfully remake your boxplot. 
+This is because `scale_fill_manual` is also expecting some instructions on how to colour your boxplot. You will need to complete Chapter \@ref(colours) before you can successfully remake your boxplot. 
 
-## Switching up colours 
+## Switching up colours {#colours}
 
 The colours of your boxes are the default colours given by `ggplot2`. We can modify these to make our plot look a bit more pleasing. Try editing the `scale_fill_manual` function to this `scale_fill_manual(labels = c("30°C", "35°C"), values = c("cornflowerblue", "coral"))`. Run it and see what happens to your plot. 
 

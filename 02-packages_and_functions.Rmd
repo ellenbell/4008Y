@@ -104,7 +104,7 @@ This should bring up a help file in your bottom right hand panel that describes 
 
 The `sum` function is part of the base R package that comes with any R installation. However there are lots of other useful functions that are held in additional packages. In order to use these functions, you must have the necessary packages installed in your work space. I already mentioned that we would be using a package called `ggplot2`, lets try installing and loading it in your work space. 
 
-With any package you wish to use in posit Cloud you will need to go through a two step process, first of all you need to __install__ the package using the `install.packages()` function (see below for usage and then you will need to __load__ it using the `library()` function. We only need to install and load a package once per posit Cloud project but I would generally keep the commands for installing and loading packages at the top of the script I'm working on.
+With any package you wish to use in posit Cloud you will need to go through a two step process, first of all you need to __install__ the package using the `install.packages()` function (see below for usage) and then you will need to __load__ it using the `library()` function. We only need to install and load a package once per posit Cloud project but I would generally keep the commands for installing and loading packages at the top of the script I'm working on.
 
 Try copying and running the following lines in your script;
 

@@ -1,4 +1,4 @@
-# A plot to choose from - Week 7A
+# A plot to choose from - Week 7A {#histogram}
 
 You should aim to complete this chapter in Week 7, Semester 1
 
@@ -16,7 +16,7 @@ If you are;
 
 Lets have a go at making a histogram. Log-in to your posit Cloud account and go to your `tribolium_parasites` project. 
 
-Add the following to your script;
+Add the following to your script and run it;
 
 ```{r}
 # Making a histogram and saving it in an object
@@ -34,22 +34,26 @@ Now have a go at making a histogram for the `parasite_burden` variable.
 
 Have a look at both of your histograms, what do you think they are showing? We will come back to histograms and how to read them in lectures. 
 
-## Exporting your histogram
+## Exporting your histogram {#export}
 
-You are going to want to save your plots, you can use the `ggsave` function to do this.
+You are going to want to save your plots, you can use the `ggsave` function to do this. Try running the code below; 
 
 ```{r}
 # Saving outputs
 ggsave("figures/tribolium_wincase_size_histogram.pdf", # Give R a path to save to and a file name
-       plot = size_histogram, # Tell R what to save - in this case your object
+       plot = size_histogram,# Tell R what to save - in this case your object
+       width = 15, # Set .pdf width
+       height = 10, # Set .pdf height
+       units = "cm", # Specify units for .pdf width and height
        device = "pdf") # Tell R what file type to create, in this case a pdf
+# Note, use trial and error to select a good width and height for your figure
 ```
 
-Note that if you remove the device line `ggsave` will automatically create a `.png` file. You can also use `width = , height = , units = "cm"` arguments to specify the size of your figure in cm. Try to incorporate these new arguments into the above chunk. Save both of your histogram outputs in your `figures` folder. 
+Note that if you remove the `device = ` line `ggsave` will automatically create a `.png` file. You can also use `width = , height = , units = "cm"` arguments to specify the size of your figure in cm. You will need to adjust these by trial and error until the proportional sizing of your plot to axis and legend labels is pleasing. Save both of your histogram outputs in your `figures` folder. 
 
 ## Before you leave!
 
-Log out of posit Cloud and make sure you save your script!
+You should have two histograms saved in your `figures` folder from todays session. Check that they are saved and look as you would expect. Make sure to log out of posit Cloud and make sure you save your script!
 
 ## References
 
