@@ -5,16 +5,19 @@
 \documentclass[
 ]{book}
 \usepackage{amsmath,amssymb}
-\usepackage{lmodern}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -44,13 +47,13 @@
 \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
 \newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
 \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
 \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
 \newcommand{\BuiltInTok}[1]{#1}
 \newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
 \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
 \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
 \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
 \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
@@ -58,7 +61,7 @@
 \newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
 \newcommand{\ExtensionTok}[1]{#1}
 \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
 \newcommand{\ImportTok}[1]{#1}
 \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
@@ -67,7 +70,7 @@
 \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
 \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
 \newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
 \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
@@ -167,7 +170,7 @@
 \fi
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={Introduction to Data Science - BIO-4008Y/CHE-4602Y},
   pdfauthor={Dr Ellen Bell},
@@ -1504,12 +1507,12 @@ Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takaha
 \hypertarget{formative}{%
 \chapter{Formative Assessment - Deadline 15/12/23}\label{formative}}
 
-The formative assessment is essentially a stripped down version of what will be asked for in the summative assessment task. They will be marked similarly so this is a fantastic opportunity to get feedback on this section of the Skills modules. There are essentially two tasks for the formative.
+The formative assessment is essentially a stripped down version of what will be asked for in the summative assessment task. Both formative and summative task will be marked similarly, so this is a fantastic opportunity to get feedback on this section of the Skills modules. There are essentially two tasks for the formative.
 
 \hypertarget{task-1}{%
 \section{Task 1 - Figure and Figure Legend}\label{task-1}}
 
-Download one of your \texttt{.pdf} box plots or scatter plots from posit Cloud, it doesnt matter which one but it does need to be presented well. Plot selection and presentation will be assessed. Use the tips and tricks that we covered in Chapters \ref{pretty-figs-p1}, \ref{pretty-figs-p2} and \ref{cannibalisation}. You can download your files from posit Cloud onto your local device by moving to your \texttt{figures} folder, ticking the box next to the file you wish to download and then clicking on \texttt{More} and then \texttt{Export}. You will then be given the option to \texttt{Download} your files.
+Download one of your \texttt{.pdf} box plots or scatter plots from posit Cloud, it doesnt matter which one, but the plot does need to be appropriate for the data and does need to be presented well. Plot selection and presentation will be assessed. Use the tips and tricks that we covered in Chapters \ref{pretty-figs-p1}, \ref{pretty-figs-p2} and \ref{cannibalisation}. You can download your files from posit Cloud onto your local device by moving to your \texttt{figures} folder, ticking the box next to the file you wish to download and then clicking on \texttt{More} and then \texttt{Export}. You will then be given the option to \texttt{Download} your files.
 Once you have your figure of choice downloaded you can copy it into a Word file and write a suitable figure legend.
 
 Remember my top tips for writing an appropriate figure legend (as covered in lectures);
@@ -1552,8 +1555,8 @@ Top tip - as you scroll down the page you can see that there is a marking rubric
 
 The deadline for formative submissions is the 8/12/23, I will mark all submissions submitted by this date over the Christmas break.
 
-\hypertarget{merry-christmas-code}{%
-\chapter{Merry Christmas!!! (\#code)}\label{merry-christmas-code}}
+\hypertarget{code}{%
+\chapter{Merry Christmas!!!}\label{code}}
 
 You have all done fanatically well in semester A so I have got you all a lovely Christmas gift\ldots{} Fully commented and completed versions of the scripts you have been working on. I would still suggest you try to complete the workbook in your own time, this will mean that you have a much better understanding of how the code works and will be better for you in the long run. But these commented and completed scripts may give you something to compare your own work too and will hopefully allow us all to start on the same page in the New Year.
 
@@ -2423,15 +2426,16 @@ Most of these fairly self explanatory and easy to find out. But a key assumption
 You will frequently see statistical models refereed to as parametric or non-parametric. Parametric tests assume that the residuals in your data are normally distributed (we can look at the overall distribution of the data as a reasonable proxy for this) and non-parametric tests do not make this assumption, but are not as statistically powerful as parametric tests (hense why we don't always do a non-parametric test, just to be on the safe side).
 
 \begin{longtable}[]{@{}cc@{}}
-\toprule()
+\toprule\noalign{}
 Parametric & Non-Parametric \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 General linear model variants & \\
 Independent T-test & Mann-Whitney U \\
 ANOVA & Mann-Whitney U \\
 Pearson's Correlation & Spearman's Rank Correlation \\
-\bottomrule()
 \end{longtable}
 
 \hypertarget{task-4---checking-for-normality}{%
@@ -2651,7 +2655,7 @@ The results of this chunk can be seen in Figure 13.1. Note that these are rough 
 \includegraphics[width=0.9\linewidth]{figures/multipanel} \caption{Results from the patchwork demonstration chunk}\label{fig:unnamed-chunk-78}
 \end{figure}
 
-Have a go at putting some of your report ready plots into a multi-panel figure. Use \texttt{ggsave} to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in \textbf{Chapter 12}. You can download these pdfs by opening them in browser and clicking the download button in the top right hand corner.
+Have a go at putting some of your report ready plots into a multi-panel figure. Use \texttt{ggsave} to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in Chapter \ref{export}. You can download these pdfs by opening them in browser and clicking the download button in the top right hand corner.
 
 \hypertarget{analysis-writing}{%
 \section{Writing about your analysis}\label{analysis-writing}}
@@ -2829,7 +2833,7 @@ Now you will need to copy your figure into a word document and write a suitable 
 \hypertarget{exercise-2---code}{%
 \subsection{Exercise 2 - Code}\label{exercise-2---code}}
 
-As before, during the formative, we require you to upload the script you have created to analyse the \texttt{catfish\_parasites.csv} dataset. I strongly recomment keeping your script nice and clean and tidy and well commented throughout your \texttt{catfish\_parasite} analysis and have it saved nicely in your \texttt{scripts} folder. If you do then this step will be super easy! You simply need to download your script using the same method described above in Chapter \ref{formative}.
+As before, during the formative, we require you to upload the script you have created to analyse the \texttt{catfish\_parasites.csv} dataset. I strongly recommend keeping your script nice and clean and tidy and well commented throughout your \texttt{catfish\_parasite} analysis and have it saved in your \texttt{scripts} folder. If you do, then this step will be super easy! You simply need to download your script using the same method described above in Chapter \ref{formative}.
 
 \hypertarget{submission}{%
 \subsection{Submission}\label{submission}}

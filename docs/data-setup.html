@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 14 New year, new data - Workshop 4 - Athletes, Week 2B | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 14 New year, new data - Workshop 4 - Athletes, Week 2B | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   <meta property="og:type" content="book" />
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="merry-christmas-code.html"/>
+<link rel="prev" href="code.html"/>
 <link rel="next" href="stats.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -123,10 +123,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -245,7 +241,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.2" data-path="formative.html"><a href="formative.html#task-2---script"><i class="fa fa-check"></i><b>12.2</b> Task 2 - Script</a></li>
 <li class="chapter" data-level="12.3" data-path="formative.html"><a href="formative.html#task-3---submission"><i class="fa fa-check"></i><b>12.3</b> Task 3 - Submission</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="merry-christmas-code.html"><a href="merry-christmas-code.html"><i class="fa fa-check"></i><b>13</b> Merry Christmas!!! (#code)</a></li>
+<li class="chapter" data-level="13" data-path="code.html"><a href="code.html"><i class="fa fa-check"></i><b>13</b> Merry Christmas!!!</a></li>
 <li class="chapter" data-level="14" data-path="data-setup.html"><a href="data-setup.html"><i class="fa fa-check"></i><b>14</b> New year, new data - Workshop 4 - Athletes, Week 2B</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="data-setup.html"><a href="data-setup.html#a-new-project"><i class="fa fa-check"></i><b>14.1</b> A new project</a>
@@ -395,31 +391,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: decimal">
 <li>Checking for duplicates - When you are manually entering data into a spreadsheet, it is very easy to accidentally enter the same row twice. With very large data sets this is something that is very hard to pick out by eye. Thankfully R has some very useful functions to check for this. Try running;</li>
 </ol>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="data-setup.html#cb58-1" aria-hidden="true" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span></span>
-<span id="cb58-2"><a href="data-setup.html#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">duplicated</span>() <span class="co"># check for duplicated rows</span></span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="data-setup.html#cb58-1" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span></span>
+<span id="cb58-2"><a href="data-setup.html#cb58-2" tabindex="-1"></a>  <span class="fu">duplicated</span>() <span class="co"># check for duplicated rows</span></span></code></pre></div>
 <p><strong>Note that %&gt;% used here is just another notation for piping, rather like the + that ggplot uses. This means that the output from one function is fed directly into the next function.</strong></p>
 <p>This chunk of code will spit out a long list of TRUE (row is duplicated) or FALSE (row is not duplicated) statements. Again not very human readable, especially if we have a very large data set. Try ammending the code to;</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="data-setup.html#cb59-1" aria-hidden="true" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span></span>
-<span id="cb59-2"><a href="data-setup.html#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">duplicated</span>() <span class="sc">%&gt;%</span> <span class="co"># check for duplicated rows</span></span>
-<span id="cb59-3"><a href="data-setup.html#cb59-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>() <span class="co"># Sums any TRUE statements in the list </span></span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="data-setup.html#cb59-1" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span></span>
+<span id="cb59-2"><a href="data-setup.html#cb59-2" tabindex="-1"></a>  <span class="fu">duplicated</span>() <span class="sc">%&gt;%</span> <span class="co"># check for duplicated rows</span></span>
+<span id="cb59-3"><a href="data-setup.html#cb59-3" tabindex="-1"></a>  <span class="fu">sum</span>() <span class="co"># Sums any TRUE statements in the list </span></span></code></pre></div>
 <p>Do we have any duplicated rows?</p>
 <ol start="2" style="list-style-type: decimal">
 <li>Checking for typos - As with duplicates it is very easy to enter a typo when manually entering data into a spreadsheet. Generally if you have been collecting continuous data you will have an idea of what a sensible upper and lower bound within your data set should be. We can use the <code>summarise()</code> function to see what these are within this data set, as shown below;</li>
 </ol>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="data-setup.html#cb60-1" aria-hidden="true" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span> </span>
-<span id="cb60-2"><a href="data-setup.html#cb60-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">min=</span><span class="fu">min</span>(wt, <span class="at">na.rm=</span><span class="cn">TRUE</span>), <span class="co"># reports the minimum value in the wt variable and ignores cells with N/A</span></span>
-<span id="cb60-3"><a href="data-setup.html#cb60-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">max=</span><span class="fu">max</span>(wt, <span class="at">na.rm=</span><span class="cn">TRUE</span>)) <span class="co"># reports the maximum value in the wt variable and ignores cells with N/A</span></span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="data-setup.html#cb60-1" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span> </span>
+<span id="cb60-2"><a href="data-setup.html#cb60-2" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">min=</span><span class="fu">min</span>(wt, <span class="at">na.rm=</span><span class="cn">TRUE</span>), <span class="co"># reports the minimum value in the wt variable and ignores cells with N/A</span></span>
+<span id="cb60-3"><a href="data-setup.html#cb60-3" tabindex="-1"></a>            <span class="at">max=</span><span class="fu">max</span>(wt, <span class="at">na.rm=</span><span class="cn">TRUE</span>)) <span class="co"># reports the maximum value in the wt variable and ignores cells with N/A</span></span></code></pre></div>
 <p>Try manipulating the above chunk to report the upper and lower bounds for the height variable in your data set. Do these values all look reasonable to you?</p>
 <p>But how can we check for typos in categorical data? We can use the <code>distinct()</code> function to identify all of the options stored under a categorical variable name. Try using the following chunk;</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="data-setup.html#cb61-1" aria-hidden="true" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span> </span>
-<span id="cb61-2"><a href="data-setup.html#cb61-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(sex) <span class="co"># reports the categories stored under sex</span></span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="data-setup.html#cb61-1" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span> </span>
+<span id="cb61-2"><a href="data-setup.html#cb61-2" tabindex="-1"></a>  <span class="fu">distinct</span>(sex) <span class="co"># reports the categories stored under sex</span></span></code></pre></div>
 <p>So do you think there are any potential typos in your data set?</p>
 <ol start="3" style="list-style-type: decimal">
 <li>Checking for missing data - finally sometimes when entering data manually, you may miss or delete a spreadsheet cell by mistake, leaving it empty. Again this is really difficult to spot by eye in a large data set. Try running the following chunk of code, can you work out what each line does? Try adding comments to it in your script yourself.</li>
 </ol>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="data-setup.html#cb62-1" aria-hidden="true" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span> </span>
-<span id="cb62-2"><a href="data-setup.html#cb62-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">is.na</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb62-3"><a href="data-setup.html#cb62-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="data-setup.html#cb62-1" tabindex="-1"></a>athletes <span class="sc">%&gt;%</span> </span>
+<span id="cb62-2"><a href="data-setup.html#cb62-2" tabindex="-1"></a>  <span class="fu">is.na</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb62-3"><a href="data-setup.html#cb62-3" tabindex="-1"></a>  <span class="fu">sum</span>()</span></code></pre></div>
 <details>
 <summary>
 <strong>Click-me to check your code interpretation</strong>
@@ -457,9 +453,9 @@ Look at your histogram for red blood cell count with 20 bins, why do you think i
 </details>
 <p><br />
 So lets have a think about how we could split out data set up to examine male and female athletes separately. Try using this chunk;</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="data-setup.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pipe your data set to the filter function, this will pull out the male athletes and store then in a new object.</span></span>
-<span id="cb63-2"><a href="data-setup.html#cb63-2" aria-hidden="true" tabindex="-1"></a>male_athletes <span class="ot">&lt;-</span> athletes <span class="sc">%&gt;%</span></span>
-<span id="cb63-3"><a href="data-setup.html#cb63-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="st">&quot;m&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="data-setup.html#cb63-1" tabindex="-1"></a><span class="co"># Pipe your data set to the filter function, this will pull out the male athletes and store then in a new object.</span></span>
+<span id="cb63-2"><a href="data-setup.html#cb63-2" tabindex="-1"></a>male_athletes <span class="ot">&lt;-</span> athletes <span class="sc">%&gt;%</span></span>
+<span id="cb63-3"><a href="data-setup.html#cb63-3" tabindex="-1"></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="st">&quot;m&quot;</span>)</span></code></pre></div>
 <p>Make a similar data frame for female athletes using the above chunk. Then create two new histograms for:</p>
 <ul>
 <li>Male athlete red blood cell count</li>
@@ -548,7 +544,7 @@ Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takaha
           </div>
         </div>
       </div>
-<a href="merry-christmas-code.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="code.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="stats.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -609,7 +605,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

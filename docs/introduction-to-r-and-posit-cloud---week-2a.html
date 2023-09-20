@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Introduction to R and posit Cloud - Week 2A | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Introduction to R and posit Cloud - Week 2A | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   <meta property="og:type" content="book" />
@@ -123,10 +123,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -245,7 +241,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.2" data-path="formative.html"><a href="formative.html#task-2---script"><i class="fa fa-check"></i><b>12.2</b> Task 2 - Script</a></li>
 <li class="chapter" data-level="12.3" data-path="formative.html"><a href="formative.html#task-3---submission"><i class="fa fa-check"></i><b>12.3</b> Task 3 - Submission</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="merry-christmas-code.html"><a href="merry-christmas-code.html"><i class="fa fa-check"></i><b>13</b> Merry Christmas!!! (#code)</a></li>
+<li class="chapter" data-level="13" data-path="code.html"><a href="code.html"><i class="fa fa-check"></i><b>13</b> Merry Christmas!!!</a></li>
 <li class="chapter" data-level="14" data-path="data-setup.html"><a href="data-setup.html"><i class="fa fa-check"></i><b>14</b> New year, new data - Workshop 4 - Athletes, Week 2B</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="data-setup.html"><a href="data-setup.html#a-new-project"><i class="fa fa-check"></i><b>14.1</b> A new project</a>
@@ -405,16 +401,16 @@ Figure 2.5: How to make your project more efficient
 <div id="entering-commands-directly-into-the-consol" class="section level2 hasAnchor" number="2.5">
 <h2><span class="header-section-number">2.5</span> Entering commands directly into the consol<a href="introduction-to-r-and-posit-cloud---week-2a.html#entering-commands-directly-into-the-consol" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Lets start by playing with some commands in the console. Type or copy and paste the simple calculation (or command) shown below, into the console. Your text should appear next to the <code>&gt;</code> symbol. Press <code>Enter</code> on your keyboard, this will instruct R to run the command.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">9</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb1-1" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">9</span></span></code></pre></div>
 <p>The two final lines of your output should look like this:</p>
 <pre><code>&gt; 5 + 9
 [1] 14</code></pre>
 <p>So… your initial command <code>5 + 9</code> is shown after the <code>&gt;</code>, symbol and the resulting output from R is shown after <code>[1]</code>. Don’t worry too much about the syntax of <code>&gt;</code> and <code>[1]</code> here. You can think of <code>&gt;</code> as meaning that R is ready to receive a command and <code>[1]</code> as R telling you that the answer to the first part of your question is here (in this case <code>14</code>).</p>
 <p>Try out some other commands… What happens when you input the following?</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">362</span> <span class="sc">*</span> <span class="dv">12</span></span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">55</span> <span class="sc">/</span> <span class="dv">5</span></span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb5-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">40</span> <span class="sc">/</span> <span class="dv">990</span>) <span class="sc">*</span> <span class="dv">100</span></span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb3-1" tabindex="-1"></a><span class="dv">362</span> <span class="sc">*</span> <span class="dv">12</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb4-1" tabindex="-1"></a><span class="dv">55</span> <span class="sc">/</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb5-1" tabindex="-1"></a>(<span class="dv">40</span> <span class="sc">/</span> <span class="dv">990</span>) <span class="sc">*</span> <span class="dv">100</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb6-1" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
 <p>See if you can work out what 30% of 735 is using the R console</p>
 </div>
 <div id="sending-commands-down-to-the-console-from-an-r-script" class="section level2 hasAnchor" number="2.6">
@@ -434,13 +430,13 @@ Figure 2.7: The four panels of an R Studio workspace
 </p>
 </div>
 <p>This new panel is essentially a text file where you can write your commands into a script and then send them down to the console when you want to run them. Lets have a play. Copy the below into your new R script.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">362</span> <span class="sc">*</span> <span class="dv">12</span></span>
-<span id="cb7-2"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dv">55</span> <span class="sc">/</span> <span class="dv">5</span></span>
-<span id="cb7-4"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-5" aria-hidden="true" tabindex="-1"></a>(<span class="dv">40</span> <span class="sc">/</span> <span class="dv">990</span>) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb7-6"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-1" tabindex="-1"></a><span class="dv">362</span> <span class="sc">*</span> <span class="dv">12</span></span>
+<span id="cb7-2"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-3" tabindex="-1"></a><span class="dv">55</span> <span class="sc">/</span> <span class="dv">5</span></span>
+<span id="cb7-4"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-4" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-5" tabindex="-1"></a>(<span class="dv">40</span> <span class="sc">/</span> <span class="dv">990</span>) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb7-6"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-6" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-7" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
 <p>These are all commands you have run before but now if you save your script you will have a text based document with your progress saved. It doesn’t make a huge amount of sense to do this now because these are just a un-associated set of calculations and we are just playing with the interface, but you could if you wanted to.</p>
 <p>Ok, so now we are ready to execute our commands. You can do this with each calculation individually, line by line, or you can run the whole script.</p>
 <p>To run your script line by line, place your cursor on the line you wish to run and you can either;</p>
@@ -457,8 +453,8 @@ Figure 2.7: The four panels of an R Studio workspace
 <div id="a-note-on-comments" class="section level2 hasAnchor" number="2.7">
 <h2><span class="header-section-number">2.7</span> A note on comments<a href="introduction-to-r-and-posit-cloud---week-2a.html#a-note-on-comments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When you are writing a script you can leave notes for yourself. This can be extremely useful if you need reminding on what a particular piece of script is doing. This is a good learning tool while you are still learning how to use R, but its also a good habit to get into for later. As you progress with R you will inevitably start constructing quite intricate scripts, leaving good notes on what each part of the script is doing is very useful for you and for anyone else who may later come to use your script. You can leave notes or comments in scripts if you precede them with <code>#</code>. If R sees <code>#</code> it will ignore all text on that line that comes after it. For example, copy and paste the following into your script and try running it line by line.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Four squared can be calculated with the following command</span></span>
-<span id="cb8-2"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb8-1" tabindex="-1"></a><span class="co"># Four squared can be calculated with the following command</span></span>
+<span id="cb8-2"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb8-2" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
 <p>In this case I have reminded myself how to calculate 4 squared, everything after the <code>#</code> will be ignored by R when you try to run the line.</p>
 <p>Well Done! You have started writing and running simple code. But R is capable of doing so much more than simple calculations. Next week in Chapter 3 we will explore how we can create objects, and use packages and functions.</p>
 
@@ -530,7 +526,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
