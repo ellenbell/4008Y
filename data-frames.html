@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Introduction to R and posit Cloud - Week 2A | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
+  <title>Chapter 4 Directories and data frames - Week 4A - Workshop 1 | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Introduction to R and posit Cloud - Week 2A | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
+  <meta property="og:title" content="Chapter 4 Directories and data frames - Week 4A - Workshop 1 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A brief introduction so some fundamental applications of R in data science" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Introduction to R and posit Cloud - Week 2A | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
+  <meta name="twitter:title" content="Chapter 4 Directories and data frames - Week 4A - Workshop 1 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   
   <meta name="twitter:description" content="A brief introduction so some fundamental applications of R in data science" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="objects-functions-and-packages---week-3a.html"/>
+<link rel="prev" href="objects-functions-and-packages---week-3a.html"/>
+<link rel="next" href="reading-week---week-5a.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -335,131 +335,151 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction-to-r-and-posit-cloud---week-2a" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Introduction to R and posit Cloud - Week 2A<a href="introduction-to-r-and-posit-cloud---week-2a.html#introduction-to-r-and-posit-cloud---week-2a" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>You should aim to complete this chapter in Week 2, Semester 1.</p>
-<div id="what-is-r-and-posit-cloud" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> What is R and posit Cloud?<a href="introduction-to-r-and-posit-cloud---week-2a.html#what-is-r-and-posit-cloud" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>So hopefully you have read through Chapter 1, where R and the posit Cloud interface were introduced in this module. But what really is R and what is the difference between R and posit Cloud?</p>
-<p>Essentially R is a programming language that is commonly used in statistical computing, data handling, data visualisation and data analysis. Posit Cloud is a cloud based interface for a piece of software called RStudio (we wont be using the non cloud based RStudio in this sub-module, so we wont explore this software further here). Posit Cloud uses the R programming language but has a nice user friendly interface and is a great tool for learning how to conduct analysis in R.</p>
-<p>We are using the posit cloud rather then RStudio because it means that no one has to worry about installing extra software on their own computers and everyone will be working with the same software versions. You will all need to create your own free accounts on posit Cloud, but first have a look at the short video below introducing you to the interface.</p>
-<div style="position:relative;height:0;padding-bottom:40%">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3l02OgYYb0I" title="Intro to posit Cloud" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
+<div id="data-frames" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Directories and data frames - Week 4A - Workshop 1<a href="data-frames.html#data-frames" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This week we don’t have any lectures but we do have an in person workshop. The section to complete this week may be a little more chunky than usual, complete what you can during the workshop and then finish it off in your own time. Do make use of the demonstrators if any of the exercises so far haven’t made sense.</p>
+<div id="data-entry" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Data Entry<a href="data-frames.html#data-entry" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s have a look at some actual data now, Figure 4.1 shows some lab notes taken during the data collection phase of a small research project to investigate parasite load in 2 small populations of the flour beetle <em>Tribolium castaneum</em>. Each beetle has an ID, a measure of wing casing in mm (which is a good proxy for overall size) and a tally for the number of tapeworm cysticercoids dissected out. In terms of data handling and analysis, we need this data to be stored digitally and we need to have it ordered sensibly in a spreadsheet. We covered what to look for in a tidy, well ordered spreadsheet in our week 3 lecture. Have a go at entering the data from Figure 4.1 into an Excel spreadsheet. When you’re done go to <strong>File &gt; Save As…</strong>, name your spreadsheet something sensible and make sure you select a sensible place to save it to, where it says <strong>File Format:</strong> select <strong>Comma-separated Values (.csv)</strong>.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-25"></span>
+<img src="figures/parasite_burden.jpg" alt="Tribolium parasite data raw" width="90%" />
+<p class="caption">
+Figure 4.1: Lab notes for wing case size (mm) and parasite burden of 20 <em>Tribolium castanium</em>
+</p>
 </div>
-<p>
-<p>Now that you’ve watched the video, create your own Free posit Cloud account <a href="https://login.rstudio.cloud/login?redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Frstudio.cloud%252Flogin%26client_id%3Drstudio-cloud%26response_type%3Dcode%26show_auth%3D0%26show_login%3D1">here</a>.</p>
-</div>
-<div id="a-warning-on-managing-your-work-flow" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> A warning on managing your work flow<a href="introduction-to-r-and-posit-cloud---week-2a.html#a-warning-on-managing-your-work-flow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Your free posit Cloud account comes with some restrictions which you should be aware of. These are;</p>
+<div id="a-note-on-naming" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> A note on naming<a href="data-frames.html#a-note-on-naming" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>While we are on the subject of naming, I am going to take a moment to go over a few good rules to follow. You have just created names for some variables and for a file. You will also frequently have to name folders/directories and objects while working in R, so naming is something that you are repeatedly going to have to do. It therefore makes sense for you to learn how to do it well.</p>
 <ul>
-<li>You may have up to 50 projects in total</li>
-<li>You are limited to 25 project hours per month</li>
-<li>You have up to 1GB of RAM and 1 CPU per project</li>
+<li><p>Keep names meaningful - Over the course of your degree you will create a lot of files and folders/directories. You will also frequently be naming data variables and objects. You need to be able to easily recognise what is what so informative names are better then arbitrary names. So <code>girraffe</code>, <code>elephant</code>, <code>hippo</code> are better names then <code>1</code>, <code>2</code> and <code>3</code>.</p></li>
+<li><p>Make versions obvious - There will be occasions when you want to save new information in a file or object but keep the original untouched. You may be experimenting or you may want the option to revisit to your original work. In these instances it makes sense to save your edits to a new version of the original file or object. If you do this and especially if you are sharing it with others make it clear. I tend to add my initials and a version identifier (e.g. eb_v1, eb_v2) as a suffix to the file name.</p></li>
+<li><p>Keep names short - Typing takes time, its boring, and the more you type the greater the risk of a typo. So keep names short. So <code>trunk_length</code> is better than <code>elephant_trunk_length_cm</code>, there is important information in the second name but you can store this as a comment or a note.</p></li>
+<li><p>Avoid spaces - Lots of software packages hate spaces, including R. If you can get out of the habbit of using spaces and instead use <code>_</code> your future self will thank you.</p></li>
+<li><p>Abide by the rules for R - R does have some rules of its own for naming. Names must <strong>not</strong> start with a number, but numbers may be used provided the first character is a letter. You can also use <code>.</code> or <code>_</code>, but avoid spaces at all costs. You may use upper or lower case letters, but remember R is case sensitive so will see <code>Elephant</code> and <code>elephant</code> as different. I try to keep to a lower case and use <code>_</code> instead of spaces, it keeps everything uniform and saves me time (this style is known as snake_case).</p></li>
 </ul>
-<p>For the purposes of our work here these restrictions should not be a problem. But I strongly suggest you don’t leave your coursework to the last minute. If you try and pack in a whole semester or years worth or material into a single month, you will exceed those 25 project hours. There are some options of last resort should this happen, you could install RStudio on your desktop for example, or set up an alternative posit cloud account with an alternative email address, but things will get complicated. Lets avoid that where we can! There are some ways you can increase the efficiency of your workspace which are documented below in section 2.4.</p>
-</div>
-<div id="creating-your-first-posit-cloud-project" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Creating your first posit Cloud Project<a href="introduction-to-r-and-posit-cloud---week-2a.html#creating-your-first-posit-cloud-project" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Once you have created an posit Cloud account you should be presented with this window</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
-<img src="figures/posit1.jpg" alt="Screen for when you first login to posit Cloud" width="90%" />
-<p class="caption">
-Figure 2.1: Your workspace in posit Cloud
-</p>
-</div>
-<p>Under <strong>Spaces</strong> go to <strong>Your Workspace</strong> and under <strong>Projects</strong> create a <strong>New Project &gt; New R studio Project</strong>.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
-<img src="figures/posit2.jpg" alt="Screen for creating a new project" width="90%" />
-<p class="caption">
-Figure 2.2: Creating a new project in posit Cloud
-</p>
-</div>
-<p>Lets name this project <code>testing_R</code>, notice that I have no spaces in my project name. Instead of a space I have used an underscore, there are a number of good habits you should try and adopt when project or file naming and not including spaces is one of them, we will go over this in more depth in lectures and later chapters. You can rename your project by clicking on <strong>Untitled Project</strong> at the top of the window, and typing in your new project name.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
-<img src="figures/posit3.jpg" alt="Screen for renaming your project" width="90%" />
-<p class="caption">
-Figure 2.3: Renaming your project
-</p>
-</div>
-<p>You will see that your new project has three panels with tabs showing the Console, Environment and Files for your project.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
-<img src="figures/posit4.jpg" alt="Screen for your r studio workspace" width="90%" />
-<p class="caption">
-Figure 2.4: The three basic panels of an R Studio workspace
-</p>
+<p>Now go back to your spreadsheet, do your variables and file names follow a sensible naming convention?</p>
+<p><strong>Make sure you have a demonstrator check your work before moving onto the next step.</strong></p>
 </div>
 </div>
-<div id="maximising-the-efficiency-of-your-workspace" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Maximising the efficiency of your workspace<a href="introduction-to-r-and-posit-cloud---week-2a.html#maximising-the-efficiency-of-your-workspace" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We know we have limited project hours on our free posit Cloud accounts to reduce your resource usage. In your project, go to settings (the cogwheel sign), Resources, and drag all of the sliders down to the minimum setting, apply the changes, this will mean the project has to restart. This will mean that running the project for 1 hour will consume 0.5 project hours. We wont be doing anything particularly computationally intensive so there is no need for RAM of CPUs to be higher.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
-<img src="figures/posit5.jpg" alt="Making your project more efficient" width="90%" />
-<p class="caption">
-Figure 2.5: How to make your project more efficient
-</p>
-</div>
-</div>
-<div id="entering-commands-directly-into-the-consol" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> Entering commands directly into the consol<a href="introduction-to-r-and-posit-cloud---week-2a.html#entering-commands-directly-into-the-consol" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Lets start by playing with some commands in the console. Type or copy and paste the simple calculation (or command) shown below, into the console. Your text should appear next to the <code>&gt;</code> symbol. Press <code>Enter</code> on your keyboard, this will instruct R to run the command.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb1-1" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">9</span></span></code></pre></div>
-<p>The two final lines of your output should look like this:</p>
-<pre><code>&gt; 5 + 9
-[1] 14</code></pre>
-<p>So… your initial command <code>5 + 9</code> is shown after the <code>&gt;</code>, symbol and the resulting output from R is shown after <code>[1]</code>. Don’t worry too much about the syntax of <code>&gt;</code> and <code>[1]</code> here. You can think of <code>&gt;</code> as meaning that R is ready to receive a command and <code>[1]</code> as R telling you that the answer to the first part of your question is here (in this case <code>14</code>).</p>
-<p>Try out some other commands… What happens when you input the following?</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb3-1" tabindex="-1"></a><span class="dv">362</span> <span class="sc">*</span> <span class="dv">12</span></span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb4-1" tabindex="-1"></a><span class="dv">55</span> <span class="sc">/</span> <span class="dv">5</span></span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb5-1" tabindex="-1"></a>(<span class="dv">40</span> <span class="sc">/</span> <span class="dv">990</span>) <span class="sc">*</span> <span class="dv">100</span></span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb6-1" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
-<p>See if you can work out what 30% of 735 is using the R console</p>
-</div>
-<div id="sending-commands-down-to-the-console-from-an-r-script" class="section level2 hasAnchor" number="2.6">
-<h2><span class="header-section-number">2.6</span> Sending commands down to the console from an R script<a href="introduction-to-r-and-posit-cloud---week-2a.html#sending-commands-down-to-the-console-from-an-r-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>I have already mentioned the <strong>reproducibility</strong> factor as an advantage of using posit Cloud. This is because you can record and run all of your commands from an R script within posit Cloud. This means that you have a written record of your analysis workflow, what you did to your data at which stage, and you can do all of this without altering the original data files! This is super important because it means that if you revisit your work in a few weeks/months/years you can see exactly what you did AND if someone else needs to rerun any of your analysis or use your workflow on some other data, they can!</p>
-<p>So lets go about setting up your new script. You currently have three panels in posit Cloud. If you go to <strong>file &gt; New File &gt; R Script</strong> a new panel will open.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
-<img src="figures/posit6.jpg" alt="creating a new r script" width="90%" />
-<p class="caption">
-Figure 2.6: How to create a new R script
-</p>
-</div>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
-<img src="figures/posit7.jpg" alt="Screen for your r studio workspace" width="90%" />
-<p class="caption">
-Figure 2.7: The four panels of an R Studio workspace
-</p>
-</div>
-<p>This new panel is essentially a text file where you can write your commands into a script and then send them down to the console when you want to run them. Lets have a play. Copy the below into your new R script.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-1" tabindex="-1"></a><span class="dv">362</span> <span class="sc">*</span> <span class="dv">12</span></span>
-<span id="cb7-2"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-2" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-3" tabindex="-1"></a><span class="dv">55</span> <span class="sc">/</span> <span class="dv">5</span></span>
-<span id="cb7-4"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-4" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-5" tabindex="-1"></a>(<span class="dv">40</span> <span class="sc">/</span> <span class="dv">990</span>) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb7-6"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-6" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-7" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
-<p>These are all commands you have run before but now if you save your script you will have a text based document with your progress saved. It doesn’t make a huge amount of sense to do this now because these are just a un-associated set of calculations and we are just playing with the interface, but you could if you wanted to.</p>
-<p>Ok, so now we are ready to execute our commands. You can do this with each calculation individually, line by line, or you can run the whole script.</p>
-<p>To run your script line by line, place your cursor on the line you wish to run and you can either;</p>
+<div id="workspace" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Setting up your R workspace<a href="data-frames.html#workspace" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This is a new piece of analysis, we will be carrying forward principals from the previous chapters but scripts and data will be new. So its a good idea to start with a fresh clean workspace. So lets set up a new project in posit Cloud, follow the steps from Chapter 2 if you cant remember how to do this and name this project <code>tribolium_parasites</code>. Its always good to keep a well organised tidy workspace, generally I will start a new project in posit Cloud if I am working on a new series of questions with a new data set or sets.</p>
+<p>For this project you need to make sure two packages are installed. Copy the following directly into your console.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="data-frames.html#cb21-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb21-2"><a href="data-frames.html#cb21-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;janitor&quot;</span>)</span></code></pre></div>
+<p>We will be moving towards doing some more comprehensive data handling so setting up your workspace is going to become more and more important. If you can get into the habit of setting up your workspace properly at the start of each project you will thank yourself later. A well developed project will contain several files including;</p>
 <ul>
-<li>Click on the <strong>Run</strong> button on the top right of the script panel</li>
-<li>Press <strong>ctrl + Enter</strong> (or <strong>Command + Enter</strong> on mac)</li>
+<li>Input data</li>
+<li>Scripts</li>
+<li>Outputs</li>
 </ul>
-<p>Or if you wish to run the entire script you can either;</p>
+<p>Under <strong>Files</strong> in the bottom right panel create a <strong>New Folder</strong>, for each of the following;</p>
 <ul>
-<li>Manually highlight the script and click the <strong>Run</strong> button or press <strong>ctrl + Enter</strong> (or <strong>Command + Enter</strong> on mac)</li>
-<li>Press <strong>ctrl + A</strong> (or <strong>Command + A</strong> on mac) and then click the run button or press <strong>ctrl + Enter</strong> (or <strong>Command + Enter</strong> on mac)</li>
+<li>data</li>
+<li>scripts</li>
+<li>figures</li>
 </ul>
+<p><strong>Make sure you copy the names over exactly, or some of the commands that we will be using later wont work</strong></p>
+<p>A tidy workspace will help you find the things you need when you need them and will reduce the risk of loosing things.</p>
+<div id="a-note-on-directories-and-their-structure" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> A note on directories and their structure<a href="data-frames.html#a-note-on-directories-and-their-structure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Working with text based interfaces like R, where you are writing and running commands, means that we need to have some understanding of the underlying computer architecture. You need to have some appreciation for how files are organised within folders/directories and why its important to know which directory you are working from with R.</p>
+<p>Under <strong>Files</strong> in the bottom right panel of your screen you will see a file with the ending .Rproj. This is an R project file which tells R where you are working in the server. It means that R will automatically treat your project location as the <strong>working directory</strong>. If you wish to access files in any of the folders you have just created you will need to tell R the <strong>path</strong> that it needs to follow in order to access these files. There are two types of path;</p>
+<ul>
+<li><strong>absolute</strong> paths, which refer to the same location in a file system relative to the root directory (don’t worry if that doesn’t make too much sense at this stage). For example, in Figure 4.2, if you wanted to access files in the <code>/work</code> directory but were already in any of the other directories like <code>/dev</code>, an absolute path would work from wherever you were working this would be <code>/home/jono/work</code>.</li>
+<li><strong>relative</strong> paths, which refer to a location in the file system relative to the directory you are currently working in. For example, in Figure 4.2, if you were working in the <code>/home</code> directory and wanted to access files in <code>/work</code> a relative path would look like <code>jono/work</code>. This is fine from the <code>/home</code> directory, but the path would not work if you were working in, for example <code>/lib</code>.</li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-27"></span>
+<img src="figures/absolutePathNames.jpg" alt="Absolute vs relative paths" width="90%" />
+<p class="caption">
+Figure 4.2: Absolute vs Relative Paths
+</p>
 </div>
-<div id="a-note-on-comments" class="section level2 hasAnchor" number="2.7">
-<h2><span class="header-section-number">2.7</span> A note on comments<a href="introduction-to-r-and-posit-cloud---week-2a.html#a-note-on-comments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>When you are writing a script you can leave notes for yourself. This can be extremely useful if you need reminding on what a particular piece of script is doing. This is a good learning tool while you are still learning how to use R, but its also a good habit to get into for later. As you progress with R you will inevitably start constructing quite intricate scripts, leaving good notes on what each part of the script is doing is very useful for you and for anyone else who may later come to use your script. You can leave notes or comments in scripts if you precede them with <code>#</code>. If R sees <code>#</code> it will ignore all text on that line that comes after it. For example, copy and paste the following into your script and try running it line by line.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb8-1" tabindex="-1"></a><span class="co"># Four squared can be calculated with the following command</span></span>
-<span id="cb8-2"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb8-2" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
-<p>In this case I have reminded myself how to calculate 4 squared, everything after the <code>#</code> will be ignored by R when you try to run the line.</p>
-<p>Well Done! You have started writing and running simple code. But R is capable of doing so much more than simple calculations. Next week in Chapter 3 we will explore how we can create objects, and use packages and functions.</p>
+<p>Here we will only be dealing with <strong>relative</strong> paths because you will always be working from within your R project directory. So for example if you wish to access a file in your <code>data</code> folder in the R project you would need to provide the path <code>("data/any_sub_folders_you_may_have_made/the_file_you_wish_to_access")</code>. We will do this in the next step so don’t worry if you don’t quite get it yet.</p>
+</div>
+</div>
+<div id="script" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Setting up your script<a href="data-frames.html#script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Right OK, enough theory, lets start setting up your script. Create a new R script by clicking on the icon with a little green plus, below File in the top left of the posit Cloud window and select <strong>R Script</strong>. Call your new script <code>tribolium_parasites</code>. Its always good to add a few lines of description at the start of your script, this tells your future self and anyone else what the script is doing. Copy over the following.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="data-frames.html#cb22-1" tabindex="-1"></a><span class="co"># An analysis of parasite abundance between male and female tribolium beetles from two thermal treatments (30 and 35 degrees centigrade)</span></span>
+<span id="cb22-2"><a href="data-frames.html#cb22-2" tabindex="-1"></a><span class="co"># Your name</span></span></code></pre></div>
+<p>Then we need to load any packages that we might want to use, copy over the following;</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="data-frames.html#cb23-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># Load the tidyverse package</span></span>
+<span id="cb23-2"><a href="data-frames.html#cb23-2" tabindex="-1"></a><span class="fu">library</span>(janitor) <span class="co"># Load the janitor package</span></span></code></pre></div>
+</div>
+<div id="importing" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Importing data<a href="data-frames.html#importing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Lets import your data set. Go into your <strong>data</strong> folder within <strong>Files</strong>, click <strong>Upload</strong> and select your newly made <code>.csv</code> file. Once its uploaded you should be able to see it under <code>data/</code> in the bottom right panel.</p>
+<p>Now we need to tell R to read your <code>.csv</code> file.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="data-frames.html#cb24-1" tabindex="-1"></a><span class="co"># Read the data from the .csv file in the data folder into my project</span></span>
+<span id="cb24-2"><a href="data-frames.html#cb24-2" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/your_file_name.csv&quot;</span>) </span></code></pre></div>
+<p>R should respond with this;</p>
+<pre><code>&gt; tribolium &lt;- read_csv(&quot;data/tribolium.csv&quot;)
+Rows: 20 Columns: 3                                                              
+── Column specification ───────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+dbl (3): beetle_id, wing_case_size, parasite_burden</code></pre>
+<p>Here R has told us that there are 20 rows and 3 columns in our data set, it has indicated that it has used comas as a column deliminator and that all the data are dbl (short for double), which means each column contains numbers. You should also be able to see <code>tribolium</code> in your <strong>Environment</strong> under <strong>Data</strong>.</p>
+<p>If you have errors, make sure your file name and path are input correctly.</p>
+<p>Lets have a look at our data to make sure it looks as we expect it to, try this;</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="data-frames.html#cb26-1" tabindex="-1"></a><span class="fu">head</span>(tribolium)</span></code></pre></div>
+<p>We can see for ourselves that R has correctly read our data.</p>
+</div>
+<div id="creating-tibbles" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Creating tibbles<a href="data-frames.html#creating-tibbles" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>So we have successfully imported data into R from a <code>.csv</code> file and stored it as a data frame which is a type of two dimensional array. Tibbles are a type of data frame as well, these can be useful if you want to type your data straight into R, or if you have more information to add to a pre-existing data frame. For example, we also have some additional data on the sex and treatment conditions of the Tribolium beetles. So lets create a tibble, add the following to your script;</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="data-frames.html#cb27-1" tabindex="-1"></a><span class="co"># First of all lets create some variables</span></span>
+<span id="cb27-2"><a href="data-frames.html#cb27-2" tabindex="-1"></a>beetle_id <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>) <span class="co"># Notice that this notation will create of a list of numbers 1 to 20</span></span>
+<span id="cb27-3"><a href="data-frames.html#cb27-3" tabindex="-1"></a>sex <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>)</span>
+<span id="cb27-4"><a href="data-frames.html#cb27-4" tabindex="-1"></a>treatment <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>)</span></code></pre></div>
+<p>Now we neet to turn our new variables into a data frame</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="data-frames.html#cb28-1" tabindex="-1"></a><span class="co"># Turning variables into a tibble</span></span>
+<span id="cb28-2"><a href="data-frames.html#cb28-2" tabindex="-1"></a>tribolium_extras <span class="ot">&lt;-</span> <span class="fu">tibble</span>(beetle_id,sex,treatment)</span></code></pre></div>
+<p>Try using <code>head()</code> to check your new <code>tribolium_extras</code> data frame.</p>
+</div>
+<div id="renaming" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> Renaming variables<a href="data-frames.html#renaming" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It may be advantageous to have all the data from both of our data frames together, we can use another function to do this. However first I would like everyone in the class to have the same variable names, this will help us later on but also sometimes its useful to change headings in R. Add the following to your script and run it, make sure you edit it to match your variable names.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="data-frames.html#cb29-1" tabindex="-1"></a><span class="co"># Renaming some variables in your original data set</span></span>
+<span id="cb29-2"><a href="data-frames.html#cb29-2" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> tribolium <span class="sc">%&gt;%</span></span>
+<span id="cb29-3"><a href="data-frames.html#cb29-3" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">beetle_id =</span> your_variable_name_here)</span>
+<span id="cb29-4"><a href="data-frames.html#cb29-4" tabindex="-1"></a><span class="co"># Check how your data frame now looks</span></span>
+<span id="cb29-5"><a href="data-frames.html#cb29-5" tabindex="-1"></a><span class="fu">head</span>(tribolium) </span></code></pre></div>
+<blockquote>
+<p><strong>Side Note</strong> you may have noticed the %&gt;% expression, this is known as the forward pipe operator and allows you to chain together commands (rather like the <code>+</code> we covered in Chapter 2 when using <code>ggplot</code>). This is a very simple use of it but it is piping your data frame forward to the rename function.</p>
+</blockquote>
+<p>Hopefully the column containing your beetle IDs is now labeled <code>beetle_id</code>. Use the same set of commands to rename your variables for beetle wing case size and parasite load. Call the variables <code>wing_case_size</code> and <code>parasite_burden</code> instead.</p>
+<p>Now we can merge our two data frames.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="data-frames.html#cb30-1" tabindex="-1"></a><span class="co"># Merge data frames</span></span>
+<span id="cb30-2"><a href="data-frames.html#cb30-2" tabindex="-1"></a>tribolium_combo <span class="ot">&lt;-</span> <span class="fu">merge</span>(tribolium, tribolium_extras, <span class="at">by =</span> <span class="st">&quot;beetle_id&quot;</span>)</span>
+<span id="cb30-3"><a href="data-frames.html#cb30-3" tabindex="-1"></a><span class="co"># This merge function combines both of your data frames but matches rows by beetle_id</span></span></code></pre></div>
+<p>Take a look at your new data frame now with the <code>head()</code> function, and lets try one more command to do one last check on your data. Try this;</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="data-frames.html#cb31-1" tabindex="-1"></a><span class="fu">glimpse</span>(tribolium_combo)</span></code></pre></div>
+<p>This command will show you something like this;</p>
+<pre><code>&gt;glimpse(tribolium_combo)
+Rows: 20
+Columns: 5
+$ beetle_id       &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17…
+$ wing_case_size  &lt;dbl&gt; 2.4, 2.2, 2.5, 2.3, 2.3, 2.6, 2.6, 2.3, 2.4, 2.4, 2.3, 2.…
+$ parasite_burden &lt;dbl&gt; 15, 15, 19, 13, 12, 19, 22, 10, 14, 16, 11, 8, 15, 9, 14,…
+$ sex             &lt;chr&gt; &quot;F&quot;, &quot;F&quot;, &quot;F&quot;, &quot;F&quot;, &quot;F&quot;, &quot;M&quot;, &quot;M&quot;, &quot;M&quot;, &quot;M&quot;, &quot;M&quot;, &quot;F&quot;, &quot;F…
+$ treatment       &lt;dbl&gt; 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 30, 30, 30, 30, 3…</code></pre>
+<p>Once again we can see that four of our variables have been interpreted by R as being <code>&lt;dbl&gt;</code> vectors, R has identified them as being numeric. One of our variables has been identified as being a <code>&lt;chr&gt;</code> (short for character) vector, so R knows that this variable contains letters or words.</p>
+<p>You may now wish to export your new combined data frame as a <code>.csv</code> file. You can do this by running the following command;</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="data-frames.html#cb33-1" tabindex="-1"></a><span class="co"># Save your combined data frame as a .csv file (which you could download) to your data folder</span></span>
+<span id="cb33-2"><a href="data-frames.html#cb33-2" tabindex="-1"></a><span class="fu">write.csv</span>(tribolium_combo,<span class="st">&quot;data/tribolium_combo.csv&quot;</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<p>Well done everyone, you have successfully entered your data and uploaded it to posit Cloud as well as making some small adjustments to the data frame and doing a first pass quality check! There are more checks we could have run, and we will revisit this later in the course when we look at some larger data sets. But we will leave this here for now, next week is reading week and the week after we will start looking at checking our data dimensions.</p>
+</div>
+<div id="before-you-leave" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> Before you leave!<a href="data-frames.html#before-you-leave" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Log out of posit Cloud and make sure you save your script!</p>
+</div>
+<div id="references-1" class="section level2 hasAnchor" number="4.8">
+<h2><span class="header-section-number">4.8</span> References<a href="data-frames.html#references-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Firke, Sam. 2021. Janitor: Simple Tools for Examining and Cleaning Dirty Data. <a href="https://github.com/sfirke/janitor" class="uri">https://github.com/sfirke/janitor</a>. <br />
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686" class="uri">https://doi.org/10.21105/joss.01686</a>. <br />
+Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2021. Dplyr: A Grammar of Data Manipulation. <a href="https://CRAN.R-project.org/package=dplyr" class="uri">https://CRAN.R-project.org/package=dplyr</a>. <br />
+Wickham, Hadley, Jim Hester, and Jennifer Bryan. 2021. Readr: Read Rectangular Text Data. <a href="https://CRAN.R-project.org/package=readr" class="uri">https://CRAN.R-project.org/package=readr</a>.</p>
 
 </div>
 </div>
@@ -468,8 +488,8 @@ Figure 2.7: The four panels of an R Studio workspace
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="objects-functions-and-packages---week-3a.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="objects-functions-and-packages---week-3a.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reading-week---week-5a.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -500,7 +520,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-intro_to_R.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-directories_and_dataframes.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Introduction to R and posit Cloud - Week 2A | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
+  <title>Chapter 8 Lost the plot? Some more data visualisations - Week 8A - Workshop 2 | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Introduction to R and posit Cloud - Week 2A | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
+  <meta property="og:title" content="Chapter 8 Lost the plot? Some more data visualisations - Week 8A - Workshop 2 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A brief introduction so some fundamental applications of R in data science" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Introduction to R and posit Cloud - Week 2A | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
+  <meta name="twitter:title" content="Chapter 8 Lost the plot? Some more data visualisations - Week 8A - Workshop 2 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   
   <meta name="twitter:description" content="A brief introduction so some fundamental applications of R in data science" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="objects-functions-and-packages---week-3a.html"/>
+<link rel="prev" href="histogram.html"/>
+<link rel="next" href="pretty-figs-p1.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -335,131 +335,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction-to-r-and-posit-cloud---week-2a" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Introduction to R and posit Cloud - Week 2A<a href="introduction-to-r-and-posit-cloud---week-2a.html#introduction-to-r-and-posit-cloud---week-2a" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>You should aim to complete this chapter in Week 2, Semester 1.</p>
-<div id="what-is-r-and-posit-cloud" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> What is R and posit Cloud?<a href="introduction-to-r-and-posit-cloud---week-2a.html#what-is-r-and-posit-cloud" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>So hopefully you have read through Chapter 1, where R and the posit Cloud interface were introduced in this module. But what really is R and what is the difference between R and posit Cloud?</p>
-<p>Essentially R is a programming language that is commonly used in statistical computing, data handling, data visualisation and data analysis. Posit Cloud is a cloud based interface for a piece of software called RStudio (we wont be using the non cloud based RStudio in this sub-module, so we wont explore this software further here). Posit Cloud uses the R programming language but has a nice user friendly interface and is a great tool for learning how to conduct analysis in R.</p>
-<p>We are using the posit cloud rather then RStudio because it means that no one has to worry about installing extra software on their own computers and everyone will be working with the same software versions. You will all need to create your own free accounts on posit Cloud, but first have a look at the short video below introducing you to the interface.</p>
-<div style="position:relative;height:0;padding-bottom:40%">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3l02OgYYb0I" title="Intro to posit Cloud" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
+<div id="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Lost the plot? Some more data visualisations - Week 8A - Workshop 2<a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#lost-the-plot-some-more-data-visualisations---week-8a---workshop-2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This is our second workshop hopefully you are gaining some confidence with how the underlying functionality of R works. For this workshop we will be building plots to explore possible relationships and differences within the data. Don’t forget to ask for help if you are stuck on any of the material covered so far.</p>
+<div id="boxplot" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Looking at differences<a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#boxplot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As we discussed in the Chapter 4 wing case length is a good proxy for overall beetle size in <em>Tribolium</em>. So we will be comparing beetle wing case length in male and female beetles. Because we are looking for possible differences we know that we probably want to build a box plot. Login to your posit Cloud account and copy over the following chunk of code into your <code>tribolium_parasites.r</code> script. Run it and see what happens.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb39-1" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
+<span id="cb39-2"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb39-2" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
+<span id="cb39-3"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb39-3" tabindex="-1"></a>size_differences_by_sex_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> sex, y wing_case_size)) <span class="sc">+</span> </span>
+<span id="cb39-4"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb39-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="co"># Tell ggplot that you want it to build a boxplot</span></span>
+<span id="cb39-5"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb39-5" tabindex="-1"></a><span class="fu">print</span>(size_differences_by_sex_boxplot) <span class="co"># Print your new figure</span></span></code></pre></div>
+<p>Oh dear… Looks like there may be something wrong with the script…</p>
+<pre><code>geom_boxplot: outlier.colour = NULL, outlier.fill = NULL, outlier.shape = 19, outlier.size = 1.5, outlier.stroke = 0.5, outlier.alpha = NULL, notch = FALSE, notchwidth = 0.5, varwidth = FALSE, na.rm = FALSE, orientation = NA
+stat_boxplot: na.rm = FALSE, orientation = NA
+position_dodge2 </code></pre>
+<p>When you get errors like this it generally means that ggplot is missing something essential from the script. There is a typo in the original script, can you spot it and fix it? Once you have made the figure, take a look at it, do you think that there is a difference in size between male and female beetles? How would you interpret this figure? Make sure you save your box plot to your figures folder, you may need to adjust the sizing variables using the some of the arguments we learned in Chapter <a href="histogram.html#export">7.3</a>.</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb41-1" tabindex="-1"></a><span class="co"># Saving outputs</span></span>
+<span id="cb41-2"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb41-2" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/size_differences_by_sex_boxplot.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
+<span id="cb41-3"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb41-3" tabindex="-1"></a>       <span class="at">plot =</span> size_differences_by_sex_boxplot, <span class="co"># Tell R what to save - in this case your object</span></span>
+<span id="cb41-4"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb41-4" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span></code></pre></div>
+<p>Our other categorical variable is treatment. Using the chunk of code within your script try to write a new chunk to compare the differences between <code>wing_case_size</code> and <code>treatment</code> in our sample of <em>Tribolium</em>.</p>
+<p>Oh dear… R still isn’t happy… You have probably been presented with the following message</p>
+<pre><code>Warning message:
+Continuous x aesthetic -- did you forget aes(group=...)? </code></pre>
+<p>This essentially means that R is expecting a categorical variable (e.g. blue, red, green or as our example is 30 or 35 degrees centigrade) but what it sees is a continuous variable (e.g. 1, 2, 3, 4, 5, 6, 7, 8, 9). This has come about because although our treatment is categorical it is expressed as a numeric and has confused R. Use the <code>glimpse()</code> command to see how R has interpreted the <code>treatment</code> variable. This should confirm that R sees <code>treatment</code> as a double (<code>dbl</code>) vector. We missed this when we were checking our data in Chapter 4, but thankfully it is an easy fix. We want to tell R to treat the variable <code>treatment</code> as a factor (categorical data) and not as continuous data. Try adding this to your script;</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb43-1" tabindex="-1"></a><span class="co"># Instruct R to treat the treatment variable as a factor </span></span>
+<span id="cb43-2"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb43-2" tabindex="-1"></a>tribolium_combo<span class="sc">$</span>treatment <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(tribolium_combo<span class="sc">$</span>treatment) <span class="co"># Note this will edit your data frame</span></span></code></pre></div>
+<p>Now run <code>glimpse()</code> again. Can you spot the difference?</p>
+<p>Try to make your box plot for <code>wing_case_size</code> and <code>treatment</code> again. What does this plot tell you about the data set? Make sure you save it to your <code>figures</code> folder.</p>
+<p>It would be really useful to show both <code>sex</code> and <code>treatment</code> on the x axis so that you can compare between both categorical variables and size. We can do this with a fairly simple addition to our chunk. Add the expression <code>fill = sex</code> to the <code>aes</code> function of your last chunk. This tells R to colour your box plot by sex. You should therefore have 4 boxes. Save this figure under a different name in your <code>figures folder</code>.</p>
+<p>You should have five figures (2 histogram and 3 box plots) saved there now. Look over your box plots, can you see how your interpretation of the data might change depending on which plot you look at? Which plot gives you the most complete picture?</p>
+<p>We will discus this further in lectures. But for now lets have a look at visualising a relationship.</p>
 </div>
-<p>
-<p>Now that you’ve watched the video, create your own Free posit Cloud account <a href="https://login.rstudio.cloud/login?redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Frstudio.cloud%252Flogin%26client_id%3Drstudio-cloud%26response_type%3Dcode%26show_auth%3D0%26show_login%3D1">here</a>.</p>
+<div id="scatter" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Looking at relationships<a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#scatter" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To look for possible relationships we need two continuous variables. In our data set we have <code>wing_case_size</code> and <code>parasite_burden</code>. There are several theories in the field of parasitology that suggest larger organisms tend to harbor more parasites. We can see if this is a relationship that persists in our <em>Tribolium</em>. Copy, complete and run the following chunk. You may notice that x and y axis variables have been left blank, which variable do you think belongs on which axis?</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb44-1" tabindex="-1"></a><span class="co"># Making a scatter plot and saving it in an object</span></span>
+<span id="cb44-2"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb44-2" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
+<span id="cb44-3"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb44-3" tabindex="-1"></a>size_vs_parasites_point <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> , <span class="at">y =</span> )) <span class="sc">+</span> </span>
+<span id="cb44-4"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb44-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="co"># geom_point is ggplots scatter plot</span></span>
+<span id="cb44-5"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#cb44-5" tabindex="-1"></a><span class="fu">print</span>(size_vs_parasites_point)</span></code></pre></div>
+<p>What do you think this plot is showing you? Try adding another function to this chunk, add <code>geom_smooth(method="lm")</code>. This will add a simple regression line to your plot, I suggest you add a suitable comment to that effect to your chunk. Does this new addition to your plot support any initial observations you may have made from the plot? Make sure you save your plot in your <code>figures</code> folder.</p>
+<p>Well done, you have started building two very commonly used plots using R. These plots are functionally sound, but lets be honest, they’re not pretty. A plot should always be pretty. Next week we will start learning how to make plots visually pleasing as well as functional.</p>
 </div>
-<div id="a-warning-on-managing-your-work-flow" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> A warning on managing your work flow<a href="introduction-to-r-and-posit-cloud---week-2a.html#a-warning-on-managing-your-work-flow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Your free posit Cloud account comes with some restrictions which you should be aware of. These are;</p>
-<ul>
-<li>You may have up to 50 projects in total</li>
-<li>You are limited to 25 project hours per month</li>
-<li>You have up to 1GB of RAM and 1 CPU per project</li>
-</ul>
-<p>For the purposes of our work here these restrictions should not be a problem. But I strongly suggest you don’t leave your coursework to the last minute. If you try and pack in a whole semester or years worth or material into a single month, you will exceed those 25 project hours. There are some options of last resort should this happen, you could install RStudio on your desktop for example, or set up an alternative posit cloud account with an alternative email address, but things will get complicated. Lets avoid that where we can! There are some ways you can increase the efficiency of your workspace which are documented below in section 2.4.</p>
+<div id="before-you-leave-3" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Before you leave!<a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#before-you-leave-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You should have two histograms from last week (Chapter <a href="histogram.html#histogram">7</a>) along with three boxplots (Chapter <a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#boxplot">8.1</a>) and one scatter plot (Chapter <a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#scatter">8.2</a>) from today saved in your <code>figures</code> folder. Check that they are saved and look as you would expect. Make sure to log out of posit Cloud and make sure you save your script!</p>
 </div>
-<div id="creating-your-first-posit-cloud-project" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Creating your first posit Cloud Project<a href="introduction-to-r-and-posit-cloud---week-2a.html#creating-your-first-posit-cloud-project" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Once you have created an posit Cloud account you should be presented with this window</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
-<img src="figures/posit1.jpg" alt="Screen for when you first login to posit Cloud" width="90%" />
-<p class="caption">
-Figure 2.1: Your workspace in posit Cloud
-</p>
-</div>
-<p>Under <strong>Spaces</strong> go to <strong>Your Workspace</strong> and under <strong>Projects</strong> create a <strong>New Project &gt; New R studio Project</strong>.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
-<img src="figures/posit2.jpg" alt="Screen for creating a new project" width="90%" />
-<p class="caption">
-Figure 2.2: Creating a new project in posit Cloud
-</p>
-</div>
-<p>Lets name this project <code>testing_R</code>, notice that I have no spaces in my project name. Instead of a space I have used an underscore, there are a number of good habits you should try and adopt when project or file naming and not including spaces is one of them, we will go over this in more depth in lectures and later chapters. You can rename your project by clicking on <strong>Untitled Project</strong> at the top of the window, and typing in your new project name.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
-<img src="figures/posit3.jpg" alt="Screen for renaming your project" width="90%" />
-<p class="caption">
-Figure 2.3: Renaming your project
-</p>
-</div>
-<p>You will see that your new project has three panels with tabs showing the Console, Environment and Files for your project.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
-<img src="figures/posit4.jpg" alt="Screen for your r studio workspace" width="90%" />
-<p class="caption">
-Figure 2.4: The three basic panels of an R Studio workspace
-</p>
-</div>
-</div>
-<div id="maximising-the-efficiency-of-your-workspace" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Maximising the efficiency of your workspace<a href="introduction-to-r-and-posit-cloud---week-2a.html#maximising-the-efficiency-of-your-workspace" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We know we have limited project hours on our free posit Cloud accounts to reduce your resource usage. In your project, go to settings (the cogwheel sign), Resources, and drag all of the sliders down to the minimum setting, apply the changes, this will mean the project has to restart. This will mean that running the project for 1 hour will consume 0.5 project hours. We wont be doing anything particularly computationally intensive so there is no need for RAM of CPUs to be higher.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
-<img src="figures/posit5.jpg" alt="Making your project more efficient" width="90%" />
-<p class="caption">
-Figure 2.5: How to make your project more efficient
-</p>
-</div>
-</div>
-<div id="entering-commands-directly-into-the-consol" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> Entering commands directly into the consol<a href="introduction-to-r-and-posit-cloud---week-2a.html#entering-commands-directly-into-the-consol" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Lets start by playing with some commands in the console. Type or copy and paste the simple calculation (or command) shown below, into the console. Your text should appear next to the <code>&gt;</code> symbol. Press <code>Enter</code> on your keyboard, this will instruct R to run the command.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb1-1" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">9</span></span></code></pre></div>
-<p>The two final lines of your output should look like this:</p>
-<pre><code>&gt; 5 + 9
-[1] 14</code></pre>
-<p>So… your initial command <code>5 + 9</code> is shown after the <code>&gt;</code>, symbol and the resulting output from R is shown after <code>[1]</code>. Don’t worry too much about the syntax of <code>&gt;</code> and <code>[1]</code> here. You can think of <code>&gt;</code> as meaning that R is ready to receive a command and <code>[1]</code> as R telling you that the answer to the first part of your question is here (in this case <code>14</code>).</p>
-<p>Try out some other commands… What happens when you input the following?</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb3-1" tabindex="-1"></a><span class="dv">362</span> <span class="sc">*</span> <span class="dv">12</span></span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb4-1" tabindex="-1"></a><span class="dv">55</span> <span class="sc">/</span> <span class="dv">5</span></span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb5-1" tabindex="-1"></a>(<span class="dv">40</span> <span class="sc">/</span> <span class="dv">990</span>) <span class="sc">*</span> <span class="dv">100</span></span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb6-1" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
-<p>See if you can work out what 30% of 735 is using the R console</p>
-</div>
-<div id="sending-commands-down-to-the-console-from-an-r-script" class="section level2 hasAnchor" number="2.6">
-<h2><span class="header-section-number">2.6</span> Sending commands down to the console from an R script<a href="introduction-to-r-and-posit-cloud---week-2a.html#sending-commands-down-to-the-console-from-an-r-script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>I have already mentioned the <strong>reproducibility</strong> factor as an advantage of using posit Cloud. This is because you can record and run all of your commands from an R script within posit Cloud. This means that you have a written record of your analysis workflow, what you did to your data at which stage, and you can do all of this without altering the original data files! This is super important because it means that if you revisit your work in a few weeks/months/years you can see exactly what you did AND if someone else needs to rerun any of your analysis or use your workflow on some other data, they can!</p>
-<p>So lets go about setting up your new script. You currently have three panels in posit Cloud. If you go to <strong>file &gt; New File &gt; R Script</strong> a new panel will open.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
-<img src="figures/posit6.jpg" alt="creating a new r script" width="90%" />
-<p class="caption">
-Figure 2.6: How to create a new R script
-</p>
-</div>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
-<img src="figures/posit7.jpg" alt="Screen for your r studio workspace" width="90%" />
-<p class="caption">
-Figure 2.7: The four panels of an R Studio workspace
-</p>
-</div>
-<p>This new panel is essentially a text file where you can write your commands into a script and then send them down to the console when you want to run them. Lets have a play. Copy the below into your new R script.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-1" tabindex="-1"></a><span class="dv">362</span> <span class="sc">*</span> <span class="dv">12</span></span>
-<span id="cb7-2"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-2" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-3" tabindex="-1"></a><span class="dv">55</span> <span class="sc">/</span> <span class="dv">5</span></span>
-<span id="cb7-4"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-4" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-5" tabindex="-1"></a>(<span class="dv">40</span> <span class="sc">/</span> <span class="dv">990</span>) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb7-6"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-6" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb7-7" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
-<p>These are all commands you have run before but now if you save your script you will have a text based document with your progress saved. It doesn’t make a huge amount of sense to do this now because these are just a un-associated set of calculations and we are just playing with the interface, but you could if you wanted to.</p>
-<p>Ok, so now we are ready to execute our commands. You can do this with each calculation individually, line by line, or you can run the whole script.</p>
-<p>To run your script line by line, place your cursor on the line you wish to run and you can either;</p>
-<ul>
-<li>Click on the <strong>Run</strong> button on the top right of the script panel</li>
-<li>Press <strong>ctrl + Enter</strong> (or <strong>Command + Enter</strong> on mac)</li>
-</ul>
-<p>Or if you wish to run the entire script you can either;</p>
-<ul>
-<li>Manually highlight the script and click the <strong>Run</strong> button or press <strong>ctrl + Enter</strong> (or <strong>Command + Enter</strong> on mac)</li>
-<li>Press <strong>ctrl + A</strong> (or <strong>Command + A</strong> on mac) and then click the run button or press <strong>ctrl + Enter</strong> (or <strong>Command + Enter</strong> on mac)</li>
-</ul>
-</div>
-<div id="a-note-on-comments" class="section level2 hasAnchor" number="2.7">
-<h2><span class="header-section-number">2.7</span> A note on comments<a href="introduction-to-r-and-posit-cloud---week-2a.html#a-note-on-comments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>When you are writing a script you can leave notes for yourself. This can be extremely useful if you need reminding on what a particular piece of script is doing. This is a good learning tool while you are still learning how to use R, but its also a good habit to get into for later. As you progress with R you will inevitably start constructing quite intricate scripts, leaving good notes on what each part of the script is doing is very useful for you and for anyone else who may later come to use your script. You can leave notes or comments in scripts if you precede them with <code>#</code>. If R sees <code>#</code> it will ignore all text on that line that comes after it. For example, copy and paste the following into your script and try running it line by line.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb8-1" tabindex="-1"></a><span class="co"># Four squared can be calculated with the following command</span></span>
-<span id="cb8-2"><a href="introduction-to-r-and-posit-cloud---week-2a.html#cb8-2" tabindex="-1"></a><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
-<p>In this case I have reminded myself how to calculate 4 squared, everything after the <code>#</code> will be ignored by R when you try to run the line.</p>
-<p>Well Done! You have started writing and running simple code. But R is capable of doing so much more than simple calculations. Next week in Chapter 3 we will explore how we can create objects, and use packages and functions.</p>
+<div id="references-4" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> References<a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#references-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” Journal of Open Source Software 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686" class="uri">https://doi.org/10.21105/joss.01686</a>. <br />
+Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2021. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. <a href="https://CRAN.R-project.org/package=ggplot2" class="uri">https://CRAN.R-project.org/package=ggplot2</a>.</p>
 
 </div>
 </div>
@@ -468,8 +395,8 @@ Figure 2.7: The four panels of an R Studio workspace
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="objects-functions-and-packages---week-3a.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="histogram.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pretty-figs-p1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -500,7 +427,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-intro_to_R.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/07-lost_the_plot.Rmd",
 "text": "Edit"
 },
 "history": {
