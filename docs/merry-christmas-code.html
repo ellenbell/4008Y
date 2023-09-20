@@ -6,11 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 13 Merry Christmas!!! (#code) | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-<<<<<<< HEAD
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
-=======
   <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
->>>>>>> 7c875222307693b9fb69a50ba3edddb75a89628b
 
   <meta property="og:title" content="Chapter 13 Merry Christmas!!! (#code) | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   <meta property="og:type" content="book" />
@@ -27,11 +23,7 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<<<<<<< HEAD
 <meta name="date" content="2023-09-20" />
-=======
-<meta name="date" content="2023-09-19" />
->>>>>>> 7c875222307693b9fb69a50ba3edddb75a89628b
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -131,13 +123,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<<<<<<< HEAD
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-=======
->>>>>>> 7c875222307693b9fb69a50ba3edddb75a89628b
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -358,118 +343,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 <strong>Show me the Tribolium parasites script</strong>
 </summary>
-<<<<<<< HEAD
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="merry-christmas-code.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># An analysis of parasite abundance between male and female tribolium beetles from two thermal treatments (30 and 35 degrees centigrade)</span></span>
-<span id="cb55-2"><a href="merry-christmas-code.html#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Ellen Bell </span></span>
-<span id="cb55-3"><a href="merry-christmas-code.html#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 08/08/2022</span></span>
-<span id="cb55-4"><a href="merry-christmas-code.html#cb55-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-5"><a href="merry-christmas-code.html#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># Loads the tidyverse package</span></span>
-<span id="cb55-6"><a href="merry-christmas-code.html#cb55-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor) <span class="co"># Loads the janitor package</span></span>
-<span id="cb55-7"><a href="merry-christmas-code.html#cb55-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-8"><a href="merry-christmas-code.html#cb55-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the data from the .csv file in the data folder into my project</span></span>
-<span id="cb55-9"><a href="merry-christmas-code.html#cb55-9" aria-hidden="true" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/Tribolium_parasites.csv&quot;</span>) <span class="co">#</span></span>
-<span id="cb55-10"><a href="merry-christmas-code.html#cb55-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-11"><a href="merry-christmas-code.html#cb55-11" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tribolium)</span>
-<span id="cb55-12"><a href="merry-christmas-code.html#cb55-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-13"><a href="merry-christmas-code.html#cb55-13" aria-hidden="true" tabindex="-1"></a><span class="co"># First of all lets create some variables</span></span>
-<span id="cb55-14"><a href="merry-christmas-code.html#cb55-14" aria-hidden="true" tabindex="-1"></a>beetle_id <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>) <span class="co"># Notice that this notation will create of a list of numbers 1 to 20</span></span>
-<span id="cb55-15"><a href="merry-christmas-code.html#cb55-15" aria-hidden="true" tabindex="-1"></a>sex <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>)</span>
-<span id="cb55-16"><a href="merry-christmas-code.html#cb55-16" aria-hidden="true" tabindex="-1"></a>treatment <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>)</span>
-<span id="cb55-17"><a href="merry-christmas-code.html#cb55-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-18"><a href="merry-christmas-code.html#cb55-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Turning variables into a tibble</span></span>
-<span id="cb55-19"><a href="merry-christmas-code.html#cb55-19" aria-hidden="true" tabindex="-1"></a>tribolium_extras <span class="ot">&lt;-</span> <span class="fu">tibble</span>(beetle_id,sex,treatment)</span>
-<span id="cb55-20"><a href="merry-christmas-code.html#cb55-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-21"><a href="merry-christmas-code.html#cb55-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Renaming some variables in your original data set</span></span>
-<span id="cb55-22"><a href="merry-christmas-code.html#cb55-22" aria-hidden="true" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> tribolium <span class="sc">%&gt;%</span></span>
-<span id="cb55-23"><a href="merry-christmas-code.html#cb55-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">beetle_id =</span> beetle_id)</span>
-<span id="cb55-24"><a href="merry-christmas-code.html#cb55-24" aria-hidden="true" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> tribolium <span class="sc">%&gt;%</span></span>
-<span id="cb55-25"><a href="merry-christmas-code.html#cb55-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">wing_case_size =</span> wing_case_size)</span>
-<span id="cb55-26"><a href="merry-christmas-code.html#cb55-26" aria-hidden="true" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> tribolium <span class="sc">%&gt;%</span></span>
-<span id="cb55-27"><a href="merry-christmas-code.html#cb55-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">parasite_burden =</span> parasite_burden)</span>
-<span id="cb55-28"><a href="merry-christmas-code.html#cb55-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-29"><a href="merry-christmas-code.html#cb55-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Check how your data frame now looks</span></span>
-<span id="cb55-30"><a href="merry-christmas-code.html#cb55-30" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tribolium)</span>
-<span id="cb55-31"><a href="merry-christmas-code.html#cb55-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-32"><a href="merry-christmas-code.html#cb55-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge data frames</span></span>
-<span id="cb55-33"><a href="merry-christmas-code.html#cb55-33" aria-hidden="true" tabindex="-1"></a>tribolium_combo <span class="ot">&lt;-</span> <span class="fu">merge</span>(tribolium, tribolium_extras, <span class="at">by =</span> <span class="st">&quot;beetle_id&quot;</span>) <span class="co"># This merge function combines both of your data frames but matches rows by beetle_id</span></span>
-<span id="cb55-34"><a href="merry-christmas-code.html#cb55-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-35"><a href="merry-christmas-code.html#cb55-35" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(tribolium_combo)</span>
-<span id="cb55-36"><a href="merry-christmas-code.html#cb55-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-37"><a href="merry-christmas-code.html#cb55-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Save your combined data frame as a .csv file (which you could download) to your data folder</span></span>
-<span id="cb55-38"><a href="merry-christmas-code.html#cb55-38" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tribolium_combo,<span class="st">&quot;data/tribolium_combo.csv&quot;</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb55-39"><a href="merry-christmas-code.html#cb55-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-40"><a href="merry-christmas-code.html#cb55-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the n_distinct function to count unique/distinct entries in the beetle_id column</span></span>
-<span id="cb55-41"><a href="merry-christmas-code.html#cb55-41" aria-hidden="true" tabindex="-1"></a><span class="fu">n_distinct</span>(tribolium_combo<span class="sc">$</span>beetle_id)</span>
-<span id="cb55-42"><a href="merry-christmas-code.html#cb55-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-43"><a href="merry-christmas-code.html#cb55-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the tabyl function from the janitor package, comment on what it does. </span></span>
-<span id="cb55-44"><a href="merry-christmas-code.html#cb55-44" aria-hidden="true" tabindex="-1"></a><span class="fu">tabyl</span>(tribolium_combo, sex , treatment)</span>
-<span id="cb55-45"><a href="merry-christmas-code.html#cb55-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-46"><a href="merry-christmas-code.html#cb55-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a histogram and saving it in an object</span></span>
-<span id="cb55-47"><a href="merry-christmas-code.html#cb55-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis</span></span>
-<span id="cb55-48"><a href="merry-christmas-code.html#cb55-48" aria-hidden="true" tabindex="-1"></a>size_histogram <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> wing_case_size)) <span class="sc">+</span> </span>
-<span id="cb55-49"><a href="merry-christmas-code.html#cb55-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">6</span>) <span class="co"># Tell ggplot that you want it to build a histogram with 6 equal sized bins</span></span>
-<span id="cb55-50"><a href="merry-christmas-code.html#cb55-50" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_histogram) <span class="co"># Print your new figure</span></span>
-<span id="cb55-51"><a href="merry-christmas-code.html#cb55-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-52"><a href="merry-christmas-code.html#cb55-52" aria-hidden="true" tabindex="-1"></a>parasite_burden_histogram <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> parasite_burden)) <span class="sc">+</span> </span>
-<span id="cb55-53"><a href="merry-christmas-code.html#cb55-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">6</span>) <span class="co"># Tell ggplot that you want it to build a histogram with 6 equal sized bins</span></span>
-<span id="cb55-54"><a href="merry-christmas-code.html#cb55-54" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(parasite_burden_histogram) <span class="co"># Print your new figure</span></span>
-<span id="cb55-55"><a href="merry-christmas-code.html#cb55-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-56"><a href="merry-christmas-code.html#cb55-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Saving outputs</span></span>
-<span id="cb55-57"><a href="merry-christmas-code.html#cb55-57" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/tribolium_wingcase_size_histogram.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
-<span id="cb55-58"><a href="merry-christmas-code.html#cb55-58" aria-hidden="true" tabindex="-1"></a>       <span class="at">plot =</span> size_histogram, <span class="co"># Tell R what to save - in this case your object</span></span>
-<span id="cb55-59"><a href="merry-christmas-code.html#cb55-59" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span>
-<span id="cb55-60"><a href="merry-christmas-code.html#cb55-60" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/tribolium_parasite_burden_histogram.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
-<span id="cb55-61"><a href="merry-christmas-code.html#cb55-61" aria-hidden="true" tabindex="-1"></a>       <span class="at">plot =</span> parasite_burden_histogram, <span class="co"># Tell R what to save - in this case your object</span></span>
-<span id="cb55-62"><a href="merry-christmas-code.html#cb55-62" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span>
-<span id="cb55-63"><a href="merry-christmas-code.html#cb55-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-64"><a href="merry-christmas-code.html#cb55-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
-<span id="cb55-65"><a href="merry-christmas-code.html#cb55-65" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
-<span id="cb55-66"><a href="merry-christmas-code.html#cb55-66" aria-hidden="true" tabindex="-1"></a>size_differences_by_sex_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> wing_case_size)) <span class="sc">+</span> </span>
-<span id="cb55-67"><a href="merry-christmas-code.html#cb55-67" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="co"># Tell ggplot that you want it to build a boxplot</span></span>
-<span id="cb55-68"><a href="merry-christmas-code.html#cb55-68" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_differences_by_sex_boxplot) <span class="co"># Print your new figure</span></span>
-<span id="cb55-69"><a href="merry-christmas-code.html#cb55-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-70"><a href="merry-christmas-code.html#cb55-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Saving outputs</span></span>
-<span id="cb55-71"><a href="merry-christmas-code.html#cb55-71" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/size_differences_by_sex_boxplot.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
-<span id="cb55-72"><a href="merry-christmas-code.html#cb55-72" aria-hidden="true" tabindex="-1"></a>       <span class="at">plot =</span> size_differences_by_sex_boxplot, <span class="co"># Tell R what to save - in this case your object</span></span>
-<span id="cb55-73"><a href="merry-christmas-code.html#cb55-73" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span>
-<span id="cb55-74"><a href="merry-christmas-code.html#cb55-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-75"><a href="merry-christmas-code.html#cb55-75" aria-hidden="true" tabindex="-1"></a><span class="co"># Instruct R to treat the treatment variable as a factor </span></span>
-<span id="cb55-76"><a href="merry-christmas-code.html#cb55-76" aria-hidden="true" tabindex="-1"></a>tribolium_combo<span class="sc">$</span>treatment <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(tribolium_combo<span class="sc">$</span>treatment) <span class="co"># Note this will edit your data frame</span></span>
-<span id="cb55-77"><a href="merry-christmas-code.html#cb55-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-78"><a href="merry-christmas-code.html#cb55-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
-<span id="cb55-79"><a href="merry-christmas-code.html#cb55-79" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
-<span id="cb55-80"><a href="merry-christmas-code.html#cb55-80" aria-hidden="true" tabindex="-1"></a>size_differences_by_treatment_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> wing_case_size)) <span class="sc">+</span> </span>
-<span id="cb55-81"><a href="merry-christmas-code.html#cb55-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="co"># Tell ggplot that you want it to build a boxplot</span></span>
-<span id="cb55-82"><a href="merry-christmas-code.html#cb55-82" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_differences_by_treatment_boxplot) <span class="co"># Print your new figure</span></span>
-<span id="cb55-83"><a href="merry-christmas-code.html#cb55-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-84"><a href="merry-christmas-code.html#cb55-84" aria-hidden="true" tabindex="-1"></a><span class="co"># Saving outputs</span></span>
-<span id="cb55-85"><a href="merry-christmas-code.html#cb55-85" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/size_differences_by_treatment_boxplot.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
-<span id="cb55-86"><a href="merry-christmas-code.html#cb55-86" aria-hidden="true" tabindex="-1"></a>       <span class="at">plot =</span> size_differences_by_treatment_boxplot, <span class="co"># Tell R what to save - in this case your object</span></span>
-<span id="cb55-87"><a href="merry-christmas-code.html#cb55-87" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span>
-<span id="cb55-88"><a href="merry-christmas-code.html#cb55-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-89"><a href="merry-christmas-code.html#cb55-89" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
-<span id="cb55-90"><a href="merry-christmas-code.html#cb55-90" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
-<span id="cb55-91"><a href="merry-christmas-code.html#cb55-91" aria-hidden="true" tabindex="-1"></a>size_differences_by_treatment_and_sex_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> wing_case_size, <span class="at">fill =</span> sex)) <span class="sc">+</span> </span>
-<span id="cb55-92"><a href="merry-christmas-code.html#cb55-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="co"># Tell ggplot that you want it to build a boxplot</span></span>
-<span id="cb55-93"><a href="merry-christmas-code.html#cb55-93" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_differences_by_treatment_and_sex_boxplot) <span class="co"># Print your new figure</span></span>
-<span id="cb55-94"><a href="merry-christmas-code.html#cb55-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-95"><a href="merry-christmas-code.html#cb55-95" aria-hidden="true" tabindex="-1"></a><span class="co"># Saving outputs</span></span>
-<span id="cb55-96"><a href="merry-christmas-code.html#cb55-96" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/size_differences_by_treatment_and_sex_boxplot.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
-<span id="cb55-97"><a href="merry-christmas-code.html#cb55-97" aria-hidden="true" tabindex="-1"></a>       <span class="at">plot =</span> size_differences_by_treatment_and_sex_boxplot, <span class="co"># Tell R what to save - in this case your object</span></span>
-<span id="cb55-98"><a href="merry-christmas-code.html#cb55-98" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span>
-<span id="cb55-99"><a href="merry-christmas-code.html#cb55-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-100"><a href="merry-christmas-code.html#cb55-100" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a scatter plot and saving it in an object</span></span>
-<span id="cb55-101"><a href="merry-christmas-code.html#cb55-101" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
-<span id="cb55-102"><a href="merry-christmas-code.html#cb55-102" aria-hidden="true" tabindex="-1"></a>size_vs_parasites_point <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> wing_case_size , <span class="at">y =</span> parasite_burden )) <span class="sc">+</span> </span>
-<span id="cb55-103"><a href="merry-christmas-code.html#cb55-103" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co"># geom_point is ggplots scatter plot</span></span>
-<span id="cb55-104"><a href="merry-christmas-code.html#cb55-104" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>)</span>
-<span id="cb55-105"><a href="merry-christmas-code.html#cb55-105" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_vs_parasites_point)</span>
-<span id="cb55-106"><a href="merry-christmas-code.html#cb55-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-107"><a href="merry-christmas-code.html#cb55-107" aria-hidden="true" tabindex="-1"></a><span class="co"># Saving outputs</span></span>
-<span id="cb55-108"><a href="merry-christmas-code.html#cb55-108" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/size_vs_parsite_point.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
-<span id="cb55-109"><a href="merry-christmas-code.html#cb55-109" aria-hidden="true" tabindex="-1"></a>       <span class="at">plot =</span> size_vs_parasites_point, <span class="co"># Tell R what to save - in this case your object</span></span>
-<span id="cb55-110"><a href="merry-christmas-code.html#cb55-110" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span></code></pre></div>
-=======
 <div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="merry-christmas-code.html#cb55-1" tabindex="-1"></a><span class="co"># An analysis of parasite abundance between male and female tribolium beetles from two thermal treatments (30 and 35 degrees centigrade)</span></span>
 <span id="cb55-2"><a href="merry-christmas-code.html#cb55-2" tabindex="-1"></a><span class="co"># Ellen Bell </span></span>
 <span id="cb55-3"><a href="merry-christmas-code.html#cb55-3" tabindex="-1"></a><span class="co"># 08/08/2022</span></span>
@@ -580,43 +453,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb55-108"><a href="merry-christmas-code.html#cb55-108" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/size_vs_parsite_point.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
 <span id="cb55-109"><a href="merry-christmas-code.html#cb55-109" tabindex="-1"></a>       <span class="at">plot =</span> size_vs_parasites_point, <span class="co"># Tell R what to save - in this case your object</span></span>
 <span id="cb55-110"><a href="merry-christmas-code.html#cb55-110" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span></code></pre></div>
->>>>>>> 7c875222307693b9fb69a50ba3edddb75a89628b
 </details>
 <details>
 <summary>
 <strong>Show me the ggplot fundamentals script</strong>
 </summary>
-<<<<<<< HEAD
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="merry-christmas-code.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot fundamentals  </span></span>
-<span id="cb56-2"><a href="merry-christmas-code.html#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Ellen Bell </span></span>
-<span id="cb56-3"><a href="merry-christmas-code.html#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 08/08/2022</span></span>
-<span id="cb56-4"><a href="merry-christmas-code.html#cb56-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-5"><a href="merry-christmas-code.html#cb56-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean up your environment</span></span>
-<span id="cb56-6"><a href="merry-christmas-code.html#cb56-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
-<span id="cb56-7"><a href="merry-christmas-code.html#cb56-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-8"><a href="merry-christmas-code.html#cb56-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Reload your tribolium_combo data frame</span></span>
-<span id="cb56-9"><a href="merry-christmas-code.html#cb56-9" aria-hidden="true" tabindex="-1"></a>tribolium_combo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/tribolium_combo.csv&quot;</span>)</span>
-<span id="cb56-10"><a href="merry-christmas-code.html#cb56-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-11"><a href="merry-christmas-code.html#cb56-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Instruct R to treat the treatment variable as a factor </span></span>
-<span id="cb56-12"><a href="merry-christmas-code.html#cb56-12" aria-hidden="true" tabindex="-1"></a>tribolium_combo<span class="sc">$</span>treatment <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(tribolium_combo<span class="sc">$</span>treatment) <span class="co"># Note this will edit your data frame</span></span>
-<span id="cb56-13"><a href="merry-christmas-code.html#cb56-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-14"><a href="merry-christmas-code.html#cb56-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
-<span id="cb56-15"><a href="merry-christmas-code.html#cb56-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
-<span id="cb56-16"><a href="merry-christmas-code.html#cb56-16" aria-hidden="true" tabindex="-1"></a>size_differences_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo, <span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> wing_case_size)) <span class="sc">+</span> </span>
-<span id="cb56-17"><a href="merry-christmas-code.html#cb56-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> treatment), <span class="at">width =</span> <span class="fl">0.9</span>) <span class="sc">+</span> <span class="co"># Tell ggplot that you want it to build a boxplot</span></span>
-<span id="cb56-18"><a href="merry-christmas-code.html#cb56-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Sex&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Wing case size (mm)</span><span class="sc">\n</span><span class="st">&quot;</span>) <span class="sc">+</span> <span class="co"># Adjust your x and y axis labels </span></span>
-<span id="cb56-19"><a href="merry-christmas-code.html#cb56-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Female&quot;</span>,<span class="st">&quot;Male&quot;</span>)) <span class="sc">+</span> <span class="co"># Rename the categories on the x axis </span></span>
-<span id="cb56-20"><a href="merry-christmas-code.html#cb56-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;30°C&quot;</span>, <span class="st">&quot;35°C&quot;</span>), <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;cornflowerblue&quot;</span>, <span class="st">&quot;coral&quot;</span>)) <span class="sc">+</span> <span class="co"># Rename your treatments</span></span>
-<span id="cb56-21"><a href="merry-christmas-code.html#cb56-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb56-22"><a href="merry-christmas-code.html#cb56-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color=</span><span class="st">&quot;black&quot;</span>), <span class="co"># Specifies that the plot boarder is coloured black</span></span>
-<span id="cb56-23"><a href="merry-christmas-code.html#cb56-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(), <span class="co"># Removes minor grid lines </span></span>
-<span id="cb56-24"><a href="merry-christmas-code.html#cb56-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(), <span class="co"># Removes major grid lines </span></span>
-<span id="cb56-25"><a href="merry-christmas-code.html#cb56-25" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>), <span class="co"># Changes the size of text on both axis </span></span>
-<span id="cb56-26"><a href="merry-christmas-code.html#cb56-26" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>), <span class="co"># Changes size of your axis labels </span></span>
-<span id="cb56-27"><a href="merry-christmas-code.html#cb56-27" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>), <span class="co"># Changes the size of text within your legend</span></span>
-<span id="cb56-28"><a href="merry-christmas-code.html#cb56-28" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>)) <span class="co"># Changes the size of the legend title  </span></span>
-<span id="cb56-29"><a href="merry-christmas-code.html#cb56-29" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_differences_boxplot) <span class="co"># Print the object your plot is stored in to view it</span></span></code></pre></div>
-=======
 <div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="merry-christmas-code.html#cb56-1" tabindex="-1"></a><span class="co"># ggplot fundamentals  </span></span>
 <span id="cb56-2"><a href="merry-christmas-code.html#cb56-2" tabindex="-1"></a><span class="co"># Ellen Bell </span></span>
 <span id="cb56-3"><a href="merry-christmas-code.html#cb56-3" tabindex="-1"></a><span class="co"># 08/08/2022</span></span>
@@ -646,106 +487,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb56-27"><a href="merry-christmas-code.html#cb56-27" tabindex="-1"></a>        <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>), <span class="co"># Changes the size of text within your legend</span></span>
 <span id="cb56-28"><a href="merry-christmas-code.html#cb56-28" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>)) <span class="co"># Changes the size of the legend title  </span></span>
 <span id="cb56-29"><a href="merry-christmas-code.html#cb56-29" tabindex="-1"></a><span class="fu">print</span>(size_differences_boxplot) <span class="co"># Print the object your plot is stored in to view it</span></span></code></pre></div>
->>>>>>> 7c875222307693b9fb69a50ba3edddb75a89628b
 </details>
 <details>
 <summary>
 <strong>Show me some examples of scripts for pretty figures</strong>
 </summary>
-<<<<<<< HEAD
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="merry-christmas-code.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pretty figure examples </span></span>
-<span id="cb57-2"><a href="merry-christmas-code.html#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Ellen Bell </span></span>
-<span id="cb57-3"><a href="merry-christmas-code.html#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 08/08/2022</span></span>
-<span id="cb57-4"><a href="merry-christmas-code.html#cb57-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-5"><a href="merry-christmas-code.html#cb57-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean up your environment</span></span>
-<span id="cb57-6"><a href="merry-christmas-code.html#cb57-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
-<span id="cb57-7"><a href="merry-christmas-code.html#cb57-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-8"><a href="merry-christmas-code.html#cb57-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Reload your tribolium_combo data frame</span></span>
-<span id="cb57-9"><a href="merry-christmas-code.html#cb57-9" aria-hidden="true" tabindex="-1"></a>tribolium_combo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/tribolium_combo.csv&quot;</span>)</span>
-<span id="cb57-10"><a href="merry-christmas-code.html#cb57-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-11"><a href="merry-christmas-code.html#cb57-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Instruct R to treat the treatment variable as a factor </span></span>
-<span id="cb57-12"><a href="merry-christmas-code.html#cb57-12" aria-hidden="true" tabindex="-1"></a>tribolium_combo<span class="sc">$</span>treatment <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(tribolium_combo<span class="sc">$</span>treatment) <span class="co"># Note this will edit your data frame</span></span>
-<span id="cb57-13"><a href="merry-christmas-code.html#cb57-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-14"><a href="merry-christmas-code.html#cb57-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Make a pretty histogram </span></span>
-<span id="cb57-15"><a href="merry-christmas-code.html#cb57-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-16"><a href="merry-christmas-code.html#cb57-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a histogram and saving it in an object</span></span>
-<span id="cb57-17"><a href="merry-christmas-code.html#cb57-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis</span></span>
-<span id="cb57-18"><a href="merry-christmas-code.html#cb57-18" aria-hidden="true" tabindex="-1"></a>size_histogram <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> wing_case_size)) <span class="sc">+</span> </span>
-<span id="cb57-19"><a href="merry-christmas-code.html#cb57-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">6</span>, <span class="at">fill=</span><span class="st">&quot;cornflowerblue&quot;</span>, <span class="at">color=</span><span class="st">&quot;cornflowerblue&quot;</span>) <span class="sc">+</span> <span class="co"># Tell ggplot that you want it to build a histogram with 6 equal sized bins</span></span>
-<span id="cb57-20"><a href="merry-christmas-code.html#cb57-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">Wing Case Size (mm)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Frequency</span><span class="sc">\n</span><span class="st">&quot;</span>) <span class="sc">+</span> <span class="co"># Adjust your x and y axis labels </span></span>
-<span id="cb57-21"><a href="merry-christmas-code.html#cb57-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb57-22"><a href="merry-christmas-code.html#cb57-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color=</span><span class="st">&quot;black&quot;</span>), <span class="co"># Specifies that the plot boarder is coloured black</span></span>
-<span id="cb57-23"><a href="merry-christmas-code.html#cb57-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(), <span class="co"># Removes minor grid lines </span></span>
-<span id="cb57-24"><a href="merry-christmas-code.html#cb57-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(), <span class="co"># Removes major grid lines </span></span>
-<span id="cb57-25"><a href="merry-christmas-code.html#cb57-25" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>), <span class="co"># Changes the size of text on both axis </span></span>
-<span id="cb57-26"><a href="merry-christmas-code.html#cb57-26" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>), <span class="co"># Changes size of your axis labels </span></span>
-<span id="cb57-27"><a href="merry-christmas-code.html#cb57-27" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>), <span class="co"># Changes the size of text within your legend</span></span>
-<span id="cb57-28"><a href="merry-christmas-code.html#cb57-28" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>)) <span class="co"># Changes the size of the legend title  </span></span>
-<span id="cb57-29"><a href="merry-christmas-code.html#cb57-29" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_histogram) <span class="co"># Print your new figure</span></span>
-<span id="cb57-30"><a href="merry-christmas-code.html#cb57-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-31"><a href="merry-christmas-code.html#cb57-31" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/pretty_size_histogram.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
-<span id="cb57-32"><a href="merry-christmas-code.html#cb57-32" aria-hidden="true" tabindex="-1"></a>       <span class="at">plot =</span> size_histogram, <span class="co"># Tell R what to save - in this case your object</span></span>
-<span id="cb57-33"><a href="merry-christmas-code.html#cb57-33" aria-hidden="true" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">15</span>, <span class="co"># Set .pdf width</span></span>
-<span id="cb57-34"><a href="merry-christmas-code.html#cb57-34" aria-hidden="true" tabindex="-1"></a>       <span class="at">height =</span> <span class="dv">10</span>, <span class="co"># Set .pdf height</span></span>
-<span id="cb57-35"><a href="merry-christmas-code.html#cb57-35" aria-hidden="true" tabindex="-1"></a>       <span class="at">units =</span> <span class="st">&quot;cm&quot;</span>, <span class="co"># Specify units for .pdf width and height</span></span>
-<span id="cb57-36"><a href="merry-christmas-code.html#cb57-36" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span>
-<span id="cb57-37"><a href="merry-christmas-code.html#cb57-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Note, use trial and error to select a good width and height for your figure</span></span>
-<span id="cb57-38"><a href="merry-christmas-code.html#cb57-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-39"><a href="merry-christmas-code.html#cb57-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Make a pretty boxplot</span></span>
-<span id="cb57-40"><a href="merry-christmas-code.html#cb57-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-41"><a href="merry-christmas-code.html#cb57-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
-<span id="cb57-42"><a href="merry-christmas-code.html#cb57-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
-<span id="cb57-43"><a href="merry-christmas-code.html#cb57-43" aria-hidden="true" tabindex="-1"></a>size_differences_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo, <span class="fu">aes</span>(<span class="at">x =</span> treatment, <span class="at">y =</span> wing_case_size)) <span class="sc">+</span> </span>
-<span id="cb57-44"><a href="merry-christmas-code.html#cb57-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> sex), <span class="at">width =</span> <span class="fl">0.9</span>) <span class="sc">+</span> <span class="co"># Tell ggplot that you want it to build a boxplot</span></span>
-<span id="cb57-45"><a href="merry-christmas-code.html#cb57-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">Treatment&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Wing case size (mm)</span><span class="sc">\n</span><span class="st">&quot;</span>) <span class="sc">+</span> <span class="co"># Adjust your x and y axis labels </span></span>
-<span id="cb57-46"><a href="merry-christmas-code.html#cb57-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;30°C&quot;</span>, <span class="st">&quot;35°C&quot;</span>)) <span class="sc">+</span> <span class="co"># Rename the categories on the x axis </span></span>
-<span id="cb57-47"><a href="merry-christmas-code.html#cb57-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">name =</span> <span class="st">&quot;Sex&quot;</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Female&quot;</span>,<span class="st">&quot;Male&quot;</span>), <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;cornflowerblue&quot;</span>, <span class="st">&quot;coral&quot;</span>)) <span class="sc">+</span> <span class="co"># Rename your treatments</span></span>
-<span id="cb57-48"><a href="merry-christmas-code.html#cb57-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb57-49"><a href="merry-christmas-code.html#cb57-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color=</span><span class="st">&quot;black&quot;</span>), <span class="co"># Specifies that the plot boarder is coloured black</span></span>
-<span id="cb57-50"><a href="merry-christmas-code.html#cb57-50" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(), <span class="co"># Removes minor grid lines </span></span>
-<span id="cb57-51"><a href="merry-christmas-code.html#cb57-51" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(), <span class="co"># Removes major grid lines </span></span>
-<span id="cb57-52"><a href="merry-christmas-code.html#cb57-52" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>), <span class="co"># Changes the size of text on both axis </span></span>
-<span id="cb57-53"><a href="merry-christmas-code.html#cb57-53" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>), <span class="co"># Changes size of your axis labels </span></span>
-<span id="cb57-54"><a href="merry-christmas-code.html#cb57-54" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>), <span class="co"># Changes the size of text within your legend</span></span>
-<span id="cb57-55"><a href="merry-christmas-code.html#cb57-55" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>)) <span class="co"># Changes the size of the legend title  </span></span>
-<span id="cb57-56"><a href="merry-christmas-code.html#cb57-56" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_differences_boxplot) <span class="co"># Print the object your plot is stored in to view it</span></span>
-<span id="cb57-57"><a href="merry-christmas-code.html#cb57-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-58"><a href="merry-christmas-code.html#cb57-58" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/pretty_tribolium_wingcase_size_boxplot.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
-<span id="cb57-59"><a href="merry-christmas-code.html#cb57-59" aria-hidden="true" tabindex="-1"></a>       <span class="at">plot =</span> size_differences_boxplot, <span class="co"># Tell R what to save - in this case your object</span></span>
-<span id="cb57-60"><a href="merry-christmas-code.html#cb57-60" aria-hidden="true" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">15</span>, <span class="co"># Set .pdf width</span></span>
-<span id="cb57-61"><a href="merry-christmas-code.html#cb57-61" aria-hidden="true" tabindex="-1"></a>       <span class="at">height =</span> <span class="dv">10</span>, <span class="co"># Set .pdf height</span></span>
-<span id="cb57-62"><a href="merry-christmas-code.html#cb57-62" aria-hidden="true" tabindex="-1"></a>       <span class="at">units =</span> <span class="st">&quot;cm&quot;</span>, <span class="co"># Specify units for .pdf width and height</span></span>
-<span id="cb57-63"><a href="merry-christmas-code.html#cb57-63" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span>
-<span id="cb57-64"><a href="merry-christmas-code.html#cb57-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Note, use trial and error to select a good width and height for your figure</span></span>
-<span id="cb57-65"><a href="merry-christmas-code.html#cb57-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-66"><a href="merry-christmas-code.html#cb57-66" aria-hidden="true" tabindex="-1"></a><span class="co"># Make a pretty scatter graph</span></span>
-<span id="cb57-67"><a href="merry-christmas-code.html#cb57-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-68"><a href="merry-christmas-code.html#cb57-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a scatter plot and saving it in an object</span></span>
-<span id="cb57-69"><a href="merry-christmas-code.html#cb57-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
-<span id="cb57-70"><a href="merry-christmas-code.html#cb57-70" aria-hidden="true" tabindex="-1"></a>size_vs_parasites_point <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> wing_case_size , <span class="at">y =</span> parasite_burden )) <span class="sc">+</span> </span>
-<span id="cb57-71"><a href="merry-christmas-code.html#cb57-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">shape =</span> treatment, <span class="at">colour =</span> sex)) <span class="sc">+</span> <span class="co"># geom_point is ggplots scatter plot</span></span>
-<span id="cb57-72"><a href="merry-christmas-code.html#cb57-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;cornflowerblue&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>) <span class="sc">+</span></span>
-<span id="cb57-73"><a href="merry-christmas-code.html#cb57-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;</span><span class="sc">\n</span><span class="st">Wing Case Size (mm)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Parasite Burden</span><span class="sc">\n</span><span class="st">&quot;</span>) <span class="sc">+</span> <span class="co"># Adjust your x and y axis labels </span></span>
-<span id="cb57-74"><a href="merry-christmas-code.html#cb57-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">name =</span> <span class="st">&quot;Sex&quot;</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Male&quot;</span>), <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;deepskyblue3&quot;</span>, <span class="st">&quot;coral&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb57-75"><a href="merry-christmas-code.html#cb57-75" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">name =</span> <span class="st">&quot;Treatment&quot;</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;30°C&quot;</span>, <span class="st">&quot;35°C&quot;</span>), <span class="at">values =</span> <span class="fu">c</span>(<span class="dv">15</span>,<span class="dv">16</span>)) <span class="sc">+</span></span>
-<span id="cb57-76"><a href="merry-christmas-code.html#cb57-76" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb57-77"><a href="merry-christmas-code.html#cb57-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color=</span><span class="st">&quot;black&quot;</span>), <span class="co"># Specifies that the plot boarder is coloured black</span></span>
-<span id="cb57-78"><a href="merry-christmas-code.html#cb57-78" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(), <span class="co"># Removes minor grid lines </span></span>
-<span id="cb57-79"><a href="merry-christmas-code.html#cb57-79" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(), <span class="co"># Removes major grid lines </span></span>
-<span id="cb57-80"><a href="merry-christmas-code.html#cb57-80" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>), <span class="co"># Changes the size of text on both axis </span></span>
-<span id="cb57-81"><a href="merry-christmas-code.html#cb57-81" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>), <span class="co"># Changes size of your axis labels </span></span>
-<span id="cb57-82"><a href="merry-christmas-code.html#cb57-82" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>), <span class="co"># Changes the size of text within your legend</span></span>
-<span id="cb57-83"><a href="merry-christmas-code.html#cb57-83" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>)) <span class="co"># Changes the size of the legend title  </span></span>
-<span id="cb57-84"><a href="merry-christmas-code.html#cb57-84" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_vs_parasites_point)</span>
-<span id="cb57-85"><a href="merry-christmas-code.html#cb57-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-86"><a href="merry-christmas-code.html#cb57-86" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/pretty_tribolium_wingcase_size_parasite_scatter.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
-<span id="cb57-87"><a href="merry-christmas-code.html#cb57-87" aria-hidden="true" tabindex="-1"></a>       <span class="at">plot =</span> size_vs_parasites_point, <span class="co"># Tell R what to save - in this case your object</span></span>
-<span id="cb57-88"><a href="merry-christmas-code.html#cb57-88" aria-hidden="true" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">25</span>, <span class="co"># Set .pdf width</span></span>
-<span id="cb57-89"><a href="merry-christmas-code.html#cb57-89" aria-hidden="true" tabindex="-1"></a>       <span class="at">height =</span> <span class="dv">10</span>, <span class="co"># Set .pdf height</span></span>
-<span id="cb57-90"><a href="merry-christmas-code.html#cb57-90" aria-hidden="true" tabindex="-1"></a>       <span class="at">units =</span> <span class="st">&quot;cm&quot;</span>, <span class="co"># Specify units for .pdf width and height</span></span>
-<span id="cb57-91"><a href="merry-christmas-code.html#cb57-91" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span>
-<span id="cb57-92"><a href="merry-christmas-code.html#cb57-92" aria-hidden="true" tabindex="-1"></a><span class="co"># Note, use trial and error to select a good width and height for your figure</span></span></code></pre></div>
-=======
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="merry-christmas-code.html#cb57-1" tabindex="-1"></a><span class="co"># Pretty figure examples </span></span>
 <span id="cb57-2"><a href="merry-christmas-code.html#cb57-2" tabindex="-1"></a><span class="co"># Ellen Bell </span></span>
 <span id="cb57-3"><a href="merry-christmas-code.html#cb57-3" tabindex="-1"></a><span class="co"># 08/08/2022</span></span>
@@ -838,7 +584,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb57-90"><a href="merry-christmas-code.html#cb57-90" tabindex="-1"></a>       <span class="at">units =</span> <span class="st">&quot;cm&quot;</span>, <span class="co"># Specify units for .pdf width and height</span></span>
 <span id="cb57-91"><a href="merry-christmas-code.html#cb57-91" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span>
 <span id="cb57-92"><a href="merry-christmas-code.html#cb57-92" tabindex="-1"></a><span class="co"># Note, use trial and error to select a good width and height for your figure</span></span></code></pre></div>
->>>>>>> 7c875222307693b9fb69a50ba3edddb75a89628b
 </details>
 
 </div>
@@ -908,11 +653,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-<<<<<<< HEAD
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-=======
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
->>>>>>> 7c875222307693b9fb69a50ba3edddb75a89628b
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

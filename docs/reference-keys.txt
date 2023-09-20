@@ -84,11 +84,7 @@ formative
 task-1
 task-2---script
 task-3---submission
-<<<<<<< HEAD
 code
-=======
-merry-christmas-code
->>>>>>> 7c875222307693b9fb69a50ba3edddb75a89628b
 data-setup
 a-new-project
 project-setup
