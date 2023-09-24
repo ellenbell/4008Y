@@ -53,7 +53,7 @@ theme(panel.border = element_rect(color="black"), # Specifies that the plot boar
 
 Have a play with the different text sizes until you think they are optimal. 
 
-Hopefully you now have a nice clean, clear and aesthetically pleasing plot and have some awareness of the commands and functions used to make it. Next week is our last workshop of the term and we will be applying these rules to all of the plots made in the previous chapters. This will also give you the oppotunity to ask any questions. 
+Hopefully you now have a nice clean, clear and aesthetically pleasing plot and have some awareness of the commands and functions used to make it. Next week is our last workshop of the term and we will be applying these rules to all of the plots made in the previous chapters. This will also give you the opportunity to ask any questions. 
 
 ## Before you leave!
 
