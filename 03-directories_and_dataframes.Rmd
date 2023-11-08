@@ -83,6 +83,8 @@ Right OK, enough theory, lets start setting up your script. Create a new R scrip
 Then we need to load any packages that we might want to use, copy over the following;
 
 ```{r}
+install.packages("tidyverse") # Install tidyverse
+install.packages("janitor") # Install janitor
 library(tidyverse) # Load the tidyverse package
 library(janitor) # Load the janitor package
 ```
