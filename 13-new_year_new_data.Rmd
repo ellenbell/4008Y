@@ -61,7 +61,7 @@ athletes %>%
 ```
 **Note that %>% used here is just another notation for piping, rather like the + that ggplot uses. This means that the output from one function is fed directly into the next function.**
 
-This chunk of code will spit out a long list of TRUE (row is duplicated) or FALSE (row is not duplicated) statements. Again not very human readable, especially if we have a very large data set. Try ammending the code to;
+This chunk of code will spit out a long list of TRUE (row is duplicated) or FALSE (row is not duplicated) statements. Again not very human readable, especially if we have a very large data set. Try amending the code to;
 
 ```{r}
 athletes %>%
