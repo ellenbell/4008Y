@@ -5,19 +5,16 @@
 \documentclass[
 ]{book}
 \usepackage{amsmath,amssymb}
+\usepackage{lmodern}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math} % this also loads fontspec
+  \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-\fi
-\usepackage{lmodern}
-\ifPDFTeX\else
-  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -47,13 +44,13 @@
 \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
 \newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
 \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
 \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
 \newcommand{\BuiltInTok}[1]{#1}
 \newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
 \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
 \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
 \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
@@ -61,7 +58,7 @@
 \newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
 \newcommand{\ExtensionTok}[1]{#1}
 \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\ImportTok}[1]{#1}
 \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
@@ -70,7 +67,7 @@
 \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
 \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
 \newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
@@ -170,7 +167,7 @@
 \fi
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same}
+\urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={Introduction to Data Science - BIO-4008Y/CHE-4602Y},
   pdfauthor={Dr Ellen Bell},
@@ -179,7 +176,7 @@
 
 \title{Introduction to Data Science - BIO-4008Y/CHE-4602Y}
 \author{Dr Ellen Bell}
-\date{2023-11-24}
+\date{2024-02-08}
 
 \begin{document}
 \maketitle
@@ -1862,7 +1859,7 @@ The following variables were measured for each athlete:
   red blood cell count (rcc) in 10\textsuperscript{12}l\textsuperscript{-1}
 \end{itemize}
 
-You can download the new data set \href{https://downgit.github.io/\#/home?url=https://github.com/ellenbell/4008Y/blob/main/data/athletes.csv}{here}. When downloaded you will need to unzip the file, save it somewhere sensible on your computer and then load it in to posit cloud (see \textbf{Chapter 4.4} if you are unsure). If you have trouble downloading the data via the link I have also uploaded it to the Workbook and Data Sets folder in the Data Sciences Learning Module in your Skills module blackboard page, the file is called \texttt{athletes.csv}.
+You can download the new data set \href{https://downgit.github.io/\#/home?url=https://github.com/ellenbell/4008Y/blob/main/data/athletes.csv}{here}. When downloaded you will need to unzip the file, save it somewhere sensible on your computer and then load it in to posit cloud (see Chapter \ref{importing} if you are unsure). If you have trouble downloading the data via the link I have also uploaded it to the Workbook and Data Sets folder in the Data Sciences Learning Module in your Skills module blackboard page, the file is called \texttt{athletes.csv}.
 
 \hypertarget{check-the-data}{%
 \section{Check the data}\label{check-the-data}}
@@ -1991,7 +1988,7 @@ Do we have any missing data?
 \hypertarget{explore-the-data}{%
 \section{Explore the data}\label{explore-the-data}}
 
-We finished last terms workshops by looking at how we can cannibalise code to fit our purposes. We will be spending the first part of todays workshop going over a few of these skills on our shiney new data set! It may be helpful to look through some of the scripts in \textbf{Chapter 12} if you get stuck.
+We finished last terms workshops by looking at how we can cannibalise code to fit our purposes. We will be spending the first part of todays workshop going over a few of these skills on our shiney new data set! It may be helpful to look through some of the scripts in Chapter \ref{code} if you get stuck.
 
 \hypertarget{task-2---look-at-your-data-distributions}{%
 \subsection{Task 2 - Look at your data distributions}\label{task-2---look-at-your-data-distributions}}
@@ -2050,7 +2047,7 @@ How would you describe these two new histograms?
 \hypertarget{task-3---look-for-differences-and-relationships}{%
 \subsection{Task 3 - Look for differences and relationships}\label{task-3---look-for-differences-and-relationships}}
 
-Now that we have a better idea for how our data are distributed we can start to ask some questions of the data set. First of all think, what kind of plot would you build to explore the following questions? We covered this in \textbf{Chapter 7.1}.
+Now that we have a better idea for how our data are distributed we can start to ask some questions of the data set. First of all think, what kind of plot would you build to explore the following questions? We covered this in Chapter \ref{histogram}.
 
 \begin{itemize}
 \tightlist
@@ -2087,6 +2084,14 @@ If you are unsure about any of the logic behind these choices - please ask a dem
 Build a draft plot to explore each of your questions.
 
 For your scatter plots add some code to colour the points by sex and add a regression line using \texttt{geom\_smooth()}.
+
+If you would like to make your axes to be super fancy with full superscript lettering you can incorporate this line of code to describe your axis labels;
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{labs}\NormalTok{(}\AttributeTok{x=}\StringTok{"Weight (kg)}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{, }\AttributeTok{y =} \FunctionTok{expression}\NormalTok{(Red}\SpecialCharTok{\textasciitilde{}}\NormalTok{Blood}\SpecialCharTok{\textasciitilde{}}\NormalTok{Cell}\SpecialCharTok{\textasciitilde{}}\NormalTok{Count}\SpecialCharTok{\textasciitilde{}}\StringTok{" "}\SpecialCharTok{\textasciitilde{}}\DecValTok{10}\SpecialCharTok{\^{}}\NormalTok{\{}\DecValTok{12}\NormalTok{\}}\SpecialCharTok{\textasciitilde{}}\NormalTok{l}\SpecialCharTok{\^{}}\NormalTok{\{}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{\})) }\SpecialCharTok{+}
+\end{Highlighting}
+\end{Shaded}
 
 \begin{quote}
 \textbf{Pitt Stop; pause your analysis and check your interpretation}
@@ -2427,16 +2432,15 @@ Most of these fairly self explanatory and easy to find out. But a key assumption
 You will frequently see statistical models refereed to as parametric or non-parametric. Parametric tests assume that the residuals in your data are normally distributed (we can look at the overall distribution of the data as a reasonable proxy for this) and non-parametric tests do not make this assumption, but are not as statistically powerful as parametric tests (hense why we don't always do a non-parametric test, just to be on the safe side).
 
 \begin{longtable}[]{@{}cc@{}}
-\toprule\noalign{}
+\toprule()
 Parametric & Non-Parametric \\
-\midrule\noalign{}
+\midrule()
 \endhead
-\bottomrule\noalign{}
-\endlastfoot
 General linear model variants & \\
 Independent T-test & Mann-Whitney U \\
 ANOVA & Mann-Whitney U \\
 Pearson's Correlation & Spearman's Rank Correlation \\
+\bottomrule()
 \end{longtable}
 
 \hypertarget{task-4---checking-for-normality}{%
@@ -2653,14 +2657,12 @@ Above I suggested that it may be a good idea to present some of your reported pl
 The results of this chunk can be seen in Figure 13.1. Note that these are rough draft figures and placement, you can play with the ggplot and patchwork parameters to get them to look as you would like, and as would be expected in a written report.
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{figures/multipanel} \caption{Results from the patchwork demonstration chunk}\label{fig:unnamed-chunk-78}
+\includegraphics[width=0.9\linewidth]{figures/multipanel} \caption{Results from the patchwork demonstration chunk}\label{fig:unnamed-chunk-79}
 \end{figure}
 
-\textless\textless\textless\textless\textless\textless\textless{} HEAD
 Have a go at putting some of your report ready plots into a multi-panel figure. Use \texttt{ggsave} to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in Chapter \ref{export}. You can download these pdfs by opening them in browser and clicking the download button in the top right hand corner.
-=======
-Have a go at putting some of your report ready plots into a multi-panel figure. Use \texttt{ggsave} to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in \textbf{Chapter 12}. You can download these pdfs by opening them in browser and clicking the download button in the top right hand corner.
-\textgreater\textgreater\textgreater\textgreater\textgreater\textgreater\textgreater{} 7c875222307693b9fb69a50ba3edddb75a89628b
+
+Have a go at putting some of your report ready plots into a multi-panel figure. Use \texttt{ggsave} to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in Chapter \ref{code}. You can download these pdfs by opening them in browser and clicking the download button in the top right hand corner.
 
 \hypertarget{analysis-writing}{%
 \section{Writing about your analysis}\label{analysis-writing}}
@@ -2781,7 +2783,7 @@ Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takaha
 The data you will be analysing focus' on parasite abundance in \emph{Corydoras} catfish.
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{figures/cory} \caption{*Corydoras araguaiaensis*}\label{fig:unnamed-chunk-79}
+\includegraphics[width=0.9\linewidth]{figures/cory} \caption{*Corydoras araguaiaensis*}\label{fig:unnamed-chunk-80}
 \end{figure}
 
 \emph{Corydoras} catfishes were collected from Brazil and identified. Each fish belonged to one of two species that are very similar in life history but have dramatically different genome sizes. \emph{Corydoras araguaiaensis} is a polyploid species (probable tetraploid), and \emph{Corydoras maculifer} is a diploid species. The two species are müllerian mimics and coexist, sharing a niche, so environmentally they have had very similar experiences.

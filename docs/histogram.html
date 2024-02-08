@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 7 A plot to choose from - Week 7A | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 A plot to choose from - Week 7A | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<meta name="date" content="2023-11-24" />
+<meta name="date" content="2024-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -123,6 +123,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -349,11 +353,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">7.2</span> My first histogram in R<a href="histogram.html#my-first-histogram-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Lets have a go at making a histogram. Log-in to your posit Cloud account and go to your <code>tribolium_parasites</code> project.</p>
 <p>Add the following to your script and run it;</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="histogram.html#cb37-1" tabindex="-1"></a><span class="co"># Making a histogram and saving it in an object</span></span>
-<span id="cb37-2"><a href="histogram.html#cb37-2" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis</span></span>
-<span id="cb37-3"><a href="histogram.html#cb37-3" tabindex="-1"></a>size_histogram <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> wing_case_size)) <span class="sc">+</span> </span>
-<span id="cb37-4"><a href="histogram.html#cb37-4" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">6</span>) <span class="co"># Tell ggplot that you want it to build a histogram with 6 equal sized bins</span></span>
-<span id="cb37-5"><a href="histogram.html#cb37-5" tabindex="-1"></a><span class="fu">print</span>(size_histogram) <span class="co"># Print your new figure</span></span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="histogram.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a histogram and saving it in an object</span></span>
+<span id="cb37-2"><a href="histogram.html#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis</span></span>
+<span id="cb37-3"><a href="histogram.html#cb37-3" aria-hidden="true" tabindex="-1"></a>size_histogram <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> wing_case_size)) <span class="sc">+</span> </span>
+<span id="cb37-4"><a href="histogram.html#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">6</span>) <span class="co"># Tell ggplot that you want it to build a histogram with 6 equal sized bins</span></span>
+<span id="cb37-5"><a href="histogram.html#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_histogram) <span class="co"># Print your new figure</span></span></code></pre></div>
 <p>Your plot should appear in the plot tab in the bottom right panel of posit Cloud.</p>
 <p>A side note on histograms and bins. You may have noticed that we have only specified our x axis variable. This is because R is essentially calculating a frequency for the y axis. How many beetles have a 2.1mm long wing case? How many beetles have a 2.4mm long wing case? This what the y axis is based on. We have asked R to split our x axis variable into 6 equal parts (bins). Have a go at changing the number of bins, what happens to the histogram?</p>
 <p>Now have a go at making a histogram for the <code>parasite_burden</code> variable.</p>
@@ -362,14 +366,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="export" class="section level2 hasAnchor" number="7.3">
 <h2><span class="header-section-number">7.3</span> Exporting your histogram<a href="histogram.html#export" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You are going to want to save your plots, you can use the <code>ggsave</code> function to do this. Try running the code below;</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="histogram.html#cb38-1" tabindex="-1"></a><span class="co"># Saving outputs</span></span>
-<span id="cb38-2"><a href="histogram.html#cb38-2" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/tribolium_wincase_size_histogram.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
-<span id="cb38-3"><a href="histogram.html#cb38-3" tabindex="-1"></a>       <span class="at">plot =</span> size_histogram,<span class="co"># Tell R what to save - in this case your object</span></span>
-<span id="cb38-4"><a href="histogram.html#cb38-4" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">15</span>, <span class="co"># Set .pdf width</span></span>
-<span id="cb38-5"><a href="histogram.html#cb38-5" tabindex="-1"></a>       <span class="at">height =</span> <span class="dv">10</span>, <span class="co"># Set .pdf height</span></span>
-<span id="cb38-6"><a href="histogram.html#cb38-6" tabindex="-1"></a>       <span class="at">units =</span> <span class="st">&quot;cm&quot;</span>, <span class="co"># Specify units for .pdf width and height</span></span>
-<span id="cb38-7"><a href="histogram.html#cb38-7" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span>
-<span id="cb38-8"><a href="histogram.html#cb38-8" tabindex="-1"></a><span class="co"># Note, use trial and error to select a good width and height for your figure</span></span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="histogram.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Saving outputs</span></span>
+<span id="cb38-2"><a href="histogram.html#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/tribolium_wincase_size_histogram.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
+<span id="cb38-3"><a href="histogram.html#cb38-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">plot =</span> size_histogram,<span class="co"># Tell R what to save - in this case your object</span></span>
+<span id="cb38-4"><a href="histogram.html#cb38-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">15</span>, <span class="co"># Set .pdf width</span></span>
+<span id="cb38-5"><a href="histogram.html#cb38-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">height =</span> <span class="dv">10</span>, <span class="co"># Set .pdf height</span></span>
+<span id="cb38-6"><a href="histogram.html#cb38-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">units =</span> <span class="st">&quot;cm&quot;</span>, <span class="co"># Specify units for .pdf width and height</span></span>
+<span id="cb38-7"><a href="histogram.html#cb38-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span>
+<span id="cb38-8"><a href="histogram.html#cb38-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Note, use trial and error to select a good width and height for your figure</span></span></code></pre></div>
 <p>Note that if you remove the <code>device =</code> line <code>ggsave</code> will automatically create a <code>.png</code> file. You can also use <code>width = , height = , units = "cm"</code> arguments to specify the size of your figure in cm. You will need to adjust these by trial and error until the proportional sizing of your plot to axis and legend labels is pleasing. Save both of your histogram outputs in your <code>figures</code> folder.</p>
 </div>
 <div id="before-you-leave-2" class="section level2 hasAnchor" number="7.4">
@@ -449,7 +453,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

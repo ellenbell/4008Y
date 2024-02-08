@@ -9,8 +9,8 @@ fig:unnamed-chunk-25
 fig:unnamed-chunk-27
 fig:unnamed-chunk-50
 fig:unnamed-chunk-52
-fig:unnamed-chunk-78
 fig:unnamed-chunk-79
+fig:unnamed-chunk-80
 welcome-to-the-data-science-workbook
 data-science-learning-objectives
 teaching-layout-for-data-science

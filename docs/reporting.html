@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 16 Reporting your analysis - Workshop 6 - Athletes continued, Week 6B | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 16 Reporting your analysis - Workshop 6 - Athletes continued, Week 6B | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<meta name="date" content="2023-11-24" />
+<meta name="date" content="2024-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -123,6 +123,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -369,38 +373,35 @@ Make each figure that you would include in your report visually pleasing. Use yo
 <div id="task-2---building-your-first-multi-pannel-figure" class="section level3 hasAnchor" number="16.1.2">
 <h3><span class="header-section-number">16.1.2</span> Task 2 - Building your first multi-pannel figure<a href="reporting.html#task-2---building-your-first-multi-pannel-figure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Above I suggested that it may be a good idea to present some of your reported plots in a multi-panel figure. We can make these in R using the package <code>patchwork</code>. See if you can install and load the <code>patchwork</code> package and then take a look at the the chunk below for a demonstration of how it can be used;</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="reporting.html#cb84-1" tabindex="-1"></a><span class="co"># Demonstrating how to use the plot_layout function within the patchwork package to make multi-panel figures</span></span>
-<span id="cb84-2"><a href="reporting.html#cb84-2" tabindex="-1"></a><span class="co"># First, here are some basic plots, you can use your own plots that have been nicely formatted instead, these are just to demonstrate</span></span>
-<span id="cb84-3"><a href="reporting.html#cb84-3" tabindex="-1"></a>weight_box <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> athletes,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> wt)) <span class="sc">+</span> </span>
-<span id="cb84-4"><a href="reporting.html#cb84-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() </span>
-<span id="cb84-5"><a href="reporting.html#cb84-5" tabindex="-1"></a>height_box <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> athletes,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> ht)) <span class="sc">+</span> </span>
-<span id="cb84-6"><a href="reporting.html#cb84-6" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() </span>
-<span id="cb84-7"><a href="reporting.html#cb84-7" tabindex="-1"></a>height_v_weight <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> athletes,<span class="fu">aes</span>(<span class="at">x =</span> ht, <span class="at">y =</span> wt)) <span class="sc">+</span> </span>
-<span id="cb84-8"><a href="reporting.html#cb84-8" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour =</span> sex)) <span class="sc">+</span></span>
-<span id="cb84-9"><a href="reporting.html#cb84-9" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>)</span>
-<span id="cb84-10"><a href="reporting.html#cb84-10" tabindex="-1"></a></span>
-<span id="cb84-11"><a href="reporting.html#cb84-11" tabindex="-1"></a><span class="co"># Now we can use the plot_layout function within the patchwork package to make our multi-panel figure.</span></span>
-<span id="cb84-12"><a href="reporting.html#cb84-12" tabindex="-1"></a><span class="co"># Here I have asked for the height and weight box plots to be on the top row, side by side and the height v weight scatter below.</span></span>
-<span id="cb84-13"><a href="reporting.html#cb84-13" tabindex="-1"></a><span class="co"># You can play with the configuration to suit your tastes, use help(plot_layout) to see some other configurations.</span></span>
-<span id="cb84-14"><a href="reporting.html#cb84-14" tabindex="-1"></a><span class="co"># You may notice that here I have specified the package for the function using &quot;::&quot; e.g. patchwork::plot_layout.</span></span>
-<span id="cb84-15"><a href="reporting.html#cb84-15" tabindex="-1"></a><span class="co"># This is because some functions across multiple packages have shared names, as the do here, so R can become confused, by specifying the package, I am directing R to the specific package which contains the specific function I wish to use. </span></span>
-<span id="cb84-16"><a href="reporting.html#cb84-16" tabindex="-1"></a><span class="co"># The second argument (guides=&#39;collect&#39;) pulls together all the little figure keys you may have and presents them on one place and should remove duplicated information.</span></span>
-<span id="cb84-17"><a href="reporting.html#cb84-17" tabindex="-1"></a><span class="co"># The final argument adds a tag onto each plot within the figure, in this case A, B C, this makes it easier to write about each plot when you construct your figure legend.</span></span>
-<span id="cb84-18"><a href="reporting.html#cb84-18" tabindex="-1"></a>(height_box <span class="sc">|</span> weight_box) <span class="sc">/</span> height_v_weight <span class="sc">+</span> </span>
-<span id="cb84-19"><a href="reporting.html#cb84-19" tabindex="-1"></a>  patchwork<span class="sc">::</span><span class="fu">plot_layout</span>(<span class="at">guides =</span><span class="st">&#39;collect&#39;</span>) <span class="sc">+</span></span>
-<span id="cb84-20"><a href="reporting.html#cb84-20" tabindex="-1"></a>  <span class="fu">plot_annotation</span>(<span class="at">tag_levels =</span> <span class="st">&#39;A&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="reporting.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Demonstrating how to use the plot_layout function within the patchwork package to make multi-panel figures</span></span>
+<span id="cb85-2"><a href="reporting.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="co"># First, here are some basic plots, you can use your own plots that have been nicely formatted instead, these are just to demonstrate</span></span>
+<span id="cb85-3"><a href="reporting.html#cb85-3" aria-hidden="true" tabindex="-1"></a>weight_box <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> athletes,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> wt)) <span class="sc">+</span> </span>
+<span id="cb85-4"><a href="reporting.html#cb85-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() </span>
+<span id="cb85-5"><a href="reporting.html#cb85-5" aria-hidden="true" tabindex="-1"></a>height_box <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> athletes,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> ht)) <span class="sc">+</span> </span>
+<span id="cb85-6"><a href="reporting.html#cb85-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() </span>
+<span id="cb85-7"><a href="reporting.html#cb85-7" aria-hidden="true" tabindex="-1"></a>height_v_weight <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> athletes,<span class="fu">aes</span>(<span class="at">x =</span> ht, <span class="at">y =</span> wt)) <span class="sc">+</span> </span>
+<span id="cb85-8"><a href="reporting.html#cb85-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">colour =</span> sex)) <span class="sc">+</span></span>
+<span id="cb85-9"><a href="reporting.html#cb85-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&quot;lm&quot;</span>)</span>
+<span id="cb85-10"><a href="reporting.html#cb85-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-11"><a href="reporting.html#cb85-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Now we can use the plot_layout function within the patchwork package to make our multi-panel figure.</span></span>
+<span id="cb85-12"><a href="reporting.html#cb85-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Here I have asked for the height and weight box plots to be on the top row, side by side and the height v weight scatter below.</span></span>
+<span id="cb85-13"><a href="reporting.html#cb85-13" aria-hidden="true" tabindex="-1"></a><span class="co"># You can play with the configuration to suit your tastes, use help(plot_layout) to see some other configurations.</span></span>
+<span id="cb85-14"><a href="reporting.html#cb85-14" aria-hidden="true" tabindex="-1"></a><span class="co"># You may notice that here I have specified the package for the function using &quot;::&quot; e.g. patchwork::plot_layout.</span></span>
+<span id="cb85-15"><a href="reporting.html#cb85-15" aria-hidden="true" tabindex="-1"></a><span class="co"># This is because some functions across multiple packages have shared names, as the do here, so R can become confused, by specifying the package, I am directing R to the specific package which contains the specific function I wish to use. </span></span>
+<span id="cb85-16"><a href="reporting.html#cb85-16" aria-hidden="true" tabindex="-1"></a><span class="co"># The second argument (guides=&#39;collect&#39;) pulls together all the little figure keys you may have and presents them on one place and should remove duplicated information.</span></span>
+<span id="cb85-17"><a href="reporting.html#cb85-17" aria-hidden="true" tabindex="-1"></a><span class="co"># The final argument adds a tag onto each plot within the figure, in this case A, B C, this makes it easier to write about each plot when you construct your figure legend.</span></span>
+<span id="cb85-18"><a href="reporting.html#cb85-18" aria-hidden="true" tabindex="-1"></a>(height_box <span class="sc">|</span> weight_box) <span class="sc">/</span> height_v_weight <span class="sc">+</span> </span>
+<span id="cb85-19"><a href="reporting.html#cb85-19" aria-hidden="true" tabindex="-1"></a>  patchwork<span class="sc">::</span><span class="fu">plot_layout</span>(<span class="at">guides =</span><span class="st">&#39;collect&#39;</span>) <span class="sc">+</span></span>
+<span id="cb85-20"><a href="reporting.html#cb85-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_annotation</span>(<span class="at">tag_levels =</span> <span class="st">&#39;A&#39;</span>)</span></code></pre></div>
 <p>The results of this chunk can be seen in Figure 13.1. Note that these are rough draft figures and placement, you can play with the ggplot and patchwork parameters to get them to look as you would like, and as would be expected in a written report.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-78"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-79"></span>
 <img src="figures/multipanel.png" alt="Results from the patchwork demonstration chunk" width="90%" />
 <p class="caption">
 Figure 16.1: Results from the patchwork demonstration chunk
 </p>
 </div>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-Have a go at putting some of your report ready plots into a multi-panel figure. Use <code>ggsave</code> to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in Chapter <a href="histogram.html#export">7.3</a>. You can download these pdfs by opening them in browser and clicking the download button in the top right hand corner.
-=======
-Have a go at putting some of your report ready plots into a multi-panel figure. Use <code>ggsave</code> to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in <strong>Chapter 12</strong>. You can download these pdfs by opening them in browser and clicking the download button in the top right hand corner.
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 7c875222307693b9fb69a50ba3edddb75a89628b</p>
+<p>Have a go at putting some of your report ready plots into a multi-panel figure. Use <code>ggsave</code> to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in Chapter <a href="histogram.html#export">7.3</a>. You can download these pdfs by opening them in browser and clicking the download button in the top right hand corner.</p>
+<p>Have a go at putting some of your report ready plots into a multi-panel figure. Use <code>ggsave</code> to save all of the figures (multi-panel or single-panel). Check your pdf sizes to make sure they are scaled sensibly, you can change the scaling options by looking at the code chunks in Chapter <a href="code.html#code">13</a>. You can download these pdfs by opening them in browser and clicking the download button in the top right hand corner.</p>
 </div>
 </div>
 <div id="analysis-writing" class="section level2 hasAnchor" number="16.2">
@@ -537,7 +538,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

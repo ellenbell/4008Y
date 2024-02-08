@@ -31,7 +31,7 @@ The following variables were measured for each athlete:
 * weight (wt) was recorded in kg
 * red blood cell count (rcc) in 10^12^l^-1^
 
-You can download the new data set [here](https://downgit.github.io/#/home?url=https://github.com/ellenbell/4008Y/blob/main/data/athletes.csv). When downloaded you will need to unzip the file, save it somewhere sensible on your computer and then load it in to posit cloud (see **Chapter 4.4** if you are unsure). If you have trouble downloading the data via the link I have also uploaded it to the Workbook and Data Sets folder in the Data Sciences Learning Module in your Skills module blackboard page, the file is called `athletes.csv`.
+You can download the new data set [here](https://downgit.github.io/#/home?url=https://github.com/ellenbell/4008Y/blob/main/data/athletes.csv). When downloaded you will need to unzip the file, save it somewhere sensible on your computer and then load it in to posit cloud (see Chapter \@ref(importing) if you are unsure). If you have trouble downloading the data via the link I have also uploaded it to the Workbook and Data Sets folder in the Data Sciences Learning Module in your Skills module blackboard page, the file is called `athletes.csv`.
 
 ## Check the data 
 
@@ -108,7 +108,7 @@ Do we have any missing data?
 
 ## Explore the data
 
-We finished last terms workshops by looking at how we can cannibalise code to fit our purposes. We will be spending the first part of todays workshop going over a few of these skills on our shiney new data set! It may be helpful to look through some of the scripts in **Chapter 12** if you get stuck.
+We finished last terms workshops by looking at how we can cannibalise code to fit our purposes. We will be spending the first part of todays workshop going over a few of these skills on our shiney new data set! It may be helpful to look through some of the scripts in Chapter \@ref(code) if you get stuck.
 
 ### Task 2 - Look at your data distributions
 
@@ -152,7 +152,7 @@ Make a similar data frame for female athletes using the above chunk. Then create
 
 ### Task 3 - Look for differences and relationships
 
-Now that we have a better idea for how our data are distributed we can start to ask some questions of the data set. First of all think, what kind of plot would you build to explore the following questions? We covered this in **Chapter 7.1**.
+Now that we have a better idea for how our data are distributed we can start to ask some questions of the data set. First of all think, what kind of plot would you build to explore the following questions? We covered this in Chapter \@ref(histogram).
 
 * Is there a difference between male and female athlete height?
 * Is there a difference between male and female athlete weight?
@@ -175,6 +175,12 @@ If you are unsure about any of the logic behind these choices - please ask a dem
 Build a draft plot to explore each of your questions.
 
 For your scatter plots add some code to colour the points by sex and add a regression line using `geom_smooth()`. 
+
+If you would like to make your axes to be super fancy with full superscript lettering you can incorporate this line of code to describe your axis labels;
+
+```{r}
+labs(x="Weight (kg)\n", y = expression(Red~Blood~Cell~Count~" "~10^{12}~l^{-1})) +
+```
 
 > **Pitt Stop; pause your analysis and check your interpretation**
 > How would you interpret each of these plots? Write down a sentence or two to describe the pattern displayed in each. Then look at the scatter plot that explores the relationhsip between red blood cell count and weight in male and female athletes. What does the regression line indicate? Is there a relationship between weight and red blood cell count or could there be another variable effecting the relationship? Remember we know the red blood cell count data are bimodal, how might this effect what we are seeing?
