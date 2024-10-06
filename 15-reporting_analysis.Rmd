@@ -1,4 +1,4 @@
-# Reporting your analysis - Workshop 6 - Athletes continued, Week 6B {#reporting}
+# Reporting your analysis - Workshop 6 - Athletes continued, Week 6 {#reporting}
 
 This semester we have been working through the complete process of analysing a data set. So we not only do we need to be working on our analytical skills but also thinking about how we report our analyses. Over the last few weeks we have been conducting analysis that will eventually be put into a mock report (to help you prepare for future reports that you may need to produce). So lets begin by thinking about how we might present some of our figures.  
 

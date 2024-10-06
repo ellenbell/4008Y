@@ -1,6 +1,6 @@
-# Exploring the dimensions of your data frame - Week 6A {#dimensions}
+# Exploring the dimensions of your data frame - Week 7 {#dimensions}
 
-You should aim to complete this chapter in Week 6, Semester 1
+You should aim to complete this chapter in Week 7, Semester 1
 
 ## Top to tail - some useful functions to explore
 

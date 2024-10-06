@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Directories and data frames - Week 4A - Workshop 1 | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
+  <title>Chapter 4 Directories and data frames - Week 5 - Workshop 1 | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Directories and data frames - Week 4A - Workshop 1 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
+  <meta property="og:title" content="Chapter 4 Directories and data frames - Week 5 - Workshop 1 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A brief introduction so some fundamental applications of R in data science" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Directories and data frames - Week 4A - Workshop 1 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
+  <meta name="twitter:title" content="Chapter 4 Directories and data frames - Week 5 - Workshop 1 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   
   <meta name="twitter:description" content="A brief introduction so some fundamental applications of R in data science" />
   
@@ -23,15 +23,15 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<meta name="date" content="2024-02-08" />
+<meta name="date" content="2024-10-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="objects-functions-and-packages---week-3a.html"/>
-<link rel="next" href="reading-week---week-5a.html"/>
+<link rel="prev" href="objects-functions-and-packages---week-4.html"/>
+<link rel="next" href="reading-week---week-6.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -60,7 +60,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -123,10 +123,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -152,28 +148,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#how-to-use-this-workbook"><i class="fa fa-check"></i><b>1.4</b> How to use this workbook</a></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#why-is-data-science-important-and-why-are-we-teaching-it-in-r"><i class="fa fa-check"></i><b>1.5</b> Why is data science important and why are we teaching it in R?</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html"><i class="fa fa-check"></i><b>2</b> Introduction to R and posit Cloud - Week 2A</a>
+<li class="chapter" data-level="2" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html"><i class="fa fa-check"></i><b>2</b> Introduction to R and posit Cloud - Week 3</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#what-is-r-and-posit-cloud"><i class="fa fa-check"></i><b>2.1</b> What is R and posit Cloud?</a></li>
-<li class="chapter" data-level="2.2" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#a-warning-on-managing-your-work-flow"><i class="fa fa-check"></i><b>2.2</b> A warning on managing your work flow</a></li>
-<li class="chapter" data-level="2.3" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#creating-your-first-posit-cloud-project"><i class="fa fa-check"></i><b>2.3</b> Creating your first posit Cloud Project</a></li>
-<li class="chapter" data-level="2.4" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#maximising-the-efficiency-of-your-workspace"><i class="fa fa-check"></i><b>2.4</b> Maximising the efficiency of your workspace</a></li>
-<li class="chapter" data-level="2.5" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#entering-commands-directly-into-the-consol"><i class="fa fa-check"></i><b>2.5</b> Entering commands directly into the consol</a></li>
-<li class="chapter" data-level="2.6" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#sending-commands-down-to-the-console-from-an-r-script"><i class="fa fa-check"></i><b>2.6</b> Sending commands down to the console from an R script</a></li>
-<li class="chapter" data-level="2.7" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#a-note-on-comments"><i class="fa fa-check"></i><b>2.7</b> A note on comments</a></li>
+<li class="chapter" data-level="2.1" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html#what-is-r-and-posit-cloud"><i class="fa fa-check"></i><b>2.1</b> What is R and posit Cloud?</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html#a-warning-on-managing-your-work-flow"><i class="fa fa-check"></i><b>2.2</b> A warning on managing your work flow</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html#creating-your-first-posit-cloud-project"><i class="fa fa-check"></i><b>2.3</b> Creating your first posit Cloud Project</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html#maximising-the-efficiency-of-your-workspace"><i class="fa fa-check"></i><b>2.4</b> Maximising the efficiency of your workspace</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html#entering-commands-directly-into-the-consol"><i class="fa fa-check"></i><b>2.5</b> Entering commands directly into the consol</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html#sending-commands-down-to-the-console-from-an-r-script"><i class="fa fa-check"></i><b>2.6</b> Sending commands down to the console from an R script</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html#a-note-on-comments"><i class="fa fa-check"></i><b>2.7</b> A note on comments</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html"><i class="fa fa-check"></i><b>3</b> Objects, Functions and Packages - Week 3A</a>
+<li class="chapter" data-level="3" data-path="objects-functions-and-packages---week-4.html"><a href="objects-functions-and-packages---week-4.html"><i class="fa fa-check"></i><b>3</b> Objects, Functions and Packages - Week 4</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html#creating-objects"><i class="fa fa-check"></i><b>3.1</b> Creating objects</a></li>
-<li class="chapter" data-level="3.2" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html#what-are-functions-and-packages"><i class="fa fa-check"></i><b>3.2</b> What are functions and packages?</a>
+<li class="chapter" data-level="3.1" data-path="objects-functions-and-packages---week-4.html"><a href="objects-functions-and-packages---week-4.html#creating-objects"><i class="fa fa-check"></i><b>3.1</b> Creating objects</a></li>
+<li class="chapter" data-level="3.2" data-path="objects-functions-and-packages---week-4.html"><a href="objects-functions-and-packages---week-4.html#what-are-functions-and-packages"><i class="fa fa-check"></i><b>3.2</b> What are functions and packages?</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html#using-functions"><i class="fa fa-check"></i><b>3.2.1</b> Using functions</a></li>
+<li class="chapter" data-level="3.2.1" data-path="objects-functions-and-packages---week-4.html"><a href="objects-functions-and-packages---week-4.html#using-functions"><i class="fa fa-check"></i><b>3.2.1</b> Using functions</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html#installing-packages"><i class="fa fa-check"></i><b>3.3</b> Installing packages</a></li>
-<li class="chapter" data-level="3.4" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html#what-do-i-do-if-i-get-an-error-message"><i class="fa fa-check"></i><b>3.4</b> What do I do if I get an error message?</a></li>
-<li class="chapter" data-level="3.5" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html#references"><i class="fa fa-check"></i><b>3.5</b> References</a></li>
+<li class="chapter" data-level="3.3" data-path="objects-functions-and-packages---week-4.html"><a href="objects-functions-and-packages---week-4.html#installing-packages"><i class="fa fa-check"></i><b>3.3</b> Installing packages</a></li>
+<li class="chapter" data-level="3.4" data-path="objects-functions-and-packages---week-4.html"><a href="objects-functions-and-packages---week-4.html#what-do-i-do-if-i-get-an-error-message"><i class="fa fa-check"></i><b>3.4</b> What do I do if I get an error message?</a></li>
+<li class="chapter" data-level="3.5" data-path="objects-functions-and-packages---week-4.html"><a href="objects-functions-and-packages---week-4.html#references"><i class="fa fa-check"></i><b>3.5</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>4</b> Directories and data frames - Week 4A - Workshop 1</a>
+<li class="chapter" data-level="4" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>4</b> Directories and data frames - Week 5 - Workshop 1</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="data-frames.html"><a href="data-frames.html#data-entry"><i class="fa fa-check"></i><b>4.1</b> Data Entry</a>
 <ul>
@@ -190,15 +186,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.7" data-path="data-frames.html"><a href="data-frames.html#before-you-leave"><i class="fa fa-check"></i><b>4.7</b> Before you leave!</a></li>
 <li class="chapter" data-level="4.8" data-path="data-frames.html"><a href="data-frames.html#references-1"><i class="fa fa-check"></i><b>4.8</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="reading-week---week-5a.html"><a href="reading-week---week-5a.html"><i class="fa fa-check"></i><b>5</b> Reading week - Week 5A</a></li>
-<li class="chapter" data-level="6" data-path="dimensions.html"><a href="dimensions.html"><i class="fa fa-check"></i><b>6</b> Exploring the dimensions of your data frame - Week 6A</a>
+<li class="chapter" data-level="5" data-path="reading-week---week-6.html"><a href="reading-week---week-6.html"><i class="fa fa-check"></i><b>5</b> Reading week - Week 6</a></li>
+<li class="chapter" data-level="6" data-path="dimensions.html"><a href="dimensions.html"><i class="fa fa-check"></i><b>6</b> Exploring the dimensions of your data frame - Week 7</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="dimensions.html"><a href="dimensions.html#top-to-tail---some-useful-functions-to-explore"><i class="fa fa-check"></i><b>6.1</b> Top to tail - some useful functions to explore</a></li>
 <li class="chapter" data-level="6.2" data-path="dimensions.html"><a href="dimensions.html#whats-your-sample-size"><i class="fa fa-check"></i><b>6.2</b> Whats your sample size?</a></li>
 <li class="chapter" data-level="6.3" data-path="dimensions.html"><a href="dimensions.html#before-you-leave-1"><i class="fa fa-check"></i><b>6.3</b> Before you leave!</a></li>
 <li class="chapter" data-level="6.4" data-path="dimensions.html"><a href="dimensions.html#references-2"><i class="fa fa-check"></i><b>6.4</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="histogram.html"><a href="histogram.html"><i class="fa fa-check"></i><b>7</b> A plot to choose from - Week 7A</a>
+<li class="chapter" data-level="7" data-path="histogram.html"><a href="histogram.html"><i class="fa fa-check"></i><b>7</b> A plot to choose from - Week 8</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="histogram.html"><a href="histogram.html#relationships-differences-and-distributions"><i class="fa fa-check"></i><b>7.1</b> Relationships, differences and distributions</a></li>
 <li class="chapter" data-level="7.2" data-path="histogram.html"><a href="histogram.html#my-first-histogram-in-r"><i class="fa fa-check"></i><b>7.2</b> My first histogram in R</a></li>
@@ -206,14 +202,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.4" data-path="histogram.html"><a href="histogram.html#before-you-leave-2"><i class="fa fa-check"></i><b>7.4</b> Before you leave!</a></li>
 <li class="chapter" data-level="7.5" data-path="histogram.html"><a href="histogram.html#references-3"><i class="fa fa-check"></i><b>7.5</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html"><i class="fa fa-check"></i><b>8</b> Lost the plot? Some more data visualisations - Week 8A - Workshop 2</a>
+<li class="chapter" data-level="8" data-path="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html"><i class="fa fa-check"></i><b>8</b> Lost the plot? Some more data visualisations - Week 9 - Workshop 2</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#boxplot"><i class="fa fa-check"></i><b>8.1</b> Looking at differences</a></li>
-<li class="chapter" data-level="8.2" data-path="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#scatter"><i class="fa fa-check"></i><b>8.2</b> Looking at relationships</a></li>
-<li class="chapter" data-level="8.3" data-path="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#before-you-leave-3"><i class="fa fa-check"></i><b>8.3</b> Before you leave!</a></li>
-<li class="chapter" data-level="8.4" data-path="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#references-4"><i class="fa fa-check"></i><b>8.4</b> References</a></li>
+<li class="chapter" data-level="8.1" data-path="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#boxplot"><i class="fa fa-check"></i><b>8.1</b> Looking at differences</a></li>
+<li class="chapter" data-level="8.2" data-path="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#scatter"><i class="fa fa-check"></i><b>8.2</b> Looking at relationships</a></li>
+<li class="chapter" data-level="8.3" data-path="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#before-you-leave-3"><i class="fa fa-check"></i><b>8.3</b> Before you leave!</a></li>
+<li class="chapter" data-level="8.4" data-path="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#references-4"><i class="fa fa-check"></i><b>8.4</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="pretty-figs-p1.html"><a href="pretty-figs-p1.html"><i class="fa fa-check"></i><b>9</b> Make them pretty - Week 9A</a>
+<li class="chapter" data-level="9" data-path="pretty-figs-p1.html"><a href="pretty-figs-p1.html"><i class="fa fa-check"></i><b>9</b> Make them pretty - Week 10</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="pretty-figs-p1.html"><a href="pretty-figs-p1.html#deconstructing-ggplot"><i class="fa fa-check"></i><b>9.1</b> Deconstructing ggplot</a></li>
 <li class="chapter" data-level="9.2" data-path="pretty-figs-p1.html"><a href="pretty-figs-p1.html#labels"><i class="fa fa-check"></i><b>9.2</b> Labels</a></li>
@@ -221,14 +217,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.4" data-path="pretty-figs-p1.html"><a href="pretty-figs-p1.html#before-you-leave-4"><i class="fa fa-check"></i><b>9.4</b> Before you leave!</a></li>
 <li class="chapter" data-level="9.5" data-path="pretty-figs-p1.html"><a href="pretty-figs-p1.html#references-5"><i class="fa fa-check"></i><b>9.5</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="pretty-figs-p2.html"><a href="pretty-figs-p2.html"><i class="fa fa-check"></i><b>10</b> Make them pretty continued - Week 10A</a>
+<li class="chapter" data-level="10" data-path="pretty-figs-p2.html"><a href="pretty-figs-p2.html"><i class="fa fa-check"></i><b>10</b> Make them pretty continued - Week 11</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="pretty-figs-p2.html"><a href="pretty-figs-p2.html#spacing"><i class="fa fa-check"></i><b>10.1</b> Spacing</a></li>
 <li class="chapter" data-level="10.2" data-path="pretty-figs-p2.html"><a href="pretty-figs-p2.html#themes"><i class="fa fa-check"></i><b>10.2</b> Themes</a></li>
 <li class="chapter" data-level="10.3" data-path="pretty-figs-p2.html"><a href="pretty-figs-p2.html#before-you-leave-5"><i class="fa fa-check"></i><b>10.3</b> Before you leave!</a></li>
 <li class="chapter" data-level="10.4" data-path="pretty-figs-p2.html"><a href="pretty-figs-p2.html#references-6"><i class="fa fa-check"></i><b>10.4</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="cannibalisation.html"><a href="cannibalisation.html"><i class="fa fa-check"></i><b>11</b> The subtle art of cannibalisation - Week 11A - Workshop 3</a>
+<li class="chapter" data-level="11" data-path="cannibalisation.html"><a href="cannibalisation.html"><i class="fa fa-check"></i><b>11</b> The subtle art of cannibalisation - Week 12 - Workshop 3</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="cannibalisation.html"><a href="cannibalisation.html#starting-on-the-right-footing"><i class="fa fa-check"></i><b>11.1</b> Starting on the right footing</a></li>
 <li class="chapter" data-level="11.2" data-path="cannibalisation.html"><a href="cannibalisation.html#beautifying-your-box-plots"><i class="fa fa-check"></i><b>11.2</b> Beautifying your box plots</a></li>
@@ -239,14 +235,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.7" data-path="cannibalisation.html"><a href="cannibalisation.html#before-you-leave-6"><i class="fa fa-check"></i><b>11.7</b> Before you leave!</a></li>
 <li class="chapter" data-level="11.8" data-path="cannibalisation.html"><a href="cannibalisation.html#references-7"><i class="fa fa-check"></i><b>11.8</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="formative.html"><a href="formative.html"><i class="fa fa-check"></i><b>12</b> Formative Assessment - Deadline 08/12/23</a>
+<li class="chapter" data-level="12" data-path="formative.html"><a href="formative.html"><i class="fa fa-check"></i><b>12</b> Formative Assessment - Deadline 13/12/24</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="formative.html"><a href="formative.html#task-1"><i class="fa fa-check"></i><b>12.1</b> Task 1 - Figure and Figure Legend</a></li>
 <li class="chapter" data-level="12.2" data-path="formative.html"><a href="formative.html#task-2---script"><i class="fa fa-check"></i><b>12.2</b> Task 2 - Script</a></li>
 <li class="chapter" data-level="12.3" data-path="formative.html"><a href="formative.html#task-3---submission"><i class="fa fa-check"></i><b>12.3</b> Task 3 - Submission</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="code.html"><a href="code.html"><i class="fa fa-check"></i><b>13</b> Merry Christmas!!!</a></li>
-<li class="chapter" data-level="14" data-path="data-setup.html"><a href="data-setup.html"><i class="fa fa-check"></i><b>14</b> New year, new data - Workshop 4 - Athletes, Week 2B</a>
+<li class="chapter" data-level="14" data-path="data-setup.html"><a href="data-setup.html"><i class="fa fa-check"></i><b>14</b> New year, new data - Workshop 4 - Athletes, Week 2</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="data-setup.html"><a href="data-setup.html#a-new-project"><i class="fa fa-check"></i><b>14.1</b> A new project</a>
 <ul>
@@ -267,7 +263,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="14.5" data-path="data-setup.html"><a href="data-setup.html#before-you-leave-7"><i class="fa fa-check"></i><b>14.5</b> Before you leave!</a></li>
 <li class="chapter" data-level="14.6" data-path="data-setup.html"><a href="data-setup.html#references-8"><i class="fa fa-check"></i><b>14.6</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="stats.html"><a href="stats.html"><i class="fa fa-check"></i><b>15</b> Playing with some statistics - Workshop 5 - Athletes continued, Week 4B</a>
+<li class="chapter" data-level="15" data-path="stats.html"><a href="stats.html"><i class="fa fa-check"></i><b>15</b> Playing with some statistics - Workshop 5 - Athletes continued, Week 4</a>
 <ul>
 <li class="chapter" data-level="15.1" data-path="stats.html"><a href="stats.html#descriptive-statistics"><i class="fa fa-check"></i><b>15.1</b> Descriptive statistics</a>
 <ul>
@@ -288,7 +284,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="15.5" data-path="stats.html"><a href="stats.html#before-you-leave-8"><i class="fa fa-check"></i><b>15.5</b> Before you leave!</a></li>
 <li class="chapter" data-level="15.6" data-path="stats.html"><a href="stats.html#references-9"><i class="fa fa-check"></i><b>15.6</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="reporting.html"><a href="reporting.html"><i class="fa fa-check"></i><b>16</b> Reporting your analysis - Workshop 6 - Athletes continued, Week 6B</a>
+<li class="chapter" data-level="16" data-path="reporting.html"><a href="reporting.html"><i class="fa fa-check"></i><b>16</b> Reporting your analysis - Workshop 6 - Athletes continued, Week 6</a>
 <ul>
 <li class="chapter" data-level="16.1" data-path="reporting.html"><a href="reporting.html#selecting-what-to-report"><i class="fa fa-check"></i><b>16.1</b> Selecting what to report</a>
 <ul>
@@ -337,7 +333,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="data-frames" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Directories and data frames - Week 4A - Workshop 1<a href="data-frames.html#data-frames" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Chapter 4</span> Directories and data frames - Week 5 - Workshop 1<a href="data-frames.html#data-frames" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This week we don’t have any lectures but we do have an in person workshop. The section to complete this week may be a little more chunky than usual, complete what you can during the workshop and then finish it off in your own time. Do make use of the demonstrators if any of the exercises so far haven’t made sense.</p>
 <div id="data-entry" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Data Entry<a href="data-frames.html#data-entry" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -366,8 +362,8 @@ Figure 4.1: Lab notes for wing case size (mm) and parasite burden of 20 <em>Trib
 <h2><span class="header-section-number">4.2</span> Setting up your R workspace<a href="data-frames.html#workspace" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This is a new piece of analysis, we will be carrying forward principals from the previous chapters but scripts and data will be new. So its a good idea to start with a fresh clean workspace. So lets set up a new project in posit Cloud, follow the steps from Chapter 2 if you cant remember how to do this and name this project <code>tribolium_parasites</code>. Its always good to keep a well organised tidy workspace, generally I will start a new project in posit Cloud if I am working on a new series of questions with a new data set or sets.</p>
 <p>For this project you need to make sure two packages are installed. Copy the following directly into your console.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="data-frames.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb21-2"><a href="data-frames.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;janitor&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="data-frames.html#cb21-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb21-2"><a href="data-frames.html#cb21-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;janitor&quot;</span>)</span></code></pre></div>
 <p>We will be moving towards doing some more comprehensive data handling so setting up your workspace is going to become more and more important. If you can get into the habit of setting up your workspace properly at the start of each project you will thank yourself later. A well developed project will contain several files including;</p>
 <ul>
 <li>Input data</li>
@@ -402,20 +398,20 @@ Figure 4.2: Absolute vs Relative Paths
 <div id="script" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Setting up your script<a href="data-frames.html#script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Right OK, enough theory, lets start setting up your script. Create a new R script by clicking on the icon with a little green plus, below File in the top left of the posit Cloud window and select <strong>R Script</strong>. Call your new script <code>tribolium_parasites</code>. Its always good to add a few lines of description at the start of your script, this tells your future self and anyone else what the script is doing. Copy over the following.</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="data-frames.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># An analysis of parasite abundance between male and female tribolium beetles from two thermal treatments (30 and 35 degrees centigrade)</span></span>
-<span id="cb22-2"><a href="data-frames.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Your name</span></span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="data-frames.html#cb22-1" tabindex="-1"></a><span class="co"># An analysis of parasite abundance between male and female tribolium beetles from two thermal treatments (30 and 35 degrees centigrade)</span></span>
+<span id="cb22-2"><a href="data-frames.html#cb22-2" tabindex="-1"></a><span class="co"># Your name</span></span></code></pre></div>
 <p>Then we need to load any packages that we might want to use, copy over the following;</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="data-frames.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>) <span class="co"># Install tidyverse</span></span>
-<span id="cb23-2"><a href="data-frames.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;janitor&quot;</span>) <span class="co"># Install janitor</span></span>
-<span id="cb23-3"><a href="data-frames.html#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># Load the tidyverse package</span></span>
-<span id="cb23-4"><a href="data-frames.html#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor) <span class="co"># Load the janitor package</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="data-frames.html#cb23-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>) <span class="co"># Install tidyverse</span></span>
+<span id="cb23-2"><a href="data-frames.html#cb23-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;janitor&quot;</span>) <span class="co"># Install janitor</span></span>
+<span id="cb23-3"><a href="data-frames.html#cb23-3" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># Load the tidyverse package</span></span>
+<span id="cb23-4"><a href="data-frames.html#cb23-4" tabindex="-1"></a><span class="fu">library</span>(janitor) <span class="co"># Load the janitor package</span></span></code></pre></div>
 </div>
 <div id="importing" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Importing data<a href="data-frames.html#importing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Lets import your data set. Go into your <strong>data</strong> folder within <strong>Files</strong>, click <strong>Upload</strong> and select your newly made <code>.csv</code> file. Once its uploaded you should be able to see it under <code>data/</code> in the bottom right panel.</p>
 <p>Now we need to tell R to read your <code>.csv</code> file.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="data-frames.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the data from the .csv file in the data folder into my project</span></span>
-<span id="cb24-2"><a href="data-frames.html#cb24-2" aria-hidden="true" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/your_file_name.csv&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="data-frames.html#cb24-1" tabindex="-1"></a><span class="co"># Read the data from the .csv file in the data folder into my project</span></span>
+<span id="cb24-2"><a href="data-frames.html#cb24-2" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/your_file_name.csv&quot;</span>) </span></code></pre></div>
 <p>R should respond with this;</p>
 <pre><code>&gt; tribolium &lt;- read_csv(&quot;data/tribolium.csv&quot;)
 Rows: 20 Columns: 3                                                              
@@ -425,39 +421,39 @@ dbl (3): beetle_id, wing_case_size, parasite_burden</code></pre>
 <p>Here R has told us that there are 20 rows and 3 columns in our data set, it has indicated that it has used comas as a column deliminator and that all the data are dbl (short for double), which means each column contains numbers. You should also be able to see <code>tribolium</code> in your <strong>Environment</strong> under <strong>Data</strong>.</p>
 <p>If you have errors, make sure your file name and path are input correctly.</p>
 <p>Lets have a look at our data to make sure it looks as we expect it to, try this;</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="data-frames.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tribolium)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="data-frames.html#cb26-1" tabindex="-1"></a><span class="fu">head</span>(tribolium)</span></code></pre></div>
 <p>We can see for ourselves that R has correctly read our data.</p>
 </div>
 <div id="creating-tibbles" class="section level2 hasAnchor" number="4.5">
 <h2><span class="header-section-number">4.5</span> Creating tibbles<a href="data-frames.html#creating-tibbles" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>So we have successfully imported data into R from a <code>.csv</code> file and stored it as a data frame which is a type of two dimensional array. Tibbles are a type of data frame as well, these can be useful if you want to type your data straight into R, or if you have more information to add to a pre-existing data frame. For example, we also have some additional data on the sex and treatment conditions of the Tribolium beetles. So lets create a tibble, add the following to your script;</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="data-frames.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First of all lets create some variables</span></span>
-<span id="cb27-2"><a href="data-frames.html#cb27-2" aria-hidden="true" tabindex="-1"></a>beetle_id <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>) <span class="co"># Notice that this notation will create of a list of numbers 1 to 20</span></span>
-<span id="cb27-3"><a href="data-frames.html#cb27-3" aria-hidden="true" tabindex="-1"></a>sex <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>)</span>
-<span id="cb27-4"><a href="data-frames.html#cb27-4" aria-hidden="true" tabindex="-1"></a>treatment <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="data-frames.html#cb27-1" tabindex="-1"></a><span class="co"># First of all lets create some variables</span></span>
+<span id="cb27-2"><a href="data-frames.html#cb27-2" tabindex="-1"></a>beetle_id <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>) <span class="co"># Notice that this notation will create of a list of numbers 1 to 20</span></span>
+<span id="cb27-3"><a href="data-frames.html#cb27-3" tabindex="-1"></a>sex <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>)</span>
+<span id="cb27-4"><a href="data-frames.html#cb27-4" tabindex="-1"></a>treatment <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>)</span></code></pre></div>
 <p>Now we neet to turn our new variables into a data frame</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="data-frames.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Turning variables into a tibble</span></span>
-<span id="cb28-2"><a href="data-frames.html#cb28-2" aria-hidden="true" tabindex="-1"></a>tribolium_extras <span class="ot">&lt;-</span> <span class="fu">tibble</span>(beetle_id,sex,treatment)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="data-frames.html#cb28-1" tabindex="-1"></a><span class="co"># Turning variables into a tibble</span></span>
+<span id="cb28-2"><a href="data-frames.html#cb28-2" tabindex="-1"></a>tribolium_extras <span class="ot">&lt;-</span> <span class="fu">tibble</span>(beetle_id,sex,treatment)</span></code></pre></div>
 <p>Try using <code>head()</code> to check your new <code>tribolium_extras</code> data frame.</p>
 </div>
 <div id="renaming" class="section level2 hasAnchor" number="4.6">
 <h2><span class="header-section-number">4.6</span> Renaming variables<a href="data-frames.html#renaming" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>It may be advantageous to have all the data from both of our data frames together, we can use another function to do this. However first I would like everyone in the class to have the same variable names, this will help us later on but also sometimes its useful to change headings in R. Add the following to your script and run it, make sure you edit it to match your variable names.</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="data-frames.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Renaming some variables in your original data set</span></span>
-<span id="cb29-2"><a href="data-frames.html#cb29-2" aria-hidden="true" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> tribolium <span class="sc">%&gt;%</span></span>
-<span id="cb29-3"><a href="data-frames.html#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">beetle_id =</span> your_variable_name_here)</span>
-<span id="cb29-4"><a href="data-frames.html#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check how your data frame now looks</span></span>
-<span id="cb29-5"><a href="data-frames.html#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tribolium) </span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="data-frames.html#cb29-1" tabindex="-1"></a><span class="co"># Renaming some variables in your original data set</span></span>
+<span id="cb29-2"><a href="data-frames.html#cb29-2" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> tribolium <span class="sc">%&gt;%</span></span>
+<span id="cb29-3"><a href="data-frames.html#cb29-3" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">beetle_id =</span> your_variable_name_here)</span>
+<span id="cb29-4"><a href="data-frames.html#cb29-4" tabindex="-1"></a><span class="co"># Check how your data frame now looks</span></span>
+<span id="cb29-5"><a href="data-frames.html#cb29-5" tabindex="-1"></a><span class="fu">head</span>(tribolium) </span></code></pre></div>
 <blockquote>
 <p><strong>Side Note</strong> you may have noticed the %&gt;% expression, this is known as the forward pipe operator and allows you to chain together commands (rather like the <code>+</code> we covered in Chapter 2 when using <code>ggplot</code>). This is a very simple use of it but it is piping your data frame forward to the rename function.</p>
 </blockquote>
 <p>Hopefully the column containing your beetle IDs is now labeled <code>beetle_id</code>. Use the same set of commands to rename your variables for beetle wing case size and parasite load. Call the variables <code>wing_case_size</code> and <code>parasite_burden</code> instead.</p>
 <p>Now we can merge our two data frames.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="data-frames.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge data frames</span></span>
-<span id="cb30-2"><a href="data-frames.html#cb30-2" aria-hidden="true" tabindex="-1"></a>tribolium_combo <span class="ot">&lt;-</span> <span class="fu">merge</span>(tribolium, tribolium_extras, <span class="at">by =</span> <span class="st">&quot;beetle_id&quot;</span>)</span>
-<span id="cb30-3"><a href="data-frames.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This merge function combines both of your data frames but matches rows by beetle_id</span></span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="data-frames.html#cb30-1" tabindex="-1"></a><span class="co"># Merge data frames</span></span>
+<span id="cb30-2"><a href="data-frames.html#cb30-2" tabindex="-1"></a>tribolium_combo <span class="ot">&lt;-</span> <span class="fu">merge</span>(tribolium, tribolium_extras, <span class="at">by =</span> <span class="st">&quot;beetle_id&quot;</span>)</span>
+<span id="cb30-3"><a href="data-frames.html#cb30-3" tabindex="-1"></a><span class="co"># This merge function combines both of your data frames but matches rows by beetle_id</span></span></code></pre></div>
 <p>Take a look at your new data frame now with the <code>head()</code> function, and lets try one more command to do one last check on your data. Try this;</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="data-frames.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(tribolium_combo)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="data-frames.html#cb31-1" tabindex="-1"></a><span class="fu">glimpse</span>(tribolium_combo)</span></code></pre></div>
 <p>This command will show you something like this;</p>
 <pre><code>&gt;glimpse(tribolium_combo)
 Rows: 20
@@ -469,8 +465,8 @@ $ sex             &lt;chr&gt; &quot;F&quot;, &quot;F&quot;, &quot;F&quot;, &quot
 $ treatment       &lt;dbl&gt; 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 30, 30, 30, 30, 3…</code></pre>
 <p>Once again we can see that four of our variables have been interpreted by R as being <code>&lt;dbl&gt;</code> vectors, R has identified them as being numeric. One of our variables has been identified as being a <code>&lt;chr&gt;</code> (short for character) vector, so R knows that this variable contains letters or words.</p>
 <p>You may now wish to export your new combined data frame as a <code>.csv</code> file. You can do this by running the following command;</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="data-frames.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save your combined data frame as a .csv file (which you could download) to your data folder</span></span>
-<span id="cb33-2"><a href="data-frames.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tribolium_combo,<span class="st">&quot;data/tribolium_combo.csv&quot;</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="data-frames.html#cb33-1" tabindex="-1"></a><span class="co"># Save your combined data frame as a .csv file (which you could download) to your data folder</span></span>
+<span id="cb33-2"><a href="data-frames.html#cb33-2" tabindex="-1"></a><span class="fu">write.csv</span>(tribolium_combo,<span class="st">&quot;data/tribolium_combo.csv&quot;</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <p>Well done everyone, you have successfully entered your data and uploaded it to posit Cloud as well as making some small adjustments to the data frame and doing a first pass quality check! There are more checks we could have run, and we will revisit this later in the course when we look at some larger data sets. But we will leave this here for now, next week is reading week and the week after we will start looking at checking our data dimensions.</p>
 </div>
 <div id="before-you-leave" class="section level2 hasAnchor" number="4.7">
@@ -491,8 +487,8 @@ Wickham, Hadley, Jim Hester, and Jennifer Bryan. 2021. Readr: Read Rectangular T
           </div>
         </div>
       </div>
-<a href="objects-functions-and-packages---week-3a.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="reading-week---week-5a.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="objects-functions-and-packages---week-4.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reading-week---week-6.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -552,7 +548,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

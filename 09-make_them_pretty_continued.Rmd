@@ -1,6 +1,6 @@
-# Make them pretty continued - Week 10A {#pretty-figs-p2}
+# Make them pretty continued - Week 11 {#pretty-figs-p2}
 
-You should aim to complete this chapter in Week 10, Semester 1
+You should aim to complete this chapter in Week 11, Semester 1
 
 In Chapter \@ref(pretty-figs-p1) we explored the fundamental functionality of `ggplot2` and we started to play with some functions that improved our plots labels and colour scheme. This week we will be extending this further and investigating how we may also be able to alter spacing and themes to improve the appearance of our plots. 
 

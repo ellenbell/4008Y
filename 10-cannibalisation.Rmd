@@ -1,6 +1,6 @@
-# The subtle art of cannibalisation - Week 11A - Workshop 3 {#cannibalisation}
+# The subtle art of cannibalisation - Week 12 - Workshop 3 {#cannibalisation}
 
-In this Week 11 workshop we will be applying the rules of aesthetics that we learned in the last two chapters to the rest of our plots. You may use functions and arguments from your `ggplot_fundamentals.r` script to modify the plots you made in previous weeks. This is a very common practice, especially while learning a new programming language, you get a script or chunk of code right once and then canibalise parts of it for other uses, modifying it as needed to fit its new purpose. 
+In this Week 12 workshop we will be applying the rules of aesthetics that we learned in the last two chapters to the rest of our plots. You may use functions and arguments from your `ggplot_fundamentals.r` script to modify the plots you made in previous weeks. This is a very common practice, especially while learning a new programming language, you get a script or chunk of code right once and then canibalise parts of it for other uses, modifying it as needed to fit its new purpose. 
 
 ## Starting on the right footing 
 
@@ -8,7 +8,7 @@ In the last few chapters, and over the last few weeks you have been asked to mod
 
 ## Beautifying your box plots
 
-In Chapters 9 and 10 we specifically worked on making changes to our box plots that would make them clean, clear and visually pleasing. You have all the code already made for your box plots, it just needs tailoring a little. You should have three boxplots saved in your `figures` folder (made in Chapter \@ref(boxplot));
+In Chapters \@ref(pretty-figs-p1) and \@ref(pretty-figs-p2) we specifically worked on making changes to our box plots that would make them clean, clear and visually pleasing. You have all the code already made for your box plots, it just needs tailoring a little. You should have three boxplots saved in your `figures` folder (made in Chapter \@ref(boxplot));
 
 * size_differences_by_sex_boxplot.pdf
 * size_differences_by_treatment_boxplot.pdf

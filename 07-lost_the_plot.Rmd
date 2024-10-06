@@ -1,4 +1,4 @@
-# Lost the plot? Some more data visualisations - Week 8A - Workshop 2
+# Lost the plot? Some more data visualisations - Week 9 - Workshop 2
 
 This is our second workshop hopefully you are gaining some confidence with how the underlying functionality of R works. For this workshop we will be building plots to explore possible relationships and differences within the data. Don't forget to ask for help if you are stuck on any of the material covered so far.
 

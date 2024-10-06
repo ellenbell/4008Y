@@ -1,6 +1,6 @@
-# Objects, Functions and Packages - Week 3A
+# Objects, Functions and Packages - Week 4
 
-You should aim to complete this chapter in Week 3, Semester 1
+You should aim to complete this chapter in Week 4, Semester 1
 
 ## Creating objects 
 
@@ -130,7 +130,7 @@ ggplot(data = iris,aes(x = Sepal.Length, y = Sepal.Width)) +
   geom_point(aes(colour=Species)) 
 ```
 
-Those sharped eyed among you may have noticed that the short script defining our plot goes over two lines and contains a `+` and an indentation on the second line. The `+` and indentation is essentially allowing you to pipe one line of code into the next. This allows you to add more detailed instructions on how you would like your graph to be built and linking together multiple functions. Don't worry if this is a lot to take in at this stage, as we progress with `ggplot2` we will revisit this in more detail. 
+Those sharp eyed among you may have noticed that the short script defining our plot goes over two lines and contains a `+` and an indentation on the second line. The `+` and indentation is essentially allowing you to pipe one line of code into the next. This allows you to add more detailed instructions on how you would like your graph to be built and linking together multiple functions. Don't worry if this is a lot to take in at this stage, as we progress with `ggplot2` we will revisit this in more detail. 
 
 ## What do I do if I get an error message?
 

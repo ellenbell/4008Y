@@ -1,4 +1,4 @@
-# Playing with some statistics - Workshop 5 - Athletes continued, Week 4B {#stats}
+# Playing with some statistics - Workshop 5 - Athletes continued, Week 4 {#stats}
 
 Here we have material for Workshop 5 in Week 4 of Semester 2. We will be continuing with the Athletes data set from Week 2. So go to your `athletes` project in posit Cloud. It may be helpful to review the plots you made (including the histograms) to remind yourself of how the data look. 
 

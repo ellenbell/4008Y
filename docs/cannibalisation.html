@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 11 The subtle art of cannibalisation - Week 11A - Workshop 3 | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
+  <title>Chapter 11 The subtle art of cannibalisation - Week 12 - Workshop 3 | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 11 The subtle art of cannibalisation - Week 11A - Workshop 3 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
+  <meta property="og:title" content="Chapter 11 The subtle art of cannibalisation - Week 12 - Workshop 3 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A brief introduction so some fundamental applications of R in data science" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 11 The subtle art of cannibalisation - Week 11A - Workshop 3 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
+  <meta name="twitter:title" content="Chapter 11 The subtle art of cannibalisation - Week 12 - Workshop 3 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   
   <meta name="twitter:description" content="A brief introduction so some fundamental applications of R in data science" />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<meta name="date" content="2024-02-08" />
+<meta name="date" content="2024-10-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -60,7 +60,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -123,10 +123,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -152,28 +148,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#how-to-use-this-workbook"><i class="fa fa-check"></i><b>1.4</b> How to use this workbook</a></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#why-is-data-science-important-and-why-are-we-teaching-it-in-r"><i class="fa fa-check"></i><b>1.5</b> Why is data science important and why are we teaching it in R?</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html"><i class="fa fa-check"></i><b>2</b> Introduction to R and posit Cloud - Week 2A</a>
+<li class="chapter" data-level="2" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html"><i class="fa fa-check"></i><b>2</b> Introduction to R and posit Cloud - Week 3</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#what-is-r-and-posit-cloud"><i class="fa fa-check"></i><b>2.1</b> What is R and posit Cloud?</a></li>
-<li class="chapter" data-level="2.2" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#a-warning-on-managing-your-work-flow"><i class="fa fa-check"></i><b>2.2</b> A warning on managing your work flow</a></li>
-<li class="chapter" data-level="2.3" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#creating-your-first-posit-cloud-project"><i class="fa fa-check"></i><b>2.3</b> Creating your first posit Cloud Project</a></li>
-<li class="chapter" data-level="2.4" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#maximising-the-efficiency-of-your-workspace"><i class="fa fa-check"></i><b>2.4</b> Maximising the efficiency of your workspace</a></li>
-<li class="chapter" data-level="2.5" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#entering-commands-directly-into-the-consol"><i class="fa fa-check"></i><b>2.5</b> Entering commands directly into the consol</a></li>
-<li class="chapter" data-level="2.6" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#sending-commands-down-to-the-console-from-an-r-script"><i class="fa fa-check"></i><b>2.6</b> Sending commands down to the console from an R script</a></li>
-<li class="chapter" data-level="2.7" data-path="introduction-to-r-and-posit-cloud---week-2a.html"><a href="introduction-to-r-and-posit-cloud---week-2a.html#a-note-on-comments"><i class="fa fa-check"></i><b>2.7</b> A note on comments</a></li>
+<li class="chapter" data-level="2.1" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html#what-is-r-and-posit-cloud"><i class="fa fa-check"></i><b>2.1</b> What is R and posit Cloud?</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html#a-warning-on-managing-your-work-flow"><i class="fa fa-check"></i><b>2.2</b> A warning on managing your work flow</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html#creating-your-first-posit-cloud-project"><i class="fa fa-check"></i><b>2.3</b> Creating your first posit Cloud Project</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html#maximising-the-efficiency-of-your-workspace"><i class="fa fa-check"></i><b>2.4</b> Maximising the efficiency of your workspace</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html#entering-commands-directly-into-the-consol"><i class="fa fa-check"></i><b>2.5</b> Entering commands directly into the consol</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html#sending-commands-down-to-the-console-from-an-r-script"><i class="fa fa-check"></i><b>2.6</b> Sending commands down to the console from an R script</a></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-r-and-posit-cloud---week-3.html"><a href="introduction-to-r-and-posit-cloud---week-3.html#a-note-on-comments"><i class="fa fa-check"></i><b>2.7</b> A note on comments</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html"><i class="fa fa-check"></i><b>3</b> Objects, Functions and Packages - Week 3A</a>
+<li class="chapter" data-level="3" data-path="objects-functions-and-packages---week-4.html"><a href="objects-functions-and-packages---week-4.html"><i class="fa fa-check"></i><b>3</b> Objects, Functions and Packages - Week 4</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html#creating-objects"><i class="fa fa-check"></i><b>3.1</b> Creating objects</a></li>
-<li class="chapter" data-level="3.2" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html#what-are-functions-and-packages"><i class="fa fa-check"></i><b>3.2</b> What are functions and packages?</a>
+<li class="chapter" data-level="3.1" data-path="objects-functions-and-packages---week-4.html"><a href="objects-functions-and-packages---week-4.html#creating-objects"><i class="fa fa-check"></i><b>3.1</b> Creating objects</a></li>
+<li class="chapter" data-level="3.2" data-path="objects-functions-and-packages---week-4.html"><a href="objects-functions-and-packages---week-4.html#what-are-functions-and-packages"><i class="fa fa-check"></i><b>3.2</b> What are functions and packages?</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html#using-functions"><i class="fa fa-check"></i><b>3.2.1</b> Using functions</a></li>
+<li class="chapter" data-level="3.2.1" data-path="objects-functions-and-packages---week-4.html"><a href="objects-functions-and-packages---week-4.html#using-functions"><i class="fa fa-check"></i><b>3.2.1</b> Using functions</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html#installing-packages"><i class="fa fa-check"></i><b>3.3</b> Installing packages</a></li>
-<li class="chapter" data-level="3.4" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html#what-do-i-do-if-i-get-an-error-message"><i class="fa fa-check"></i><b>3.4</b> What do I do if I get an error message?</a></li>
-<li class="chapter" data-level="3.5" data-path="objects-functions-and-packages---week-3a.html"><a href="objects-functions-and-packages---week-3a.html#references"><i class="fa fa-check"></i><b>3.5</b> References</a></li>
+<li class="chapter" data-level="3.3" data-path="objects-functions-and-packages---week-4.html"><a href="objects-functions-and-packages---week-4.html#installing-packages"><i class="fa fa-check"></i><b>3.3</b> Installing packages</a></li>
+<li class="chapter" data-level="3.4" data-path="objects-functions-and-packages---week-4.html"><a href="objects-functions-and-packages---week-4.html#what-do-i-do-if-i-get-an-error-message"><i class="fa fa-check"></i><b>3.4</b> What do I do if I get an error message?</a></li>
+<li class="chapter" data-level="3.5" data-path="objects-functions-and-packages---week-4.html"><a href="objects-functions-and-packages---week-4.html#references"><i class="fa fa-check"></i><b>3.5</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>4</b> Directories and data frames - Week 4A - Workshop 1</a>
+<li class="chapter" data-level="4" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>4</b> Directories and data frames - Week 5 - Workshop 1</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="data-frames.html"><a href="data-frames.html#data-entry"><i class="fa fa-check"></i><b>4.1</b> Data Entry</a>
 <ul>
@@ -190,15 +186,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.7" data-path="data-frames.html"><a href="data-frames.html#before-you-leave"><i class="fa fa-check"></i><b>4.7</b> Before you leave!</a></li>
 <li class="chapter" data-level="4.8" data-path="data-frames.html"><a href="data-frames.html#references-1"><i class="fa fa-check"></i><b>4.8</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="reading-week---week-5a.html"><a href="reading-week---week-5a.html"><i class="fa fa-check"></i><b>5</b> Reading week - Week 5A</a></li>
-<li class="chapter" data-level="6" data-path="dimensions.html"><a href="dimensions.html"><i class="fa fa-check"></i><b>6</b> Exploring the dimensions of your data frame - Week 6A</a>
+<li class="chapter" data-level="5" data-path="reading-week---week-6.html"><a href="reading-week---week-6.html"><i class="fa fa-check"></i><b>5</b> Reading week - Week 6</a></li>
+<li class="chapter" data-level="6" data-path="dimensions.html"><a href="dimensions.html"><i class="fa fa-check"></i><b>6</b> Exploring the dimensions of your data frame - Week 7</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="dimensions.html"><a href="dimensions.html#top-to-tail---some-useful-functions-to-explore"><i class="fa fa-check"></i><b>6.1</b> Top to tail - some useful functions to explore</a></li>
 <li class="chapter" data-level="6.2" data-path="dimensions.html"><a href="dimensions.html#whats-your-sample-size"><i class="fa fa-check"></i><b>6.2</b> Whats your sample size?</a></li>
 <li class="chapter" data-level="6.3" data-path="dimensions.html"><a href="dimensions.html#before-you-leave-1"><i class="fa fa-check"></i><b>6.3</b> Before you leave!</a></li>
 <li class="chapter" data-level="6.4" data-path="dimensions.html"><a href="dimensions.html#references-2"><i class="fa fa-check"></i><b>6.4</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="histogram.html"><a href="histogram.html"><i class="fa fa-check"></i><b>7</b> A plot to choose from - Week 7A</a>
+<li class="chapter" data-level="7" data-path="histogram.html"><a href="histogram.html"><i class="fa fa-check"></i><b>7</b> A plot to choose from - Week 8</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="histogram.html"><a href="histogram.html#relationships-differences-and-distributions"><i class="fa fa-check"></i><b>7.1</b> Relationships, differences and distributions</a></li>
 <li class="chapter" data-level="7.2" data-path="histogram.html"><a href="histogram.html#my-first-histogram-in-r"><i class="fa fa-check"></i><b>7.2</b> My first histogram in R</a></li>
@@ -206,14 +202,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.4" data-path="histogram.html"><a href="histogram.html#before-you-leave-2"><i class="fa fa-check"></i><b>7.4</b> Before you leave!</a></li>
 <li class="chapter" data-level="7.5" data-path="histogram.html"><a href="histogram.html#references-3"><i class="fa fa-check"></i><b>7.5</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html"><i class="fa fa-check"></i><b>8</b> Lost the plot? Some more data visualisations - Week 8A - Workshop 2</a>
+<li class="chapter" data-level="8" data-path="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html"><i class="fa fa-check"></i><b>8</b> Lost the plot? Some more data visualisations - Week 9 - Workshop 2</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#boxplot"><i class="fa fa-check"></i><b>8.1</b> Looking at differences</a></li>
-<li class="chapter" data-level="8.2" data-path="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#scatter"><i class="fa fa-check"></i><b>8.2</b> Looking at relationships</a></li>
-<li class="chapter" data-level="8.3" data-path="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#before-you-leave-3"><i class="fa fa-check"></i><b>8.3</b> Before you leave!</a></li>
-<li class="chapter" data-level="8.4" data-path="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#references-4"><i class="fa fa-check"></i><b>8.4</b> References</a></li>
+<li class="chapter" data-level="8.1" data-path="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#boxplot"><i class="fa fa-check"></i><b>8.1</b> Looking at differences</a></li>
+<li class="chapter" data-level="8.2" data-path="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#scatter"><i class="fa fa-check"></i><b>8.2</b> Looking at relationships</a></li>
+<li class="chapter" data-level="8.3" data-path="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#before-you-leave-3"><i class="fa fa-check"></i><b>8.3</b> Before you leave!</a></li>
+<li class="chapter" data-level="8.4" data-path="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#references-4"><i class="fa fa-check"></i><b>8.4</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="pretty-figs-p1.html"><a href="pretty-figs-p1.html"><i class="fa fa-check"></i><b>9</b> Make them pretty - Week 9A</a>
+<li class="chapter" data-level="9" data-path="pretty-figs-p1.html"><a href="pretty-figs-p1.html"><i class="fa fa-check"></i><b>9</b> Make them pretty - Week 10</a>
 <ul>
 <li class="chapter" data-level="9.1" data-path="pretty-figs-p1.html"><a href="pretty-figs-p1.html#deconstructing-ggplot"><i class="fa fa-check"></i><b>9.1</b> Deconstructing ggplot</a></li>
 <li class="chapter" data-level="9.2" data-path="pretty-figs-p1.html"><a href="pretty-figs-p1.html#labels"><i class="fa fa-check"></i><b>9.2</b> Labels</a></li>
@@ -221,14 +217,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.4" data-path="pretty-figs-p1.html"><a href="pretty-figs-p1.html#before-you-leave-4"><i class="fa fa-check"></i><b>9.4</b> Before you leave!</a></li>
 <li class="chapter" data-level="9.5" data-path="pretty-figs-p1.html"><a href="pretty-figs-p1.html#references-5"><i class="fa fa-check"></i><b>9.5</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="pretty-figs-p2.html"><a href="pretty-figs-p2.html"><i class="fa fa-check"></i><b>10</b> Make them pretty continued - Week 10A</a>
+<li class="chapter" data-level="10" data-path="pretty-figs-p2.html"><a href="pretty-figs-p2.html"><i class="fa fa-check"></i><b>10</b> Make them pretty continued - Week 11</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="pretty-figs-p2.html"><a href="pretty-figs-p2.html#spacing"><i class="fa fa-check"></i><b>10.1</b> Spacing</a></li>
 <li class="chapter" data-level="10.2" data-path="pretty-figs-p2.html"><a href="pretty-figs-p2.html#themes"><i class="fa fa-check"></i><b>10.2</b> Themes</a></li>
 <li class="chapter" data-level="10.3" data-path="pretty-figs-p2.html"><a href="pretty-figs-p2.html#before-you-leave-5"><i class="fa fa-check"></i><b>10.3</b> Before you leave!</a></li>
 <li class="chapter" data-level="10.4" data-path="pretty-figs-p2.html"><a href="pretty-figs-p2.html#references-6"><i class="fa fa-check"></i><b>10.4</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="cannibalisation.html"><a href="cannibalisation.html"><i class="fa fa-check"></i><b>11</b> The subtle art of cannibalisation - Week 11A - Workshop 3</a>
+<li class="chapter" data-level="11" data-path="cannibalisation.html"><a href="cannibalisation.html"><i class="fa fa-check"></i><b>11</b> The subtle art of cannibalisation - Week 12 - Workshop 3</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="cannibalisation.html"><a href="cannibalisation.html#starting-on-the-right-footing"><i class="fa fa-check"></i><b>11.1</b> Starting on the right footing</a></li>
 <li class="chapter" data-level="11.2" data-path="cannibalisation.html"><a href="cannibalisation.html#beautifying-your-box-plots"><i class="fa fa-check"></i><b>11.2</b> Beautifying your box plots</a></li>
@@ -239,14 +235,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.7" data-path="cannibalisation.html"><a href="cannibalisation.html#before-you-leave-6"><i class="fa fa-check"></i><b>11.7</b> Before you leave!</a></li>
 <li class="chapter" data-level="11.8" data-path="cannibalisation.html"><a href="cannibalisation.html#references-7"><i class="fa fa-check"></i><b>11.8</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="formative.html"><a href="formative.html"><i class="fa fa-check"></i><b>12</b> Formative Assessment - Deadline 08/12/23</a>
+<li class="chapter" data-level="12" data-path="formative.html"><a href="formative.html"><i class="fa fa-check"></i><b>12</b> Formative Assessment - Deadline 13/12/24</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="formative.html"><a href="formative.html#task-1"><i class="fa fa-check"></i><b>12.1</b> Task 1 - Figure and Figure Legend</a></li>
 <li class="chapter" data-level="12.2" data-path="formative.html"><a href="formative.html#task-2---script"><i class="fa fa-check"></i><b>12.2</b> Task 2 - Script</a></li>
 <li class="chapter" data-level="12.3" data-path="formative.html"><a href="formative.html#task-3---submission"><i class="fa fa-check"></i><b>12.3</b> Task 3 - Submission</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="code.html"><a href="code.html"><i class="fa fa-check"></i><b>13</b> Merry Christmas!!!</a></li>
-<li class="chapter" data-level="14" data-path="data-setup.html"><a href="data-setup.html"><i class="fa fa-check"></i><b>14</b> New year, new data - Workshop 4 - Athletes, Week 2B</a>
+<li class="chapter" data-level="14" data-path="data-setup.html"><a href="data-setup.html"><i class="fa fa-check"></i><b>14</b> New year, new data - Workshop 4 - Athletes, Week 2</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="data-setup.html"><a href="data-setup.html#a-new-project"><i class="fa fa-check"></i><b>14.1</b> A new project</a>
 <ul>
@@ -267,7 +263,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="14.5" data-path="data-setup.html"><a href="data-setup.html#before-you-leave-7"><i class="fa fa-check"></i><b>14.5</b> Before you leave!</a></li>
 <li class="chapter" data-level="14.6" data-path="data-setup.html"><a href="data-setup.html#references-8"><i class="fa fa-check"></i><b>14.6</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="stats.html"><a href="stats.html"><i class="fa fa-check"></i><b>15</b> Playing with some statistics - Workshop 5 - Athletes continued, Week 4B</a>
+<li class="chapter" data-level="15" data-path="stats.html"><a href="stats.html"><i class="fa fa-check"></i><b>15</b> Playing with some statistics - Workshop 5 - Athletes continued, Week 4</a>
 <ul>
 <li class="chapter" data-level="15.1" data-path="stats.html"><a href="stats.html#descriptive-statistics"><i class="fa fa-check"></i><b>15.1</b> Descriptive statistics</a>
 <ul>
@@ -288,7 +284,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="15.5" data-path="stats.html"><a href="stats.html#before-you-leave-8"><i class="fa fa-check"></i><b>15.5</b> Before you leave!</a></li>
 <li class="chapter" data-level="15.6" data-path="stats.html"><a href="stats.html#references-9"><i class="fa fa-check"></i><b>15.6</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="reporting.html"><a href="reporting.html"><i class="fa fa-check"></i><b>16</b> Reporting your analysis - Workshop 6 - Athletes continued, Week 6B</a>
+<li class="chapter" data-level="16" data-path="reporting.html"><a href="reporting.html"><i class="fa fa-check"></i><b>16</b> Reporting your analysis - Workshop 6 - Athletes continued, Week 6</a>
 <ul>
 <li class="chapter" data-level="16.1" data-path="reporting.html"><a href="reporting.html#selecting-what-to-report"><i class="fa fa-check"></i><b>16.1</b> Selecting what to report</a>
 <ul>
@@ -337,15 +333,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="cannibalisation" class="section level1 hasAnchor" number="11">
-<h1><span class="header-section-number">Chapter 11</span> The subtle art of cannibalisation - Week 11A - Workshop 3<a href="cannibalisation.html#cannibalisation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In this Week 11 workshop we will be applying the rules of aesthetics that we learned in the last two chapters to the rest of our plots. You may use functions and arguments from your <code>ggplot_fundamentals.r</code> script to modify the plots you made in previous weeks. This is a very common practice, especially while learning a new programming language, you get a script or chunk of code right once and then canibalise parts of it for other uses, modifying it as needed to fit its new purpose.</p>
+<h1><span class="header-section-number">Chapter 11</span> The subtle art of cannibalisation - Week 12 - Workshop 3<a href="cannibalisation.html#cannibalisation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this Week 12 workshop we will be applying the rules of aesthetics that we learned in the last two chapters to the rest of our plots. You may use functions and arguments from your <code>ggplot_fundamentals.r</code> script to modify the plots you made in previous weeks. This is a very common practice, especially while learning a new programming language, you get a script or chunk of code right once and then canibalise parts of it for other uses, modifying it as needed to fit its new purpose.</p>
 <div id="starting-on-the-right-footing" class="section level2 hasAnchor" number="11.1">
 <h2><span class="header-section-number">11.1</span> Starting on the right footing<a href="cannibalisation.html#starting-on-the-right-footing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In the last few chapters, and over the last few weeks you have been asked to modify quite a few chunks of script. If anything hasn’t made sense or you haven’t managed to get some chunks or functions working please do let either myself or a demonstrator know before you start the workshop activity. We are here to help!</p>
 </div>
 <div id="beautifying-your-box-plots" class="section level2 hasAnchor" number="11.2">
 <h2><span class="header-section-number">11.2</span> Beautifying your box plots<a href="cannibalisation.html#beautifying-your-box-plots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In Chapters 9 and 10 we specifically worked on making changes to our box plots that would make them clean, clear and visually pleasing. You have all the code already made for your box plots, it just needs tailoring a little. You should have three boxplots saved in your <code>figures</code> folder (made in Chapter <a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#boxplot">8.1</a>);</p>
+<p>In Chapters <a href="pretty-figs-p1.html#pretty-figs-p1">9</a> and <a href="pretty-figs-p2.html#pretty-figs-p2">10</a> we specifically worked on making changes to our box plots that would make them clean, clear and visually pleasing. You have all the code already made for your box plots, it just needs tailoring a little. You should have three boxplots saved in your <code>figures</code> folder (made in Chapter <a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#boxplot">8.1</a>);</p>
 <ul>
 <li>size_differences_by_sex_boxplot.pdf</li>
 <li>size_differences_by_treatment_boxplot.pdf</li>
@@ -364,7 +360,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="beautifying-your-scatter-plot" class="section level2 hasAnchor" number="11.4">
 <h2><span class="header-section-number">11.4</span> Beautifying your scatter plot<a href="cannibalisation.html#beautifying-your-scatter-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You hopefully also have a scatter plot saved in your <code>figures</code> folder (made in Chapter <a href="lost-the-plot-some-more-data-visualisations---week-8a---workshop-2.html#scatter">8.2</a>);</p>
+<p>You hopefully also have a scatter plot saved in your <code>figures</code> folder (made in Chapter <a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#scatter">8.2</a>);</p>
 <ul>
 <li>size_vs_parasites_point.pdf</li>
 </ul>
@@ -482,7 +478,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

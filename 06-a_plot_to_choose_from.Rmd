@@ -1,6 +1,6 @@
-# A plot to choose from - Week 7A {#histogram}
+# A plot to choose from - Week 8 {#histogram}
 
-You should aim to complete this chapter in Week 7, Semester 1
+You should aim to complete this chapter in Week 8, Semester 1
 
 ## Relationships, differences and distributions
 

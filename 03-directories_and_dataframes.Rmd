@@ -1,4 +1,4 @@
-# Directories and data frames - Week 4A - Workshop 1 {#data-frames}
+# Directories and data frames - Week 5 - Workshop 1 {#data-frames}
 
 This week we don't have any lectures but we do have an in person workshop. The section to complete this week may be a little more chunky than usual, complete what you can during the workshop and then finish it off in your own time. Do make use of the demonstrators if any of the exercises so far haven't made sense. 
 

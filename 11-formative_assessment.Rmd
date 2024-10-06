@@ -1,10 +1,10 @@
-# Formative Assessment - Deadline 08/12/23 {#formative}
+# Formative Assessment - Deadline 13/12/24 {#formative}
 
 The formative assessment is essentially a stripped down version of what will be asked for in the summative assessment task. Both formative and summative task will be marked similarly, so this is a fantastic opportunity to get feedback on this section of the Skills modules. There are essentially two tasks for the formative.
 
 ## Task 1 - Figure and Figure Legend {#task-1}
 
-Download one of your `.pdf` box plots or scatter plots from posit Cloud, it doesnt matter which one but it does need to be presented well. Plot selection and presentation will be assessed. Use the tips and tricks that we covered in Chapters \@ref(pretty-figs-p1), \@ref(pretty-figs-p2) and \@ref(cannibalisation). You can download your files from posit Cloud onto your local device by moving to your `figures` folder, ticking the box next to the file you wish to download and then clicking on `More` and then `Export`. You will then be given the option to `Download` your files. Once you have your figure of choice downloaded you can copy it into a Word file and write a suitable figure legend. 
+Download one of your `.pdf` box plots or scatter plots from posit Cloud, it doesn't matter which one but it does need to be presented well. Plot selection and presentation will be assessed. Use the tips and tricks that we covered in Chapters \@ref(pretty-figs-p1), \@ref(pretty-figs-p2) and \@ref(cannibalisation). You can download your files from posit Cloud onto your local device by moving to your `figures` folder, ticking the box next to the file you wish to download and then clicking on `More` and then `Export`. You will then be given the option to `Download` your files. Once you have your figure of choice downloaded you can copy it into a Word file and write a suitable figure legend. 
 
 Remember my top tips for writing an appropriate figure legend (as covered in lectures);
 
@@ -24,10 +24,8 @@ Hopefully you have been keeping your script nice and clean and tidy throughout y
 
 ## Task 3 - Submission
 
-If you go to the Data Sciences Learning Module in the BIO-4008Y page of blackboard you will see a link to PebblePad. If you follow this link you should be automatically taken to the Data Sciences portfolio. You will see there are two pages to the portfolio, at this stage you only need to complete the `Formative` page. You will see there are a number of tick boxes to help guide you through what our expectations are from your work here. There are then two places to upload your work, one for your figure and figure legend and the other for your script. Upload the corresponding documents where required. 
+If you go to the Formative assessment folder of the BIO-4008Y or BIO-4602Y you will find a submission point, you will need to upload both your figure with figure legend document along with your script document. 
 
-You may notice that there is a check box where you will need to assert that this is your own work. Once this is done you can scroll down and you will be able to mark the page as complete. Once you have marked your page as complete you can consider it submitted. 
+> Top tip - I will release a marking rubric to you respective blackboard page so that you can see the criteria underwhich these asignments are assessed. 
 
-> Top tip - as you scroll down the page you can see that there is a marking rubric included, these are the criteria under which we will be marking your work, a similar one has been created for the summative page as well. 
-
-The deadline for formative submissions is the 08/12/23, I will mark all submissions submitted by this date over the Christmas break.
+The deadline for formative submissions is the 13/12/24, I will mark all submissions submitted by this date over the Christmas break.

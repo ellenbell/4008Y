@@ -14,7 +14,7 @@ This prediction was that polyploid fish may carry a higher number of different i
 
 ## The data
 
-The data you have been provided with can be found [here](https://downgit.github.io/#/home?url=https://github.com/ellenbell/4008Y/blob/main/data/catfish_parasite_data.csv), it is also on blackboard should the download link prove troublesome. Go to the Workbook and Data Sets folder in the Data Sciences Learning Module in your Skills module blackboard page, the file is called `catfish_parasite_data.csv`. 
+The data you have been provided with can be found on blackboard. Go to the Data Sets folder in the Data Sciences Learning Module in your Skills module blackboard page, the file is called `catfish_parasite_data.csv`. 
 
 The data consist of four variables;
 

@@ -17,7 +17,7 @@ teaching-layout-for-data-science
 assessment
 how-to-use-this-workbook
 why-is-data-science-important-and-why-are-we-teaching-it-in-r
-introduction-to-r-and-posit-cloud---week-2a
+introduction-to-r-and-posit-cloud---week-3
 what-is-r-and-posit-cloud
 a-warning-on-managing-your-work-flow
 creating-your-first-posit-cloud-project
@@ -25,7 +25,7 @@ maximising-the-efficiency-of-your-workspace
 entering-commands-directly-into-the-consol
 sending-commands-down-to-the-console-from-an-r-script
 a-note-on-comments
-objects-functions-and-packages---week-3a
+objects-functions-and-packages---week-4
 creating-objects
 what-are-functions-and-packages
 using-functions
@@ -43,7 +43,7 @@ creating-tibbles
 renaming
 before-you-leave
 references-1
-reading-week---week-5a
+reading-week---week-6
 dimensions
 top-to-tail---some-useful-functions-to-explore
 whats-your-sample-size
@@ -55,7 +55,7 @@ my-first-histogram-in-r
 export
 before-you-leave-2
 references-3
-lost-the-plot-some-more-data-visualisations---week-8a---workshop-2
+lost-the-plot-some-more-data-visualisations---week-9---workshop-2
 boxplot
 scatter
 before-you-leave-3
