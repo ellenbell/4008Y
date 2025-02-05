@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 8 Lost the plot? Some more data visualisations - Week 9 - Workshop 2 | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 8 Lost the plot? Some more data visualisations - Week 9 - Workshop 2 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   <meta property="og:type" content="book" />
@@ -60,7 +60,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -123,10 +123,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -340,27 +336,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="boxplot" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Looking at differences<a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#boxplot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As we discussed in the Chapter 4 wing case length is a good proxy for overall beetle size in <em>Tribolium</em>. So we will be comparing beetle wing case length in male and female beetles. Because we are looking for possible differences we know that we probably want to build a box plot. Login to your posit Cloud account and copy over the following chunk of code into your <code>tribolium_parasites.r</code> script. Run it and see what happens.</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
-<span id="cb39-2"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
-<span id="cb39-3"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb39-3" aria-hidden="true" tabindex="-1"></a>size_differences_by_sex_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> sex, y wing_case_size)) <span class="sc">+</span> </span>
-<span id="cb39-4"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="co"># Tell ggplot that you want it to build a boxplot</span></span>
-<span id="cb39-5"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_differences_by_sex_boxplot) <span class="co"># Print your new figure</span></span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb39-1" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
+<span id="cb39-2"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb39-2" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
+<span id="cb39-3"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb39-3" tabindex="-1"></a>size_differences_by_sex_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> sex, y wing_case_size)) <span class="sc">+</span> </span>
+<span id="cb39-4"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb39-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="co"># Tell ggplot that you want it to build a boxplot</span></span>
+<span id="cb39-5"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb39-5" tabindex="-1"></a><span class="fu">print</span>(size_differences_by_sex_boxplot) <span class="co"># Print your new figure</span></span></code></pre></div>
 <p>Oh dear… Looks like there may be something wrong with the script…</p>
 <pre><code>geom_boxplot: outlier.colour = NULL, outlier.fill = NULL, outlier.shape = 19, outlier.size = 1.5, outlier.stroke = 0.5, outlier.alpha = NULL, notch = FALSE, notchwidth = 0.5, varwidth = FALSE, na.rm = FALSE, orientation = NA
 stat_boxplot: na.rm = FALSE, orientation = NA
 position_dodge2 </code></pre>
 <p>When you get errors like this it generally means that ggplot is missing something essential from the script. There is a typo in the original script, can you spot it and fix it? Once you have made the figure, take a look at it, do you think that there is a difference in size between male and female beetles? How would you interpret this figure? Make sure you save your box plot to your figures folder, you may need to adjust the sizing variables using the some of the arguments we learned in Chapter <a href="histogram.html#export">7.3</a>.</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Saving outputs</span></span>
-<span id="cb41-2"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/size_differences_by_sex_boxplot.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
-<span id="cb41-3"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb41-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">plot =</span> size_differences_by_sex_boxplot, <span class="co"># Tell R what to save - in this case your object</span></span>
-<span id="cb41-4"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb41-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb41-1" tabindex="-1"></a><span class="co"># Saving outputs</span></span>
+<span id="cb41-2"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb41-2" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;figures/size_differences_by_sex_boxplot.pdf&quot;</span>, <span class="co"># Give R a path to save to and a file name</span></span>
+<span id="cb41-3"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb41-3" tabindex="-1"></a>       <span class="at">plot =</span> size_differences_by_sex_boxplot, <span class="co"># Tell R what to save - in this case your object</span></span>
+<span id="cb41-4"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb41-4" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;pdf&quot;</span>) <span class="co"># Tell R what file type to create, in this case a pdf</span></span></code></pre></div>
 <p>Our other categorical variable is treatment. Using the chunk of code within your script try to write a new chunk to compare the differences between <code>wing_case_size</code> and <code>treatment</code> in our sample of <em>Tribolium</em>.</p>
 <p>Oh dear… R still isn’t happy… You have probably been presented with the following message</p>
 <pre><code>Warning message:
 Continuous x aesthetic -- did you forget aes(group=...)? </code></pre>
 <p>This essentially means that R is expecting a categorical variable (e.g. blue, red, green or as our example is 30 or 35 degrees centigrade) but what it sees is a continuous variable (e.g. 1, 2, 3, 4, 5, 6, 7, 8, 9). This has come about because although our treatment is categorical it is expressed as a numeric and has confused R. Use the <code>glimpse()</code> command to see how R has interpreted the <code>treatment</code> variable. This should confirm that R sees <code>treatment</code> as a double (<code>dbl</code>) vector. We missed this when we were checking our data in Chapter 4, but thankfully it is an easy fix. We want to tell R to treat the variable <code>treatment</code> as a factor (categorical data) and not as continuous data. Try adding this to your script;</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instruct R to treat the treatment variable as a factor </span></span>
-<span id="cb43-2"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb43-2" aria-hidden="true" tabindex="-1"></a>tribolium_combo<span class="sc">$</span>treatment <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(tribolium_combo<span class="sc">$</span>treatment) <span class="co"># Note this will edit your data frame</span></span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb43-1" tabindex="-1"></a><span class="co"># Instruct R to treat the treatment variable as a factor </span></span>
+<span id="cb43-2"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb43-2" tabindex="-1"></a>tribolium_combo<span class="sc">$</span>treatment <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(tribolium_combo<span class="sc">$</span>treatment) <span class="co"># Note this will edit your data frame</span></span></code></pre></div>
 <p>Now run <code>glimpse()</code> again. Can you spot the difference?</p>
 <p>Try to make your box plot for <code>wing_case_size</code> and <code>treatment</code> again. What does this plot tell you about the data set? Make sure you save it to your <code>figures</code> folder.</p>
 <p>It would be really useful to show both <code>sex</code> and <code>treatment</code> on the x axis so that you can compare between both categorical variables and size. We can do this with a fairly simple addition to our chunk. Add the expression <code>fill = sex</code> to the <code>aes</code> function of your last chunk. This tells R to colour your box plot by sex. You should therefore have 4 boxes. Save this figure under a different name in your <code>figures folder</code>.</p>
@@ -370,11 +366,11 @@ Continuous x aesthetic -- did you forget aes(group=...)? </code></pre>
 <div id="scatter" class="section level2 hasAnchor" number="8.2">
 <h2><span class="header-section-number">8.2</span> Looking at relationships<a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#scatter" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To look for possible relationships we need two continuous variables. In our data set we have <code>wing_case_size</code> and <code>parasite_burden</code>. There are several theories in the field of parasitology that suggest larger organisms tend to harbor more parasites. We can see if this is a relationship that persists in our <em>Tribolium</em>. Copy, complete and run the following chunk. You may notice that x and y axis variables have been left blank, which variable do you think belongs on which axis?</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a scatter plot and saving it in an object</span></span>
-<span id="cb44-2"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
-<span id="cb44-3"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb44-3" aria-hidden="true" tabindex="-1"></a>size_vs_parasites_point <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> , <span class="at">y =</span> )) <span class="sc">+</span> </span>
-<span id="cb44-4"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="co"># geom_point is ggplots scatter plot</span></span>
-<span id="cb44-5"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_vs_parasites_point)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb44-1" tabindex="-1"></a><span class="co"># Making a scatter plot and saving it in an object</span></span>
+<span id="cb44-2"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb44-2" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
+<span id="cb44-3"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb44-3" tabindex="-1"></a>size_vs_parasites_point <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> , <span class="at">y =</span> )) <span class="sc">+</span> </span>
+<span id="cb44-4"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb44-4" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="co"># geom_point is ggplots scatter plot</span></span>
+<span id="cb44-5"><a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#cb44-5" tabindex="-1"></a><span class="fu">print</span>(size_vs_parasites_point)</span></code></pre></div>
 <p>What do you think this plot is showing you? Try adding another function to this chunk, add <code>geom_smooth(method="lm")</code>. This will add a simple regression line to your plot, I suggest you add a suitable comment to that effect to your chunk. Does this new addition to your plot support any initial observations you may have made from the plot? Make sure you save your plot in your <code>figures</code> folder.</p>
 <p>Well done, you have started building two very commonly used plots using R. These plots are functionally sound, but lets be honest, they’re not pretty. A plot should always be pretty. Next week we will start learning how to make plots visually pleasing as well as functional.</p>
 </div>
@@ -455,7 +451,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Exploring the dimensions of your data frame - Week 7 | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Exploring the dimensions of your data frame - Week 7 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   <meta property="og:type" content="book" />
@@ -60,7 +60,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -123,10 +123,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -341,26 +337,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">6.1</span> Top to tail - some useful functions to explore<a href="dimensions.html#top-to-tail---some-useful-functions-to-explore" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Log into posit cloud and open up your <code>tribolium_parasites</code> project.</p>
 <p>Lets start by reminding ourselves of what these data look like. Try using the following functions on your<code>tribolium_combo</code> data frame, copy them into your script and comment <code>#</code> next to each when you work out what it does.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="dimensions.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Some functions to play with</span></span>
-<span id="cb34-2"><a href="dimensions.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>()</span>
-<span id="cb34-3"><a href="dimensions.html#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>()</span>
-<span id="cb34-4"><a href="dimensions.html#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>()</span>
-<span id="cb34-5"><a href="dimensions.html#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>()</span>
-<span id="cb34-6"><a href="dimensions.html#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="fu">view</span>()</span>
-<span id="cb34-7"><a href="dimensions.html#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="dimensions.html#cb34-1" tabindex="-1"></a><span class="co"># Some functions to play with</span></span>
+<span id="cb34-2"><a href="dimensions.html#cb34-2" tabindex="-1"></a><span class="fu">nrow</span>()</span>
+<span id="cb34-3"><a href="dimensions.html#cb34-3" tabindex="-1"></a><span class="fu">ncol</span>()</span>
+<span id="cb34-4"><a href="dimensions.html#cb34-4" tabindex="-1"></a><span class="fu">colnames</span>()</span>
+<span id="cb34-5"><a href="dimensions.html#cb34-5" tabindex="-1"></a><span class="fu">str</span>()</span>
+<span id="cb34-6"><a href="dimensions.html#cb34-6" tabindex="-1"></a><span class="fu">view</span>()</span>
+<span id="cb34-7"><a href="dimensions.html#cb34-7" tabindex="-1"></a><span class="fu">tail</span>()</span></code></pre></div>
 <p>Hopefully you can see that these functions help give you some good insights into the dimensions of your data set, especially when used alongside functions that you are already be familiar with, like <code>head()</code> and <code>glimpse()</code>.</p>
 </div>
 <div id="whats-your-sample-size" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> Whats your sample size?<a href="dimensions.html#whats-your-sample-size" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>With this data set its not hard to work out what the sample size is. But data sets can become huge and its not always easy or effective to scroll through them. Sometimes you really just need to know how many observations are in your data set, thankfully each of our beetles has a unique identifyer so we can count how many unique entries there are in the <code>beetle_id</code> variable. Try the following;</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="dimensions.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the n_distinct function to count unique/distinct entries in the beetle_id column</span></span>
-<span id="cb35-2"><a href="dimensions.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">n_distinct</span>(tribolium_combo<span class="sc">$</span>beetle_id)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="dimensions.html#cb35-1" tabindex="-1"></a><span class="co"># Use the n_distinct function to count unique/distinct entries in the beetle_id column</span></span>
+<span id="cb35-2"><a href="dimensions.html#cb35-2" tabindex="-1"></a><span class="fu">n_distinct</span>(tribolium_combo<span class="sc">$</span>beetle_id)</span></code></pre></div>
 <blockquote>
 <p><strong>Side Note</strong> notice the use of the <code>$</code> above. This is effectively directing R to a specific variable/column within a data frame.</p>
 </blockquote>
 <p>You may have noticed that we have two categorical variables in this data set, <code>sex</code> and <code>treatment</code>. It would be really useful to know what your sample size is for each of these variables. Try the following;</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="dimensions.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the tabyl function from the janitor package, comment on what it does. </span></span>
-<span id="cb36-2"><a href="dimensions.html#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tabyl</span>(tribolium_combo, sex , treatment)</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="dimensions.html#cb36-1" tabindex="-1"></a><span class="co"># Use the tabyl function from the janitor package, comment on what it does. </span></span>
+<span id="cb36-2"><a href="dimensions.html#cb36-2" tabindex="-1"></a><span class="fu">tabyl</span>(tribolium_combo, sex , treatment)</span></code></pre></div>
 <details>
 <summary>
 <strong>Stuck? Click here for a breakdown of the code above</strong>
@@ -448,7 +444,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 15 Playing with some statistics - Workshop 5 - Athletes continued, Week 4 | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 15 Playing with some statistics - Workshop 5 - Athletes continued, Week 4 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   <meta property="og:type" content="book" />
@@ -60,7 +60,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -123,10 +123,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -343,21 +339,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="task-1---calculating-some-descriptive-statistics" class="section level3 hasAnchor" number="15.1.1">
 <h3><span class="header-section-number">15.1.1</span> Task 1 - Calculating some descriptive statistics<a href="stats.html#task-1---calculating-some-descriptive-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Copy the following piece of code into your script and then run it;</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="stats.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new object called athletes_summary_stats_ht and store mean, standard deviation (sd), and sample size (n) for height (ht) in male and female athletes.</span></span>
-<span id="cb65-2"><a href="stats.html#cb65-2" aria-hidden="true" tabindex="-1"></a>athletes_summary_stats_ht <span class="ot">&lt;-</span> athletes <span class="sc">%&gt;%</span> </span>
-<span id="cb65-3"><a href="stats.html#cb65-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">%&gt;%</span> </span>
-<span id="cb65-4"><a href="stats.html#cb65-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean=</span><span class="fu">mean</span>(ht),</span>
-<span id="cb65-5"><a href="stats.html#cb65-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd=</span><span class="fu">sd</span>(ht),</span>
-<span id="cb65-6"><a href="stats.html#cb65-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">n=</span><span class="fu">n</span>())</span>
-<span id="cb65-7"><a href="stats.html#cb65-7" aria-hidden="true" tabindex="-1"></a>athletes_summary_stats_ht</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="stats.html#cb65-1" tabindex="-1"></a><span class="co"># Create a new object called athletes_summary_stats_ht and store mean, standard deviation (sd), and sample size (n) for height (ht) in male and female athletes.</span></span>
+<span id="cb65-2"><a href="stats.html#cb65-2" tabindex="-1"></a>athletes_summary_stats_ht <span class="ot">&lt;-</span> athletes <span class="sc">%&gt;%</span> </span>
+<span id="cb65-3"><a href="stats.html#cb65-3" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">%&gt;%</span> </span>
+<span id="cb65-4"><a href="stats.html#cb65-4" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean=</span><span class="fu">mean</span>(ht),</span>
+<span id="cb65-5"><a href="stats.html#cb65-5" tabindex="-1"></a>            <span class="at">sd=</span><span class="fu">sd</span>(ht),</span>
+<span id="cb65-6"><a href="stats.html#cb65-6" tabindex="-1"></a>            <span class="at">n=</span><span class="fu">n</span>())</span>
+<span id="cb65-7"><a href="stats.html#cb65-7" tabindex="-1"></a>athletes_summary_stats_ht</span></code></pre></div>
 <p>Have a look at the table that R produces. Then look back at the code you used, do you understand what each function has done? The <code>summarise</code> function can also calculate other summary statistics. Try using <code>help(summarise)</code> to find out what else it can do. Play with the function, see if you can produce a similar table that calculates the mean and standard deviation for red blood cell count in male and female athletes.</p>
 <p>It would also be useful to know the standard error of the mean and 95% confidence intervals for this data set. We can use the <code>mutate</code> function to add additional columns onto our summary stats table. Remember we can calculate the standard error of the mean using;</p>
 <p><span class="math display">\[
 SEM = \frac{SD}{\sqrt{n}}
 \]</span>
 Copy the following chunk of code into your script, run it, and then take a look at the <code>athletes_summary_stats_ht</code> object.</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="stats.html#cb66-1" aria-hidden="true" tabindex="-1"></a>athletes_summary_stats_ht <span class="ot">&lt;-</span> athletes_summary_stats_ht <span class="sc">%&gt;%</span></span>
-<span id="cb66-2"><a href="stats.html#cb66-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sem =</span> sd<span class="sc">/</span><span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="stats.html#cb66-1" tabindex="-1"></a>athletes_summary_stats_ht <span class="ot">&lt;-</span> athletes_summary_stats_ht <span class="sc">%&gt;%</span></span>
+<span id="cb66-2"><a href="stats.html#cb66-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sem =</span> sd<span class="sc">/</span><span class="fu">sqrt</span>(n))</span></code></pre></div>
 <p>Hopefully you should see something that looks like this:</p>
 <pre><code>&gt; athletes_summary_stats_ht
 # A tibble: 2 × 5
@@ -392,10 +388,10 @@ Copy the following chunk of code into your script, run it, and then take a look 
 <div id="task-2---testing-for-differences" class="section level3 hasAnchor" number="15.2.2">
 <h3><span class="header-section-number">15.2.2</span> Task 2 - Testing for differences<a href="stats.html#task-2---testing-for-differences" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Lets say we wanted to analyse the difference in average weight between male and female athletes. So our hypothesis might be; male athletes are heavier then female athletes, in this case the predictor variable is sex and the response variable is weight. If we wanted to use that information to fit a general linear model we could use the following chunk;</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="stats.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fitting a linear model </span></span>
-<span id="cb69-2"><a href="stats.html#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Here I have created an object &quot;linear_model01&quot; to store the outputs of our model in</span></span>
-<span id="cb69-3"><a href="stats.html#cb69-3" aria-hidden="true" tabindex="-1"></a>linear_model01 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wt <span class="sc">~</span> sex, <span class="at">data =</span> athletes) <span class="co"># lm() is the function here, and we are specifying that we want to analyse weight (our response variable) as a function of sex (our predictor variable) using tilde (~). It is super important to place your response and predictor variables on the right side of tilde. We then just tell R which data frame we are using with the data = athletes argument. </span></span>
-<span id="cb69-4"><a href="stats.html#cb69-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(linear_model01) <span class="co"># Summary() will just print out a summary of our model for us to interpret </span></span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="stats.html#cb69-1" tabindex="-1"></a><span class="co"># Fitting a linear model </span></span>
+<span id="cb69-2"><a href="stats.html#cb69-2" tabindex="-1"></a><span class="co"># Here I have created an object &quot;linear_model01&quot; to store the outputs of our model in</span></span>
+<span id="cb69-3"><a href="stats.html#cb69-3" tabindex="-1"></a>linear_model01 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wt <span class="sc">~</span> sex, <span class="at">data =</span> athletes) <span class="co"># lm() is the function here, and we are specifying that we want to analyse weight (our response variable) as a function of sex (our predictor variable) using tilde (~). It is super important to place your response and predictor variables on the right side of tilde. We then just tell R which data frame we are using with the data = athletes argument. </span></span>
+<span id="cb69-4"><a href="stats.html#cb69-4" tabindex="-1"></a><span class="fu">summary</span>(linear_model01) <span class="co"># Summary() will just print out a summary of our model for us to interpret </span></span></code></pre></div>
 <p>The <code>summary()</code> function will then provide you with the following overview of your model output;</p>
 <pre><code>&gt; summary(lsmodel01)
 
@@ -451,10 +447,10 @@ F-statistic: 85.14 on 1 and 200 DF,  p-value: &lt; 2.2e-16</code></pre>
 <div id="task-3---testing-for-relationships" class="section level3 hasAnchor" number="15.2.3">
 <h3><span class="header-section-number">15.2.3</span> Task 3 - Testing for relationships<a href="stats.html#task-3---testing-for-relationships" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When it comes to investigating relationships between two continuous variables we may want to know if there is a statistical correlation between variables. We can use Pearson’s correlation coefficient to do this. Try running the following chunk of code to test for a correlation between height and weight in the athletes data set;</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="stats.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlations</span></span>
-<span id="cb75-2"><a href="stats.html#cb75-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb75-3"><a href="stats.html#cb75-3" aria-hidden="true" tabindex="-1"></a>correlation01 <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(athletes<span class="sc">$</span>ht, athletes<span class="sc">$</span>wt, <span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>) <span class="co"># perform a correlation test on height and weight in the athletes data set using Pearson&#39;s correlation coefficient </span></span>
-<span id="cb75-4"><a href="stats.html#cb75-4" aria-hidden="true" tabindex="-1"></a>correlation01</span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="stats.html#cb75-1" tabindex="-1"></a><span class="co"># Correlations</span></span>
+<span id="cb75-2"><a href="stats.html#cb75-2" tabindex="-1"></a></span>
+<span id="cb75-3"><a href="stats.html#cb75-3" tabindex="-1"></a>correlation01 <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(athletes<span class="sc">$</span>ht, athletes<span class="sc">$</span>wt, <span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>) <span class="co"># perform a correlation test on height and weight in the athletes data set using Pearson&#39;s correlation coefficient </span></span>
+<span id="cb75-4"><a href="stats.html#cb75-4" tabindex="-1"></a>correlation01</span></code></pre></div>
 <p>Your output should look somethink like this;</p>
 <pre><code>&gt; correlation01
 
@@ -547,9 +543,9 @@ F-statistic: 312.6 on 1 and 200 DF,  p-value: &lt; 2.2e-16</code></pre>
 <h3><span class="header-section-number">15.3.1</span> Task 4 - Checking for normality<a href="stats.html#task-4---checking-for-normality" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To check our distributions we can and should always make a histogram just to look over the data. But there are also tests we can use to reassure ourselves of the data distribution. One such test is called the Shapiro-Wilk test for normality and its very easy to perform in R. Lets go back to our weight variable in the male athletes data set and see if that is normally distributed. First of all pull up your histogram for this variable and remind yourself of how the data are distributed.</p>
 <p>Now to add confidence to our interpretation we can run the following piece of code;</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="stats.html#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Normality test</span></span>
-<span id="cb78-2"><a href="stats.html#cb78-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-3"><a href="stats.html#cb78-3" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(male_athletes<span class="sc">$</span>wt) <span class="co"># Notice we are running this test on just the male athletes</span></span></code></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="stats.html#cb78-1" tabindex="-1"></a><span class="co"># Normality test</span></span>
+<span id="cb78-2"><a href="stats.html#cb78-2" tabindex="-1"></a></span>
+<span id="cb78-3"><a href="stats.html#cb78-3" tabindex="-1"></a><span class="fu">shapiro.test</span>(male_athletes<span class="sc">$</span>wt) <span class="co"># Notice we are running this test on just the male athletes</span></span></code></pre></div>
 <p>The results should look something like this;</p>
 <pre><code>&gt; shapiro.test(male_athletes$wt)
 
@@ -569,10 +565,10 @@ W = 0.98523, p-value = 0.3167
 <li>We can run a non parametric test</li>
 </ol>
 <p>Hopefully you noticed that the red blood cell count for both male and female athletes are not normally distributed. We can log transform the female althletes red blood cell count using the following piece of code;</p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="stats.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Log transform</span></span>
-<span id="cb80-2"><a href="stats.html#cb80-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb80-3"><a href="stats.html#cb80-3" aria-hidden="true" tabindex="-1"></a>female_athletes <span class="ot">&lt;-</span> female_athletes <span class="sc">%&gt;%</span></span>
-<span id="cb80-4"><a href="stats.html#cb80-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">log10 =</span> <span class="fu">log10</span>(female_athletes<span class="sc">$</span>rcc))</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="stats.html#cb80-1" tabindex="-1"></a><span class="co"># Log transform</span></span>
+<span id="cb80-2"><a href="stats.html#cb80-2" tabindex="-1"></a></span>
+<span id="cb80-3"><a href="stats.html#cb80-3" tabindex="-1"></a>female_athletes <span class="ot">&lt;-</span> female_athletes <span class="sc">%&gt;%</span></span>
+<span id="cb80-4"><a href="stats.html#cb80-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">log10 =</span> <span class="fu">log10</span>(female_athletes<span class="sc">$</span>rcc))</span></code></pre></div>
 <p>Now try making a new histogram and running the Shapiro-Wilk test on this new log10 variable and see if its normally distributed. Do the same thing for the red blood cell counts in male athletes. How might you interpret these results?</p>
 <details>
 <summary>
@@ -583,9 +579,9 @@ W = 0.98523, p-value = 0.3167
 <p><br />
 The second option with data that aren’t normally distributed is to perform a non-parametric test. If we are interested in looking for differences between categorical variables we can perform a Mann-Whitney U test (instead of a general linear model, ANOVA or T-test) or if we wish to test for correlations we can use Spearmans rank correlation coefficient (instead of Pearsons correlation coefficient).</p>
 <p>Try running the following piece of code;</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="stats.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mann Whitney U / Wilcoxan </span></span>
-<span id="cb81-2"><a href="stats.html#cb81-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-3"><a href="stats.html#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wilcox.test</span>(rcc <span class="sc">~</span> sex, <span class="at">data=</span>athletes) </span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="stats.html#cb81-1" tabindex="-1"></a><span class="co"># Mann Whitney U / Wilcoxan </span></span>
+<span id="cb81-2"><a href="stats.html#cb81-2" tabindex="-1"></a></span>
+<span id="cb81-3"><a href="stats.html#cb81-3" tabindex="-1"></a><span class="fu">wilcox.test</span>(rcc <span class="sc">~</span> sex, <span class="at">data=</span>athletes) </span></code></pre></div>
 <pre><code>&gt; wilcox.test(rcc ~ sex, data=athletes) 
 
     Wilcoxon rank sum test with continuity correction
@@ -595,10 +591,10 @@ W = 948, p-value &lt; 2.2e-16
 alternative hypothesis: true location shift is not equal to 0</code></pre>
 <p>This is a fairly easy output to interpret. Although this is called a Wilcoxon test, if you run the test on two independent samples (as we have here), R runs a Mann-Whitney U test (confusing I know). Here we have performed a Mann-Whitney U test. The W value is our test statistic and p-value is fairly self explanatory. So we can say that there is a significant difference in red blood cell count between male and female athletes.</p>
 <p>Now if we want to investigate a correlation with data that does not follow a normal distribution we can use the Spearmans rank correlation coefficient. Lets use the same functions to test for a correlation between height and red blood cell count. Try using the following chunk;</p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="stats.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlations</span></span>
-<span id="cb83-2"><a href="stats.html#cb83-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb83-3"><a href="stats.html#cb83-3" aria-hidden="true" tabindex="-1"></a>correlation02 <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(athletes<span class="sc">$</span>ht, athletes<span class="sc">$</span>rcc, <span class="at">method =</span> <span class="st">&quot;spearman&quot;</span>)</span>
-<span id="cb83-4"><a href="stats.html#cb83-4" aria-hidden="true" tabindex="-1"></a>correlation02</span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="stats.html#cb83-1" tabindex="-1"></a><span class="co"># Correlations</span></span>
+<span id="cb83-2"><a href="stats.html#cb83-2" tabindex="-1"></a></span>
+<span id="cb83-3"><a href="stats.html#cb83-3" tabindex="-1"></a>correlation02 <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(athletes<span class="sc">$</span>ht, athletes<span class="sc">$</span>rcc, <span class="at">method =</span> <span class="st">&quot;spearman&quot;</span>)</span>
+<span id="cb83-4"><a href="stats.html#cb83-4" tabindex="-1"></a>correlation02</span></code></pre></div>
 <p>You should get an output that looks something like this;</p>
 <pre><code>&gt; correlation02
 
@@ -696,7 +692,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

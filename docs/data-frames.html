@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Directories and data frames - Week 5 - Workshop 1 | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Directories and data frames - Week 5 - Workshop 1 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   <meta property="og:type" content="book" />
@@ -60,7 +60,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -123,10 +123,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -364,8 +360,8 @@ Figure 4.1: Lab notes for wing case size (mm) and parasite burden of 20 <em>Trib
 <h2><span class="header-section-number">4.2</span> Setting up your R workspace<a href="data-frames.html#workspace" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This is a new piece of analysis, we will be carrying forward principals from the previous chapters but scripts and data will be new. So its a good idea to start with a fresh clean workspace. So lets set up a new project in posit Cloud, follow the steps from Chapter 2 if you cant remember how to do this and name this project <code>tribolium_parasites</code>. Its always good to keep a well organised tidy workspace, generally I will start a new project in posit Cloud if I am working on a new series of questions with a new data set or sets.</p>
 <p>For this project you need to make sure two packages are installed. Copy the following directly into your console.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="data-frames.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb21-2"><a href="data-frames.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;janitor&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="data-frames.html#cb21-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb21-2"><a href="data-frames.html#cb21-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;janitor&quot;</span>)</span></code></pre></div>
 <p>We will be moving towards doing some more comprehensive data handling so setting up your workspace is going to become more and more important. If you can get into the habit of setting up your workspace properly at the start of each project you will thank yourself later. A well developed project will contain several files including;</p>
 <ul>
 <li>Input data</li>
@@ -400,20 +396,20 @@ Figure 4.2: Absolute vs Relative Paths
 <div id="script" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Setting up your script<a href="data-frames.html#script" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Right OK, enough theory, lets start setting up your script. Create a new R script by clicking on the icon with a little green plus, below File in the top left of the posit Cloud window and select <strong>R Script</strong>. Call your new script <code>tribolium_parasites</code>. Its always good to add a few lines of description at the start of your script, this tells your future self and anyone else what the script is doing. Copy over the following.</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="data-frames.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># An analysis of parasite abundance between male and female tribolium beetles from two thermal treatments (30 and 35 degrees centigrade)</span></span>
-<span id="cb22-2"><a href="data-frames.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Your name</span></span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="data-frames.html#cb22-1" tabindex="-1"></a><span class="co"># An analysis of parasite abundance between male and female tribolium beetles from two thermal treatments (30 and 35 degrees centigrade)</span></span>
+<span id="cb22-2"><a href="data-frames.html#cb22-2" tabindex="-1"></a><span class="co"># Your name</span></span></code></pre></div>
 <p>Then we need to load any packages that we might want to use, copy over the following;</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="data-frames.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>) <span class="co"># Install tidyverse</span></span>
-<span id="cb23-2"><a href="data-frames.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;janitor&quot;</span>) <span class="co"># Install janitor</span></span>
-<span id="cb23-3"><a href="data-frames.html#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># Load the tidyverse package</span></span>
-<span id="cb23-4"><a href="data-frames.html#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor) <span class="co"># Load the janitor package</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="data-frames.html#cb23-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>) <span class="co"># Install tidyverse</span></span>
+<span id="cb23-2"><a href="data-frames.html#cb23-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;janitor&quot;</span>) <span class="co"># Install janitor</span></span>
+<span id="cb23-3"><a href="data-frames.html#cb23-3" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># Load the tidyverse package</span></span>
+<span id="cb23-4"><a href="data-frames.html#cb23-4" tabindex="-1"></a><span class="fu">library</span>(janitor) <span class="co"># Load the janitor package</span></span></code></pre></div>
 </div>
 <div id="importing" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Importing data<a href="data-frames.html#importing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Lets import your data set. Go into your <strong>data</strong> folder within <strong>Files</strong>, click <strong>Upload</strong> and select your newly made <code>.csv</code> file. Once its uploaded you should be able to see it under <code>data/</code> in the bottom right panel.</p>
 <p>Now we need to tell R to read your <code>.csv</code> file.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="data-frames.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the data from the .csv file in the data folder into my project</span></span>
-<span id="cb24-2"><a href="data-frames.html#cb24-2" aria-hidden="true" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/your_file_name.csv&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="data-frames.html#cb24-1" tabindex="-1"></a><span class="co"># Read the data from the .csv file in the data folder into my project</span></span>
+<span id="cb24-2"><a href="data-frames.html#cb24-2" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/your_file_name.csv&quot;</span>) </span></code></pre></div>
 <p>R should respond with this;</p>
 <pre><code>&gt; tribolium &lt;- read_csv(&quot;data/tribolium.csv&quot;)
 Rows: 20 Columns: 3                                                              
@@ -423,39 +419,39 @@ dbl (3): beetle_id, wing_case_size, parasite_burden</code></pre>
 <p>Here R has told us that there are 20 rows and 3 columns in our data set, it has indicated that it has used comas as a column deliminator and that all the data are dbl (short for double), which means each column contains numbers. You should also be able to see <code>tribolium</code> in your <strong>Environment</strong> under <strong>Data</strong>.</p>
 <p>If you have errors, make sure your file name and path are input correctly.</p>
 <p>Lets have a look at our data to make sure it looks as we expect it to, try this;</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="data-frames.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tribolium)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="data-frames.html#cb26-1" tabindex="-1"></a><span class="fu">head</span>(tribolium)</span></code></pre></div>
 <p>We can see for ourselves that R has correctly read our data.</p>
 </div>
 <div id="creating-tibbles" class="section level2 hasAnchor" number="4.5">
 <h2><span class="header-section-number">4.5</span> Creating tibbles<a href="data-frames.html#creating-tibbles" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>So we have successfully imported data into R from a <code>.csv</code> file and stored it as a data frame which is a type of two dimensional array. Tibbles are a type of data frame as well, these can be useful if you want to type your data straight into R, or if you have more information to add to a pre-existing data frame. For example, we also have some additional data on the sex and treatment conditions of the Tribolium beetles. So lets create a tibble, add the following to your script;</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="data-frames.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First of all lets create some variables</span></span>
-<span id="cb27-2"><a href="data-frames.html#cb27-2" aria-hidden="true" tabindex="-1"></a>beetle_id <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>) <span class="co"># Notice that this notation will create of a list of numbers 1 to 20</span></span>
-<span id="cb27-3"><a href="data-frames.html#cb27-3" aria-hidden="true" tabindex="-1"></a>sex <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>)</span>
-<span id="cb27-4"><a href="data-frames.html#cb27-4" aria-hidden="true" tabindex="-1"></a>treatment <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="data-frames.html#cb27-1" tabindex="-1"></a><span class="co"># First of all lets create some variables</span></span>
+<span id="cb27-2"><a href="data-frames.html#cb27-2" tabindex="-1"></a>beetle_id <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>) <span class="co"># Notice that this notation will create of a list of numbers 1 to 20</span></span>
+<span id="cb27-3"><a href="data-frames.html#cb27-3" tabindex="-1"></a>sex <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>)</span>
+<span id="cb27-4"><a href="data-frames.html#cb27-4" tabindex="-1"></a>treatment <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">30</span>)</span></code></pre></div>
 <p>Now we neet to turn our new variables into a data frame</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="data-frames.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Turning variables into a tibble</span></span>
-<span id="cb28-2"><a href="data-frames.html#cb28-2" aria-hidden="true" tabindex="-1"></a>tribolium_extras <span class="ot">&lt;-</span> <span class="fu">tibble</span>(beetle_id,sex,treatment)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="data-frames.html#cb28-1" tabindex="-1"></a><span class="co"># Turning variables into a tibble</span></span>
+<span id="cb28-2"><a href="data-frames.html#cb28-2" tabindex="-1"></a>tribolium_extras <span class="ot">&lt;-</span> <span class="fu">tibble</span>(beetle_id,sex,treatment)</span></code></pre></div>
 <p>Try using <code>head()</code> to check your new <code>tribolium_extras</code> data frame.</p>
 </div>
 <div id="renaming" class="section level2 hasAnchor" number="4.6">
 <h2><span class="header-section-number">4.6</span> Renaming variables<a href="data-frames.html#renaming" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>It may be advantageous to have all the data from both of our data frames together, we can use another function to do this. However first I would like everyone in the class to have the same variable names, this will help us later on but also sometimes its useful to change headings in R. Add the following to your script and run it, make sure you edit it to match your variable names.</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="data-frames.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Renaming some variables in your original data set</span></span>
-<span id="cb29-2"><a href="data-frames.html#cb29-2" aria-hidden="true" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> tribolium <span class="sc">%&gt;%</span></span>
-<span id="cb29-3"><a href="data-frames.html#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">beetle_id =</span> your_variable_name_here)</span>
-<span id="cb29-4"><a href="data-frames.html#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check how your data frame now looks</span></span>
-<span id="cb29-5"><a href="data-frames.html#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tribolium) </span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="data-frames.html#cb29-1" tabindex="-1"></a><span class="co"># Renaming some variables in your original data set</span></span>
+<span id="cb29-2"><a href="data-frames.html#cb29-2" tabindex="-1"></a>tribolium <span class="ot">&lt;-</span> tribolium <span class="sc">%&gt;%</span></span>
+<span id="cb29-3"><a href="data-frames.html#cb29-3" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">beetle_id =</span> your_variable_name_here)</span>
+<span id="cb29-4"><a href="data-frames.html#cb29-4" tabindex="-1"></a><span class="co"># Check how your data frame now looks</span></span>
+<span id="cb29-5"><a href="data-frames.html#cb29-5" tabindex="-1"></a><span class="fu">head</span>(tribolium) </span></code></pre></div>
 <blockquote>
 <p><strong>Side Note</strong> you may have noticed the %&gt;% expression, this is known as the forward pipe operator and allows you to chain together commands (rather like the <code>+</code> we covered in Chapter 2 when using <code>ggplot</code>). This is a very simple use of it but it is piping your data frame forward to the rename function.</p>
 </blockquote>
 <p>Hopefully the column containing your beetle IDs is now labeled <code>beetle_id</code>. Use the same set of commands to rename your variables for beetle wing case size and parasite load. Call the variables <code>wing_case_size</code> and <code>parasite_burden</code> instead.</p>
 <p>Now we can merge our two data frames.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="data-frames.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge data frames</span></span>
-<span id="cb30-2"><a href="data-frames.html#cb30-2" aria-hidden="true" tabindex="-1"></a>tribolium_combo <span class="ot">&lt;-</span> <span class="fu">merge</span>(tribolium, tribolium_extras, <span class="at">by =</span> <span class="st">&quot;beetle_id&quot;</span>)</span>
-<span id="cb30-3"><a href="data-frames.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This merge function combines both of your data frames but matches rows by beetle_id</span></span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="data-frames.html#cb30-1" tabindex="-1"></a><span class="co"># Merge data frames</span></span>
+<span id="cb30-2"><a href="data-frames.html#cb30-2" tabindex="-1"></a>tribolium_combo <span class="ot">&lt;-</span> <span class="fu">merge</span>(tribolium, tribolium_extras, <span class="at">by =</span> <span class="st">&quot;beetle_id&quot;</span>)</span>
+<span id="cb30-3"><a href="data-frames.html#cb30-3" tabindex="-1"></a><span class="co"># This merge function combines both of your data frames but matches rows by beetle_id</span></span></code></pre></div>
 <p>Take a look at your new data frame now with the <code>head()</code> function, and lets try one more command to do one last check on your data. Try this;</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="data-frames.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(tribolium_combo)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="data-frames.html#cb31-1" tabindex="-1"></a><span class="fu">glimpse</span>(tribolium_combo)</span></code></pre></div>
 <p>This command will show you something like this;</p>
 <pre><code>&gt;glimpse(tribolium_combo)
 Rows: 20
@@ -467,8 +463,8 @@ $ sex             &lt;chr&gt; &quot;F&quot;, &quot;F&quot;, &quot;F&quot;, &quot
 $ treatment       &lt;dbl&gt; 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 30, 30, 30, 30, 3…</code></pre>
 <p>Once again we can see that four of our variables have been interpreted by R as being <code>&lt;dbl&gt;</code> vectors, R has identified them as being numeric. One of our variables has been identified as being a <code>&lt;chr&gt;</code> (short for character) vector, so R knows that this variable contains letters or words.</p>
 <p>You may now wish to export your new combined data frame as a <code>.csv</code> file. You can do this by running the following command;</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="data-frames.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save your combined data frame as a .csv file (which you could download) to your data folder</span></span>
-<span id="cb33-2"><a href="data-frames.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(tribolium_combo,<span class="st">&quot;data/tribolium_combo.csv&quot;</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="data-frames.html#cb33-1" tabindex="-1"></a><span class="co"># Save your combined data frame as a .csv file (which you could download) to your data folder</span></span>
+<span id="cb33-2"><a href="data-frames.html#cb33-2" tabindex="-1"></a><span class="fu">write.csv</span>(tribolium_combo,<span class="st">&quot;data/tribolium_combo.csv&quot;</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <p>Well done everyone, you have successfully entered your data and uploaded it to posit Cloud as well as making some small adjustments to the data frame and doing a first pass quality check! There are more checks we could have run, and we will revisit this later in the course when we look at some larger data sets. But we will leave this here for now, next week is reading week and the week after we will start looking at checking our data dimensions.</p>
 </div>
 <div id="before-you-leave" class="section level2 hasAnchor" number="4.7">
@@ -550,7 +546,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
