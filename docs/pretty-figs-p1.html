@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 9 Make them pretty - Week 10 | Introduction to Data Science - BIO-4008Y/CHE-4602Y</title>
   <meta name="description" content="A brief introduction so some fundamental applications of R in data science" />
-  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 9 Make them pretty - Week 10 | Introduction to Data Science - BIO-4008Y/CHE-4602Y" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<meta name="date" content="2024-10-06" />
+<meta name="date" content="2025-02-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -60,7 +60,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -123,6 +123,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -300,17 +304,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="16.4" data-path="reporting.html"><a href="reporting.html#before-you-leave-9"><i class="fa fa-check"></i><b>16.4</b> Before you leave!</a></li>
 <li class="chapter" data-level="16.5" data-path="reporting.html"><a href="reporting.html#references-10"><i class="fa fa-check"></i><b>16.5</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="17" data-path="portfolio-tasks.html"><a href="portfolio-tasks.html"><i class="fa fa-check"></i><b>17</b> Portfolio Tasks</a>
+<li class="chapter" data-level="17" data-path="summative-tasks.html"><a href="summative-tasks.html"><i class="fa fa-check"></i><b>17</b> Summative Tasks</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="portfolio-tasks.html"><a href="portfolio-tasks.html#background"><i class="fa fa-check"></i><b>17.1</b> Background</a></li>
-<li class="chapter" data-level="17.2" data-path="portfolio-tasks.html"><a href="portfolio-tasks.html#the-data-1"><i class="fa fa-check"></i><b>17.2</b> The data</a></li>
-<li class="chapter" data-level="17.3" data-path="portfolio-tasks.html"><a href="portfolio-tasks.html#the-tasks"><i class="fa fa-check"></i><b>17.3</b> The tasks</a>
+<li class="chapter" data-level="17.1" data-path="summative-tasks.html"><a href="summative-tasks.html#the-tasks-for-the-summative"><i class="fa fa-check"></i><b>17.1</b> The tasks for the summative</a>
 <ul>
-<li class="chapter" data-level="17.3.1" data-path="portfolio-tasks.html"><a href="portfolio-tasks.html#exercise-1---figure-and-figure-legend"><i class="fa fa-check"></i><b>17.3.1</b> Exercise 1 - Figure and figure legend</a></li>
-<li class="chapter" data-level="17.3.2" data-path="portfolio-tasks.html"><a href="portfolio-tasks.html#exercise-2---code"><i class="fa fa-check"></i><b>17.3.2</b> Exercise 2 - Code</a></li>
-<li class="chapter" data-level="17.3.3" data-path="portfolio-tasks.html"><a href="portfolio-tasks.html#submission"><i class="fa fa-check"></i><b>17.3.3</b> Submission</a></li>
+<li class="chapter" data-level="17.1.1" data-path="summative-tasks.html"><a href="summative-tasks.html#task-1---produce-a-short-result-section"><i class="fa fa-check"></i><b>17.1.1</b> Task 1 - Produce a short result section</a></li>
+<li class="chapter" data-level="17.1.2" data-path="summative-tasks.html"><a href="summative-tasks.html#task-2---code"><i class="fa fa-check"></i><b>17.1.2</b> Task 2 - Code</a></li>
+<li class="chapter" data-level="17.1.3" data-path="summative-tasks.html"><a href="summative-tasks.html#submission"><i class="fa fa-check"></i><b>17.1.3</b> Submission</a></li>
 </ul></li>
-<li class="chapter" data-level="17.4" data-path="portfolio-tasks.html"><a href="portfolio-tasks.html#references-11"><i class="fa fa-check"></i><b>17.4</b> References</a></li>
+<li class="chapter" data-level="17.2" data-path="summative-tasks.html"><a href="summative-tasks.html#references-11"><i class="fa fa-check"></i><b>17.2</b> References</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -338,18 +340,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Over the last couple of weeks you have built histograms, box plots and scatter plots. Probably the three types of data visualisation you are most likely to run into and want to build. But you may have noticed that non of these are particularly aesthetically pleasing. As a rule, data visualisations should always be designed to be attractive, clean, clear and nicely spaced. The purpose of a plot is to provide, you and your audience with a accurate, visually pleasing and easy to interpret representation of your data. Thankfully <code>ggplot2</code> contains all the tools we need to do this.</p>
 <p>Open your <code>tribolium_parasites</code> project in posit Cloud. Create a new script and call it <code>ggplot_fundamentals</code>, save it in your <code>scripts</code> folder and set up your script following the rules in Chapter 4, make sure the <code>tidyverse</code> library is loaded, this contains <code>ggplot2</code>.</p>
 <p>Sometimes its can be good to cleanup your <strong>Environment</strong> a bit, if you run the following command, it will delete everything stored in your environment. Note - you will have to reload your data frames from your data folder. Make sure you saved <code>tribolium_combo</code> to your data folder in Chapter 4 before you do this.</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="pretty-figs-p1.html#cb45-1" tabindex="-1"></a><span class="co"># Clean up your environment</span></span>
-<span id="cb45-2"><a href="pretty-figs-p1.html#cb45-2" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span></code></pre></div>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="pretty-figs-p1.html#cb46-1" tabindex="-1"></a><span class="co"># Reload your tribolium_combo data frame</span></span>
-<span id="cb46-2"><a href="pretty-figs-p1.html#cb46-2" tabindex="-1"></a>tribolium_combo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/tribolium_combo.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="pretty-figs-p1.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean up your environment</span></span>
+<span id="cb45-2"><a href="pretty-figs-p1.html#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="pretty-figs-p1.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reload your tribolium_combo data frame</span></span>
+<span id="cb46-2"><a href="pretty-figs-p1.html#cb46-2" aria-hidden="true" tabindex="-1"></a>tribolium_combo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/tribolium_combo.csv&quot;</span>)</span></code></pre></div>
 <p>Check your data has loaded correctly. Can you remember how to change <code>treatment</code> from a <code>dbl</code> vector to a factor (<code>fct</code>) (hint in Chapter <a href="lost-the-plot-some-more-data-visualisations---week-9---workshop-2.html#boxplot">8.1</a>)?</p>
 <div id="deconstructing-ggplot" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> Deconstructing ggplot<a href="pretty-figs-p1.html#deconstructing-ggplot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To get an idea of how ggplot works we are going to go back over some code you have already run. Try running the following, what happens?</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="pretty-figs-p1.html#cb47-1" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
-<span id="cb47-2"><a href="pretty-figs-p1.html#cb47-2" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
-<span id="cb47-3"><a href="pretty-figs-p1.html#cb47-3" tabindex="-1"></a>size_differences_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> wing_case_size)) </span>
-<span id="cb47-4"><a href="pretty-figs-p1.html#cb47-4" tabindex="-1"></a><span class="fu">print</span>(size_differences_boxplot) <span class="co"># Print the object your plot is stored in to view it</span></span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="pretty-figs-p1.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
+<span id="cb47-2"><a href="pretty-figs-p1.html#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
+<span id="cb47-3"><a href="pretty-figs-p1.html#cb47-3" aria-hidden="true" tabindex="-1"></a>size_differences_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> wing_case_size)) </span>
+<span id="cb47-4"><a href="pretty-figs-p1.html#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_differences_boxplot) <span class="co"># Print the object your plot is stored in to view it</span></span></code></pre></div>
 <p>So you have given ggplot your data set and specified the axes. But you haven’t told it how you would like the data to be visualised. So you should see something like this…</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-50"></span>
 <img src="figures/screenshot_deconstructingaplot_1.png" alt="Basic ggplot output" width="90%" />
@@ -358,11 +360,11 @@ Figure 9.1: The most basic output from ggplot
 </p>
 </div>
 <p>Now modify the script so that it looks like this…</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="pretty-figs-p1.html#cb48-1" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
-<span id="cb48-2"><a href="pretty-figs-p1.html#cb48-2" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
-<span id="cb48-3"><a href="pretty-figs-p1.html#cb48-3" tabindex="-1"></a>size_differences_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> wing_case_size)) <span class="sc">+</span> </span>
-<span id="cb48-4"><a href="pretty-figs-p1.html#cb48-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> treatment)) <span class="co"># Tell ggplot that you want it to build a box plot coloured by treatment</span></span>
-<span id="cb48-5"><a href="pretty-figs-p1.html#cb48-5" tabindex="-1"></a><span class="fu">print</span>(size_differences_boxplot) <span class="co"># Print the object your plot is stored in to view it</span></span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="pretty-figs-p1.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
+<span id="cb48-2"><a href="pretty-figs-p1.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
+<span id="cb48-3"><a href="pretty-figs-p1.html#cb48-3" aria-hidden="true" tabindex="-1"></a>size_differences_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> wing_case_size)) <span class="sc">+</span> </span>
+<span id="cb48-4"><a href="pretty-figs-p1.html#cb48-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> treatment)) <span class="co"># Tell ggplot that you want it to build a box plot coloured by treatment</span></span>
+<span id="cb48-5"><a href="pretty-figs-p1.html#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_differences_boxplot) <span class="co"># Print the object your plot is stored in to view it</span></span></code></pre></div>
 <p>Note the <code>+</code>, this is essentially another way of piping information from one function into the next. You could also have added <code>fill = treatment</code> to the first line within this chunk within <code>aes()</code>.</p>
 <p>Your figure should look like this…</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-52"></span>
@@ -385,23 +387,23 @@ Figure 9.2: A basic ggplot box plot output
 <h2><span class="header-section-number">9.2</span> Labels<a href="pretty-figs-p1.html#labels" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Clear accurate labeling is essential in the sciences, be it when your in the lab labeling up your samples or creating data visualisations.</p>
 <p>In our current plot both our x and y axis could do with some relabeling, just because we dont use capitals when coding doesn’t mean we don’t follow the normal rules of English grammar when presenting data. Try adjusting your code so that it looks like the following;</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="pretty-figs-p1.html#cb49-1" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
-<span id="cb49-2"><a href="pretty-figs-p1.html#cb49-2" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
-<span id="cb49-3"><a href="pretty-figs-p1.html#cb49-3" tabindex="-1"></a>size_differences_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> wing_case_size)) <span class="sc">+</span> </span>
-<span id="cb49-4"><a href="pretty-figs-p1.html#cb49-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> treatment)) <span class="sc">+</span> <span class="co"># Tell ggplot that you want it to build a boxplot</span></span>
-<span id="cb49-5"><a href="pretty-figs-p1.html#cb49-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Sex&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Wing case size (mm)</span><span class="sc">\n</span><span class="st">&quot;</span>) <span class="co"># Adjust your x and y axis labels </span></span>
-<span id="cb49-6"><a href="pretty-figs-p1.html#cb49-6" tabindex="-1"></a><span class="fu">print</span>(size_differences_boxplot) <span class="co"># Print the object your plot is stored in to view it</span></span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="pretty-figs-p1.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
+<span id="cb49-2"><a href="pretty-figs-p1.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
+<span id="cb49-3"><a href="pretty-figs-p1.html#cb49-3" aria-hidden="true" tabindex="-1"></a>size_differences_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> wing_case_size)) <span class="sc">+</span> </span>
+<span id="cb49-4"><a href="pretty-figs-p1.html#cb49-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> treatment)) <span class="sc">+</span> <span class="co"># Tell ggplot that you want it to build a boxplot</span></span>
+<span id="cb49-5"><a href="pretty-figs-p1.html#cb49-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Sex&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Wing case size (mm)</span><span class="sc">\n</span><span class="st">&quot;</span>) <span class="co"># Adjust your x and y axis labels </span></span>
+<span id="cb49-6"><a href="pretty-figs-p1.html#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_differences_boxplot) <span class="co"># Print the object your plot is stored in to view it</span></span></code></pre></div>
 <p>Note the <code>\n</code> on your y axis label. This simply adds a new line to the label and spaces it nicely away from the y axis.</p>
 <p>This looks a bit better but our legend is still not very well labeled. Adjust your <code>labs</code> function so that it reads <code>labs(x = "Sex", y = "Wing case size (mm)\n", fill = "Treatment")</code>. This will change the label for your legend.</p>
 <p>Our labels still aren’t quite right, I don’t like the abbreviations on the x axis and our legend could still use some work as there are no units given for the treatment temperatures. Try these changes;</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="pretty-figs-p1.html#cb50-1" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
-<span id="cb50-2"><a href="pretty-figs-p1.html#cb50-2" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
-<span id="cb50-3"><a href="pretty-figs-p1.html#cb50-3" tabindex="-1"></a>size_differences_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> wing_case_size)) <span class="sc">+</span> </span>
-<span id="cb50-4"><a href="pretty-figs-p1.html#cb50-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> treatment)) <span class="sc">+</span> <span class="co"># Tell ggplot that you want it to build a boxplot</span></span>
-<span id="cb50-5"><a href="pretty-figs-p1.html#cb50-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Sex&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Wing case size (mm)</span><span class="sc">\n</span><span class="st">&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;Treatment&quot;</span>) <span class="sc">+</span> <span class="co"># Adjust your legend and x and y axis labels </span></span>
-<span id="cb50-6"><a href="pretty-figs-p1.html#cb50-6" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Female&quot;</span>,<span class="st">&quot;Male&quot;</span>)) <span class="sc">+</span> <span class="co"># Rename the categories on the x axis </span></span>
-<span id="cb50-7"><a href="pretty-figs-p1.html#cb50-7" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;30°C&quot;</span>, <span class="st">&quot;35°C&quot;</span>)) <span class="co"># Rename your treatments</span></span>
-<span id="cb50-8"><a href="pretty-figs-p1.html#cb50-8" tabindex="-1"></a><span class="fu">print</span>(size_differences_boxplot) <span class="co"># Print the object your plot is stored in to view it</span></span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="pretty-figs-p1.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a box plot and saving it in an object</span></span>
+<span id="cb50-2"><a href="pretty-figs-p1.html#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the ggplot function and direct it to your data and define your x axis and y axis</span></span>
+<span id="cb50-3"><a href="pretty-figs-p1.html#cb50-3" aria-hidden="true" tabindex="-1"></a>size_differences_boxplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> tribolium_combo,<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y =</span> wing_case_size)) <span class="sc">+</span> </span>
+<span id="cb50-4"><a href="pretty-figs-p1.html#cb50-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> treatment)) <span class="sc">+</span> <span class="co"># Tell ggplot that you want it to build a boxplot</span></span>
+<span id="cb50-5"><a href="pretty-figs-p1.html#cb50-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Sex&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Wing case size (mm)</span><span class="sc">\n</span><span class="st">&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;Treatment&quot;</span>) <span class="sc">+</span> <span class="co"># Adjust your legend and x and y axis labels </span></span>
+<span id="cb50-6"><a href="pretty-figs-p1.html#cb50-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Female&quot;</span>,<span class="st">&quot;Male&quot;</span>)) <span class="sc">+</span> <span class="co"># Rename the categories on the x axis </span></span>
+<span id="cb50-7"><a href="pretty-figs-p1.html#cb50-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;30°C&quot;</span>, <span class="st">&quot;35°C&quot;</span>)) <span class="co"># Rename your treatments</span></span>
+<span id="cb50-8"><a href="pretty-figs-p1.html#cb50-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(size_differences_boxplot) <span class="co"># Print the object your plot is stored in to view it</span></span></code></pre></div>
 <p>Note that the <code>scale x discrete</code> and <code>scale_fill_manual</code> functions simply rename things in the same order as you present them, make sure you label your categories accurately or this can make a big mess later on.</p>
 <p>If you try to remake your plot at this stage you will get the following error:</p>
 <pre><code>Error in `f()`:
@@ -493,7 +495,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

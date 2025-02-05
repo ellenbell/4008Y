@@ -11,6 +11,7 @@ fig:unnamed-chunk-50
 fig:unnamed-chunk-52
 fig:unnamed-chunk-79
 fig:unnamed-chunk-80
+fig:unnamed-chunk-81
 welcome-to-the-data-science-workbook
 data-science-learning-objectives
 teaching-layout-for-data-science
@@ -121,11 +122,9 @@ task-4---have-a-go-at-preparing-a-result-section
 wrapping-up-2
 before-you-leave-9
 references-10
-portfolio-tasks
-background
-the-data-1
-the-tasks
-exercise-1---figure-and-figure-legend
-exercise-2---code
+summative-tasks
+the-tasks-for-the-summative
+task-1---produce-a-short-result-section
+task-2---code
 submission
 references-11
