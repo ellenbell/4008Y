@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Ellen Bell" />
 
 
-<meta name="date" content="2025-02-05" />
+<meta name="date" content="2025-02-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -332,7 +332,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="summative-tasks" class="section level1 hasAnchor" number="17">
 <h1><span class="header-section-number">Chapter 17</span> Summative Tasks<a href="summative-tasks.html#summative-tasks" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>For this assessment you have a choice of two data sets to work with, <strong>you only need to select one</strong>. If you are more interested in ecology, evolutionary biology or parasitology I recommend the <em>Corydoras</em> catfishes data set, if you are more interested in biomedicine, biochemistry or microbiology I recommend the mouse obesity data set.</p>
+<p>For this assessment you have a choice of two data sets to work with, <strong>you only need to select one</strong>. If you are more interested in ecology, evolutionary biology, parasitology or genetics I recommend the <em>Corydoras</em> catfishes data set, if you are more interested in biomedicine, biochemistry or microbiology I recommend the mouse obesity data set.</p>
 <p>Take a look at the background of your chosen data set below.</p>
 <details>
 <summary>
@@ -371,28 +371,28 @@ Figure 17.1: <em>Corydoras araguaiaensis</em>
 <strong>Show me the mouse obesity data set background</strong>
 </summary>
 <p><strong>Background</strong></p>
-<p>The data you will be analysing if you choose this data set focus on microbiota and dietary energy harvest of mice with a mutation that produces obesity.</p>
+<p>The data you will be analysing if you choose this data set focus on microbiota and dietary energy harvest of mice with a mutation that predisposes the mouse to obesity.</p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-81"></span>
 <img src="figures/mouse.png" alt="*Corydoras araguaiaensis*" width="90%" />
 <p class="caption">
 Figure 17.2: Wild type vs obese mice
 </p>
 </div>
-<p>Mice were grouped into two categories wild type and obese. The wild type mice can be thought of as mice with phenotypic characteristics that are considered “normal” in mouse populations. Obese mice were homozygous for a mutation in the leptin gene, which is known to produce obese phenotypes. However some evidence suggests that differences in weight between wild type and obese mice may not always linked to food consumption but instead to mutualistic bacterial communities living in the gut (gut microbiome).</p>
-<p>The prediction here was that if obesity in mice was linked to differences in gut microbiome then the gut microbiome of an obese mouse may be able aid in the breaking down of otherwise indigestible dietary polysaccharides (making those resources digestible to the obese mouse and leading to weight gain). An end product of the microbial breakdown of these normally indigestible polysaccharides is the short chain fatty acid buryrate. So if the gut microbiome was aiding in breakdown of indigestible polysaccharides you might expect higher concentrations of butyrate in the bowel of obese mice and that obese mouse faeces might have fewer calories remaining (due to more energy being extracted during digestion). During this experiment both wild type and obese mice were fed standardised amounts of food.</p>
+<p>Mice were grouped into two categories wild type and obese. The wild type mice can be thought of as mice with phenotypic characteristics that are considered “normal” in mouse populations. Obese mice were homozygous for a mutation in the leptin gene, which is known to produce obese phenotypes. However some evidence suggests that differences in weight between wild type and obese mice may not always be completely explained by food consumption but also by mutualistic bacterial communities living in the gut (gut microbiome).</p>
+<p>The prediction here was that if obesity in mice was linked to differences in gut microbiome then the gut microbiome of an obese mouse may be able to aid in the breaking down of otherwise indigestible dietary polysaccharides (making those resources digestible to the obese mouse and leading to weight gain). An end product of the microbial breakdown of these normally indigestible polysaccharides is the short chain fatty acid butyrate. So if the gut microbiome was aiding in breakdown of indigestible polysaccharides you might expect higher concentrations of butyrate in the bowel of obese mice and that obese mouse faeces might have fewer calories remaining (due to more energy being extracted during digestion). During this experiment both wild type and obese mice were fed standardised amounts of food.</p>
 <p><strong>Mouse data</strong></p>
 <p>The data you have been provided with can be found on blackboard. Go to the Data Sets folder in the Data Sciences folder in your Skills module blackboard page, the file is called <code>obese_mouse_data.csv</code>.</p>
-<p>The data consist of four variables;</p>
+<p>The data consist of five variables;</p>
 <ol style="list-style-type: decimal">
 <li>mouse_id - this is simply a sample ID with values ranging from 1-61</li>
 <li>genotype - either the wild type (wt) or the obese (ob) mouse genotypes</li>
 <li>weight_g - weight of each mouse in grams</li>
 <li>bomb_kcalg - bomb calorimetry - gross energy measured in per gram of fecal sample - measured in kcal g<sup>-1</sup></li>
-<li>butyrate_umolg - gass chromatography mass-spectrometry quantification of the short chain fatty acid butyrate from the large intestine of mice measured in mol per gram wet weight intestine contents.</li>
+<li>butyrate_umolg - gas chromatography mass-spectrometry quantification of the short chain fatty acid butyrate from the large intestine of mice measured in µmol per gram wet weight intestine contents.</li>
 </ol>
 <p>This data set was adapted from Turnbaugh et al., 2006.</p>
 <p><strong>Mouse questions</strong></p>
-<p>You wish to know if there is a link between obesity and the gut microbiome of mice, but you also want to make sure and show that there are no confounding variables (like size) affecting any conclusions you draw from your analysis. So you ask three questions of your data;</p>
+<p>You wish to know if there is a link between obesity and the gut microbiome of mice, so you ask three questions of your data;</p>
 <ol style="list-style-type: decimal">
 <li>Is there a difference in butyrate concentration between obese and wild type mice?</li>
 <li>Is there a difference in bomb calorimetry between obese and wild type mice?</li>

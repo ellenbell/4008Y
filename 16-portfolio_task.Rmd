@@ -1,6 +1,6 @@
 # Summative Tasks 
 
-For this assessment you have a choice of two data sets to work with, **you only need to select one**. If you are more interested in ecology, evolutionary biology or parasitology I recommend the *Corydoras* catfishes data set, if you are more interested in biomedicine, biochemistry or microbiology I recommend the mouse obesity data set. 
+For this assessment you have a choice of two data sets to work with, **you only need to select one**. If you are more interested in ecology, evolutionary biology, parasitology or genetics I recommend the *Corydoras* catfishes data set, if you are more interested in biomedicine, biochemistry or microbiology I recommend the mouse obesity data set. 
 
 Take a look at the background of your chosen data set below.
 
@@ -46,33 +46,33 @@ You wish to know if there is a link between genome size and parasite load in *Co
 
 **Background** 
 
-The data you will be analysing if you choose this data set focus on microbiota and dietary energy harvest of mice with a mutation that produces obesity. 
+The data you will be analysing if you choose this data set focus on microbiota and dietary energy harvest of mice with a mutation that predisposes the mouse to obesity. 
 
 ```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "*Corydoras araguaiaensis*", fig.cap ="Wild type vs obese mice"}
 knitr::include_graphics("figures/mouse.png")
 ```
 
-Mice were grouped into two categories wild type and obese. The wild type mice can be thought of as mice with phenotypic characteristics that are considered "normal" in mouse populations. Obese mice were homozygous for a mutation in the leptin gene, which is known to produce obese phenotypes. However some evidence suggests that differences in weight between wild type and obese mice may not always linked to food consumption but instead to mutualistic bacterial communities living in the gut (gut microbiome).
+Mice were grouped into two categories wild type and obese. The wild type mice can be thought of as mice with phenotypic characteristics that are considered "normal" in mouse populations. Obese mice were homozygous for a mutation in the leptin gene, which is known to produce obese phenotypes. However some evidence suggests that differences in weight between wild type and obese mice may not always be completely explained by food consumption but also by mutualistic bacterial communities living in the gut (gut microbiome).
 
-The prediction here was that if obesity in mice was linked to differences in gut microbiome then the gut microbiome of an obese mouse may be able aid in the breaking down of otherwise indigestible dietary polysaccharides (making those resources digestible to the obese mouse and leading to weight gain). An end product of the microbial breakdown of these normally indigestible polysaccharides is the short chain fatty acid buryrate. So if the gut microbiome was aiding in breakdown of indigestible polysaccharides you might expect higher concentrations of butyrate in the bowel of obese mice and that obese mouse faeces might have fewer calories remaining (due to more energy being extracted during digestion). During this experiment both wild type and obese mice were fed standardised amounts of food. 
+The prediction here was that if obesity in mice was linked to differences in gut microbiome then the gut microbiome of an obese mouse may be able to aid in the breaking down of otherwise indigestible dietary polysaccharides (making those resources digestible to the obese mouse and leading to weight gain). An end product of the microbial breakdown of these normally indigestible polysaccharides is the short chain fatty acid butyrate. So if the gut microbiome was aiding in breakdown of indigestible polysaccharides you might expect higher concentrations of butyrate in the bowel of obese mice and that obese mouse faeces might have fewer calories remaining (due to more energy being extracted during digestion). During this experiment both wild type and obese mice were fed standardised amounts of food. 
 
 **Mouse data**
 
 The data you have been provided with can be found on blackboard. Go to the Data Sets folder in the Data Sciences folder in your Skills module blackboard page, the file is called `obese_mouse_data.csv`. 
 
-The data consist of four variables;
+The data consist of five variables;
 
 1) mouse_id - this is simply a sample ID with values ranging from 1-61
 2) genotype - either the wild type (wt) or the obese (ob) mouse genotypes
 3) weight_g - weight of each mouse in grams 
 4) bomb_kcalg - bomb calorimetry - gross energy measured in per gram of fecal sample - measured in kcal g^-1^
-5) butyrate_umolg - gass chromatography mass-spectrometry quantification of the short chain fatty acid butyrate from the large intestine of mice measured in \mu mol per gram wet weight intestine contents. 
+5) butyrate_umolg - gas chromatography mass-spectrometry quantification of the short chain fatty acid butyrate from the large intestine of mice measured in µmol per gram wet weight intestine contents. 
 
 This data set was adapted from Turnbaugh et al., 2006.
 
 **Mouse questions**
 
-You wish to know if there is a link between obesity and the gut microbiome of mice, but you also want to make sure and show that there are no confounding variables (like size) affecting any conclusions you draw from your analysis. So you ask three questions of your data;
+You wish to know if there is a link between obesity and the gut microbiome of mice, so you ask three questions of your data;
 
 1) Is there a difference in butyrate concentration between obese and wild type mice?
 2) Is there a difference in bomb calorimetry between obese and wild type mice?
