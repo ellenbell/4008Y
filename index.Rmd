@@ -23,7 +23,7 @@ Introduction to Data Science is a 'sub-module' that will run throughout your fir
 
 In Semester 1 we will be learning some basic R syntax, how to create and load data sets and how to produce some basic data visualisations that are attractive and reproducible. Each week you will have either a lecture or a 1 hour workshop, you will also be expected to complete a chapter of this workbook each week, in your own time. 
 
-Teaching for semester 1; 
+Teaching for Semester 1; 
 
 * Semester 1 Lectures - Weeks; 3, 4, 7, 8, 10, 11
 * Semester 1 Workshops - Weeks; 5, 9, 12
@@ -31,7 +31,7 @@ Teaching for semester 1;
 
 In Semester 2 we will move onto some slightly more advanced data interpretation and visualisation skills and some descriptive statistics. Towards the end of the module we will briefly touch on inferential statistics, but this will be a very brief introduction. You will have a lecture every week until week 9 and a 2 hour workshop every other week. The workshops are all outlined as chapters in this workbook, if you don't complete a workshop in the timetabled slot, we strongly recommend you make every effort to complete it in your own time.
 
-Teaching for s=Semester 2; 
+Teaching for Semester 2; 
 
 * Semester 2 Lectures - Weeks; 1, 2, 3, 4, 5, 6, 7, 8, 9
 * Semester 2 Workshops - Weeks; 2, 4, 6, 8
