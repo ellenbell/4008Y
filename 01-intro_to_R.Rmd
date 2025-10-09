@@ -2,27 +2,27 @@
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
-# Introduction to R and posit Cloud - Week 3
+# Introduction to R and Posit Cloud - Week 3
 
 You should aim to complete this chapter in Week 3, Semester 1. 
 
-## What is R and posit Cloud?
+## What is R and Posit Cloud?
 
-So hopefully you have read through Chapter 1, where R and the posit Cloud interface were introduced in this module. But what really is R and what is the difference between R and posit Cloud? 
+So hopefully you have read through Chapter 1, where R and the Posit Cloud interface were introduced in this module. But what really is R and what is the difference between R and Posit Cloud? 
 
 Essentially R is a programming language that is commonly used in statistical computing, data handling, data visualisation and data analysis. Posit Cloud is a cloud based interface for a piece of software called RStudio (we wont be using the non cloud based RStudio in this sub-module, so we wont explore this software further here). Posit Cloud uses the R programming language but has a nice user friendly interface and is a great tool for learning how to conduct analysis in R. 
 
-We are using the posit cloud rather then RStudio because it means that no one has to worry about installing extra software on their own computers and everyone will be working with the same software versions. You will all need to create your own free accounts on posit Cloud, but first have a look at the short video below introducing you to the interface. 
+We are using the Posit Cloud rather then RStudio because it means that no one has to worry about installing extra software on their own computers and everyone will be working with the same software versions. You will all need to create your own free accounts on Posit Cloud, but first have a look at the short video below introducing you to the interface. 
 
-<div style="position:relative;height:0;padding-bottom:40%"><iframe width="560" height="315" src="https://www.youtube.com/embed/3l02OgYYb0I" title="Intro to posit Cloud" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div style="position:relative;height:0;padding-bottom:40%"><iframe width="560" height="315" src="https://www.youtube.com/embed/3l02OgYYb0I" title="Intro to Posit Cloud" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 <p>
 
-Now that you've watched the video, create your own Free posit Cloud account [here](https://login.rstudio.cloud/login?redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Frstudio.cloud%252Flogin%26client_id%3Drstudio-cloud%26response_type%3Dcode%26show_auth%3D0%26show_login%3D1).
+Now that you've watched the video, create your own Free Posit Cloud account [here](https://login.rstudio.cloud/login?redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Frstudio.cloud%252Flogin%26client_id%3Drstudio-cloud%26response_type%3Dcode%26show_auth%3D0%26show_login%3D1).
 
 ## A warning on managing your work flow
 
-Your free posit Cloud account comes with some restrictions which you should be aware of. These are;
+Your free Posit Cloud account comes with some restrictions which you should be aware of. These are;
 
 * You may have up to 50 projects in total
 * You are limited to 25 project hours per month
@@ -30,17 +30,17 @@ Your free posit Cloud account comes with some restrictions which you should be a
 
 For the purposes of our work here these restrictions should not be a problem. But I strongly suggest you don't leave your coursework to the last minute. If you try and pack in a whole semester or years worth or material into a single month, you will exceed those 25 project hours. There are some options of last resort should this happen, you could install RStudio on your desktop for example, or set up an alternative posit cloud account with an alternative email address, but things will get complicated. Lets avoid that where we can! There are some ways you can increase the efficiency of your workspace which are documented below in section 2.4.
 
-## Creating your first posit Cloud Project
+## Creating your first Posit Cloud Project
 
-Once you have created an posit Cloud account you should be presented with this window
+Once you have created an Posit Cloud account you should be presented with this window
 
-```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Screen for when you first login to posit Cloud", fig.cap ="Your workspace in posit Cloud"}
+```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Screen for when you first login to Posit Cloud", fig.cap ="Your workspace in Posit Cloud"}
 knitr::include_graphics("figures/posit1.jpg")
 ```
 
 Under __Spaces__ go to __Your Workspace__ and under __Projects__ create a __New Project > New R studio Project__. 
 
-```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Screen for creating a new project", fig.cap ="Creating a new project in posit Cloud"}
+```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Screen for creating a new project", fig.cap ="Creating a new project in Posit Cloud"}
 knitr::include_graphics("figures/posit2.jpg")
 ```
 
@@ -58,7 +58,7 @@ knitr::include_graphics("figures/posit4.jpg")
 
 ## Maximising the efficiency of your workspace
 
-We know we have limited project hours on our free posit Cloud accounts to reduce your resource usage. In your project, go to settings (the cogwheel sign), Resources, and drag all of the sliders down to the minimum setting, apply the changes, this will mean the project has to restart. This will mean that running the project for 1 hour will consume 0.5 project hours. We wont be doing anything particularly computationally intensive so there is no need for RAM of CPUs to be higher. 
+We know we have limited project hours on our free Posit Cloud accounts to reduce your resource usage. In your project, go to settings (the cogwheel sign), Resources, and drag all of the sliders down to the minimum setting, apply the changes, this will mean the project has to restart. This will mean that running the project for 1 hour will consume 0.5 project hours. We wont be doing anything particularly computationally intensive so there is no need for RAM of CPUs to be higher. 
 
 ```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "Making your project more efficient", fig.cap ="How to make your project more efficient"}
 knitr::include_graphics("figures/posit5.jpg")
@@ -103,9 +103,9 @@ See if you can work out what 30% of 735 is using the R console
 
 ## Sending commands down to the console from an R script
 
-I have already mentioned the __reproducibility__ factor as an advantage of using posit Cloud. This is because you can record and run all of your commands from an R script within posit Cloud. This means that you have a written record of your analysis workflow, what you did to your data at which stage, and you can do all of this without altering the original data files! This is super important because it means that if you revisit your work in a few weeks/months/years you can see exactly what you did AND if someone else needs to rerun any of your analysis or use your workflow on some other data, they can! 
+I have already mentioned the __reproducibility__ factor as an advantage of using Posit Cloud. This is because you can record and run all of your commands from an R script within posit Cloud. This means that you have a written record of your analysis workflow, what you did to your data at which stage, and you can do all of this without altering the original data files! This is super important because it means that if you revisit your work in a few weeks/months/years you can see exactly what you did AND if someone else needs to rerun any of your analysis or use your workflow on some other data, they can! 
 
-So lets go about setting up your new script. You currently have three panels in posit Cloud. If you go to __file > New File > R Script__ a new panel will open.
+So lets go about setting up your new script. You currently have three panels in Posit Cloud. If you go to __file > New File > R Script__ a new panel will open.
 
 ```{r, eval=TRUE, echo=FALSE, out.width="90%", fig.alt= "creating a new r script", fig.cap ="How to create a new R script"}
 knitr::include_graphics("figures/posit6.jpg")
