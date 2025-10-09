@@ -1,6 +1,6 @@
 --- 
 title: "Introduction to Data Science - BIO-4008Y/CHE-4602Y"
-author: "created by Dr Ellen Bell (updated for 25/26 by Dr Ed Ivimey-Cook)
+author: "created by Dr Ellen Bell (updated for 25/26 by Dr Ed Ivimey-Cook)"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
