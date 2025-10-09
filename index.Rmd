@@ -17,7 +17,7 @@ always_allow_html: true
 
 ## Data Science learning objectives
 
-Introduction to Data Science is a 'sub-module' that will run throughout your first year as part of the BIO-4008Y and CHE-4602Y Skills modules. Here we aim to teach you the fundamentals of how to collect and organise data in a clean and sensible format and how to correctly visualise and describe data. The platform we will be using to manage, manipulate and analyse data is posit Cloud. This is a cloud based interface that utilises the programming language R in a very similar interface to RStudio (a package you may wish to install on your own computers at some point). Over the course of the next few weeks you will start to learn fundamentals of this language and its application in posit Cloud. 
+Introduction to Data Science is a 'sub-module' that will run throughout your first year as part of the BIO-4008Y and CHE-4602Y Skills modules. Here we aim to teach you the fundamentals of how to collect and organise data in a clean and sensible format and how to correctly visualise and describe data. The platform we will be using to manage, manipulate and analyse data is Posit Cloud. This is a cloud based interface that utilises the programming language R in a very similar interface to RStudio (a package you may wish to install on your own computers at some point). Over the course of the next few weeks you will start to learn fundamentals of this language and its application in Posit Cloud. 
 
 ## Teaching layout for Data Science 
 
