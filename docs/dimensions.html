@@ -348,7 +348,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="whats-your-sample-size" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> Whats your sample size?<a href="dimensions.html#whats-your-sample-size" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>With this data set its not hard to work out what the sample size is. But data sets can become huge and its not always easy or effective to scroll through them. Sometimes you really just need to know how many observations are in your data set, thankfully each of our beetles has a unique identifyer so we can count how many unique entries there are in the <code>beetle_id</code> variable. Try the following (be sure to load the tidyverse pakcage!);</p>
+<p>With this data set its not hard to work out what the sample size is. But data sets can become huge and its not always easy or effective to scroll through them. Sometimes you really just need to know how many observations are in your data set, thankfully each of our beetles has a unique identifyer so we can count how many unique entries there are in the <code>beetle_id</code> variable. Try the following (be sure to load the tidyverse and janitor packages!);</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="dimensions.html#cb35-1" tabindex="-1"></a><span class="co"># Use the n_distinct function to count unique/distinct entries in the beetle_id column</span></span>
 <span id="cb35-2"><a href="dimensions.html#cb35-2" tabindex="-1"></a><span class="fu">n_distinct</span>(tribolium_combo<span class="sc">$</span>beetle_id)</span></code></pre></div>
 <blockquote>
